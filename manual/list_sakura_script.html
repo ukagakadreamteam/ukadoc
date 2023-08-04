@@ -621,7 +621,7 @@
 			<dl id="_sID番号">
 				<dt class="entry">\s(ID number)</dt>
 				<dd class="entry">
-					<p>Changes the surface of the character that is currently the focus to the surface with the specified ID number.<br>This tag can only be used with surfaces 0~9.</p>
+					<p>Changes the surface of the character that is currently the focus to the surface with the specified ID number.<br>This tag can only be used with surfaces 0–9.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -969,7 +969,7 @@
 			<dl id="_!_set,alpha,数値_">
 				<dt class="entry">\![set,alpha,(value)]</dt>
 				<dd class="entry">
-					<p>Changes the opacity of the surface that currently has the focus from 0~100. The smaller the value, the more translucent it becomes.</p>
+					<p>Changes the opacity of the surface that currently has the focus from 0–100. The smaller the value, the more translucent it becomes.</p>
 					<p>Effective until the ghost is closed.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1686,9 +1686,9 @@
 				<dt class="entry">\![set,balloonwait,(scaling factor)]</dt>
 				<dd class="entry">
 					<p>Specifies the scaling factor of the speed at which text is shown (weight per individual letter) in the balloon. 
-                    <br>Lone value: 1~100 can be specified. 1 is the equal scale. Decimals can also be specified. Example: Specifying 1.5 will increase the slowness by 50%.
-                    <br>With % appended: 0~10000 can be specified. 100 is the equal value. Only integers above 0 can be used.
-                    <br>With ms appended: 0~10000 can be specified. Specifies the absolute value of the waiting time for each letter in milliseconds.</p>
+                    <br>Lone value: 1–100 can be specified. 1 is the equal scale. Decimals can also be specified. Example: Specifying 1.5 will increase the slowness by 50%.
+                    <br>With % appended: 0–10000 can be specified. 100 is the equal value. Only integers above 0 can be used.
+                    <br>With ms appended: 0–10000 can be specified. Specifies the absolute value of the waiting time for each letter in milliseconds.</p>
 					
 					<p>When omitted or 1 is specified: Return to the original value
 					<br>When 0 is specified: Always display instantly</p>
@@ -2588,7 +2588,7 @@
 			<dl id="_f_cursorfontcolor,色指定_">
 				<dt class="entry">\f[cursorfontcolor,(color specification)]</dt>
 				<dd class="entry">
-					<p>Changes the color of the choice text when being hovered over using RGB values (0~255).<br><a href="#notes_color">※Refer to the section below</a> for specification methods.</p>
+					<p>Changes the color of the choice text when being hovered over using RGB values (0–255).<br><a href="#notes_color">※Refer to the section below</a> for specification methods.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -2935,9 +2935,9 @@
 				<p>Fundamentally similar to HTML and CSS color expressions.</p>
 				<dl>
 					<dt>R,G,B</dt>
-					<dd>Specifies a color using the values of the three primary colors red, green, and blue, expressed in decimal notation from 0~255 and separated by commas.<br>0,0,0 is black and 255,255,255 is white.</dd>
+					<dd>Specifies a color using the values of the three primary colors red, green, and blue, expressed in decimal notation from 0–255 and separated by commas.<br>0,0,0 is black and 255,255,255 is white.</dd>
 					<dt>R%,G%,B%</dt>
-					<dd>Specifies a color using the values of the three primary colors red, green, and blue, expressed in percentage from 0~100% and separated by commas.<br>0%,0%,0% is black and 100%,100%,100% is white.</dd>
+					<dd>Specifies a color using the values of the three primary colors red, green, and blue, expressed in percentage from 0–100% and separated by commas.<br>0%,0%,0% is black and 100%,100%,100% is white.</dd>
 					<dt>Hex color codes</dt>
 					<dd>Specifies a color using the values of the three primary colors red, green, and blue, expressed in <em>hexadecimal notation</em> after a hash "#", as in #07f, and connected together.<br>The color can be specified using two digits for red, green, and blue respectively, adding up to six digits, or one digit each for a total of three digits.<br>Alphabetical characters may be in either upper or lower case for hex color codes.<br>#000000 or #000 are black, and #ffffff or #fff are white.</dd>
 					<dt>Predefined keywords</dt>
@@ -3480,7 +3480,7 @@
 						<dt>none</dt>
 						<dd>None.</dd>
 						<dt>--timeout=(time in seconds)</dt>
-						<dd>The length of time that the balloon will be displayed (units are in seconds). Only values from 10~30 are specifiable. This option is ignored in Windows 7 or later.</dd>
+						<dd>The length of time that the balloon will be displayed (units are in seconds). Only values from 10–30 are specifiable. This option is ignored in Windows 7 or later.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -3857,11 +3857,11 @@
 			<section class="caption" id="notes_sound">
 				<h1>sound play/load/option options</h1>
 				<dl>
-					<dt>--volume=0~100</dt>
+					<dt>--volume=0–100</dt>
 					<dd>Adjusts the playback volume. The maximum value is 100. However, this option cannot control the volume of the whole OS.</dd>
-					<dt>--balance=-100~0~100</dt>
+					<dt>--balance=-100–0–100</dt>
 					<dd>Adjusts the right and left balance when playing stereo. -100 is the full left value and 100 is the full right value.</dd>
-					<dt>--rate=1~100~10000</dt>
+					<dt>--rate=1–100–10000</dt>
 					<dd>Adjusts the playback speed. 100 is the default speed.</dd>
 					<dt>--window=false/true (=OFF/ON)</dt>
 					<dd>Whether or not to display a window with the seek bar. When set as true, it will be displayed even if only sound is being played. If left unspecified, sound will not have a seek bar, whereas videos will.</dd>
