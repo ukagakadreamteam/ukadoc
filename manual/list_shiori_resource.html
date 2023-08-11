@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project SHIORI Resourceリスト</title>
+<title>UKADOC Project SHIORI Resource List</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script src="ghost_status.js"></script>
 </head>
 <body>
-	<h1 id="page-title">SHIORI Resourceリスト</h1>
+	<h1 id="page-title">SHIORI Resource List</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -26,7 +26,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -82,7 +82,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -93,12 +93,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -114,17 +114,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -137,21 +137,21 @@
 			<h1>Ghost Status</h1>
 			<!-- 一个列表用于显示和选择ghost -->
 			<div id="ghost_select">
-				<p>ゴーストを選択してください：</p>
+				<p>Please select a ghost:</p>
 				<select id="ghost_list_content" onchange="reload_button()"></select>
 				<!-- reloadボタン -->
-				<button id="ghost_reload_button" onclick="reload_button()">リロード</button>
+				<button id="ghost_reload_button" onclick="reload_button()">Reload</button>
 			</div>
 			<div id="supported_text_event_Has_Event_reminder" style="display: none;">
-				<p>あなたのゴーストは以下のイベントをサポートする必要があります：</p>
+				<p>Your ghost must support the following events:</p>
 				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1972L1989">Has_Event</a>
 			</div>
 			<div id="supported_graph" style="display: none;">
 				<p>support: <meter id="supported_graph_content" min="0" max="0" value="0"></meter><span id="supported_ratio">0/0</span></p>
 			</div>
 			<div id="supported_text_event_Get_Supported_Events_reminder" style="display: none;">
-				<p>イベントの統計速度が遅い場合は？</p>
-				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1990L2025">Get_Supported_Events</a>イベントをサポートして、速度を向上させることができます。
+				<p>What if the event statistics speed is slow?</p>
+				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1990L2025">Get_Supported_Events</a> events to support and increase speed.
 			</div>
 		</section>
 		<section class="navigation-category">
@@ -160,7 +160,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>SHIORI情報</h1>
+			<h1>SHIORI Information</h1>
 			<ul>
 				<li><a href="#version">version</a></li>
 				<li><a href="#craftman">craftman</a></li>
@@ -170,7 +170,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト情報</h1>
+			<h1>Ghost Information</h1>
 			<ul>
 				<li><a href="#homeurl">homeurl</a></li>
 				<li><a href="#useorigin1">useorigin1</a></li>
@@ -187,7 +187,7 @@
 				<li><a href="#sakura.defaulttop">sakura.defaulttop</a></li>
 				<li><a href="#kero.defaulttop">kero.defaulttop</a></li>
 				<li><a href="#char*.defaulttop">char*.defaulttop</a></li>
-				<li><a href="#boxname.defaultleft">(入力ボックス種類).defaultleft</a></li>
+				<li><a href="#boxname.defaultleft">(Input box type).defaultleft</a></li>
 				<li><a href="#sakura.recommendsites">sakura.recommendsites</a></li>
 				<li><a href="#sakura.portalsites">sakura.portalsites</a></li>
 				<li><a href="#kero.recommendsites">kero.recommendsites</a></li>
@@ -212,13 +212,13 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>更新情報</h1>
+			<h1>Update Information</h1>
 			<ul>
 				<li><a href="#other_homeurl_override">other_homeurl_override</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>オーナードローメニュー画像</h1>
+			<h1>Owner Draw Menu Image</h1>
 			<ul>
 				<li><a href="#menu.sidebar.bitmap.filename">menu.sidebar.bitmap.filename</a></li>
 				<li><a href="#menu.background.bitmap.filename">menu.background.bitmap.filename</a></li>
@@ -226,7 +226,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>オーナードローメニュー文字色</h1>
+			<h1>Owner Draw Menu Text Color</h1>
 			<ul>
 				<li><a href="#menu.background.font.color.r">menu.background.font.color.r</a></li>
 				<li><a href="#menu.background.font.color.g">menu.background.font.color.g</a></li>
@@ -246,15 +246,15 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>オーナードローメニュー項目表示</h1>
+			<h1>Owner Draw Menu Item Display</h1>
 			<ul>
-				<li><a href="#caption_visible">オーナードローメニュー項目表示</a></li>
+				<li><a href="#caption_visible">Owner Draw Menu Item Display</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>オーナードローメニュー項目名</h1>
+			<h1>Owner Draw Menu Item Mame</h1>
 			<ul>
-				<li class="caption"><a href="#caption_menushortcut">ショートカットキー</a></li>
+				<li class="caption"><a href="#caption_menushortcut">Shortcut keys</a></li>
 			</ul>
 			<ul>
 				<li><a href="#-">-</a></li>
@@ -352,7 +352,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ツールチップイベント</h1>
+			<h1>Tooltip Events</h1>
 			<ul>
 				<li><a href="#tooltip">tooltip</a></li>
 				<li><a href="#balloon_tooltip">balloon_tooltip</a></li>
@@ -360,21 +360,30 @@
 		</section>
 	</section>
 	<div class="categories">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<ul>
+				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
+				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/list_shiori_resource.html">here</a>.</li>
+				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
+			</ul>
+		</section>
 		<section class="caption" id="caption_shioriresource">
 			<h1>SHIORI Resource</h1>
-			<p>SHIORI Resourceは、旧プロトコル<a href="http://usada.sakura.vg/contents/shiori.html#shiori25">SHIORI/2.5</a>において、オーナードローメニューの表示やhomeurlなどの<em>単純な文字列情報を取得するためのリクエスト</em>として定義されたものが元になっています。<br />この仕様によって、そうした情報をゴースト側の状態に応じて制御することができます。</p>
-			<p>SHIORI/3.0以降では、旧仕様の整理の結果通常のSHIORI Eventと実装上明確には区別されていません。</p>
-			<p>通常のSHIORI Eventと異なる特徴として、戻り値はさくらスクリプトでなく単なる（短い）テキスト（bool値様の物含む）として扱われることが挙げられます。またリクエストIDは「On」から始まらず、英字は小文字で表記されます。</p>
+			<p>SHIORI Resource is based on the old protocol <a href="http://usada.sakura.vg/contents/shiori.html#shiori25">SHIORI/2.5</a>, which was defined as a <em>request to get simple string information</em>, such as the display of the owner draw menu and homeurl.<br />
+			This specification allows such information to be controlled on the ghost's side, changing according to its state.</p>
+			<p>In SHIORI/3.0 and later, as a result of reorganization of the old specifications, there is now no clear distinction in implementation compared to regular SHIORI events.</p>
+			<p>A feature that differs from normal SHIORI events is that the return value is treated as a simple (short) text (including bool-like objects) rather than SakuraScript. Also, the request ID does not start with "On", and all letters are written in lowercase.</p>
 		</section>
 		<section class="category">
-			<h1>SHIORI情報</h1>
+			<h1>SHIORI Information</h1>
 			<div class="caption">
-				<p>以下4つのIDのリクエストは、通常SHIORIが自動的に返却し、各ゴースト作者サイドは関知しないものです。</p>
+				<p>The following four ID requests are usually returned automatically by the SHIORI, and are of no concern on the ghost author's side.</p>
 			</div>
 			<dl id="version">
 				<dt class="entry">version</dt>
 				<dd class="entry">
-					<p>SHIORIのロード直後に発生。<br />SHIORIはこのイベントに対し、SHIORIのバージョン情報を返却する（<em>SHIORIプロトコルのバージョンではない</em>）。</p>
+					<p>Occurs immediately after loading the SHIORI.<br />The SHIORI returns the SHIORI version information (<em>not the SHIORI protocol version</em>) for this event.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -385,7 +394,7 @@
 			<dl id="craftman">
 				<dt class="entry">craftman</dt>
 				<dd class="entry">
-					<p>SHIORIのロード直後に発生。<br />SHIORIはこのイベントに対し、SHIORIの作者名を返却する。使用できるのは7ビット文字のみ。</p>
+					<p>Occurs immediately after loading the SHIORI.<br />The SHIORI returns the name of the SHIORI author for this event. Only 7-bit characters can be used.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -396,7 +405,7 @@
 			<dl id="craftmanw">
 				<dt class="entry">craftmanw</dt>
 				<dd class="entry">
-					<p>SHIORIのロード直後に発生。<br />SHIORIはこのイベントに対し、SHIORIの作者名を返却する。7ビット文字に加え8ビット文字およびデフォルトエンコーディングのマルチバイト文字も使用可能。</p>
+					<p>Occurs immediately after loading the SHIORI.<br />The SHIORI returns the name of the SHIORI author for this event. 8-bit characters and multibyte characters with default encoding can also be used.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -407,7 +416,7 @@
 			<dl id="name">
 				<dt class="entry">name</dt>
 				<dd class="entry">
-					<p>SHIORIのロード直後に発生。<br />SHIORIはこのイベントに対し、SHIORIの名前を返却する（<em>ゴースト名ではない</em>）。使用できるのは7ビット文字のみ。</p>
+					<p>Occurs immediately after loading the SHIORI.<br />The SHIORI returns the name of the SHIORI (<em>not the ghost name</em>) for this event. Only 7-bit characters can be used.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -418,8 +427,8 @@
 			<dl id="log_path">
 				<dt class="entry">log_path</dt>
 				<dd class="entry">
-					<p>開発者用パレットの「開く」を操作した際に発生。SHIORIログファイルまでのフルパスを返す。<br />
-					<a href="list_shiori_event.html#enable_log">SHIORI Event : enable_log</a> も参照。</p>
+					<p>Occurs when the "Open" button of the developer palette is clicked. Returns the full path to the SHIORI log file.<br />
+					Refer to <a href="list_shiori_event.html#enable_log">SHIORI Event : enable_log</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -427,13 +436,13 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト情報</h1>
+			<h1>Ghost Information</h1>
 			<dl id="homeurl">
 				<dt class="entry">homeurl</dt>
 				<dd class="entry">
-					<p>ネットワーク更新用ファイルの位置。<br>
-					何かSHIORIに重大な不具合が生じた際のバックアップ用に<a href="descript_ghost.html#homeurl,URL">descript.txtにも書ける</a>。<br>
-					どちらの記述が優先されるかはdescript.txtの説明を参照。</p>
+					<p>Location of files for network updates.<br>
+					You can also <a href="descript_ghost.html#homeurl,URL">write it in descript.txt</a> as a backup in case something goes terribly wrong with the SHIORI.<br>
+					See the description in descript.txt for which takes precedence.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -444,7 +453,7 @@
 			<dl id="useorigin1">
 				<dt class="entry">useorigin1</dt>
 				<dd class="entry">
-					<p>ネットワーク更新時のファイル数の開始数値。<br />1でファイル数1から開始、0でMATERIAと同じ0から開始。</p>
+					<p>The number to start counting network update files from.<br />1 to count from 1, 0 to count from 0, the same as in MATERIA.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -454,7 +463,7 @@
 			<dl id="username">
 				<dt class="entry">username</dt>
 				<dd class="entry">
-					<p>ユーザーの名称。</p>
+					<p>Name of the user.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -465,7 +474,7 @@
 			<dl id="sakura.defaultx">
 				<dt class="entry">sakura.defaultx</dt>
 				<dd class="entry">
-					<p>本体側の画像ベースX座標。</p>
+					<p>Base X coodinate of the main character's image.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -474,7 +483,7 @@
 			<dl id="kero.defaultx">
 				<dt class="entry">kero.defaultx</dt>
 				<dd class="entry">
-					<p>相方側の画像ベースX座標。</p>
+					<p>Base X coodinate of the side character's image</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -483,7 +492,7 @@
 			<dl id="char*.defaultx">
 				<dt class="entry">char*.defaultx</dt>
 				<dd class="entry">
-					<p>2人目以降の相方側の画像ベースX座標。</p>
+					<p>Base X coodinate of the image for the 2nd and subsequent characters.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -492,7 +501,7 @@
 			<dl id="sakura.defaulty">
 				<dt class="entry">sakura.defaulty</dt>
 				<dd class="entry">
-					<p>本体側の画像ベースY座標。</p>
+					<p>Base Y coodinate of the main character's image.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -501,7 +510,7 @@
 			<dl id="kero.defaulty">
 				<dt class="entry">kero.defaulty</dt>
 				<dd class="entry">
-					<p>相方側の画像ベースY座標。</p>
+					<p>Base Y coodinate of the side character's image</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -510,7 +519,7 @@
 			<dl id="char*.defaulty">
 				<dt class="entry">char*.defaulty</dt>
 				<dd class="entry">
-					<p>2人目以降の相方側の画像ベースY座標。</p>
+					<p>Base Y coodinate of the image for the 2nd and subsequent characters.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -519,7 +528,7 @@
 			<dl id="sakura.defaultleft">
 				<dt class="entry">sakura.defaultleft</dt>
 				<dd class="entry">
-					<p>本体側のディスプレイ上でのデフォルトX座標。</p>
+					<p>Default X coordinate of the main character's display.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -530,7 +539,7 @@
 			<dl id="kero.defaultleft">
 				<dt class="entry">kero.defaultleft</dt>
 				<dd class="entry">
-					<p>相方側のディスプレイ上でのデフォルトX座標。</p>
+					<p>Default X coordinate of the side character's display.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -541,7 +550,7 @@
 			<dl id="char*.defaultleft">
 				<dt class="entry">char*.defaultleft</dt>
 				<dd class="entry">
-					<p>2人目以降のディスプレイ上でのデフォルトX座標。</p>
+					<p>Default X coordinate of the display of the 2nd and subsequent characters.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -552,7 +561,7 @@
 			<dl id="sakura.defaulttop">
 				<dt class="entry">sakura.defaulttop</dt>
 				<dd class="entry">
-					<p>本体側のディスプレイ上でのデフォルトY座標。(自由移動モードのみ有効)</p>
+					<p>Default Y coordinate of the main character's display.。 (Valid only in free movement mode.)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -561,7 +570,7 @@
 			<dl id="kero.defaulttop">
 				<dt class="entry">kero.defaulttop</dt>
 				<dd class="entry">
-					<p>相方側のディスプレイ上でのデフォルトY座標。(自由移動モードのみ有効)</p>
+					<p>Default Y coordinate of the side character's display. (Valid only in free movement mode.)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -570,17 +579,17 @@
 			<dl id="char*.defaulttop">
 				<dt class="entry">char*.defaulttop</dt>
 				<dd class="entry">
-					<p>2人目以降のディスプレイ上でのデフォルトY座標。(自由移動モードのみ有効)</p>
+					<p>Default Y coordinate of the display of the 2nd and subsequent characters. (Valid only in free movement mode.)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
 			<dl id="boxname.defaultleft">
-				<dt class="entry">(入力ボックス種類).defaultleft　(入力ボックス種類).defaulttop</dt>
+				<dt class="entry">(Input box type).defaultleft　(Input box type).defaulttop</dt>
 				<dd class="entry">
-					<p>入力ボックスの初期スクリーンX・Y座標。leftがX、topがY。<br />
-					ボックス種類は以下の通り：communicatebox、scriptbox、addressbar、teachbox、dateinput、timeinput、ipinput、sliderinput、passwordinput、inputbox</p>
+					<p>Initial screen X and Y coordinates of the input box, where left is X and top is Y.<br />
+					The box types are as follows: communicatebox, scriptbox, addressbar, teachbox, dateinput, timeinput, ipinput, sliderinput, passwordinput, inputbox</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -590,13 +599,12 @@
 				<dt class="entry">sakura.recommendsites</dt>
 				<dd class="entry">
 					<p>
-						本体側のおすすめリスト。
-						<br />値は
-						<br />項目名1[バイト値1]url1[バイト値1]バナー画像パス1[バイト値1]選択時トークスクリプト1[バイト値2]項目名2[バイト値1]...
-						<br />という形式で返す。
-						<br />ただしその形式への変換はSHIORIが内部的に行っている場合があるので詳しくは各SHIORIの解説を参照。
-						<br />トークスクリプト部分は単なる文字列ではなくさくらスクリプト。
-						<br />url部分にurlの変わりにscript:から始まる記述でそのスクリプトが実行される（<a href="list_sakura_script.html#_!_raise,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raise]</a>なども可能）。
+						Recommended list on the main character's side.
+						<br />The value is returned in the following format:
+						<br />item name 1 [byte value 1]url 1[byte value 1]banner image path 1[byte value 1]talk script on selection 1[byte value 2]...
+						<br />However, conversion to that format may be done internally by the SHIORI, so refer to the explanation of each SHIORI for details.
+						<br />The "talk script" is not just a string, but a SakuraScript.
+						<br />If the url portion begins with "script:" instead of a url, the script will be executed. (<a href="list_sakura_script.html#_!_raise,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raise]</a> tags, etc., can also be used).
 					</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -609,12 +617,11 @@
 				<dt class="entry">sakura.portalsites</dt>
 				<dd class="entry">
 					<p>
-						本体側のポータルリスト。
-						<br />値は
-						<br />項目名1[バイト値1]url1[バイト値1]バナー画像パス1[バイト値1]選択時トークスクリプト1[バイト値2]項目名2[バイト値1]...
-						<br />という形式で返す。
-						<br />ただしその形式への変換はSHIORIが内部的に行っている場合があるので詳しくは各SHIORIの解説を参照。
-						<br />トークスクリプト部分は単なる文字列ではなくさくらスクリプト。
+						Portal list on the main character's side.
+						<br />The value is returned in the following format:
+						<br />item name 1 [byte value 1]url 1[byte value 1]banner image path 1[byte value 1]talk script on selection 1[byte value 2]...
+						<br />However, conversion to that format may be done internally by the SHIORI, so refer to the explanation of each SHIORI for details.
+						<br />The "talk script" is not just a string, but a SakuraScript.
 					</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -627,13 +634,12 @@
 				<dt class="entry">kero.recommendsites</dt>
 				<dd class="entry">
 					<p>
-						相方側のおすすめリスト。
-						<br />値は
-						<br />項目名1[バイト値1]url1[バイト値1]バナー画像パス1[バイト値1]選択時トークスクリプト1[バイト値2]項目名2[バイト値1]...
-						<br />という形式で返す。
-						<br />ただしその形式への変換はSHIORIが内部的に行っている場合があるので詳しくは各SHIORIの解説を参照。
-						<br />トークスクリプト部分は単なる文字列ではなくさくらスクリプト。
-						<br />url部分にurlの変わりにscript:から始まる記述でそのスクリプトが実行される（<a href="list_sakura_script.html#_!_raise,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raise]</a>なども可能）。
+						Recommended list on the side character's side.
+						<br />The value is returned in the following format:
+						<br />item name 1 [byte value 1]url 1[byte value 1]banner image path 1[byte value 1]talk script on selection 1[byte value 2]...
+						<br />However, conversion to that format may be done internally by the SHIORI, so refer to the explanation of each SHIORI for details.
+						<br />The "talk script" is not just a string, but a SakuraScript.
+						<br />If the url portion begins with "script:" instead of a url, the script will be executed. (<a href="list_sakura_script.html#_!_raise,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raise]</a> tags, etc., can also be used).
 					</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -646,13 +652,12 @@
 				<dt class="entry">char*.recommendsites</dt>
 				<dd class="entry">
 					<p>
-						\p[0]側のおすすめリスト。
-						<br />値は
-						<br />項目名1[バイト値1]url1[バイト値1]バナー画像パス1[バイト値1]選択時トークスクリプト1[バイト値2]項目名2[バイト値1]...
-						<br />という形式で返す。
-						<br />ただしその形式への変換はSHIORIが内部的に行っている場合があるので詳しくは各SHIORIの解説を参照。
-						<br />トークスクリプト部分は単なる文字列ではなくさくらスクリプト。
-						<br />url部分にurlの変わりにscript:から始まる記述でそのスクリプトが実行される（<a href="list_sakura_script.html#_!_raise,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raise]</a>なども可能）。
+						Recommended list on the \p[*] side.
+						<br />The value is returned in the following format:
+						<br />item name 1 [byte value 1]url 1[byte value 1]banner image path 1[byte value 1]talk script on selection 1[byte value 2]...
+						<br />However, conversion to that format may be done internally by the SHIORI, so refer to the explanation of each SHIORI for details.
+						<br />The "talk script" is not just a string, but a SakuraScript.
+						<br />If the url portion begins with "script:" instead of a url, the script will be executed. (<a href="list_sakura_script.html#_!_raise,%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D,r0,r1,r2..._">\![raise]</a> tags, etc., can also be used).
 					</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -662,7 +667,7 @@
 			<dl id="sakura.recommendbuttoncaption">
 				<dt class="entry">sakura.recommendbuttoncaption</dt>
 				<dd class="entry">
-					<p>本体側のおすすめの名称。</p>
+					<p>Name of the recommended button for the main character.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -673,7 +678,7 @@
 			<dl id="sakura.portalbuttoncaption">
 				<dt class="entry">sakura.portalbuttoncaption</dt>
 				<dd class="entry">
-					<p>本体側のポータルの名称。</p>
+					<p>Name of the portal button for the main character.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -684,7 +689,7 @@
 			<dl id="kero.recommendbuttoncaption">
 				<dt class="entry">kero.recommendbuttoncaption</dt>
 				<dd class="entry">
-					<p>相方側のおすすめの名称。</p>
+					<p>Name of the recommended button for the side character.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -695,7 +700,7 @@
 			<dl id="char*.recommendbuttoncaption">
 				<dt class="entry">char*.recommendbuttoncaption</dt>
 				<dd class="entry">
-					<p>\p[*]のおすすめの名称。</p>
+					<p>Name of the recommended button for \p[*] characters.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -704,7 +709,7 @@
 			<dl id="updatebuttoncaption">
 				<dt class="entry">updatebuttoncaption</dt>
 				<dd class="entry">
-					<p>ネットワーク更新の名称。</p>
+					<p>Name of the network update button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -715,7 +720,7 @@
 			<dl id="vanishbuttoncaption">
 				<dt class="entry">vanishbuttoncaption</dt>
 				<dd class="entry">
-					<p>消滅通告の名称。</p>
+					<p>Name of the uninstall button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -726,7 +731,7 @@
 			<dl id="readmebuttoncaption">
 				<dt class="entry">readmebuttoncaption</dt>
 				<dd class="entry">
-					<p>Read Me!の名称。</p>
+					<p>Name of the Read Me.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -736,7 +741,7 @@
 			<dl id="vanishbuttonvisible">
 				<dt class="entry">vanishbuttonvisible</dt>
 				<dd class="entry">
-					<p>消滅通告の表示。1で表示、0で非表示。</p>
+					<p>Display of the uninstall button. 1 to show, 0 to hide.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -747,7 +752,7 @@
 			<dl id="sakura.popupmenu.visible">
 				<dt class="entry">sakura.popupmenu.visible</dt>
 				<dd class="entry">
-					<p>本体側のオーナードローメニューの表示。1で表示、0で非表示。</p>
+					<p>Display of the owner draw menu for the main character. 1 to show, 0 to hide.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -756,7 +761,7 @@
 			<dl id="kero.popupmenu.visible">
 				<dt class="entry">kero.popupmenu.visible</dt>
 				<dd class="entry">
-					<p>相方側のオーナードローメニューの表示。1で表示、0で非表示。</p>
+					<p>Display of the owner draw menu for the side character. 1 to show, 0 to hide.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -765,7 +770,7 @@
 			<dl id="char*.popupmenu.visible">
 				<dt class="entry">char*.popupmenu.visible</dt>
 				<dd class="entry">
-					<p>\p[*]のオーナードローメニューの表示。1で表示、0で非表示。</p>
+					<p>Display of the owner draw menu for \p[*] characters. 1 to show, 0 to hide.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -774,7 +779,7 @@
 			<dl id="sakura.popupmenu.type">
 				<dt class="entry">sakura.popupmenu.type</dt>
 				<dd class="entry">
-					<p>本体側のオーナードローメニューの変更。0で本体側メニュー、1で省略メニュー。</p>
+					<p>Change the owner draw menu for the main character. 0 for the main character menu, 1 for an abbreviated menu.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -783,7 +788,7 @@
 			<dl id="kero.popupmenu.type">
 				<dt class="entry">kero.popupmenu.type</dt>
 				<dd class="entry">
-					<p>相方側のオーナードローメニューの変更。0で本体側メニュー、1で省略メニュー。</p>
+					<p>Change the owner draw menu for the side character. 0 for the main character menu, 1 for an abbreviated menu.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -792,7 +797,7 @@
 			<dl id="char*.popupmenu.type">
 				<dt class="entry">char*.popupmenu.type</dt>
 				<dd class="entry">
-					<p>\p[*]のオーナードローメニューの変更。0で本体側メニュー、1で省略メニュー。</p>
+					<p>Change the owner draw menu for \p[*] characters. 0 for the main character menu, 1 for an abbreviated menu.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -801,46 +806,46 @@
 			<dl id="getaistate">
 				<dt class="entry">getaistate</dt>
 				<dd class="entry">
-					<p>AIグラフのSHIORI/3.0版。<br />
-					ゴースト内部状態(トーク数、好感度など)に関するレーダーチャートを描く。<br />
-					以下のフォーマットで返す。</p>
+					<p>SHIORI/3.0 version of the AI graph.<br />
+					Draws a radar chart based on the ghost's internal state (number of talks, relationship, etc.).<br />
+					Returns in the following format:</p>
 					
-					<p>グラフ表示値群 [バイト値1] グラフラベル群 [バイト値1] グラフ加算値群 [バイト値1] グラフ最大値群</p>
+					<p>Graph display value group [byte value 1] Graph label group [byte value 1] Graph additive value group [byte value 1] Graph maximum value group</p>
 					<dl>
-						<dt>グラフ表示値群</dt>
-						<dd>グラフに表示したい値を半角数値・カンマ区切りで返してください。<br />2.4.26から小数点以下可。</dd>
-						<dt>グラフラベル群(省略可)</dt>
-						<dd>グラフに表示したいラベルをカンマ区切りで返してください。<br />
-						省略時：Neuron,NeuronM,NeuronK,NeuronD,NeuronE,Synapse</dd>
-						<dt>グラフ加算値群(省略可)</dt>
-						<dd>グラフの「加算値」を半角数値・カンマ区切りで返してください。<br />2.4.26から小数点以下可。<br />
-						加算値とは、学習で増えた値や、直近で変化した値などを強調表示する機能で、グラフ表示値に加算されて表示されます。<br />
-						省略時：すべてゼロで非表示</dd>
-						<dt>グラフ最大値群(省略可)</dt>
-						<dd>グラフの最大値を半角数値・カンマ区切りで返してください。最大値 ≧ (表示値 + 加算値) です。<br />2.4.26から小数点以下可。<br />
-						省略時：表示値＋加算値を計算しその最大値をすべての要素に設定</dd>
+						<dt>Graph display value group</dt>
+						<dd>Return the values you want to display on the graph as single-byte numbers, separated by commas.<br />Decimal points allowed since 2.4.26.</dd>
+						<dt>Graph label group (optional)</dt>
+						<dd>Return a comma-separated list of the labels you want to display on the graph.<br />
+						When omitted: Neuron, NeuronM, NeuronK, NeuronD, NeuronE, Synapse</dd>
+						<dt>Graph additive value group (optional)</dt>
+						<dd>Return the "additive value" of the graph as single-byte numbers, separated by commas.<br />Decimal points allowed since 2.4.26.<br />
+						"Additive value" is a function that highlights values that have increased through learning, or values that have changed recently, and is added to the graph display value when displayed.<br />
+						When omitted: All 0s, therefore hidden.</dd>
+						<dt>Graph maximum value group (optional)</dt>
+						<dd>Return the maximum value of the graph as single-byte numbers, separated by commas. Maximum value ≧ (displayed value + additive value).<br />Decimal points allowed since 2.4.26.<br />
+						When omitted: Calculate the display value plus the additive value, and set the maximum value to all elements.</dd>
 					</dl>
 					
-					<p>例：1250,1500,45,65,19500,4[b1]馬力,rpm,km/h,t,kgf,軸[b1]100,50,40,0,0,1[b1]1350,1550,130,96,20000,8<br />
-					[b1]はバイト値1を示す。<br />
-					表示結果は以下の通りとなる。<br />
+					<p>Example: 1250,1500,45,65,19500,4 [b1] HP,rpm,km/h,t,kgf,axis [b1] 100,50,40,0,0,1 [b1] 1350,1550,130,96,20000,8<br />
+					[b1] indicates byte value 1.<br />
+					The result will be displayed as follows:<br />
 					<img src="image/aigraph.png" width="288" height="288" alt="AI Graph" /></p>
 					
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.4.26から小数点以下認識</li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> Decimal point recognition since 2.4.26</li>
 					</ul>
 				</dd>
 			</dl>
 			<dl id="getaistateex">
 				<dt class="entry">getaistateex</dt>
 				<dd class="entry">
-					<p>getaisateの複数指定可能版。Reference0に何個目のグラフ用のデータを要求しているかが渡される(数値は0スタート)。<br />
-					グラフを2コだけ表示したい場合は、Reference0が0,1の時応答し、2以上なら値なし(204)を返すこと。<br />
-					フォーマットはgetaistateと同じ。</p>
+					<p>A multiple-specification version of getaistate, where Reference0 receives the number of graphs for which data are requested (numbers start from 0).<br />
+					To display only two graphs, respond when Reference0 is 0 or 1, and return no value (204) if Reference0 is 2 more more.<br />
+					The format is the same as getaistate.</p>
 					
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>何個目のグラフ用のデータか（ゼロベース）。0、1、2…</dd>
+						<dd>Data for the graph of the same number (0-based). 0, 1, 2...</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.4.26</li>
@@ -850,7 +855,7 @@
 			<dl id="legacyinterface">
 				<dt class="entry">legacyinterface</dt>
 				<dd class="entry">
-					<p>右クリックメニュー中の、レガシーインターフェースを使うか否か。<br />これに 0 を返すと、「ゴースト、シェル、バルーンの各切り替えボタン」が表示されなくなる。<br />materia582でのみ動作。</p>
+					<p>Whether or not to use the legacy interface in the right click menu.<br />If 0 is returned, the "ghost, shell, and balloon toggle buttons" will not be displayed.<br />Only works with materia582.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -858,23 +863,23 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>更新情報</h1>
+			<h1>Update Information</h1>
 			<dl id="other_homeurl_override">
 				<dt class="entry">other_homeurl_override</dt>
 				<dd class="entry">
-					<p>\![updateother]やシェル・バルーン同時更新機能において、更新対象の更新先URL(homeurl)を強制的に置き換える。
-					<br />置き換える必要がない場合は、204を返すか空文字列とすること。</p>
+					<p>Forcibly replace the update target url (homeurl) in \![updateother] and the shell/balloon simultaneous update function.
+					<br />If no replacement is needed, return 204 or an empty string.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>更新対象の種類(shell,balloon,headline,plugin,languageなど)</dd>
+						<dd>Type of update target (shell, balloon, headline, plugin, language, etc.)</dd>
 						<dt>Reference1</dt>
-						<dd>更新対象の名前(descript.txtのname)</dd>
+						<dd>Name of update target (name in descript.txt)</dd>
 						<dt>Reference2</dt>
-						<dd>更新対象の作者名(descript.txtのcraftmanname)</dd>
+						<dd>Name of the update target's author (craftmanname in descript.txt)</dd>
 						<dt>Reference3</dt>
-						<dd>更新対象のフォルダ名。</dd>
+						<dd>Folder name of the update target.</dd>
 						<dt>Reference4</dt>
-						<dd>本来更新に使用すべきだったhomeurl。</dd>
+						<dd>The homeurl originally meant to be used for updating.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.33</li>
@@ -883,11 +888,11 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>オーナードローメニュー画像</h1>
+			<h1>Owner Draw Menu Image</h1>
 			<dl id="menu.sidebar.bitmap.filename">
 				<dt class="entry">menu.sidebar.bitmap.filename</dt>
 				<dd class="entry">
-					<p>サイドバー表示画像ファイル名。SHIORIの位置からの相対パス。</p>
+					<p>Name of the sidebar display image file, relative to the location of the SHIORI.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -898,7 +903,7 @@
 			<dl id="menu.background.bitmap.filename">
 				<dt class="entry">menu.background.bitmap.filename</dt>
 				<dd class="entry">
-					<p>バックグラウンド表示画像ファイル名。SHIORIの位置からの相対パス。</p>
+					<p>Name of the background display image file, relative to the location of the SHIORI.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -909,7 +914,7 @@
 			<dl id="menu.foreground.bitmap.filename">
 				<dt class="entry">menu.foreground.bitmap.filename</dt>
 				<dd class="entry">
-					<p>フォアグラウンド表示画像ファイル名。SHIORIの位置からの相対パス。</p>
+					<p>Name of the foreground display image file, relative to the location of the SHIORI.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -919,11 +924,11 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>オーナードローメニュー文字色</h1>
+			<h1>Owner Draw Menu Text Color</h1>
 			<dl id="menu.background.font.color.r">
 				<dt class="entry">menu.background.font.color.r</dt>
 				<dd class="entry">
-					<p>バックグラウンド文字色赤(0～255)</p>
+					<p>Red value of the background text color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -934,7 +939,7 @@
 			<dl id="menu.background.font.color.g">
 				<dt class="entry">menu.background.font.color.g</dt>
 				<dd class="entry">
-					<p>バックグラウンド文字色緑(0～255)</p>
+					<p>Green value of the background text color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -945,7 +950,7 @@
 			<dl id="menu.background.font.color.b">
 				<dt class="entry">menu.background.font.color.b</dt>
 				<dd class="entry">
-					<p>バックグラウンド文字色青(0～255)</p>
+					<p>Blue value of the background text color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -956,7 +961,7 @@
 			<dl id="menu.foreground.font.color.r">
 				<dt class="entry">menu.foreground.font.color.r</dt>
 				<dd class="entry">
-					<p>フォアグラウンド文字色赤(0～255)</p>
+					<p>Red value of the foreground text color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -967,7 +972,7 @@
 			<dl id="menu.foreground.font.color.g">
 				<dt class="entry">menu.foreground.font.color.g</dt>
 				<dd class="entry">
-					<p>フォアグラウンド文字色緑(0～255)</p>
+					<p>Green value of the foreground text color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -978,7 +983,7 @@
 			<dl id="menu.foreground.font.color.b">
 				<dt class="entry">menu.foreground.font.color.b</dt>
 				<dd class="entry">
-					<p>フォアグラウド文字色青(0～255)</p>
+					<p>Blue value of the foreground text color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -989,7 +994,7 @@
 			<dl id="menu.separator.color.r">
 				<dt class="entry">menu.separator.color.r</dt>
 				<dd class="entry">
-					<p>セパレータ色赤(0～255)</p>
+					<p>Red value of the separator color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1000,7 +1005,7 @@
 			<dl id="menu.separator.color.g">
 				<dt class="entry">menu.separator.color.g</dt>
 				<dd class="entry">
-					<p>セパレータ色緑(0～255)</p>
+					<p>Green value of the separator color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1011,7 +1016,7 @@
 			<dl id="menu.separator.color.b">
 				<dt class="entry">menu.separator.color.b</dt>
 				<dd class="entry">
-					<p>セパレータ色青(0～255)</p>
+					<p>Blue value of the separator color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1022,7 +1027,7 @@
 			<dl id="menu.frame.color.r">
 				<dt class="entry">menu.frame.color.r</dt>
 				<dd class="entry">
-					<p>枠の色赤(0～255)</p>
+					<p>Red value of the frame color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.41</li>
 					</ul>
@@ -1031,7 +1036,7 @@
 			<dl id="menu.frame.color.g">
 				<dt class="entry">menu.frame.color.g</dt>
 				<dd class="entry">
-					<p>枠の色緑(0～255)</p>
+					<p>Green value of the frame color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.41</li>
 					</ul>
@@ -1040,7 +1045,7 @@
 			<dl id="menu.frame.color.b">
 				<dt class="entry">menu.frame.color.b</dt>
 				<dd class="entry">
-					<p>枠の色青(0～255)</p>
+					<p>Blue value of the frame color (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.41</li>
 					</ul>
@@ -1049,7 +1054,7 @@
 			<dl id="menu.disable.font.color.r">
 				<dt class="entry">menu.disable.font.color.r</dt>
 				<dd class="entry">
-					<p>選択不可文字色赤(0～255)</p>
+					<p>Red value of unselectable text (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1060,7 +1065,7 @@
 			<dl id="menu.disable.font.color.g">
 				<dt class="entry">menu.disable.font.color.g</dt>
 				<dd class="entry">
-					<p>選択不可文字色緑(0～255)</p>
+					<p>Green value of unselectable text (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1071,7 +1076,7 @@
 			<dl id="menu.disable.font.color.b">
 				<dt class="entry">menu.disable.font.color.b</dt>
 				<dd class="entry">
-					<p>選択不可文字色青(0～255)</p>
+					<p>Blue value of unselectable text (0–255).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1081,27 +1086,27 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>オーナードローメニュー項目表示</h1>
+			<h1>Owner Draw Menu Item Display</h1>
 			<div class="caption" id="caption_visible">
-				<p>以下項目名の「caption」の部分を「visible」に置き換えたものが、それぞれその項目の表示を制御するたのイベントとして存在する。<br>返却が1なら表示、0なら非表示（クリック出来なくなる）。</p>
+				<p>Regarding the following items: there are also events to control whether the item is displayed or not. The names are the same as the following events, but "caption" is replaced with "visible".<br>If the return is 1, it is displayed. If it is 0, it is not displayed (cannot be clicked).</p>
 			</div>
 		</section>
 		<section class="category">
-			<h1>オーナードローメニュー項目名</h1>
+			<h1>Owner Draw Menu Item Mame</h1>
 			<section class="caption" id="caption_menushortcut">
-				<h1>ショートカットキー</h1>
+				<h1>Shortcut keys</h1>
 				<p>
-					以下の項目名を取得するSHIORI Resource系イベントに対して返却する文字列中で、「&○」というような、&に続けた一字があった場合、○に当たる文字のキーがその項目のショートカットキーになります。
-					<br>例えば<a href="#portalrootbutton.caption">portalrootbutton.caption</a>に対して「きほん(&P)」と返すと、オーナードローメニュー展開中にpキーを押した場合にポータルの項目が選択されるようになります（表示上はPに下線が引かれる）。
+					In the string returned for the following SHIORI Resource events below that acquire item names, if there is a character preceded by &, such as "&*", the key of the character corresponding to the "*" will be the shortcut key for that item.
+					<br>For example, returning "Portal (&P)" for <a href="#portalrootbutton.caption">portalrootbutton.caption</a> will cause the portal item to be selected when the P key is pressed and the owner draw menu is open (P will be underlined on the display).
 				</p>
 				<p>
-					半角英数・記号が有効です。入力にshiftキーが必要なものも有効ですが、アルファベットの大文字・小文字は区別されません。
+					Half-width alphanumeric characters and symbols are valid. Those that require the shift key for input are also valid, but are not case sensitive.
 				</p>
 			</section>
 			<dl id="-">
 				<dt class="entry">-</dt>
 				<dd class="entry">
-					<p><em class="specsign">[変更不可]</em>Languageの名称。</p>
+					<p><em class="specsign">[Unchangeable]</em>Name of the language button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1119,7 +1124,7 @@
 			<dl id="addressbarbutton.caption">
 				<dt class="entry">addressbarbutton.caption</dt>
 				<dd class="entry">
-					<p>アドレスバーの名称。</p>
+					<p>Name of the address bar button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1128,7 +1133,7 @@
 			<dl id="alignrootbutton.caption">
 				<dt class="entry">alignrootbutton.caption</dt>
 				<dd class="entry">
-					<p>キャラクター自由移動の名称。</p>
+					<p>Name of the free character movement button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1137,7 +1142,7 @@
 			<dl id="alwaysstayontopbutton.caption">
 				<dt class="entry">alwaysstayontopbutton.caption</dt>
 				<dd class="entry">
-					<p>常に手前に表示の名称。</p>
+					<p>Name of the always display in foreground button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1148,7 +1153,7 @@
 			<dl id="alwaystrayiconvisiblebutton.caption">
 				<dt class="entry">alwaystrayiconvisiblebutton.caption</dt>
 				<dd class="entry">
-					<p>常にトレイアイコンを表示の名称。</p>
+					<p>Name of the always show tray icon button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1158,7 +1163,7 @@
 			<dl id="balloonhistorybutton.caption">
 				<dt class="entry">balloonhistorybutton.caption</dt>
 				<dd class="entry">
-					<p>(最近使ったもの)バルーンの名称。</p>
+					<p>The name of the (recently used) balloon button</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1167,7 +1172,7 @@
 			<dl id="balloonrootbutton.caption">
 				<dt class="entry">balloonrootbutton.caption</dt>
 				<dd class="entry">
-					<p>バルーンの名称。</p>
+					<p>Name of the balloon button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1178,7 +1183,7 @@
 			<dl id="biffallbutton.caption">
 				<dt class="entry">biffallbutton.caption</dt>
 				<dd class="entry">
-					<p>全アカウントの名称。</p>
+					<p>Name of the check all email accounts button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1187,7 +1192,7 @@
 			<dl id="biffbutton.caption">
 				<dt class="entry">biffbutton.caption</dt>
 				<dd class="entry">
-					<p>メールチェックの名称。</p>
+					<p>Name of the email check button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1198,7 +1203,7 @@
 			<dl id="calendarbutton.caption">
 				<dt class="entry">calendarbutton.caption</dt>
 				<dd class="entry">
-					<p>カレンダーの名称。</p>
+					<p>Name of the calendar button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1207,7 +1212,7 @@
 			<dl id="callghosthistorybutton.caption">
 				<dt class="entry">callghosthistorybutton.caption</dt>
 				<dd class="entry">
-					<p>(最近使ったもの)他のゴーストを呼ぶの名称。</p>
+					<p>Name of the call (recently used) ghost button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1216,7 +1221,7 @@
 			<dl id="callghostrootbutton.caption">
 				<dt class="entry">callghostrootbutton.caption</dt>
 				<dd class="entry">
-					<p>他のゴーストを呼ぶの名称。</p>
+					<p>Name of the call ghost button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1225,7 +1230,7 @@
 			<dl id="callsstpsendboxbutton.caption">
 				<dt class="entry">callsstpsendboxbutton.caption</dt>
 				<dd class="entry">
-					<p>SSTPボックスの名称。</p>
+					<p>Name of the SSTP Box button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1234,7 +1239,7 @@
 			<dl id="char*.recommendsites.caption">
 				<dt class="entry">char*.recommendsites.caption</dt>
 				<dd class="entry">
-					<p>\p[*]を使用した際のおすすめの名称。</p>
+					<p>Name of the recommended button for \p[*].</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1243,7 +1248,7 @@
 			<dl id="charsetbutton.caption">
 				<dt class="entry">charsetbutton.caption</dt>
 				<dd class="entry">
-					<p>文字コードの名称。</p>
+					<p>Name of the character code button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1252,7 +1257,7 @@
 			<dl id="closeballoonbutton.caption">
 				<dt class="entry">closeballoonbutton.caption</dt>
 				<dd class="entry">
-					<p>バルーンを消すの名称。</p>
+					<p>Name of the hide balloons button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1261,7 +1266,7 @@
 			<dl id="closebutton.caption">
 				<dt class="entry">closebutton.caption</dt>
 				<dd class="entry">
-					<p>終了の名称。</p>
+					<p>Name of the close button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1270,7 +1275,7 @@
 			<dl id="collisionvisiblebutton.caption">
 				<dt class="entry">collisionvisiblebutton.caption</dt>
 				<dd class="entry">
-					<p>頭／顔／胸当たり判定表示の名称。</p>
+					<p>Name of the head/face/chest collision display button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1279,7 +1284,7 @@
 			<dl id="configurationbutton.caption">
 				<dt class="entry">configurationbutton.caption</dt>
 				<dd class="entry">
-					<p>設定の名称。</p>
+					<p>Name of the configuration button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1290,7 +1295,7 @@
 			<dl id="configurationrootbutton.caption">
 				<dt class="entry">configurationrootbutton.caption</dt>
 				<dd class="entry">
-					<p>設定の名称。</p>
+					<p>Name of the configuration button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1299,7 +1304,7 @@
 			<dl id="debugballoonbutton.caption">
 				<dt class="entry">debugballoonbutton.caption</dt>
 				<dd class="entry">
-					<p>バルーンマーカー全表示の名称。</p>
+					<p>Name of the balloon marker display button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1308,7 +1313,7 @@
 			<dl id="definedsurfaceonlybutton.caption">
 				<dt class="entry">definedsurfaceonlybutton.caption</dt>
 				<dd class="entry">
-					<p>定義なしサーフェスを無視の名称。</p>
+					<p>Name of the ignore undefined surfaces button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1317,7 +1322,7 @@
 			<dl id="dressuprootbutton.caption">
 				<dt class="entry">dressuprootbutton.caption</dt>
 				<dd class="entry">
-					<p>着せ替えの名称。</p>
+					<p>Name of the dressup button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1327,7 +1332,7 @@
 			<dl id="duibutton.caption">
 				<dt class="entry">duibutton.caption</dt>
 				<dd class="entry">
-					<p>開発用インターフェイスの名称。</p>
+					<p>Name of the development interface button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1336,7 +1341,7 @@
 			<dl id="enableballoonmovebutton.caption">
 				<dt class="entry">enableballoonmovebutton.caption</dt>
 				<dd class="entry">
-					<p>バルーン位置補正有効の名称。</p>
+					<p>Name of the balloon move button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1345,7 +1350,7 @@
 			<dl id="firststaffbutton.caption">
 				<dt class="entry">firststaffbutton.caption</dt>
 				<dd class="entry">
-					<p>バージョン情報の名称。</p>
+					<p>Name of the version information button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1356,7 +1361,7 @@
 			<dl id="ghostexplorerbutton.caption">
 				<dt class="entry">ghostexplorerbutton.caption</dt>
 				<dd class="entry">
-					<p>ゴーストエクスプローラの名称。</p>
+					<p>Name of the ghost explorer button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1367,7 +1372,7 @@
 			<dl id="ghosthistorybutton.caption">
 				<dt class="entry">ghosthistorybutton.caption</dt>
 				<dd class="entry">
-					<p>(最近使ったもの)ゴーストに切り替えの名称。</p>
+					<p>Name of the change to (recently used) ghost button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1376,7 +1381,7 @@
 			<dl id="ghostinstallbutton.caption">
 				<dt class="entry">ghostinstallbutton.caption</dt>
 				<dd class="entry">
-					<p>ゴーストインストールの名称。</p>
+					<p>Name of the ghost installation button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
@@ -1385,7 +1390,7 @@
 			<dl id="ghostrootbutton.caption">
 				<dt class="entry">ghostrootbutton.caption</dt>
 				<dd class="entry">
-					<p>ゴーストの名称。</p>
+					<p>Name of the change to ghost button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1396,7 +1401,7 @@
 			<dl id="headlinesensehistorybutton.caption">
 				<dt class="entry">headlinesensehistorybutton.caption</dt>
 				<dd class="entry">
-					<p>(最近使ったもの)ヘッドラインの名称。</p>
+					<p>Name of the (recently used) headline button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1405,7 +1410,7 @@
 			<dl id="headlinesenserootbutton.caption">
 				<dt class="entry">headlinesenserootbutton.caption</dt>
 				<dd class="entry">
-					<p>ヘッドラインの名称。</p>
+					<p>Name of the headline button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1416,7 +1421,7 @@
 			<dl id="helpbutton.caption">
 				<dt class="entry">helpbutton.caption</dt>
 				<dd class="entry">
-					<p>説明書の名称。</p>
+					<p>Name of the help button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1425,7 +1430,7 @@
 			<dl id="hidebutton.caption">
 				<dt class="entry">hidebutton.caption</dt>
 				<dd class="entry">
-					<p>アイコン化の名称。</p>
+					<p>Name of the iconify button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1436,7 +1441,7 @@
 			<dl id="historyrootbutton.caption">
 				<dt class="entry">historyrootbutton.caption</dt>
 				<dd class="entry">
-					<p>最近使ったものの名称。</p>
+					<p>Name of the recently used items button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1445,7 +1450,7 @@
 			<dl id="inforootbutton.caption">
 				<dt class="entry">inforootbutton.caption</dt>
 				<dd class="entry">
-					<p>情報の名称。</p>
+					<p>Name of the information button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1454,7 +1459,7 @@
 			<dl id="leavepassivebutton.caption">
 				<dt class="entry">leavepassivebutton.caption</dt>
 				<dd class="entry">
-					<p>制限モード強制解除の名称。</p>
+					<p>Name of the forcibly leave restricted modes button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1463,7 +1468,7 @@
 			<dl id="messengerbutton.caption">
 				<dt class="entry">messengerbutton.caption</dt>
 				<dd class="entry">
-					<p>SSPメッセンジャの名称。</p>
+					<p>Name of the SSP Messenger button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1472,7 +1477,7 @@
 			<dl id="pluginhistorybutton.caption">
 				<dt class="entry">pluginhistorybutton.caption</dt>
 				<dd class="entry">
-					<p>(最近使ったもの)プラグインの名称。</p>
+					<p>Name of the (recently used) plugin button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1481,7 +1486,7 @@
 			<dl id="pluginrootbutton.caption">
 				<dt class="entry">pluginrootbutton.caption</dt>
 				<dd class="entry">
-					<p>プラグインの名称。</p>
+					<p>Name of the plugin button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1491,7 +1496,7 @@
 			<dl id="portalrootbutton.caption">
 				<dt class="entry">portalrootbutton.caption</dt>
 				<dd class="entry">
-					<p>ポータルの名称。</p>
+					<p>Name of the portal button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1502,7 +1507,7 @@
 			<dl id="purgeghostcachebutton.caption">
 				<dt class="entry">purgeghostcachebutton.caption</dt>
 				<dd class="entry">
-					<p>ゴーストキャッシュ開放の名称。</p>
+					<p>Name of the purge ghost cache button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1511,7 +1516,7 @@
 			<dl id="quitbutton.caption">
 				<dt class="entry">quitbutton.caption</dt>
 				<dd class="entry">
-					<p>全て終了の名称。</p>
+					<p>Name of the quit all button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1522,7 +1527,7 @@
 			<dl id="rateofuseballoonbutton.caption">
 				<dt class="entry">rateofuseballoonbutton.caption</dt>
 				<dd class="entry">
-					<p>バルーン - 個別の名称。</p>
+					<p>Balloon - individual names.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1531,7 +1536,7 @@
 			<dl id="rateofusebutton.caption">
 				<dt class="entry">rateofusebutton.caption</dt>
 				<dd class="entry">
-					<p>使用頻度表示の名称。</p>
+					<p>NAme of the rate of use button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1541,7 +1546,7 @@
 			<dl id="rateofuserootbutton.caption">
 				<dt class="entry">rateofuserootbutton.caption</dt>
 				<dd class="entry">
-					<p>使用率グラフの名称。</p>
+					<p>Name of the utilization graph.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1550,7 +1555,7 @@
 			<dl id="rateofusetotalbutton.caption">
 				<dt class="entry">rateofusetotalbutton.caption</dt>
 				<dd class="entry">
-					<p>ゴースト - 合算の名称。</p>
+					<p>Ghost - Name of the aggregate button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1559,7 +1564,7 @@
 			<dl id="readmebutton.caption">
 				<dt class="entry">readmebutton.caption</dt>
 				<dd class="entry">
-					<p>キャラクタについての名称。</p>
+					<p>Name of the about the character button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1569,7 +1574,7 @@
 			<dl id="termsbutton.caption">
 				<dt class="entry">termsbutton.caption</dt>
 				<dd class="entry">
-					<p>キャラクタの利用条件の名称。</p>
+					<p>Name of the character's terms of use button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1578,7 +1583,7 @@
 			<dl id="recommendrootbutton.caption">
 				<dt class="entry">recommendrootbutton.caption</dt>
 				<dd class="entry">
-					<p>おすすめの名称。</p>
+					<p>Name of the recommended button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1589,7 +1594,7 @@
 			<dl id="regionenabledbutton.caption">
 				<dt class="entry">regionenabledbutton.caption</dt>
 				<dd class="entry">
-					<p>リージョンを切らずに表示の名称。</p>
+					<p>Name of the display without clipping region button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1598,7 +1603,7 @@
 			<dl id="reloadinfobutton.caption">
 				<dt class="entry">reloadinfobutton.caption</dt>
 				<dd class="entry">
-					<p>動作情報再読み込みの名称。</p>
+					<p>Name of the reload operation information button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1607,7 +1612,7 @@
 			<dl id="resetballoonpositionbutton.caption">
 				<dt class="entry">resetballoonpositionbutton.caption</dt>
 				<dd class="entry">
-					<p>バルーン位置初期化の名称。</p>
+					<p>Name of the reset balloon position button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1616,7 +1621,7 @@
 			<dl id="resettodefaultbutton.caption">
 				<dt class="entry">resettodefaultbutton.caption</dt>
 				<dd class="entry">
-					<p>設定を標準に戻すの名称。</p>
+					<p>Name of the restore default settings button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1625,7 +1630,7 @@
 			<dl id="scriptlogbutton.caption">
 				<dt class="entry">scriptlogbutton.caption</dt>
 				<dd class="entry">
-					<p>スクリプトログの名称。</p>
+					<p>Name of the script log button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1634,7 +1639,7 @@
 			<dl id="shellrootbutton.caption">
 				<dt class="entry">shellrootbutton.caption</dt>
 				<dd class="entry">
-					<p>シェルの名称。</p>
+					<p>Name of the change shell button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1645,7 +1650,7 @@
 			<dl id="shellscaleotherbutton.caption">
 				<dt class="entry">shellscaleotherbutton.caption</dt>
 				<dd class="entry">
-					<p>その他の倍率の名称。</p>
+					<p>Name of the custom shell scaling button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1654,7 +1659,7 @@
 			<dl id="shellscalerootbutton.caption">
 				<dt class="entry">shellscalerootbutton.caption</dt>
 				<dd class="entry">
-					<p>シェル倍率の名称。</p>
+					<p>Name of the shell scaling button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1664,7 +1669,7 @@
 			<dl id="sntpbutton.caption">
 				<dt class="entry">sntpbutton.caption</dt>
 				<dd class="entry">
-					<p>時計合わせの名称。</p>
+					<p>Name of the clock adjustment button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1675,7 +1680,7 @@
 			<dl id="switchactivatewhentalkbutton.caption">
 				<dt class="entry">switchactivatewhentalkbutton.caption</dt>
 				<dd class="entry">
-					<p>喋る時は常時の名称。</p>
+					<p>Name of the activate when talking button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1684,7 +1689,7 @@
 			<dl id="switchactivatewhentalkexceptupdatebutton.caption">
 				<dt class="entry">switchactivatewhentalkexceptupdatebutton.caption</dt>
 				<dd class="entry">
-					<p>更新時以外の名称。</p>
+					<p>Name of the activate when talking except updating button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1693,7 +1698,7 @@
 			<dl id="switchautobiffbutton.caption">
 				<dt class="entry">switchautobiffbutton.caption</dt>
 				<dd class="entry">
-					<p>自動メールチェックの名称。</p>
+					<p>Name of the automatic email check button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1702,7 +1707,7 @@
 			<dl id="switchautoheadlinesensebutton.caption">
 				<dt class="entry">switchautoheadlinesensebutton.caption</dt>
 				<dd class="entry">
-					<p>自動ヘッドラインセンスの名称。</p>
+					<p>Name of the automatic headline sense button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1711,7 +1716,7 @@
 			<dl id="switchblacklistingbutton.caption">
 				<dt class="entry">switchblacklistingbutton.caption</dt>
 				<dd class="entry">
-					<p>ブラックリスティングの名称。</p>
+					<p>Name of the black list button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1720,7 +1725,7 @@
 			<dl id="switchcompatiblemodebutton.caption">
 				<dt class="entry">switchcompatiblemodebutton.caption</dt>
 				<dd class="entry">
-					<p>旧仕様をサポートの名称。</p>
+					<p>Name of the old specification support button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1729,7 +1734,7 @@
 			<dl id="switchconsolealwaysvisiblebutton.caption">
 				<dt class="entry">switchconsolealwaysvisiblebutton.caption</dt>
 				<dd class="entry">
-					<p>コンソール常時可視の名称。</p>
+					<p>Name of the console always visible button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1738,7 +1743,7 @@
 			<dl id="switchconsolevisiblebutton.caption">
 				<dt class="entry">switchconsolevisiblebutton.caption</dt>
 				<dd class="entry">
-					<p>コンソール不可視の名称。</p>
+					<p>Name of the console invisible button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1747,7 +1752,7 @@
 			<dl id="switchdeactivatebutton.caption">
 				<dt class="entry">switchdeactivatebutton.caption</dt>
 				<dd class="entry">
-					<p>喋り終わると裏へ沈むの名称。</p>
+					<p>Name of the deactivate when done talking button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1756,7 +1761,7 @@
 			<dl id="switchdontactivatebutton.caption">
 				<dt class="entry">switchdontactivatebutton.caption</dt>
 				<dd class="entry">
-					<p>常に出て来ないの名称。</p>
+					<p>Name of the don't activate button.</p> <!-- TODO: I have absolutely no idea what this is -->
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1765,7 +1770,7 @@
 			<dl id="switchdontforcealignbutton.caption">
 				<dt class="entry">switchdontforcealignbutton.caption</dt>
 				<dd class="entry">
-					<p>ゴースト設定の名称。</p>
+					<p>Name of the ghost setting button.</p> <!-- TODO: I have absolutely no idea what this is -->
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1774,7 +1779,7 @@
 			<dl id="switchduivisiblebutton.caption">
 				<dt class="entry">switchduivisiblebutton.caption</dt>
 				<dd class="entry">
-					<p>開発用インターフェースの名称。</p>
+					<p>Name of the development interface button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1783,7 +1788,7 @@
 			<dl id="switchforcealignfreebutton.caption">
 				<dt class="entry">switchforcealignfreebutton.caption</dt>
 				<dd class="entry">
-					<p>常に自由移動の名称。</p>
+					<p>Name of the always allow free movement button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1792,7 +1797,7 @@
 			<dl id="switchforcealignlimitbutton.caption">
 				<dt class="entry">switchforcealignlimitbutton.caption</dt>
 				<dd class="entry">
-					<p>常に制限の名称。</p>
+					<p>Name of the alignment limitation button.</p> <!-- TODO: I have absolutely no idea what this is -->
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1801,7 +1806,7 @@
 			<dl id="switchignoreserikomovebutton.caption">
 				<dt class="entry">switchignoreserikomovebutton.caption</dt>
 				<dd class="entry">
-					<p>SERIKO Moveを無視の名称。</p>
+					<p>Name of the ignore SERIKO move button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1810,7 +1815,7 @@
 			<dl id="switchlocalsstpbutton.caption">
 				<dt class="entry">switchlocalsstpbutton.caption</dt>
 				<dd class="entry">
-					<p>ローカルSSTPの名称。</p>
+					<p>Name of the local SSTP button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1819,7 +1824,7 @@
 			<dl id="switchmovetodefaultpositionbutton.caption">
 				<dt class="entry">switchmovetodefaultpositionbutton.caption</dt>
 				<dd class="entry">
-					<p>シェル位置初期化の名称。</p>
+					<p>Name of the reset shell position button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1829,7 +1834,7 @@
 			<dl id="switchproxybutton.caption">
 				<dt class="entry">switchproxybutton.caption</dt>
 				<dd class="entry">
-					<p>プロキシサーバを有効にするの名称。</p>
+					<p>Name of the enable proxy server button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1839,7 +1844,7 @@
 			<dl id="switchquietbutton.caption">
 				<dt class="entry">switchquietbutton.caption</dt>
 				<dd class="entry">
-					<p>サウンドを鳴らさないの名称。</p>
+					<p>Name of the mute sound button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1849,7 +1854,7 @@
 			<dl id="switchreloadbutton.caption">
 				<dt class="entry">switchreloadbutton.caption</dt>
 				<dd class="entry">
-					<p>ゴースト再読み込みの名称。</p>
+					<p>Name of the ghost reload button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1858,7 +1863,7 @@
 			<dl id="switchreloadtempghostbutton.caption">
 				<dt class="entry">switchreloadtempghostbutton.caption</dt>
 				<dd class="entry">
-					<p>一時起動ゴーストを保持の名称。</p>
+					<p>Name of the keep temporary ghost button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1867,7 +1872,7 @@
 			<dl id="switchremotesstpbutton.caption">
 				<dt class="entry">switchremotesstpbutton.caption</dt>
 				<dd class="entry">
-					<p>リモートSSTPの名称。</p>
+					<p>Name of the remote SSTP button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1876,7 +1881,7 @@
 			<dl id="switchrootbutton.caption">
 				<dt class="entry">switchrootbutton.caption</dt>
 				<dd class="entry">
-					<p>スイッチ類の名称。</p>
+					<p>Name of the switch button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 					</ul>
@@ -1885,7 +1890,7 @@
 			<dl id="switchtalkghostbutton.caption">
 				<dt class="entry">switchtalkghostbutton.caption</dt>
 				<dd class="entry">
-					<p>話すタイミングをゴースト任せの名称。</p>
+					<p>Name of the button that leaves the timing of speaking up to the ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1894,7 +1899,7 @@
 			<dl id="systeminfobutton.caption">
 				<dt class="entry">systeminfobutton.caption</dt>
 				<dd class="entry">
-					<p>システム情報を提出の名称。</p>
+					<p>Name of the system info output button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1903,7 +1908,7 @@
 			<dl id="updatebutton.caption">
 				<dt class="entry">updatebutton.caption</dt>
 				<dd class="entry">
-					<p>ネットワーク更新の名称。</p>
+					<p>Name of the network update button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1914,7 +1919,7 @@
 			<dl id="updatefmobutton.caption">
 				<dt class="entry">updatefmobutton.caption</dt>
 				<dd class="entry">
-					<p>FMOの整理／更新の名称。</p>
+					<p>Name of the FMO cleanup/update button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1923,7 +1928,7 @@
 			<dl id="updateplatformbutton.caption">
 				<dt class="entry">updateplatformbutton.caption</dt>
 				<dd class="entry">
-					<p>本体ネットワーク更新の名称。</p>
+					<p>Name of the baseware network update button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1933,7 +1938,7 @@
 			<dl id="utilityrootbutton.caption">
 				<dt class="entry">utilityrootbutton.caption</dt>
 				<dd class="entry">
-					<p>機能の名称。</p>
+					<p>Name of the utility menu button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1942,7 +1947,7 @@
 			<dl id="vanishbutton.caption">
 				<dt class="entry">vanishbutton.caption</dt>
 				<dd class="entry">
-					<p>消滅通告の名称。</p>
+					<p>Name of the uninstall button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1953,7 +1958,7 @@
 			<dl id="aistatebutton.caption">
 				<dt class="entry">aistatebutton.caption</dt>
 				<dd class="entry">
-					<p>AIグラフの名称。</p>
+					<p>Name of the AI Graph button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1962,7 +1967,7 @@
 			<dl id="dictationbutton.caption">
 				<dt class="entry">dictationbutton.caption</dt>
 				<dd class="entry">
-					<p>音声認識の名称。</p>
+					<p>Name of the speech recognition button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1971,7 +1976,7 @@
 			<dl id="texttospeechbutton.caption">
 				<dt class="entry">texttospeechbutton.caption</dt>
 				<dd class="entry">
-					<p>音声合成の名称。</p>
+					<p>Name of the speech synthesis button.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1979,24 +1984,24 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ツールチップ系</h1>
+			<h1>Tooltip System</h1>
 			<dl id="tooltip">
 				<dt class="entry">tooltip</dt>
 				<dd class="entry">
-					<p>シェルにおけるツールチップ内容の取得。<br />シェルのサーフェスにマウスカーソルが乗った際に通知。<br /><a href="descript_shell_surfaces.html#当たり判定名,表示内容">シェル側設定</a>がある場合はそちらが優先される。</p>
+					<p>Obtaining tooltip content in the shell.<br />Notified when the mouse cursor hovers over a shell surface.<br />If there is a <a href="descript_shell_surfaces.html#当たり判定名,表示内容">shell-side setting</a>, that takes precedence.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>マウスカーソルの x 座標（ローカル座標）</dd>
+						<dd>X-coordinate of the mouse cursor (local coordinates)</dd>
 						<dt>Reference1</dt>
-						<dd>マウスカーソルの y 座標（ローカル座標）</dd>
+						<dd>Y-coordinate of the mouse cursor (local coordinates)</dd>
 						<dt>Reference2</dt>
-						<dd>常に0。</dd>
+						<dd>Always 0.</dd>
 						<dt>Reference3</dt>
-						<dd>本体の場合は0、相方の場合は1。SSP/CROWでは2以降もある。</dd>
+						<dd>0 for the main character, 1 for the partner. In SSP/CROW, there are also 2 and beyond.</dd>
 						<dt>Reference4</dt>
-						<dd>当たり判定の識別子。</dd>
+						<dd>The collision identifier name.</dd>
 						<dt>Reference5</dt>
-						<dd>常に0。</dd>
+						<dd>Always 0.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2006,14 +2011,14 @@
 			<dl id="balloon_tooltip">
 				<dt class="entry">balloon_tooltip</dt>
 				<dd class="entry">
-					<p>バルーン選択肢上のツールチップ内容の取得。<br />選択肢にマウスカーソルが乗った際に通知。</p>
+					<p>Obtaining tooltip content for balloon choices.<br />Notified when the mouse cursor hovers over a choice.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>選択肢のテキスト（ラベル）。</dd>
+						<dd>Choice text (label).</dd>
 						<dt>Reference1</dt>
-						<dd>選択肢のID。</dd>
+						<dd>ID of choice.</dd>
 						<dt>Reference*</dt>
-						<dd>拡張情報(\qタグ内の3番目以降の引数)。</dd>
+						<dd>Extended information (the third and subsequent arguments in the \q tag).</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
