@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project プロパティシステム</title>
+<title>UKADOC Project Property System</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">プロパティシステム</h1>
+	<h1 id="page-title">Property System</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -131,11 +131,11 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>プロパティシステム</h1>
+		<h1>Property System</h1>
 		<section class="navigation-category">
-			<h1>プロパティシステム</h1>
+			<h1>Property System</h1>
 			<ul>
-				<li class="caption introduction"><a href="#introduction_propertysystem">プロパティシステム</a></li>
+				<li class="caption introduction"><a href="#introduction_propertysystem">Property System</a></li>
 			</ul>
 			<ul>
 				<li><a href="#system.year">system.year</a></li>
@@ -152,32 +152,32 @@
 				<li><a href="#system.memory">system.memory</a></li>
 				<li><a href="#baseware.version">baseware.version</a></li>
 				<li><a href="#baseware.name">baseware.name</a></li>
-				<li><a href="#ghostlist(ゴースト名/本体側名/パス).汎用プロパティ名">ghostlist(ゴースト名/本体側名/パス).汎用プロパティ名</a></li>
-				<li><a href="#ghostlist(ゴースト名/本体側名/パス).icon">ghostlist(ゴースト名/本体側名/パス).icon</a></li>
-				<li><a href="#ghostlist.index(ID).汎用プロパティ名">ghostlist.index(ID).汎用プロパティ名</a></li>
-				<li><a href="#ghostlist.current.汎用プロパティ名">ghostlist.current.汎用プロパティ名</a></li>
+				<li><a href="#ghostlist(Ghost name/main character name/path).Generic_property_name">ghostlist(Ghost name/main character name/path).Generic property name</a></li>
+				<li><a href="#ghostlist(Ghost name/main character name/path).icon">ghostlist(Ghost name/main character name/path).icon</a></li>
+				<li><a href="#ghostlist.index(ID).Generic_property_name">ghostlist.index(ID).Generic property name</a></li>
+				<li><a href="#ghostlist.current.Generic_property_name">ghostlist.current.Generic property name</a></li>
 				<li><a href="#ghostlist.count">ghostlist.count</a></li>
-				<li><a href="#activeghostlist(ゴースト名/本体側名/パス).汎用プロパティ名">activeghostlist(ゴースト名/本体側名/パス).汎用プロパティ名</a></li>
-				<li><a href="#activeghostlist.index(ID).汎用プロパティ名">activeghostlist.index(ID).汎用プロパティ名</a></li>
-				<li><a href="#activeghostlist.current.汎用プロパティ名">activeghostlist.current.汎用プロパティ名</a></li>
-				<li><a href="#currentghost.汎用プロパティ名">currentghost.汎用プロパティ名</a></li>
+				<li><a href="#activeghostlist(Ghost name/main character name/path).Generic_property_name">activeghostlist(Ghost name/main character name/path).Generic property name</a></li>
+				<li><a href="#activeghostlist.index(ID).Generic_property_name">activeghostlist.index(ID).Generic property name</a></li>
+				<li><a href="#activeghostlist.current.Generic_property_name">activeghostlist.current.Generic property name</a></li>
+				<li><a href="#currentghost.Generic_property_name">currentghost.Generic property name</a></li>
 				<li><a href="#currentghost.status">currentghost.status</a></li>
 				
-				<li><a href="#currentghost.shelllist.current.汎用プロパティ名">currentghost.shelllist.current.汎用プロパティ名</a></li>
-				<li><a href="#currentghost.shelllist(シェル名/パス).汎用プロパティ名">currentghost.shelllist(シェル名/パス).汎用プロパティ名</a></li>
-				<li><a href="#currentghost.shelllist.index(ID).汎用プロパティ名">currentghost.shelllist.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#currentghost.shelllist.current.Generic_property_name">currentghost.shelllist.current.Generic property name</a></li>
+				<li><a href="#currentghost.shelllist(Shell name/path).Generic_property_name">currentghost.shelllist(Shell name/path).Generic property name</a></li>
+				<li><a href="#currentghost.shelllist.index(ID).Generic_property_name">currentghost.shelllist.index(ID).Generic property name</a></li>
 				<li><a href="#currentghost.shelllist.count">currentghost.shelllist.count</a></li>
 				
 				<li><a href="#currentghost.scope(ID).surface.num">currentghost.scope(ID).surface.num</a></li>
 				<li><a href="#currentghost.scope(ID).seriko.defaultsurface">currentghost.scope(ID).seriko.defaultsurface</a></li>
-				<li><a href="#currentghost.scope(番号).surface.x">currentghost.scope(番号).surface.x</a></li>
-				<li><a href="#currentghost.scope(番号).surface.y">currentghost.scope(番号).surface.y</a></li>
-				<li><a href="#currentghost.scope(番号).x">currentghost.scope(番号).x</a></li>
-				<li><a href="#currentghost.scope(番号).y">currentghost.scope(番号).y</a></li>
-				<li><a href="#currentghost.scope(番号).rect">currentghost.scope(番号).rect</a></li>
+				<li><a href="#currentghost.scope(number).surface.x">currentghost.scope(number).surface.x</a></li>
+				<li><a href="#currentghost.scope(number).surface.y">currentghost.scope(number).surface.y</a></li>
+				<li><a href="#currentghost.scope(number).x">currentghost.scope(number).x</a></li>
+				<li><a href="#currentghost.scope(number).y">currentghost.scope(number).y</a></li>
+				<li><a href="#currentghost.scope(number).rect">currentghost.scope(number).rect</a></li>
 				<li><a href="#currentghost.scope.count">currentghost.scope.count</a></li>
 				
-				<li><a href="#currentghost.balloon.汎用プロパティ名">currentghost.balloon.汎用プロパティ名</a></li>
+				<li><a href="#currentghost.balloon.Generic_property_name">currentghost.balloon.Generic property name</a></li>
 				<li><a href="#currentghost.balloon.scope(ID).count">currentghost.balloon.scope(ID).count</a></li>
 				<li><a href="#currentghost.balloon.scope(ID).num">currentghost.balloon.scope(ID).num</a></li>
 				<li><a href="#currentghost.balloon.scope(ID).validwidth">currentghost.balloon.scope(ID).validwidth</a></li>
@@ -203,14 +203,14 @@
 				<li><a href="#currentghost.balloon.mousecursor.wait">currentghost.balloon.mousecursor.wait</a></li>
 				<li><a href="#currentghost.balloon.mousecursor.arrow">currentghost.balloon.mousecursor.arrow</a></li>
 
-				<li><a href="#currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).path">currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).path</a></li>
-				<li><a href="#currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).name">currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).name</a></li>
+				<li><a href="#currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).path">currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).path</a></li>
+				<li><a href="#currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).name">currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).name</a></li>
 				<li><a href="#currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).path">currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).path</a></li>
 				<li><a href="#currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).name">currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).name</a></li>
 				<li><a href="#currentghost.seriko.cursor.scope(ID).mouse????list.count">currentghost.seriko.cursor.scope(ID).mouse????list.count</a></li>
 				
-				<li><a href="#currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).text">currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).text</a></li>
-				<li><a href="#currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).name">currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).name</a></li>
+				<li><a href="#currentghost.seriko.tooltip.scope(ID).textlist(Collision name).text">currentghost.seriko.tooltip.scope(ID).textlist(Collision name).text</a></li>
+				<li><a href="#currentghost.seriko.tooltip.scope(ID).textlist(Collision name).name">currentghost.seriko.tooltip.scope(ID).textlist(Collision name).name</a></li>
 				<li><a href="#currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).text">currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).text</a></li>
 				<li><a href="#currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).name">currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).name</a></li>
 				<li><a href="#currentghost.seriko.tooltip.scope(ID).textlist.count">currentghost.seriko.tooltip.scope(ID).textlist.count</a></li>
@@ -218,42 +218,42 @@
 				<li><a href="#currentghost.seriko.surfacelist.all">currentghost.seriko.surfacelist.all</a></li>
 				<li><a href="#currentghost.seriko.surfacelist.defined">currentghost.seriko.surfacelist.defined</a></li>
 
-				<li><a href="#balloonlist(バルーン名/パス).汎用プロパティ名">balloonlist(バルーン名/パス).汎用プロパティ名</a></li>
-				<li><a href="#balloonlist.index(ID).汎用プロパティ名">balloonlist.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#balloonlist(Balloon name/path).Generic_property_name">balloonlist(Balloon name/path).Generic property name</a></li>
+				<li><a href="#balloonlist.index(ID).Generic_property_name">balloonlist.index(ID).Generic property name</a></li>
 				<li><a href="#balloonlist.count">balloonlist.count</a></li>
-				<li><a href="#headlinelist(ヘッドライン名/パス).汎用プロパティ名">headlinelist(ヘッドライン名/パス).汎用プロパティ名</a></li>
-				<li><a href="#headlinelist.index(ID).汎用プロパティ名">headlinelist.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#headlinelist(Headline name/path).Generic_property_name">headlinelist(Headline name/path).Generic property name</a></li>
+				<li><a href="#headlinelist.index(ID).Generic_property_name">headlinelist.index(ID).Generic property name</a></li>
 				<li><a href="#headlinelist.count">headlinelist.count</a></li>
-				<li><a href="#pluginlist(プラグイン名/パス/ID).汎用プロパティ名">pluginlist(プラグイン名/パス/ID).汎用プロパティ名</a></li>
-				<li><a href="#pluginlist.index(ID).汎用プロパティ名">pluginlist.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#pluginlist(Plugin name/path/ID).Generic_property_name">pluginlist(Plugin name/path/ID).Generic property name</a></li>
+				<li><a href="#pluginlist.index(ID).Generic_property_name">pluginlist.index(ID).Generic property name</a></li>
 				<li><a href="#pluginlist.count">pluginlist.count</a></li>
-				<li><a href="#history.ghost(ゴースト名/パス).汎用プロパティ名">history.ghost(ゴースト名/パス).汎用プロパティ名</a></li>
-				<li><a href="#history.ghost.index(ID).汎用プロパティ名">history.ghost.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#history.ghost(Ghost name/path).Generic_property_name">history.ghost(Ghost name/path).Generic property name</a></li>
+				<li><a href="#history.ghost.index(ID).Generic_property_name">history.ghost.index(ID).Generic property name</a></li>
 				<li><a href="#history.ghost.count">history.ghost.count</a></li>
-				<li><a href="#history.balloon(バルーン名/パス).汎用プロパティ名">history.balloon(バルーン名/パス).汎用プロパティ名</a></li>
-				<li><a href="#history.balloon.index(ID).汎用プロパティ名">history.balloon.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#history.balloon(Balloon name/path).Generic_property_name">history.balloon(Balloon name/path).Generic property name</a></li>
+				<li><a href="#history.balloon.index(ID).Generic_property_name">history.balloon.index(ID).Generic property name</a></li>
 				<li><a href="#history.balloon.count">history.balloon.count</a></li>
-				<li><a href="#history.headline(ヘッドライン名/パス).汎用プロパティ名">history.headline(ヘッドライン名/パス).汎用プロパティ名</a></li>
-				<li><a href="#history.headlinet.index(ID).汎用プロパティ名">history.headlinet.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#history.headline(Headline name/path).Generic_property_name">history.headline(Headline name/path).Generic property name</a></li>
+				<li><a href="#history.headlinet.index(ID).Generic_property_name">history.headlinet.index(ID).Generic property name</a></li>
 				<li><a href="#history.headline.count">history.headline.count</a></li>
-				<li><a href="#history.plugin(プラグイン名/パス/ID).汎用プロパティ名">history.plugin(プラグイン名/パス/ID).汎用プロパティ名</a></li>
-				<li><a href="#history.plugint.index(ID).汎用プロパティ名">history.plugint.index(ID).汎用プロパティ名</a></li>
+				<li><a href="#history.plugin(Plugin name/path/ID).Generic_property_name">history.plugin(Plugin name/path/ID).Generic property name</a></li>
+				<li><a href="#history.plugint.index(ID).Generic_property_name">history.plugint.index(ID).Generic property name</a></li>
 				<li><a href="#history.plugin.count">history.plugin.count</a></li>
-				<li><a href="#rateofuselist(名前).name">rateofuselist(名前).name</a></li>
-				<li><a href="#rateofuselist(名前).sakuraname">rateofuselist(名前).sakuraname</a></li>
-				<li><a href="#rateofuselist(名前).keroname">rateofuselist(名前).keroname</a></li>
-				<li><a href="#rateofuselist(名前).boottime">rateofuselist(名前).boottime</a></li>
-				<li><a href="#rateofuselist(名前).bootminute">rateofuselist(名前).bootminute</a></li>
-				<li><a href="#rateofuselist(名前).percent">rateofuselist(名前).percent</a></li>
-				<li><a href="#rateofuselist.index(順位).name">rateofuselist.index(順位).name</a></li>
-				<li><a href="#rateofuselist.index(順位).sakuraname">rateofuselist.index(順位).sakuraname</a></li>
-				<li><a href="#rateofuselist.index(順位).keroname">rateofuselist.index(順位).keroname</a></li>
-				<li><a href="#rateofuselist.index(順位).boottime">rateofuselist.index(順位).boottime</a></li>
-				<li><a href="#rateofuselist.index(順位).bootminute">rateofuselist.index(順位).bootminute</a></li>
-				<li><a href="#rateofuselist.index(順位).percent">rateofuselist.index(順位).percent</a></li>
+				<li><a href="#rateofuselist(name).name">rateofuselist(name).name</a></li>
+				<li><a href="#rateofuselist(name).sakuraname">rateofuselist(name).sakuraname</a></li>
+				<li><a href="#rateofuselist(name).keroname">rateofuselist(name).keroname</a></li>
+				<li><a href="#rateofuselist(name).boottime">rateofuselist(name).boottime</a></li>
+				<li><a href="#rateofuselist(name).bootminute">rateofuselist(name).bootminute</a></li>
+				<li><a href="#rateofuselist(name).percent">rateofuselist(name).percent</a></li>
+				<li><a href="#rateofuselist.index(position).name">rateofuselist.index(position).name</a></li>
+				<li><a href="#rateofuselist.index(position).sakuraname">rateofuselist.index(position).sakuraname</a></li>
+				<li><a href="#rateofuselist.index(position).keroname">rateofuselist.index(position).keroname</a></li>
+				<li><a href="#rateofuselist.index(position).boottime">rateofuselist.index(position).boottime</a></li>
+				<li><a href="#rateofuselist.index(position).bootminute">rateofuselist.index(position).bootminute</a></li>
+				<li><a href="#rateofuselist.index(position).percent">rateofuselist.index(position).percent</a></li>
 			</ul>
 			<section>
-				<h1>汎用プロパティ名</h1>
+				<h1>Generic property name</h1>
 				<ul>
 					<li><a href="#name">name</a></li>
 					<li><a href="#sakuraname">sakuraname</a></li>
@@ -266,7 +266,7 @@
 					<li><a href="#update_time">update_time</a></li>
 					<li><a href="#homeurl">homeurl</a></li>
 					<li><a href="#username">username</a></li>
-					<li><a href="#shiori.変数名">shiori.変数名</a></li>
+					<li><a href="#shiori.Variable name">shiori.Variable name</a></li>
 					<li><a href="#index">index</a></li>
 					<li><a href="#menu">menu</a></li>
 					<li><a href="#sakura.bind.menu">sakura.bind.menu</a></li>
@@ -277,40 +277,48 @@
 		</section>
 	</section>
 	<div class="categories">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<ul>
+				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
+				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/list_propertysystem.html">here</a>.</li>
+				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
+			</ul>
+		</section>
 		<section class="category">
-			<h1>プロパティシステム</h1>
+			<h1>Property System</h1>
 			<section class="caption introduction" id="introduction_propertysystem">
-				<h1>プロパティシステム</h1>
+				<h1>Property System</h1>
 				<section>
-					<h1>概要</h1>
-					<p>プロパティシステムはベースウェアが起動中に保持している各種パラメータに、ゴースト側からアクセスして読み書きする仕組みである。</p>
+					<h1>Summary</h1>
+					<p>The property system is a mechanism for the ghost side to access and read/write various parameters maintained by the baseware while running.</p>
 					<ul>
-						<li><a href="http://crow.aqrs.jp/devtest.html" target="_blank">参考:CROW テスト項目資料</a></li>
+						<li><a href="http://crow.aqrs.jp/devtest.html" target="_blank">Reference: CROW test item documentation</a></li>
 					</ul>
 				</section>
 				<section>
-					<h1>記述例</h1>
-					<p>プロパティシステムを利用するには、環境変数と通常のタグの二つの方法がある。<br />SAKURA Scriptおよび環境変数のプロパティシステムの項もそれぞれ参照のこと。</p>
+					<h1>Description example</h1>
+					<p>There are two ways to use the property system: environment variables and regular tags.<br />See also the SAKURA Script and environment variable property system sections, respectively.</p>
 					<dl>
-						<dt><a href="list_sakura_script.html#_property_取得内容_">%property[プロパティ名]</a></dt>
+						<dt><a href="list_sakura_script.html#_property_acquisition_details_">%property[Property name]</a></dt>
 						<dd>
-							環境変数としてプロパティを参照し、値を埋め込む。
-							<br />単に値をそのまま表示したい場合に用いる。
-							<br />以下はベースウェアの名前とバージョンをその場に埋め込む（表示する）。
+							References properties as environment variables and embeds the value.
+							<br />It is used to simply display the value as it is.
+							<br />The following embeds (displays) the name and version of the baseware on the fly.
 							<pre><code>%property[baseware.name] ver,%property[baseware.version]</code></pre>
 						</dd>
-						<dt><a href="list_sakura_script.html#_!_get,property,イベント名,プロパティ名,プロパティ名,..._">\![get,property,イベント名,プロパティ名]</a></dt>
+						<dt><a href="list_sakura_script.html#_!_get,property,(Event name),Property name,Property name,..._">\![get,property,(Event name),Property name]</a></dt>
 						<dd>
-							さくらスクリプトのタグによって任意名のSHIORI Eventを発生させ、そのReferenceを通じてプロパティを取得する。
-							<br />プロパティをもとにSHIORI側でアクションを起こしたい場合に用いる。
-							<br />以下はID「OnGetSakuraName」というSHIORI Eventを発生させ、そのreference0としてゴースト「Emily/Phase4.5」の相方側名（Teddy）を通知させる。
+							A SHIORI Event with an arbitrary name is generated by a Sakura Script tag, and the property is obtained through its reference.
+							<br />This is used when you want to take action on the SHIORI side based on a property.
+							<br />The following will generate a SHIORI Event with the ID "OnGetSakuraName", and notify the ghost "Emily/Phase4.5"'s side character name (Teddy) as its reference0.
 							<pre><code>\![get,property,OnGetSakuraName,ghostlist(Emily/Phase4.5).keroname]</code></pre>
 						</dd>
-						<dt><a href="list_sakura_script.html#_!_set,property,プロパティ名,値_">\![set,property,プロパティ名,値]</a></dt>
+						<dt><a href="list_sakura_script.html#_!_set,property,Property name,value_">\![set,property,Property name,(value)]</a></dt>
 						<dd>
-							さくらスクリプトのタグによってプロパティを書き替える。
-							<br />全てのプロパティに対して書き込みが許されているわけではないが、このページの項目で<em class="specsign">[SET有効]</em>とあるものはこのようにして操作可能。
-							<br />以下はシェル「ULTIMATE FORM」を、オーナードローメニューのシェル切り替えメニューから隠す例。
+							Rewrites the property according to the Sakura Script tag.
+							<br />Not all properties are allowed to be written, but the items on this page that are marked with <em class="specsign">[SET enabled]</em> can be manipulated in this way.
+							<br />The following is an example of hiding the shell "ULTIMATE FORM" from the shell switching menu of the owner draw menu.
 							<pre><code>\![set,property,currentghost.shelllist(ULTIMATE FORM).menu,hidden]</code></pre>
 						</dd>
 					</dl>
@@ -319,7 +327,7 @@
 			<dl id="system.year">
 				<dt class="entry">system.year</dt>
 				<dd class="entry">
-					<p>現在年。</p>
+					<p>Current year</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -329,7 +337,7 @@
 			<dl id="system.month">
 				<dt class="entry">system.month</dt>
 				<dd class="entry">
-					<p>現在月。</p>
+					<p>Current month.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -339,7 +347,7 @@
 			<dl id="system.day">
 				<dt class="entry">system.day</dt>
 				<dd class="entry">
-					<p>現在日。</p>
+					<p>Current day</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -349,7 +357,7 @@
 			<dl id="system.hour">
 				<dt class="entry">system.hour</dt>
 				<dd class="entry">
-					<p>現在時。</p>
+					<p>Current hour</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -359,7 +367,7 @@
 			<dl id="system.minute">
 				<dt class="entry">system.minute</dt>
 				<dd class="entry">
-					<p>現在分。</p>
+					<p>Current minute.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -369,7 +377,7 @@
 			<dl id="system.second">
 				<dt class="entry">system.second</dt>
 				<dd class="entry">
-					<p>現在秒。</p>
+					<p>Current second.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -379,7 +387,7 @@
 			<dl id="system.millisecond">
 				<dt class="entry">system.millisecond</dt>
 				<dd class="entry">
-					<p>現在ミリ秒。</p>
+					<p>Current millisecond.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -388,7 +396,7 @@
 			<dl id="system.dayofweek">
 				<dt class="entry">system.dayofweek</dt>
 				<dd class="entry">
-					<p>現在曜日。</p>
+					<p>Current day of the week.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -397,7 +405,7 @@
 			<dl id="system.cursor.pos">
 				<dt class="entry">system.cursor.pos</dt>
 				<dd class="entry">
-					<p>現在のカーソルの位置。カンマ区切りで X,Y。単位ピクセル。</p>
+					<p>Current cursor position. X, Y, separated by commas, in pixels.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.43</li>
 					</ul>
@@ -406,20 +414,20 @@
 			<dl id="system.os">
 				<dt class="entry">system.os.(id)</dt>
 				<dd class="entry">
-					<p>起動中のOSの情報。(id)に入る文字列は以下の通り。</p>
+					<p>Information on the currently running operating system. The string that goes into (id) is as follows.</p>
 					<dl>
 						<dt>type</dt>
-						<dd>OSの種類。SSPの場合Windows固定。</dd>
+						<dd>OS type, fixed to Windows in SSP.</dd>
 						<dt>name</dt>
-						<dd>OSの名前。例：Windows 11 22H2</dd>
+						<dd>Name of the operating system. Example: Windows 11 22H2</dd>
 						<dt>version</dt>
-						<dd>OSのカーネルバージョン。例：10.0。OSの呼称と食い違う場合がある点に注意。例：Windows 10も11も10.0になる。</dd>
+						<dd>The kernel version of the OS. Example: 10.0. Note that the OS name may be different from the OS designation. For example, Windows 10 and 11 are both 10.0.</dd>
 						<dt>build</dt>
-						<dd>OSのビルド番号。例：22621</dd>
+						<dd>OS build number. Example: 22621</dd>
 						<dt>parenttype</dt>
-						<dd>何らかの互換OS/互換レイヤーで動作している場合はその種類。無い場合は空文字列。今のところ Wine か ReactOS 。</dd>
+						<dd>If running on a compatible OS/compatibility layer, what kind. Empty string if none. Currently Wine or ReactOS.</dd>
 						<dt>parentname</dt>
-						<dd>互換OS/互換レイヤーのホスト側（親側）OSの名前。無い場合は空文字列。例：Linux 5.19.0-23-generic</dd>
+						<dd>Name of the host (parent) OS of the compatible OS/compatibility layer. If not available, an empty string. Example: Linux 5.19.0-23-generic</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.26/27</li>
@@ -429,20 +437,20 @@
 			<dl id="system.cpu">
 				<dt class="entry">system.cpu.(id)</dt>
 				<dd class="entry">
-					<p>起動中の環境のCPUの情報。(id)に入る文字列は以下の通り。</p>
+					<p>Information about the CPU of the environment in which the system is running. The string that goes into (id) is as follows.</p>
 					<dl>
 						<dt>load</dt>
-						<dd>負荷率（単位％、整数、適宜分単位程度で移動平均を計算して均されているもの）</dd>
+						<dd>Load factor (Unit%, whole numbers, averaged by calculated moving averages in units of minutes).</dd>
 						<dt>num</dt>
-						<dd>OSが認識している全コア数</dd>
+						<dd>Total number of cores recognized by the OS.</dd>
 						<dt>vendor</dt>
-						<dd>ベンダー名。例：GenuineIntel</dd>
+						<dd>Vendor name. Example: GenuineIntel</dd>
 						<dt>name</dt>
-						<dd>名前。例：11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz</dd>
+						<dd>Name. Example: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz</dd>
 						<dt>clock</dt>
-						<dd>クロック周波数</dd>
+						<dd>Clock frequency.</dd>
 						<dt>features</dt>
-						<dd>解釈可能な拡張命令のリスト(半角空白区切り)。例：MMX SSE SSE2 SSE3</dd>
+						<dd>List of interpretable extension instructions (separated by spaces). Example: MMX SSE SSE2 SSE3</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.26</li>
@@ -452,14 +460,14 @@
 			<dl id="system.memory">
 				<dt class="entry">system.memory.(id)</dt>
 				<dd class="entry">
-					<p>起動中の環境の物理メモリの情報。(id)に入る文字列は以下の通り。</p>
+					<p>Information on the physical memory of the environment in which the system is running. The string that goes into (id) is as follows.</p>
 					<dl>
 						<dt>load</dt>
-						<dd>使用率（単位％、整数、適宜分単位程度で移動平均を計算して均されているもの）</dd>
+						<dd>Utilization rate (Unit%, whole numbers, averaged by calculated moving averages in units of minutes).</dd>
 						<dt>phyt</dt>
-						<dd>全物理メモリ量(MB)</dd>
+						<dd>Total physical memory (MB).</dd>
 						<dt>phya</dt>
-						<dd>空き物理メモリ量(MB)</dd>
+						<dd>Amount of free physical memory (MB).</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.26</li>
@@ -469,7 +477,7 @@
 			<dl id="baseware.version">
 				<dt class="entry">baseware.version</dt>
 				<dd class="entry">
-					<p>ベースウェアのバージョン情報。</p>
+					<p>Baseware version information.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -479,7 +487,7 @@
 			<dl id="baseware.name">
 				<dt class="entry">baseware.name</dt>
 				<dd class="entry">
-					<p>ベースウェア名。</p>
+					<p>Baseware name.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -489,82 +497,82 @@
 			<dl id="ghostlist.count">
 				<dt class="entry">ghostlist.count</dt>
 				<dd class="entry">
-					<p>インストールされているゴーストの数。</p>
+					<p>Number of installed ghosts.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="ghostlist(ゴースト名/本体側名/パス).汎用プロパティ名">
-				<dt class="entry">ghostlist(ゴースト名/本体側名/パス).汎用プロパティ名</dt>
+			<dl id="ghostlist(Ghost name/main character name/path).Generic_property_name">
+				<dt class="entry">ghostlist(Ghost name/main character name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>そのゴーストのゴースト名（name）、本体側名（sakuraname）、パスのいずれかから情報を取得。</p>
+					<p>Information is obtained from either the ghost name (name), main character name (sakuraname), or the path of that ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="ghostlist(ゴースト名/本体側名/パス).icon">
-				<dt class="entry">ghostlist(ゴースト名/本体側名/パス).icon</dt>
+			<dl id="ghostlist(Ghost name/main character name/path).icon">
+				<dt class="entry">ghostlist(Ghost name/main character name/path).icon</dt>
 				<dd class="entry">
-					<p>そのゴーストのアイコンのパス。</p>
+					<p>The path of the ghost icon.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="ghostlist.index(ID).汎用プロパティ名">
-				<dt class="entry">ghostlist.index(ID).汎用プロパティ名</dt>
+			<dl id="ghostlist.index(ID).Generic_property_name">
+				<dt class="entry">ghostlist.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>リスト内のIDの位置のゴーストから情報を取得。</p>
+					<p>Information is obtained from the ghost at the position of the ID in the list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="ghostlist.current.汎用プロパティ名">
-				<dt class="entry">ghostlist.current.汎用プロパティ名</dt>
+			<dl id="ghostlist.current.Generic_property_name">
+				<dt class="entry">ghostlist.current.Generic property name</dt>
 				<dd class="entry">
-					<p>リスト内の現在の位置のゴーストから情報を取得。</p>
+					<p>Information is obtained from the ghost at the current location in the list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="activeghostlist(ゴースト名/本体側名/パス).汎用プロパティ名">
-				<dt class="entry">activeghostlist(ゴースト名/本体側名/パス).汎用プロパティ名</dt>
+			<dl id="activeghostlist(Ghost name/main character name/path).Generic_property_name">
+				<dt class="entry">activeghostlist(Ghost name/main character name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>起動中ゴーストのゴースト名（name）、本体側名（sakuraname）、パスのいずれかから情報を取得。</p>
+					<p>Information is obtained from either the ghost name (name), main character name (sakuraname), or the path of the running ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="activeghostlist.index(ID).汎用プロパティ名">
-				<dt class="entry">activeghostlist.index(ID).汎用プロパティ名</dt>
+			<dl id="activeghostlist.index(ID).Generic_property_name">
+				<dt class="entry">activeghostlist.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>起動中ゴーストのリスト内のID位置のゴーストから情報を取得。</p>
+					<p>Information is obtained from the ghost at the position of the ID in the list of running ghosts.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="activeghostlist.current.汎用プロパティ名">
-				<dt class="entry">activeghostlist.current.汎用プロパティ名</dt>
+			<dl id="activeghostlist.current.Generic_property_name">
+				<dt class="entry">activeghostlist.current.Generic property name</dt>
 				<dd class="entry">
-					<p>起動中ゴーストの現在のゴーストから情報を取得。</p>
+					<p>Information is obtained from the current ghost of the list of running ghosts.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.汎用プロパティ名">
-				<dt class="entry">currentghost.汎用プロパティ名</dt>
+			<dl id="currentghost.Generic_property_name">
+				<dt class="entry">currentghost.Generic property name</dt>
 				<dd class="entry">
-					<p>現在のゴーストから情報を取得。</p>
+					<p>Information is obtained from the current ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -573,68 +581,68 @@
 			<dl id="currentghost.status">
 				<dt class="entry">currentghost.status</dt>
 				<dd class="entry">
-					<p>現在のゴーストの状態（SHIORI Statusヘッダ）。</p>
+					<p>Current ghost status (SHIORI Status header).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
 			<div class="caption">
-				<h1>※SHIORI Statusヘッダ</h1>
-				<p>複数がカンマ(,)区切りで返ったり、空が返る場合もある</p>
+				<h1>※SHIORI Status header</h1>
+				<p>Multiple items may be returned separated by commas (,). It may also be returned empty.</p>
 				<dl>
 					<dt>talking</dt>
-					<dd>現在スクリプトを実行中（喋り中）。</dd>
+					<dd>A script is currently running (talking).</dd>
 					<dt>passive</dt>
-					<dd>passiveモード中（\![enter,passivemode]）。</dd>
+					<dd>In passive mode (\![enter,passivemode]).</dd>
 					<dt>induction</dt>
-					<dd>inductionモード中（\![enter,inductionmode]）。</dd>
+					<dd>In induction mode (\![enter,inductionmode]).</dd>
 					<dt>timecritical</dt>
-					<dd>\tタグでロック中。</dd>
+					<dd>Locked with \t tag.</dd>
 					<dt>nouserbreak</dt>
-					<dd>nouserbreakモード中（\![enter,nouserbreak]）。</dd>
+					<dd>In nouserbreak mode (\![enter,nouserbreak]).</dd>
 					<dt>online</dt>
-					<dd>オンライン中（ヘッドラインデータ取得中や時刻あわせ中、自分自身のネットワーク更新中など）。</dd>
+					<dd>While online (getting headline data, adjusting the time, updating itself via network, etc.)</dd>
 					<dt>choosing</dt>
-					<dd>\q、\__qタグによる選択肢表示中。</dd>
+					<dd>Displaying choices with \q or \__q tags.</dd>
 					<dt>minimizing</dt>
-					<dd>最小化中（タスクトレイアイコン化中）。</dd>
-					<dt>opening(種類)</dt>
-					<dd>入力ウィンドウ展開中。<br />種類の部分にはcommunicate,input,teach,dialogのうち、開いている物がスラッシュ区切りで入る。<br />例：opening(input/dialog)<br />※SSP 2.3.97よりスラッシュ。それ以前はカンマ区切り</dd>
-					<dt>balloon(情報)</dt>
-					<dd>バルーン表示中。<br />情報の部分には(キャラID)=(バルーンID)の形式で表示中のバルーンが列挙される。バルーンIDは左右の区別はない(常に偶数)。<br />例：balloon(0=2/1=0)<br />※SSP 2.3.97よりスラッシュ。それ以前はカンマ区切り</dd>
+					<dd>Minimized (during task tray iconization).</dd>
+					<dt>opening(type)</dt>
+					<dd>Input window is open.<br />The type part contains the open items; communicate, input, teach, and dialog, separated by a slash.<br />Example: opening(input/dialog)<br />※Separated by a slash since SSP 2.3.97. Prior to that, it was comma delimited.</dd>
+					<dt>balloon(information)</dt>
+					<dd>Balloon display in progress.<br />In the information section, the currently displayed balloon is listed in the format (character ID)=(balloon ID). There is no distinction between left and right balloon IDs (it is always an even number).<br />Example: balloon(0=2/1=0)<br />※Separated by a slash since SSP 2.3.97. Prior to that, it was comma delimited.</dd>
 				</dl>
-				<p>※Statusヘッダは、SHIORI毎に以下のようにも取得出来ます。</p>
+				<p>※Status headers can also be obtained for each SHIORI as follows.</p>
 				<ul>
-					<li>華和梨……System.Request.Statusエントリ</li>
-					<li>YAYA……status変数内</li>
-					<li>里々……情報取得変数（Status）</li>
+					<li>Kawari……System.Request.Status entry</li>
+					<li>YAYA……status variable</li>
+					<li>Satori……Information acquisition variable (Status)</li>
 				</ul>
 			</div>
-			<dl id="currentghost.shelllist(シェル名/パス).汎用プロパティ名">
-				<dt class="entry">currentghost.shelllist(シェル名/パス).汎用プロパティ名</dt>
+			<dl id="currentghost.shelllist(Shell name/path).Generic_property_name">
+				<dt class="entry">currentghost.shelllist(Shell name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>現在のゴーストのシェル名もしくはパスから情報を取得。</p>
+					<p>Information is obtained from the current ghost's shell name or path.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.shelllist.index(ID).汎用プロパティ名">
-				<dt class="entry">currentghost.shelllist.index(ID).汎用プロパティ名</dt>
+			<dl id="currentghost.shelllist.index(ID).Generic_property_name">
+				<dt class="entry">currentghost.shelllist.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>現在のゴーストのリスト内ID位置のシェルから情報を取得。</p>
+					<p>Information is obtained from the shell of the ghost at the current location in the list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.shelllist.current.汎用プロパティ名">
-				<dt class="entry">currentghost.shelllist.current.汎用プロパティ名</dt>
+			<dl id="currentghost.shelllist.current.Generic_property_name">
+				<dt class="entry">currentghost.shelllist.current.Generic property name</dt>
 				<dd class="entry">
-					<p>現在のゴーストの現在のシェルから情報を取得。</p>
+					<p>Information is obtained from the current shell of the current ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -644,7 +652,7 @@
 			<dl id="currentghost.shelllist.count">
 				<dt class="entry">currentghost.shelllist.count</dt>
 				<dd class="entry">
-					<p>インストールされているシェルの数。</p>
+					<p>Number of installed shells.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -654,7 +662,7 @@
 			<dl id="currentghost.scope.count">
 				<dt class="entry">currentghost.scope.count</dt>
 				<dd class="entry">
-					<p>現在有効な最大キャラ数。</p>
+					<p>Maximum number of characters currently active.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -663,7 +671,7 @@
 			<dl id="currentghost.scope(ID).surface.num">
 				<dt class="entry">currentghost.scope(ID).surface.num</dt>
 				<dd class="entry">
-					<p>現在のゴーストのスコープIDのサーフェスID。</p>
+					<p>Surface ID of the specified scope ID of the current ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -673,61 +681,61 @@
 			<dl id="currentghost.scope(ID).seriko.defaultsurface">
 				<dt class="entry">currentghost.scope(ID).seriko.defaultsurface</dt>
 				<dd class="entry">
-					<p>現在のゴーストのデフォルトサーフェス。</p>
+					<p>Current ghost default surface.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.scope(番号).surface.x">
-				<dt class="entry">currentghost.scope(番号).surface.x</dt>
+			<dl id="currentghost.scope(number).surface.x">
+				<dt class="entry">currentghost.scope(number).surface.x</dt>
 				<dd class="entry">
-					<p>現在のゴーストのスコープIDのサーフェスのX座標。</p>
+					<p>X coordinate of the surface for the specified scope ID of the current ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.scope(番号).surface.y">
-				<dt class="entry">currentghost.scope(番号).surface.y</dt>
+			<dl id="currentghost.scope(number).surface.y">
+				<dt class="entry">currentghost.scope(number).surface.y</dt>
 				<dd class="entry">
-					<p>現在のゴーストのスコープIDのサーフェスY座標。</p>
+					<p>Y coordinate of the surface for the specified scope ID of the current ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.scope(番号).x">
-				<dt class="entry">currentghost.scope(番号).x</dt>
+			<dl id="currentghost.scope(number).x">
+				<dt class="entry">currentghost.scope(number).x</dt>
 				<dd class="entry">
-					<p>現在のゴーストのスコープIDのサーフェスの基準点のスクリーンにおけるX座標。<br />マルチモニタの場合、プライマリモニタ左上を原点とする仮想デスクトップ全体での位置。<br />基準点は通常サーフェス中央下。GHOSTおよびSHELLのdescript.txtの、<a href="descript_shell.html#sakura.defaultx,X座標">sakura(kero、char*).defaultx</a>で設定可能。</p>
+					<p>X coordinate on the screen of the surface's reference point for the specified scope ID of the current ghost.<br />In the case of multiple monitors, it will be the position in the entire virtual desktop with the origin at the top left of the primary monitor.<br />The reference point is usually the bottom center of the surface. It is configurable with <a href="descript_shell.html#sakura.defaultx,X座標">sakura(kero, char*).defaultx</a> in the ghost and shell's descript.txt file.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.scope(番号).y">
-				<dt class="entry">currentghost.scope(番号).y</dt>
+			<dl id="currentghost.scope(number).y">
+				<dt class="entry">currentghost.scope(number).y</dt>
 				<dd class="entry">
-					<p>現在のゴーストのスコープIDのサーフェスの基準点のスクリーンにおけるY座標。<br />マルチモニタの場合、プライマリモニタ左上を原点とする仮想デスクトップ全体での位置。<br />基準点は通常サーフェス中央下。GHOSTおよびSHELLのdescript.txtの、<a href="descript_shell.html#sakura.defaulty,Y座標">sakura(kero、char*).defaulty</a>で設定可能。</p>
+					<p>Y coordinate on the screen of the surface's reference point for the specified scope ID of the current ghost.<br />In the case of multiple monitors, it will be the position in the entire virtual desktop with the origin at the top left of the primary monitor.<br />The reference point is usually the bottom center of the surface. It is configurable with <a href="descript_shell.html#sakura.defaulty,Y座標">sakura(kero、char*).defaulty</a> in the ghost and shell's descript.txt file.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.scope(番号).rect">
-				<dt class="entry">currentghost.scope(番号).rect</dt>
+			<dl id="currentghost.scope(number).rect">
+				<dt class="entry">currentghost.scope(number).rect</dt>
 				<dd class="entry">
-					<p>現在のゴーストのスコープIDのウインドウ矩形座標(左,上,右,下)。</p>
+					<p>Window rectangle coordinates (left, top, right, bottom) of the specified scope ID of the current ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="currentghost.balloon.汎用プロパティ名">
-				<dt class="entry">currentghost.balloon.汎用プロパティ名</dt>
+			<dl id="currentghost.balloon.Generic_property_name">
+				<dt class="entry">currentghost.balloon.Generic property name</dt>
 				<dd class="entry">
-					<p>現在のゴーストのバルーンから情報を取得。</p>
+					<p>Information is obtained from the current ghost's balloon.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -736,7 +744,7 @@
 			<dl id="currentghost.balloon.count">
 				<dt class="entry">currentghost.balloon.count</dt>
 				<dd class="entry">
-					<p>現在のゴーストのバルーンの数。</p>
+					<p>Number of balloons in the current ghost.</p> <!-- TODO: I don't know what this means! It won't work for me so I can't check, unfortunately -->
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -746,12 +754,12 @@
 			<dl id="currentghost.mousecursor">
 				<dt class="entry">currentghost.mousecursor</dt>
 				<dd class="entry">
-					<p>ゴーストで操作できる部分を示すカーソルファイル名（指先）
-					<br />以降currentghost.mousecursor / currentghost.balloon.mousecursor で始まるプロパティに共通：
-					<br />相対パス指定はシェル→ゴーストフォルダ内の順で探索する。
-					<br />空文字列を指定してSETすると、定義削除扱いとなり、set前の表示に戻すことができる。
-					<br />カーソル指定は<a href="descript_shell_surfaces.html#introduction_cursorbrace">surfaces.txtのcursorセクション</a>と同じ指定が可能。
-					<br /><em class="specsign">[SET有効]</em></p>
+					<p>Cursor name (pointing) indicating areas that can be manipulated on the ghost.
+					<br />Common to all properties beginning with currentghost.mousecursor / currentghost.balloon.mousecursor hereafer:
+					<br />Relative path specification searches in the order of shell → ghost folder.
+					<br />If an empty string is specified and SET, the definition is deleted, and the display can be restored to its pre-SET state.
+					<br />The cursor specification can be the same as the <a href="descript_shell_surfaces.html#introduction_cursorbrace">cursor section of surfaces.txt</a>.
+					<br /><em class="specsign">[SET enabled]</em></p>
 					
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
@@ -761,7 +769,7 @@
 			<dl id="currentghost.mousecursor.text">
 				<dt class="entry">currentghost.mousecursor.text</dt>
 				<dd class="entry">
-					<p>入力ボックスのカーソルファイル名</p>
+					<p>Input box cursor file name.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -770,7 +778,7 @@
 			<dl id="currentghost.mousecursor.wait">
 				<dt class="entry">currentghost.mousecursor.wait</dt>
 				<dd class="entry">
-					<p>なにか処理中で応答できないときに使用するカーソル(腕時計型)のファイル名。</p>
+					<p>File name of the cursor (loading) to be used when something is being processed and it cannot respond.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -779,7 +787,7 @@
 			<dl id="#currentghost.mousecursor.hand">
 				<dt class="entry">currentghost.mousecursor.hand</dt>
 				<dd class="entry">
-					<p>ゴーストの掴める部分を示すカーソル（手を開いた形）のファイル名。</p>
+					<p>Filename of the cursor (open hand) indicating areas of the ghost that can be grapsed.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -788,7 +796,7 @@
 			<dl id="#currentghost.mousecursor.grip">
 				<dt class="entry">currentghost.mousecursor.grip</dt>
 				<dd class="entry">
-					<p>ゴーストの掴める部分を掴んだ状態を示すカーソル（手を握った形）のファイル名。</p>
+					<p>Filename for the cursor (grasping hand) that shows grasping the areas of the ghost that can be grasped.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -797,7 +805,7 @@
 			<dl id="#currentghost.mousecursor.arrow">
 				<dt class="entry">currentghost.mousecursor.arrow</dt>
 				<dd class="entry">
-					<p>ゴーストで操作できない部分を示すカーソルファイル名（矢印）</p>
+					<p>Filename of the cursor (arrow) that shows areas that cannot be manipulated on the ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -807,7 +815,7 @@
 			<dl id="currentghost.balloon.mousecursor">
 				<dt class="entry">currentghost.balloon.mousecursor</dt>
 				<dd class="entry">
-					<p>バルーンで操作できる部分を示すカーソルファイル名（指先）</p>
+					<p>Filename of the cursor (pointing) indicating areas of the balloon that can be manipulated.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -816,7 +824,7 @@
 			<dl id="currentghost.balloon.mousecursor.text">
 				<dt class="entry">currentghost.balloon.mousecursor.text</dt>
 				<dd class="entry">
-					<p>バルーンの入力ボックスのカーソルファイル名</p>
+					<p>Filename of the cursor for the balloon input box.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -825,7 +833,7 @@
 			<dl id="currentghost.balloon.mousecursor.wait">
 				<dt class="entry">currentghost.balloon.mousecursor.wait</dt>
 				<dd class="entry">
-					<p>バルーンでなにか処理中で応答できないときに使用するカーソル(腕時計型)のファイル名。</p>
+					<p>Filename of the cursor (loading) to be used when something is being processed and it cannot respond.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
@@ -834,32 +842,32 @@
 			<dl id="#currentghost.balloon.mousecursor.arrow">
 				<dt class="entry">currentghost.balloon.mousecursor.arrow</dt>
 				<dd class="entry">
-					<p>バルーンで操作できない部分を示すカーソルファイル名（矢印）</p>
+					<p>Filename of the cursor (arrow) indicating areas of the balloon that cannot be manipulated.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> [2.6.11]</li>
 					</ul>
 				</dd>
 			</dl>
 						
-			<dl id="currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).path">
-				<dt class="entry">currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).path</dt>
+			<dl id="currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).path">
+				<dt class="entry">currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).path</dt>
 				<dd class="entry">
-					<p>指定した当たり判定名のカーソルファイル名(相対パス：シェル→ゴーストフォルダ内の順で探索)<br />mouse????listは以下の指定が可能：mouseuplist・mousedownlist・mousehoverlist・mousewheellist<br />空文字列を指定してSETすると、定義削除扱いとなり、シェルの標準カーソルの表示に戻すことができる。<br />カーソル指定は<a href="descript_shell_surfaces.html#introduction_cursorbrace">surfaces.txtのcursorセクション</a>と同じ指定が可能。<br /><em class="specsign">[SET有効]</em></p>
+					<p>Filename of the cursor for the specified collision name. (Relative path: search in the order of shell → ghost folder).<br />mouse????list can specify the following: mouseuplist, mousedownlist, mousehoverlist, mousewheellist<br />SETting an empty string will delete the definition, and return to the standard cursor display of the shell.<br />The cursor specification can be the same as the <a href="descript_shell_surfaces.html#introduction_cursorbrace">cursor section of surfaces.txt</a>.<br /><em class="specsign">[SET enabled]</em></p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
 					<div class="legend">
 						<section class="code">
-							<h1>記述例</h1>
-							<p><code>\![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(Head).path,頭.cur]Head当たり判定で使うカーソルを頭.curに変更\![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(Head).path,]空っぽの指定だと定義削除となりシェルの標準カーソルとなる</code></p>
+							<h1>Description example</h1>
+							<p><code>\![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(Head).path,head.cur]Changed cursor used in Head collision area to head.cur. \![set,property,currentghost.seriko.cursor.scope(0).mouseuplist(Head).path,]If empty, the definition is deleted and the cursor becomes the standard cursor of the shell.</code></p>
 						</section>
 					</div>
 				</dd>
 			</dl>
-			<dl id="currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).name">
-				<dt class="entry">currentghost.seriko.cursor.scope(ID).mouse????list(当たり判定名).name</dt>
+			<dl id="currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).name">
+				<dt class="entry">currentghost.seriko.cursor.scope(ID).mouse????list(Collision name).name</dt>
 				<dd class="entry">
-					<p>指定した当たり判定名の当たり判定名。index指定との互換用の記述であり、特に意味はない。</p>
+					<p>The collision name for the specified collision. This is a description for compatibility with the index specification, and has no particular meaning.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
@@ -868,7 +876,7 @@
 			<dl id="currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).path">
 				<dt class="entry">currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).path</dt>
 				<dd class="entry">
-					<p>マウスカーソル定義リスト内の指定した位置のカーソルファイル名(相対パス)。<br /><em class="specsign">[SET有効]</em></p>
+					<p>Filename of the cursor (relative path) for the specified position in the mouse cursor definition list.<br /><em class="specsign">[SET enabled]</em></p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
@@ -877,7 +885,7 @@
 			<dl id="currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).name">
 				<dt class="entry">currentghost.seriko.cursor.scope(ID).mouse????list.index(ID2).name</dt>
 				<dd class="entry">
-					<p>マウスカーソル定義リスト内の指定した位置の当たり判定名。</p>
+					<p>The name of the collision for the specicified position in the mouse cursor definition list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
@@ -886,32 +894,32 @@
 			<dl id="currentghost.seriko.cursor.scope(ID).mouse????list.count">
 				<dt class="entry">currentghost.seriko.cursor.scope(ID).mouse????list.count</dt>
 				<dd class="entry">
-					<p>マウスカーソル定義リストの数。</p>
+					<p>Number of mouse cursors in the definition list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
 				</dd>
 			</dl>
 
-			<dl id="currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).text">
-				<dt class="entry">currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).text</dt>
+			<dl id="currentghost.seriko.tooltip.scope(ID).textlist(Collision name).text">
+				<dt class="entry">currentghost.seriko.tooltip.scope(ID).textlist(Collision name).text</dt>
 				<dd class="entry">
-					<p>指定した当たり判定名のツールチップ表示文字列。<br />空文字列を指定してSETすると、ツールチップ定義削除扱いとなり、ツールチップを表示しないようにできる。<br /><em class="specsign">[SET有効]</em></p>
+					<p>Tooltip display string for the specified collision name.<br />If an empty string is specified and SET, the definition is deleted, and the tooltip can be made to not display.<br /><em class="specsign">[SET enabled]</em></p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
 					<div class="legend">
 						<section class="code">
-							<h1>記述例</h1>
-							<p><code>\![set,property,currentghost.seriko.tooltip.scope(0).textlist(Head).text,頭をなでる]Head当たり判定で表示するツールチップを「頭をなでる」に変更\![set,property,currentghost.seriko.tooltip.scope(0).textlist(Head).text,]空っぽの指定だと定義削除となり表示されなくなる</code></p>
+							<h1>Description example</h1>
+							<p><code>\![set,property,currentghost.seriko.tooltip.scope(0).textlist(Head).text,Head nodding]Changed the tooltip displayed at the Head collision area to 'Head nodding'. \![set,property,currentghost.seriko.tooltip.scope(0).textlist(Head).text,]If an empty designation is used, the definition will be deleted and will not be displayed.</code></p>
 						</section>
 					</div>
 				</dd>
 			</dl>
-			<dl id="currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).name">
-				<dt class="entry">currentghost.seriko.tooltip.scope(ID).textlist(当たり判定名).name</dt>
+			<dl id="currentghost.seriko.tooltip.scope(ID).textlist(Collision name).name">
+				<dt class="entry">currentghost.seriko.tooltip.scope(ID).textlist(Collision name).name</dt>
 				<dd class="entry">
-					<p>指定した当たり判定名の当たり判定名。index指定との互換用の記述であり、特に意味はない。</p>
+					<p>The collision name for the specified collision name. This is a description for compatibility with the index specification, and has no particular meaning.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
@@ -920,7 +928,7 @@
 			<dl id="currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).text">
 				<dt class="entry">currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).text</dt>
 				<dd class="entry">
-					<p>ツールチップ定義リスト内の指定した位置のツールチップ文字列。<br /><em class="specsign">[SET有効]</em></p>
+					<p>Tooltip string at the specified position in the tooltip definition list.<br /><em class="specsign">[SET enabled]</em></p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
@@ -929,7 +937,7 @@
 			<dl id="currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).name">
 				<dt class="entry">currentghost.seriko.tooltip.scope(ID).textlist.index(ID2).name</dt>
 				<dd class="entry">
-					<p>ツールチップ定義リスト内の指定した位置の当たり判定名。</p>
+					<p>The collision name for the specified position in the tooltip definition list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
@@ -938,7 +946,7 @@
 			<dl id="currentghost.seriko.tooltip.scope(ID).textlist.count">
 				<dt class="entry">currentghost.seriko.tooltip.scope(ID).textlist.count</dt>
 				<dd class="entry">
-					<p>ツールチップ定義リストの数。</p>
+					<p>The number of tooltips in the tooltip definition list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.83)</li>
 					</ul>
@@ -948,7 +956,7 @@
 			<dl id="currentghost.seriko.surfacelist.all">
 				<dt class="entry">currentghost.seriko.surfacelist.all</dt>
 				<dd class="entry">
-					<p>シェル上で有効なサーフェスIDのすべてのリスト。カンマ区切り。</p>
+					<p>List of all valid surface IDs on the shell. Comma separated.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.5.98)</li>
 					</ul>
@@ -957,7 +965,7 @@
 			<dl id="currentghost.seriko.surfacelist.defined">
 				<dt class="entry">currentghost.seriko.surfacelist.defined</dt>
 				<dd class="entry">
-					<p>シェル上で有効なサーフェスIDの中で、surfaces.txt内に有効な定義のあるもののリスト。カンマ区切り。</p>
+					<p>List of valid surface IDs on the shell with valid definitions in surfaces.txt. Comma separated.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.5.98)</li>
 					</ul>
@@ -967,7 +975,7 @@
 			<dl id="currentghost.balloon.scope(ID).count">
 				<dt class="entry">currentghost.balloon.scope(ID).count</dt>
 				<dd class="entry">
-					<p>現在のバルーンのバルーン画像数。</p>
+					<p>Number of balloon images for the current balloon.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -976,7 +984,7 @@
 			<dl id="currentghost.balloon.scope(ID).num">
 				<dt class="entry">currentghost.balloon.scope(ID).num</dt>
 				<dd class="entry">
-					<p>現在のバルーンのID。</p>
+					<p>ID of the current balloon</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -985,7 +993,7 @@
 			<dl id="currentghost.balloon.scope(ID).validwidth">
 				<dt class="entry">currentghost.balloon.scope(ID).validwidth</dt>
 				<dd class="entry">
-					<p>現在のバルーンの文字描画に使える幅。baseposに関係なく描画範囲全てを示す。</p>
+					<p>The width of the area of the balloon that can be used for drawing text. Shows the entire drawing area regardless of basepos.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -994,7 +1002,7 @@
 			<dl id="currentghost.balloon.scope(ID).validwidth.initial">
 				<dt class="entry">currentghost.balloon.scope(ID).validwidth.initial</dt>
 				<dd class="entry">
-					<p>現在のバルーンの文字描画に使える幅（basepos.x＝文字開始点を考慮したもの）</p>
+					<p>The width of the area available for drawing characters (taking into account the character start point at basepos.x).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.72) </li>
 					</ul>
@@ -1003,7 +1011,7 @@
 			<dl id="currentghost.balloon.scope(ID).validheight">
 				<dt class="entry">currentghost.balloon.scope(ID).validheight</dt>
 				<dd class="entry">
-					<p>現在のバルーンの文字描画に使える高さ。baseposに関係なく描画範囲全てを示す。スクロール後の描画高さと一致。</p>
+					<p>The height of the area of the balloon that can be used for drawing text. Shows the entire drawing area regardless of basepos. Matches the drawing height after scrolling.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1012,7 +1020,7 @@
 			<dl id="currentghost.balloon.scope(ID).validheight.initial">
 				<dt class="entry">currentghost.balloon.scope(ID).validheight.initial</dt>
 				<dd class="entry">
-					<p>現在のバルーンの文字描画に使える高さ。basepos.y＝文字開始点を考慮したもの。スクロール前の描画高さと一致。</p>
+					<p>The height of the area of the balloon that can be used for drawing text, taking into account basebos.y as the text start point. Matches the drawing height before scrolling.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.72) </li>
 					</ul>
@@ -1021,7 +1029,7 @@
 			<dl id="currentghost.balloon.scope(ID).lines">
 				<dt class="entry">currentghost.balloon.scope(ID).lines</dt>
 				<dd class="entry">
-					<p>現在のバルーンのおさまる行数の最大値。baseposに関係なく描画範囲全てを示す。スクロール後の表示行数と一致。</p>
+					<p>The maximum number of lines that will fit in the current balloon. Shows the entire drawing area regardless of basepose. Matches the number of visible lines after scrolling.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1030,7 +1038,7 @@
 			<dl id="currentghost.balloon.scope(ID).lines.initial">
 				<dt class="entry">currentghost.balloon.scope(ID).lines.initial</dt>
 				<dd class="entry">
-					<p>現在のバルーンのおさまる行数の最大値。basepos.y＝文字開始点を考慮したもの。スクロール前の表示行数と一致。</p>
+					<p>The maximum number of lines that will fit in the current balloon, taking into account basepos.y as the text start point. Matches the number of visible lines before scrolling.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.72) </li>
 					</ul>
@@ -1039,7 +1047,7 @@
 			<dl id="currentghost.balloon.scope(ID).basepos.x">
 				<dt class="entry">currentghost.balloon.scope(ID).basepos.x</dt>
 				<dd class="entry">
-					<p>現在のバルーンの文字描画開始点(X座標)。描画範囲の左端とは限らない。</p>
+					<p>The character starting point (X coordinate) of the current balloon. Not necessarily the left end of the drawing range.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.72) </li>
 					</ul>
@@ -1048,7 +1056,7 @@
 			<dl id="currentghost.balloon.scope(ID).basepos.y">
 				<dt class="entry">currentghost.balloon.scope(ID).basepos.y</dt>
 				<dd class="entry">
-					<p>現在のバルーンの文字描画開始点(Y座標)。描画範囲の上端とは限らない。</p>
+					<p>The character starting point (Y coordinate) of the current balloon. Not necessarily the top of the drawing range.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />(2.3.72) </li>
 					</ul>
@@ -1057,25 +1065,25 @@
 			<dl id="currentghost.balloon.scope(ID).char_width">
 				<dt class="entry">currentghost.balloon.scope(ID).char_width</dt>
 				<dd class="entry">
-					<p>バルーン標準フォントでの半角文字列幅。等幅フォントでは文字高さ÷2、プロポーショナルフォントでは半角大文字A～Zの幅の平均値。</p>
+					<p>Width of half-width characters in the balloon's standard font. In monospace fonts, it is the character height ÷ 2. In proportional fonts, it is the average of the widths of half-width uppercase characters A-Z.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="balloonlist(バルーン名/パス).汎用プロパティ名">
-				<dt class="entry">balloonlist(バルーン名/パス).汎用プロパティ名</dt>
+			<dl id="balloonlist(Balloon name/path).Generic_property_name">
+				<dt class="entry">balloonlist(Balloon name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>バルーンの名前もしくはパスから情報を取得。</p>
+					<p>Information is obtained from the balloon name or path.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="balloonlist.index(ID).汎用プロパティ名">
-				<dt class="entry">balloonlist.index(ID).汎用プロパティ名</dt>
+			<dl id="balloonlist.index(ID).Generic_property_name">
+				<dt class="entry">balloonlist.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>リスト内のIDの位置のバルーンから情報を取得。</p>
+					<p>Information is obtained from the balloon at the position of the ID in the list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1084,25 +1092,25 @@
 			<dl id="balloonlist.count">
 				<dt class="entry">balloonlist.count</dt>
 				<dd class="entry">
-					<p>インストールされているバルーンの数。</p>
+					<p>Number of installed balloons.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="headlinelist(ヘッドライン名/パス).汎用プロパティ名">
-				<dt class="entry">headlinelist(ヘッドライン名/パス).汎用プロパティ名</dt>
+			<dl id="headlinelist(Headline name/path).Generic_property_name">
+				<dt class="entry">headlinelist(Headline name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>ヘッドラインの名前もしくはパスから情報を取得。</p>
+					<p>Obtains information from the headline name or path.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="headlinelist.index(ID).汎用プロパティ名">
-				<dt class="entry">headlinelist.index(ID).汎用プロパティ名</dt>
+			<dl id="headlinelist.index(ID).Generic_property_name">
+				<dt class="entry">headlinelist.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>リスト内のIDの位置のヘッドラインから情報を取得。</p>
+					<p>Information is obtained from the headline at the position of the ID in the list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1111,25 +1119,25 @@
 			<dl id="headlinelist.count">
 				<dt class="entry">headlinelist.count</dt>
 				<dd class="entry">
-					<p>インストールされているヘッドラインの数。</p>
+					<p>Number of installed headlines.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="pluginlist(プラグイン名/パス/ID).汎用プロパティ名">
-				<dt class="entry">pluginlist(プラグイン名/パス/ID).汎用プロパティ名</dt>
+			<dl id="pluginlist(Plugin name/path/ID).Generic_property_name">
+				<dt class="entry">pluginlist(Plugin name/path/ID).Generic property name</dt>
 				<dd class="entry">
-					<p>プラグインの名前もしくはパス、IDから情報を取得。</p>
+					<p>Information is obtained from the plugin's name or path or ID.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="pluginlist.index(ID).汎用プロパティ名">
-				<dt class="entry">pluginlist.index(ID).汎用プロパティ名</dt>
+			<dl id="pluginlist.index(ID).Generic_property_name">
+				<dt class="entry">pluginlist.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>リスト内のIDの位置のプラグインから情報を取得。</p>
+					<p>Information is obtained from the plugin at the position of the ID in the list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1138,25 +1146,25 @@
 			<dl id="pluginlist.count">
 				<dt class="entry">pluginlist.count</dt>
 				<dd class="entry">
-					<p>インストールされているプラグインの数。</p>
+					<p>Number of installed plugins.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.ghost(ゴースト名/パス).汎用プロパティ名">
-				<dt class="entry">history.ghost(ゴースト名/パス).汎用プロパティ名</dt>
+			<dl id="history.ghost(Ghost name/path).Generic_property_name">
+				<dt class="entry">history.ghost(Ghost name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののゴースト名もしくはパスから情報を取得。</p>
+					<p>Information is obtained from the ghost name or path of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.ghost.index(ID).汎用プロパティ名">
-				<dt class="entry">history.ghost.index(ID).汎用プロパティ名</dt>
+			<dl id="history.ghost.index(ID).Generic_property_name">
+				<dt class="entry">history.ghost.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののリスト内のIDの位置のゴーストから情報を取得。</p>
+					<p>Information is obtained from the ghost at the position of the ID in the list of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1165,25 +1173,25 @@
 			<dl id="history.ghost.count">
 				<dt class="entry">history.ghost.count</dt>
 				<dd class="entry">
-					<p>最近使ったものゴーストの数。</p>
+					<p>Number of recently used ghosts.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.balloon(バルーン名/パス).汎用プロパティ名">
-				<dt class="entry">history.balloon(バルーン名/パス).汎用プロパティ名</dt>
+			<dl id="history.balloon(Balloon name/path).Generic_property_name">
+				<dt class="entry">history.balloon(Balloon name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののバルーンの名前もしくはパスから情報を取得。</p>
+					<p>Information is obtained from the balloon name or path of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.balloon.index(ID).汎用プロパティ名">
-				<dt class="entry">history.balloon.index(ID).汎用プロパティ名</dt>
+			<dl id="history.balloon.index(ID).Generic_property_name">
+				<dt class="entry">history.balloon.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののリスト内のIDの位置のバルーンから情報を取得。</p>
+					<p>Information is obtained from the balloon at the position of the ID in the list of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1192,25 +1200,25 @@
 			<dl id="history.balloon.count">
 				<dt class="entry">history.balloon.count</dt>
 				<dd class="entry">
-					<p>最近使ったものバルーンの数。</p>
+					<p>Number of recently used balloons.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.headline(ヘッドライン名/パス).汎用プロパティ名">
-				<dt class="entry">history.headline(ヘッドライン名/パス).汎用プロパティ名</dt>
+			<dl id="history.headline(Headline name/path).Generic_property_name">
+				<dt class="entry">history.headline(Headline name/path).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののヘッドラインの名前もしくはパスから情報を取得。</p>
+					<p>Information is obtained from the headline name or path of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.headlinet.index(ID).汎用プロパティ名">
-				<dt class="entry">history.headlinet.index(ID).汎用プロパティ名</dt>
+			<dl id="history.headlinet.index(ID).Generic_property_name">
+				<dt class="entry">history.headlinet.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののリスト内のIDの位置のヘッドラインから情報を取得。</p>
+					<p>Information is obtained from the headline at the position of the ID in the list of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1219,25 +1227,25 @@
 			<dl id="history.headline.count">
 				<dt class="entry">history.headline.count</dt>
 				<dd class="entry">
-					<p>最近使ったものヘッドラインの数。</p>
+					<p>Number of recently used headlines.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.plugin(プラグイン名/パス/ID).汎用プロパティ名">
-				<dt class="entry">history.plugin(プラグイン名/パス/ID).汎用プロパティ名</dt>
+			<dl id="history.plugin(Plugin name/path/ID).Generic_property_name">
+				<dt class="entry">history.plugin(Plugin name/path/ID).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののプラグインの名前もしくはパス、IDから情報を取得。</p>
+					<p>Information is obtained from the plugin name or path of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="history.plugint.index(ID).汎用プロパティ名">
-				<dt class="entry">history.plugint.index(ID).汎用プロパティ名</dt>
+			<dl id="history.plugint.index(ID).Generic_property_name">
+				<dt class="entry">history.plugint.index(ID).Generic property name</dt>
 				<dd class="entry">
-					<p>最近使ったもののリスト内のIDの位置のプラグインから情報を取得。</p>
+					<p>Information is obtained from the plugin at the position of the ID in the list of recently used items.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -1246,126 +1254,126 @@
 			<dl id="history.plugin.count">
 				<dt class="entry">history.plugin.count</dt>
 				<dd class="entry">
-					<p>最近使ったもののプラグインの数。</p>
+					<p>Number of recently used plugins.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist(名前).name">
-				<dt class="entry">rateofuselist(名前).name</dt>
+			<dl id="rateofuselist(name).name">
+				<dt class="entry">rateofuselist(name).name</dt>
 				<dd class="entry">
-					<p>そのゴーストの名称。</p>
+					<p>Name of the specified ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist(名前).sakuraname">
-				<dt class="entry">rateofuselist(名前).sakuraname</dt>
+			<dl id="rateofuselist(name).sakuraname">
+				<dt class="entry">rateofuselist(name).sakuraname</dt>
 				<dd class="entry">
-					<p>そのゴーストの本体側の名前。</p>
+					<p>Name of the main character of the specified ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist(名前).keroname">
-				<dt class="entry">rateofuselist(名前).keroname</dt>
+			<dl id="rateofuselist(name).keroname">
+				<dt class="entry">rateofuselist(name).keroname</dt>
 				<dd class="entry">
-					<p>そのゴーストの相方側の名前。</p>
+					<p>The name of the side character of the specified ghost.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist(名前).boottime">
-				<dt class="entry">rateofuselist(名前).boottime</dt>
+			<dl id="rateofuselist(name).boottime">
+				<dt class="entry">rateofuselist(name).boottime</dt>
 				<dd class="entry">
-					<p>そのゴーストの起動回数。</p>
+					<p>The number of times the specified ghost has been booted.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist(名前).bootminute">
-				<dt class="entry">rateofuselist(名前).bootminute</dt>
+			<dl id="rateofuselist(name).bootminute">
+				<dt class="entry">rateofuselist(name).bootminute</dt>
 				<dd class="entry">
-					<p>そのゴーストの起動時間。(分単位)</p>
+					<p>The total run time of the specified ghost (in minutes).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist(名前).percent">
-				<dt class="entry">rateofuselist(名前).percent</dt>
+			<dl id="rateofuselist(name).percent">
+				<dt class="entry">rateofuselist(name).percent</dt>
 				<dd class="entry">
-					<p>そのゴーストの起動時間割合。(パーセント、小数)</p>
+					<p>The percentage runtime of the specified ghost (as a percentage, decimal).</p> <!-- TODO: Unsure what "decimal" means here exactly -->
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist.index(順位).name">
-				<dt class="entry">rateofuselist.index(順位).name</dt>
+			<dl id="rateofuselist.index(position).name">
+				<dt class="entry">rateofuselist.index(position).name</dt>
 				<dd class="entry">
-					<p>使用率のその順位のゴーストの名称。</p>
+					<p>The name of the ghost at the specified position in the usage list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist.index(順位).sakuraname">
-				<dt class="entry">rateofuselist.index(順位).sakuraname</dt>
+			<dl id="rateofuselist.index(position).sakuraname">
+				<dt class="entry">rateofuselist.index(position).sakuraname</dt>
 				<dd class="entry">
-					<p>使用率のその順位のゴーストの本体側の名前。</p>
+					<p>The name of the main character of the ghost at the specified position in the usage list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist.index(順位).keroname">
-				<dt class="entry">rateofuselist.index(順位).keroname</dt>
+			<dl id="rateofuselist.index(position).keroname">
+				<dt class="entry">rateofuselist.index(position).keroname</dt>
 				<dd class="entry">
-					<p>使用率のその順位のゴーストの相方側の名前。</p>
+					<p>The name of the side character of the ghost at the specified position in the usage list.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist.index(順位).boottime">
-				<dt class="entry">rateofuselist.index(順位).boottime</dt>
+			<dl id="rateofuselist.index(position).boottime">
+				<dt class="entry">rateofuselist.index(position).boottime</dt>
 				<dd class="entry">
-					<p>使用率のその順位のゴーストの起動回数。</p>
+					<p>The number of times the ghost at the specified position in the usage list has been booted.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist.index(順位).bootminute">
-				<dt class="entry">rateofuselist.index(順位).bootminute</dt>
+			<dl id="rateofuselist.index(position).bootminute">
+				<dt class="entry">rateofuselist.index(position).bootminute</dt>
 				<dd class="entry">
-					<p>使用率のその順位のゴーストの起動時間。(分単位)</p>
+					<p>The total run time of the ghost at the specified position in the usage list (in minutes).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="rateofuselist.index(順位).percent">
-				<dt class="entry">rateofuselist.index(順位).percent</dt>
+			<dl id="rateofuselist.index(position).percent">
+				<dt class="entry">rateofuselist.index(position).percent</dt>
 				<dd class="entry">
-					<p>使用率のその順位のゴーストの起動時間割合。(パーセント、小数)</p>
+					<p>The percentage runtime of the ghost at the specified position in the usage list (as a percentage, decimal).</p> <!--TODO: smae note about decimal, as above -->
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
 			<section class="subcategory">
-				<h1>汎用プロパティ名</h1>
+				<h1>Generic property name</h1>
 				<dl id="name">
 					<dt class="entry">name</dt>
 					<dd class="entry">
-						<p>対象の名前。</p>
+						<p>Name of target.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1375,7 +1383,7 @@
 				<dl id="sakuraname">
 					<dt class="entry">sakuraname</dt>
 					<dd class="entry">
-						<p>対象のゴーストの本体側の名前。</p>
+						<p>Name of the main character of the target ghost.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1385,7 +1393,7 @@
 				<dl id="keroname">
 					<dt class="entry">keroname</dt>
 					<dd class="entry">
-						<p>対象のゴーストの相方側の名前。</p>
+						<p>Name of the side character of the target ghost.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1395,7 +1403,7 @@
 				<dl id="craftmanw">
 					<dt class="entry">craftmanw</dt>
 					<dd class="entry">
-						<p>対象の作者名。</p>
+						<p>Name of the target's author.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1405,7 +1413,7 @@
 				<dl id="craftmanurl">
 					<dt class="entry">craftmanurl</dt>
 					<dd class="entry">
-						<p>対象の配布先URL。</p>
+						<p>URL of the target's distribution site.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1414,7 +1422,7 @@
 				<dl id="path">
 					<dt class="entry">path</dt>
 					<dd class="entry">
-						<p>対象のパス。</p>
+						<p>Target path.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1424,7 +1432,7 @@
 				<dl id="thumbnail">
 					<dt class="entry">thumbnail</dt>
 					<dd class="entry">
-						<p>対象のサムネイル。</p>
+						<p>Thumbnail of the target.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1433,7 +1441,7 @@
 				<dl id="update_result">
 					<dt class="entry">update_result</dt>
 					<dd class="entry">
-						<p>対象のアップデートリザルト。</p>
+						<p>Update result of the target.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1442,7 +1450,7 @@
 				<dl id="update_time">
 					<dt class="entry">update_time</dt>
 					<dd class="entry">
-						<p>対象のアップデート時間。</p>
+						<p>Update time of the target.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1451,7 +1459,7 @@
 				<dl id="homeurl">
 					<dt class="entry">homeurl</dt>
 					<dd class="entry">
-						<p>対象のhomeurl。</p>
+						<p>homeurl of the target.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1460,16 +1468,16 @@
 				<dl id="username">
 					<dt class="entry">username</dt>
 					<dd class="entry">
-						<p>対象のusername(呼ばれ方)。同時起動している場合、かつ相手がusernameの取得に対応している場合のみ取得できる。 SSP 2.3.51以降。</p>
+						<p>The target's username (how to call the user). Can only be obtained if they are running concurrently and if the other party supports getting the username. SSP 2.3.51 or later.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
 					</dd>
 				</dl>
-				<dl id="shiori.変数名">
-					<dt class="entry">shiori.変数名</dt>
+				<dl id="shiori.Variable name">
+					<dt class="entry">shiori.Variable name</dt>
 					<dd class="entry">
-						<p>対象のゴーストのSHIORI。</p>
+						<p>SHIORI of the target ghost.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 						</ul>
@@ -1478,7 +1486,7 @@
 				<dl id="index">
 					<dt class="entry">index</dt>
 					<dd class="entry">
-						<p>対象のリスト内の位置。</p>
+						<p>The position in the list of the target.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
@@ -1488,7 +1496,7 @@
 				<dl id="menu">
 					<dt class="entry">menu</dt>
 					<dd class="entry">
-						<p>（currentghost.shelllistのみ有効）対象シェルの、シェル変更メニューでの、項目非表示状態。<br />非表示設定時hidden、さもなくば空<br /><em class="specsign">[SET有効]</em>初期値はshell側descript.txtの「menu」</p>
+						<p>(Valid only for currentghost.shelllist) The hidden state of the item in the shell change menu of the target shell.<br />"hidden" when hidden, otherwise empty.<br /><em class="specsign">[SET enabled]</em>Default value is "menu" in the shell side descript.txt.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1497,7 +1505,7 @@
 				<dl id="sakura.bind.menu">
 					<dt class="entry">sakura.bind.menu</dt>
 					<dd class="entry">
-						<p>（currentghostのみ有効）対象シェルの本体側スコープの着せ替えのメニューでの、項目非表示状態。<br />非表示設定時hidden、自動列挙モードはauto、さもなくばnone<br /><em class="specsign">[SET有効]</em>初期値はshell側descript.txtの<a href="descript_shell.html#sakura.menu,autoまたはhidden">sakura.menu</a></p>
+						<p>(Valid only for currentghost) Hides items in the dressup menu of the main character scope of the target shell.<br />Hidden when set to "hidden", automatic enumeration when set to "auto", otherwise none.<br /><em class="specsign">[SET enabled]</em>Initial value is <a href="descript_shell.html#sakura.menu,autoまたはhidden">sakura.menu</a> in the shell side descript.txt.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1506,7 +1514,7 @@
 				<dl id="kero.bind.menu">
 					<dt class="entry">kero.bind.menu</dt>
 					<dd class="entry">
-						<p>（currentghostのみ有効）対象シェルの相方側スコープの着せ替えのメニューでの、項目非表示状態。<br />非表示設定時hidden、自動列挙モードはauto、さもなくばnone<br /><em class="specsign">[SET有効]</em>初期値はshell側descript.txtの<a href="descript_shell.html#kero.menu,autoまたはhidden">kero*.menu</a></p>
+						<p>(Valid only for currentghost) Hides items in the dressup menu of the side character scope of the target shell.<br />Hidden when set to "hidden", automatic enumeration when set to "auto", otherwise none.<br /><em class="specsign">[SET enabled]</em>Initial value is <a href="descript_shell.html#kero.menu,autoまたはhidden">kero*.menu</a> in the shell side descript.txt.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
@@ -1515,7 +1523,7 @@
 				<dl id="char*.bind.menu">
 					<dt class="entry">char*.bind.menu</dt>
 					<dd class="entry">
-						<p>（currentghostのみ有効）対象シェルの*番スコープの着せ替えのメニューでの、項目非表示状態。<br />非表示設定時hidden、自動列挙モードはauto、さもなくばnone<br /><em class="specsign">[SET有効]</em>初期値はshell側descript.txtの<a href="descript_shell.html#char*.menu,autoまたはhidden">char*.menu</a></p>
+						<p>(Valid only for currentghost) Hides items in the dressup menu of *th scope of the target shell.<br />Hidden when set to "hidden", automatic enumeration when set to "auto", otherwise none.<br /><em class="specsign">[SET enabled]</em>Initial value is <a href="descript_shell.html#char*.menu,autoまたはhidden">char*.menu</a> in the shell side descript.txt.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						</ul>
