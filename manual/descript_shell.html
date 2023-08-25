@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project Shell設定</title>
+<title>UKADOC Project Shell Settings</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">Shell設定</h1>
+	<h1 id="page-title">Shell Settings</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -135,115 +135,123 @@
 		<section class="navigation-category">
 			<h1>descript.txt</h1>
 			<ul>
-				<li class="caption introduction"><a href="#introduction_descript.txt">descript.txt（Shellの）</a></li>
+				<li class="caption introduction"><a href="#introduction_descript.txt">descript.txt (of Shell)</a></li>
 			</ul>
 			<ul>
-				<li><a href="#charset,文字コード">charset,文字コード</a></li>
-				<li><a href="#name,シェル名">name,シェル名</a></li>
-				<li><a href="#id,ID名">id,ID名</a></li>
-				<li><a href="#type,種別">type,種別</a></li>
-				<li><a href="#craftman,作者名">craftman,作者名</a></li>
-				<li><a href="#craftmanw,作者名">craftmanw,作者名</a></li>
-				<li><a href="#craftmanurl,URL">craftmanurl,URL</a></li>
-				<li><a href="#homeurl,URL">homeurl,URL</a></li>
-				<li><a href="#readme,ファイル名">readme,ファイル名</a></li>
-				<li><a href="#readme.charset,文字コード">readme.charset,文字コード</a></li>
+				<li><a href="#charset,(character code)">charset,(character code)</a></li>
+				<li><a href="#name,(shell name)">name,(shell name)</a></li>
+				<li><a href="#id,(ID name)">id,(ID name)</a></li>
+				<li><a href="#type,(type)">type,(type)</a></li>
+				<li><a href="#craftman,(author name)">craftman,(author name)</a></li>
+				<li><a href="#craftmanw,(author name)">craftmanw,(author name)</a></li>
+				<li><a href="#craftmanurl,(URL)">craftmanurl,(URL)</a></li>
+				<li><a href="#homeurl,(URL)">homeurl,(URL)</a></li>
+				<li><a href="#readme,(filename)">readme,(filename)</a></li>
+				<li><a href="#readme.charset,(character code)">readme.charset,(character code)</a></li>
 				<li><a href="#menu,hidden">menu,hidden</a></li>
-				<li><a href="#sakura.name,名前">sakura.name,名前</a></li>
-				<li><a href="#sakura.name2,名前">sakura.name2,名前</a></li>
-				<li><a href="#kero.name,名前">kero.name,名前</a></li>
-				<li><a href="#char*.name,名前">char*.name,名前</a></li>
-				<li><a href="#seriko.zorder,スコープID,スコープID,_">seriko.zorder,スコープID,スコープID,...</a></li>
-				<li><a href="#seriko.sticky-window,スコープID,スコープID,_">seriko.sticky-window,スコープID,スコープID,...</a></li>
-				<li><a href="#seriko.alignmenttodesktop,位置情報">seriko.alignmenttodesktop,位置情報</a></li>
-				<li><a href="#sakura.seriko.alignmenttodesktop,位置情報">sakura.seriko.alignmenttodesktop,位置情報</a></li>
-				<li><a href="#kero.seriko.alignmenttodesktop,位置情報">kero.seriko.alignmenttodesktop,位置情報</a></li>
-				<li><a href="#char*.seriko.alignmenttodesktop,位置情報">char*.seriko.alignmenttodesktop,位置情報</a></li>
-				<li><a href="#sakura.defaultx,X座標">sakura.defaultx,X座標</a></li>
-				<li><a href="#kero.defaultx,X座標">kero.defaultx,X座標</a></li>
-				<li><a href="#char*.defaultx,X座標">char*.defaultx,X座標</a></li>
-				<li><a href="#sakura.defaulty,Y座標">sakura.defaulty,Y座標</a></li>
-				<li><a href="#kero.defaulty,Y座標">kero.defaulty,Y座標</a></li>
-				<li><a href="#char*.defaulty,Y座標">char*.defaulty,Y座標</a></li>
-				<li><a href="#sakura.defaultleft,X座標">sakura.defaultleft,X座標</a></li>
-				<li><a href="#kero.defaultleft,X座標">kero.defaultleft,X座標</a></li>
-				<li><a href="#char*.defaultleft,X座標">char*.defaultleft,X座標</a></li>
-				<li><a href="#sakura.defaulttop,Y座標">sakura.defaulttop,Y座標</a></li>
-				<li><a href="#kero.defaulttop,Y座標">kero.defaulttop,Y座標</a></li>
-				<li><a href="#char*.defaulttop,Y座標">char*.defaulttop,Y座標</a></li>
-				<li><a href="#_1_sakura.balloon.offsetx,座標">sakura.balloon.offsetx,座標</a></li>
-				<li><a href="#_1_sakura.balloon.offsety,座標">sakura.balloon.offsety,座標</a></li>
-				<li><a href="#_1_kero.balloon.offsetx,座標">kero.balloon.offsetx,座標</a></li>
-				<li><a href="#_1_kero.balloon.offsety,座標">kero.balloon.offsety,座標</a></li>
-				<li><a href="#sakura.balloon.alignment,位置情報">sakura.balloon.alignment,位置情報</a></li>
-				<li><a href="#kero.balloon.alignment,位置情報">kero.balloon.alignment,位置情報</a></li>
-				<li><a href="#sakura.balloon.dontmove_">sakura.balloon.dontmove,数値</a></li>
-				<li><a href="#kero.balloon.dontmove_">kero.balloon.dontmove,数値</a></li>
-				<li><a href="#char*.balloon.dontmove_">char*.balloon.dontmove,数値</a></li>
-				<li><a href="#menu.font.name,フォント名">menu.font.name,フォント名</a></li>
-				<li><a href="#menu.font.height,フォントサイズ">menu.font.height,フォントサイズ</a></li>
-				<li><a href="#menu.background.bitmap.filename,ファイル名">menu.background.bitmap.filename,ファイル名</a></li>
-				<li><a href="#menu.foreground.bitmap.filename,ファイル名">menu.foreground.bitmap.filename,ファイル名</a></li>
-				<li><a href="#menu.sidebar.bitmap.filename,ファイル名">menu.sidebar.bitmap.filename,ファイル名</a></li>
-				<li><a href="#menu.background.font.color.r,数値">menu.background.font.color.r,数値</a></li>
-				<li><a href="#menu.background.font.color.g,数値">menu.background.font.color.g,数値</a></li>
-				<li><a href="#menu.background.font.color.b,数値">menu.background.font.color.b,数値</a></li>
-				<li><a href="#menu.foreground.font.color.r,数値">menu.foreground.font.color.r,数値</a></li>
-				<li><a href="#menu.foreground.font.color.g,数値">menu.foreground.font.color.g,数値</a></li>
-				<li><a href="#menu.foreground.font.color.b,数値">menu.foreground.font.color.b,数値</a></li>
-				<li><a href="#menu.separator.color.r,数値">menu.separator.color.r,数値</a></li>
-				<li><a href="#menu.separator.color.g,数値">menu.separator.color.g,数値</a></li>
-				<li><a href="#menu.separator.color.b,数値">menu.separator.color.b,数値</a></li>
-				<li><a href="#menu.frame.color.r,数値">menu.frame.color.r,数値</a></li>
-				<li><a href="#menu.frame.color.g,数値">menu.frame.color.g,数値</a></li>
-				<li><a href="#menu.frame.color.b,数値">menu.frame.color.b,数値</a></li>
+				<li><a href="#sakura.name,(name)">sakura.name,(name)</a></li>
+				<li><a href="#sakura.name2,(name)">sakura.name2,(name)</a></li>
+				<li><a href="#kero.name,(name)">kero.name,(name)</a></li>
+				<li><a href="#char*.name,(name)">char*.name,(name)</a></li>
+				<li><a href="#seriko.zorder,(Scope ID),(Scope ID),_">seriko.zorder,(Scope ID),(Scope ID),...</a></li>
+				<li><a href="#seriko.sticky-window,(Scope ID),(Scope ID),_">seriko.sticky-window,(Scope ID),(Scope ID),...</a></li>
+				<li><a href="#seriko.alignmenttodesktop,(position)">seriko.alignmenttodesktop,(position)</a></li>
+				<li><a href="#sakura.seriko.alignmenttodesktop,(position)">sakura.seriko.alignmenttodesktop,(position)</a></li>
+				<li><a href="#kero.seriko.alignmenttodesktop,(position)">kero.seriko.alignmenttodesktop,(position)</a></li>
+				<li><a href="#char*.seriko.alignmenttodesktop,(position)">char*.seriko.alignmenttodesktop,(position)</a></li>
+				<li><a href="#sakura.defaultx,(X coordinate)">sakura.defaultx,(X coordinate)</a></li>
+				<li><a href="#kero.defaultx,(X coordinate)">kero.defaultx,(X coordinate)</a></li>
+				<li><a href="#char*.defaultx,(X coordinate)">char*.defaultx,(X coordinate)</a></li>
+				<li><a href="#sakura.defaulty,(Y coordinate)">sakura.defaulty,(Y coordinate)</a></li>
+				<li><a href="#kero.defaulty,(Y coordinate)">kero.defaulty,(Y coordinate)</a></li>
+				<li><a href="#char*.defaulty,(Y coordinate)">char*.defaulty,(Y coordinate)</a></li>
+				<li><a href="#sakura.defaultleft,(X coordinate)">sakura.defaultleft,(X coordinate)</a></li>
+				<li><a href="#kero.defaultleft,(X coordinate)">kero.defaultleft,(X coordinate)</a></li>
+				<li><a href="#char*.defaultleft,(X coordinate)">char*.defaultleft,(X coordinate)</a></li>
+				<li><a href="#sakura.defaulttop,(Y coordinate)">sakura.defaulttop,(Y coordinate)</a></li>
+				<li><a href="#kero.defaulttop,(Y coordinate)">kero.defaulttop,(Y coordinate)</a></li>
+				<li><a href="#char*.defaulttop,(Y coordinate)">char*.defaulttop,(Y coordinate)</a></li>
+				<li><a href="#_1_sakura.balloon.offsetx,(coordinate)">sakura.balloon.offsetx,(coordinate)</a></li>
+				<li><a href="#_1_sakura.balloon.offsety,(coordinate)">sakura.balloon.offsety,(coordinate)</a></li>
+				<li><a href="#_1_kero.balloon.offsetx,(coordinate)">kero.balloon.offsetx,(coordinate)</a></li>
+				<li><a href="#_1_kero.balloon.offsety,(coordinate)">kero.balloon.offsety,(coordinate)</a></li>
+				<li><a href="#sakura.balloon.alignment,(position)">sakura.balloon.alignment,(position)</a></li>
+				<li><a href="#kero.balloon.alignment,(position)">kero.balloon.alignment,(position)</a></li>
+				<li><a href="#sakura.balloon.dontmove_">sakura.balloon.dontmove,(numeric value)</a></li>
+				<li><a href="#kero.balloon.dontmove_">kero.balloon.dontmove,(numeric value)</a></li>
+				<li><a href="#char*.balloon.dontmove_">char*.balloon.dontmove,(numeric value)</a></li>
+				<li><a href="#menu.font.name,(font name)">menu.font.name,(font name)</a></li>
+				<li><a href="#menu.font.height,(font size)">menu.font.height,(font size)</a></li>
+				<li><a href="#menu.background.bitmap.filename,(filename)">menu.background.bitmap.filename,(filename)</a></li>
+				<li><a href="#menu.foreground.bitmap.filename,(filename)">menu.foreground.bitmap.filename,(filename)</a></li>
+				<li><a href="#menu.sidebar.bitmap.filename,(filename)">menu.sidebar.bitmap.filename,(filename)</a></li>
+				<li><a href="#menu.background.font.color.r,(numeric value)">menu.background.font.color.r,(numeric value)</a></li>
+				<li><a href="#menu.background.font.color.g,(numeric value)">menu.background.font.color.g,(numeric value)</a></li>
+				<li><a href="#menu.background.font.color.b,(numeric value)">menu.background.font.color.b,(numeric value)</a></li>
+				<li><a href="#menu.foreground.font.color.r,(numeric value)">menu.foreground.font.color.r,(numeric value)</a></li>
+				<li><a href="#menu.foreground.font.color.g,(numeric value)">menu.foreground.font.color.g,(numeric value)</a></li>
+				<li><a href="#menu.foreground.font.color.b,(numeric value)">menu.foreground.font.color.b,(numeric value)</a></li>
+				<li><a href="#menu.separator.color.r,(numeric value)">menu.separator.color.r,(numeric value)</a></li>
+				<li><a href="#menu.separator.color.g,(numeric value)">menu.separator.color.g,(numeric value)</a></li>
+				<li><a href="#menu.separator.color.b,(numeric value)">menu.separator.color.b,(numeric value)</a></li>
+				<li><a href="#menu.frame.color.r,(numeric value)">menu.frame.color.r,(numeric value)</a></li>
+				<li><a href="#menu.frame.color.g,(numeric value)">menu.frame.color.g,(numeric value)</a></li>
+				<li><a href="#menu.frame.color.b,(numeric value)">menu.frame.color.b,(numeric value)</a></li>
 				<li><a href="#menu.disable.font.color.r">menu.disable.font.color.r</a></li>
 				<li><a href="#menu.disable.font.color.g">menu.disable.font.color.g</a></li>
 				<li><a href="#menu.disable.font.color.b">menu.disable.font.color.b</a></li>
-				<li><a href="#menu.background.alignment,位置">menu.background.alignment,位置</a></li>
-				<li><a href="#menu.foreground.alignment,位置">menu.foreground.alignment,位置</a></li>
-				<li><a href="#menu.sidebar.alignment,位置">menu.sidebar.alignment,位置</a></li>
-				<li><a href="#sakura.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名">sakura.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名</a></li>
-				<li><a href="#sakura.bindgroup*.default,数値">sakura.bindgroup*.default,数値</a></li>
+				<li><a href="#menu.background.alignment,(alignment)">menu.background.alignment,(alignment)</a></li>
+				<li><a href="#menu.foreground.alignment,(alignment)">menu.foreground.alignment,(alignment)</a></li>
+				<li><a href="#menu.sidebar.alignment,(alignment)">menu.sidebar.alignment,(alignment)</a></li>
+				<li><a href="#sakura.bindgroup*.name,(category name),(part name),(thumbnail name)">sakura.bindgroup*.name,(category name),(part name),(thumbnail name)</a></li>
+				<li><a href="#sakura.bindgroup*.default,(numeric value)">sakura.bindgroup*.default,(numeric value)</a></li>
 				<li><a href="#sakura.bindgroup*.addid,ID">sakura.bindgroup*.addid,ID</a></li>
-				<li><a href="#sakura.bindoption*.group,カテゴリ名,オプション">sakura.bindoption*.group,カテゴリ名,オプション</a></li>
+				<li><a href="#sakura.bindoption*.group,(category name),(option)">sakura.bindoption*.group,(category name),(option)</a></li>
 				<li><a href="#sakura.menuitem*,ID">sakura.menuitem*,ID</a></li>
-				<li><a href="#sakura.menuitemex*,メニュー名,ID">sakura.menuitemex*,メニュー名,ID</a></li>
-				<li><a href="#sakura.menu,autoまたはhidden">sakura.menu,autoまたはhidden</a></li>
-				<li><a href="#kero.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名">kero.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名</a></li>
-				<li><a href="#kero.bindgroup*.default,数値">kero.bindgroup*.default,数値</a></li>
+				<li><a href="#sakura.menuitemex*,(menu name),(ID)">sakura.menuitemex*,(menu name),(ID)</a></li>
+				<li><a href="#sakura.menu,(auto or hidden)">sakura.menu,(auto or hidden)</a></li>
+				<li><a href="#kero.bindgroup*.name,(category name),(part name),(thumbnail name)">kero.bindgroup*.name,(category name),(part name),(thumbnail name)</a></li>
+				<li><a href="#kero.bindgroup*.default,(numeric value)">kero.bindgroup*.default,(numeric value)</a></li>
 				<li><a href="#kero.bindgroup*.addid,ID">kero.bindgroup*.addid,ID</a></li>
-				<li><a href="#kero.bindoption*.group,カテゴリ名,オプション">kero.bindoption*.group,カテゴリ名,オプション</a></li>
+				<li><a href="#kero.bindoption*.group,(category name),(option)">kero.bindoption*.group,(category name),(option)</a></li>
 				<li><a href="#kero.menuitem*,ID">kero.menuitem*,ID</a></li>
-				<li><a href="#kero.menuitemex*,メニュー名,ID">kero.menuitemex*,メニュー名,ID</a></li>
-				<li><a href="#kero.menu,autoまたはhidden">kero.menu,autoまたはhidden</a></li>
-				<li><a href="#char*.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名">char*.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名</a></li>
-				<li><a href="#char*.bindgroup*.default,数値">char*.bindgroup*.default,数値</a></li>
+				<li><a href="#kero.menuitemex*,(menu name),(ID)">kero.menuitemex*,(menu name),(ID)</a></li>
+				<li><a href="#kero.menu,(auto or hidden)">kero.menu,(auto or hidden)</a></li>
+				<li><a href="#char*.bindgroup*.name,(category name),(part name),(thumbnail name)">char*.bindgroup*.name,(category name),(part name),(thumbnail name)</a></li>
+				<li><a href="#char*.bindgroup*.default,(numeric value)">char*.bindgroup*.default,(numeric value)</a></li>
 				<li><a href="#char*.bindgroup*.addid,ID">char*.bindgroup*.addid,ID</a></li>
-				<li><a href="#char*.bindoption*.group,カテゴリ名,オプション">char*.bindoption*.group,カテゴリ名,オプション</a></li>
+				<li><a href="#char*.bindoption*.group,(category name),(option)">char*.bindoption*.group,(category name),(option)</a></li>
 				<li><a href="#char*.menuitem*,ID">char*.menuitem*,ID</a></li>
-				<li><a href="#char*.menuitemex*,メニュー名,ID">char*.menuitemex*,メニュー名,ID</a></li>
-				<li><a href="#char*.menu,autoまたはhidden">char*.menu,autoまたはhidden</a></li>
-				<li><a href="#seriko.paint_transparent_region_black,数値">seriko.paint_transparent_region_black,数値</a></li>
-				<li><a href="#seriko.use_self_alpha,数値">seriko.use_self_alpha,数値</a></li>
+				<li><a href="#char*.menuitemex*,(menu name),(ID)">char*.menuitemex*,(menu name),(ID)</a></li>
+				<li><a href="#char*.menu,(auto or hidden)">char*.menu,(auto or hidden)</a></li>
+				<li><a href="#seriko.paint_transparent_region_black,(numeric value)">seriko.paint_transparent_region_black,(numeric value)</a></li>
+				<li><a href="#seriko.use_self_alpha,(numeric value)">seriko.use_self_alpha,(numeric value)</a></li>
 			</ul>
 			<ul>
-				<li class="caption"><a href="#caption_surfaceposition">サーフェスの位置情報</a></li>
-				<li class="caption"><a href="#caption_balloonposition">バルーンの位置情報</a></li>
-				<li class="caption"><a href="#caption_menualign">メニュー画像の位置指定</a></li>
+				<li class="caption"><a href="#caption_surfaceposition">Surface position information</a></li>
+				<li class="caption"><a href="#caption_balloonposition">Balloon position information</a></li>
+				<li class="caption"><a href="#caption_menualign">Positioning of menu images</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="categories">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<ul>
+				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
+				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/descript_shell.html">here</a>.</li>
+				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
+			</ul>
+		</section>
 		<section class="category">
 			<h1>descript.txt</h1>			<section class="caption introduction" id="introduction_descript.txt">
-				<h1>descript.txt（Shellの）</h1>
+				<h1>descript.txt (of Shell)</h1>
 				<section>
-					<h1>概要</h1>
-					<p>シェルの基本設定ファイル。<br>シェル名や作者情報の他、バルーンの表示位置設定や、オーナードローメニュー（右クリックメニュー）の画像設定、着せ替えのオーナードローメニューでの表示設定などもここで行う。</p>
+					<h1>Summary</h1>
+					<p>Basic shell configuration file.<br>In addition to the shell name and author information, the display position of the balloon, image setting of the owner draw menu (right-click menu), and the display settings for dressup in the owner draw menu are also written here.</p>
 				</section>
 				<section>
-					<h1>記述例と基本の書き方</h1>
+					<h1>Basic format and description examples</h1>
 <pre><code>charset,Shift_JIS
 type,shell
 name,master
@@ -263,16 +271,16 @@ kero.balloon.offsety,10
 sakura.balloon.alignment,none
 kero.balloon.alignment,none
 
-sakura.bindgroup0.name,服,エプロンドレス,apron
-sakura.bindgroup1.name,リボン,白リボン,ribbonwhite
-sakura.bindgroup2.name,服,黒服,black
-sakura.bindgroup3.name,リボン,黒リボン,ribbonblack
+sakura.bindgroup0.name,Clothing,Apron dress,apron
+sakura.bindgroup1.name,Ribbon,White ribbon,ribbonwhite
+sakura.bindgroup2.name,Clothing,Black dress,black
+sakura.bindgroup3.name,Ribbon,Black ribbon,ribbonblack
 sakura.bindgroup0.default,1
 sakura.bindgroup1.default,1
 
-kero.bindgroup0.name,ネクタイ,ネクタイ
-kero.bindgroup1.name,腕章,黒腕章
-kero.bindgroup2.name,腕,ドリル
+kero.bindgroup0.name,Necktie,Necktie
+kero.bindgroup1.name,Arm Band,Black arm band
+kero.bindgroup2.name,Arm,Drill
 kero.bindgroup0.default,1
 kero.bindgroup1.default,1
 
@@ -287,28 +295,28 @@ kero.menuitem1,1
 kero.menuitem2,-
 kero.menuitem3,2
 </code></pre>
-					<p>type、nameは必須。</p>
-					<p>SSPでは、シェルに対してもhomeurlを設定しておくことで、エクスプローラなどからネットワーク更新が可能になる。</p>
-					<p>着せ替え設定の各項目については後述のそれぞれの節を参照。<br>基本的な仕組みは、<a href="descript_shell_surfaces.html">surfaces.txt</a>で定義した、タイミングbindのanimationIDに対して、着せ替え名と着せ替えカテゴリ名を与え（sakura(kero).bindgroup*.name,～）、またオーナードローメニュー上での配置を指定する必要がある（sakura(kero).menuitem*,～）。</p>
-					<p>なお、\や%で始まる文字列はさくらスクリプトや環境変数のタグと見なされ、セキュリティ上のリスクから破棄される。もし単なる文字としてそれらを含めたい場合は、\\や\%などとしてエスケープする必要がある。</p>
+					<p>type and name are required.</p>
+					<p>In SSP, it is possible to perform network updates from the Explorer, etc., by setting a homeurl for the shell as well.</p>
+					<p>See the respective sections below for more information on each of the dressup settings.<br>The basic mechanism is that the name and category name of each dressup are assigned to the animation ID of the bind interval defined in <a href="descript_shell_surfaces.html">surfaces.txt</a> (sakura(kero).bindgroup*.name,~), and the placement on the owner draw menu is also specified (sakura(kero).menuitem*,~).</p>
+					<p>Note that strings beginning with \ or % are considered tags in Sakura Script or environment variables, and are discarded due to security risks. If you want to include them as just characters, you need to escape them as \\ or \%.</p>
 				</section>
 			</section>
-			<dl id="charset,文字コード">
-				<dt class="entry">charset,文字コード</dt>
+			<dl id="charset,(character code)">
+				<dt class="entry">charset,(character code)</dt>
 				<dd class="entry">
-					<p>表示する文字コード。旧い環境との互換性を考慮する場合はShift_JIS、それ以外はUTF-8を推奨。</p>
-					<p class="default">(OSの標準設定またはSSP->国際化->省略時の文字コード->テキスト定義)</p>
+					<p>Character code to be displayed. Shift_JIS is recommended for compatibility with older environments, otherwise UTF-8 is recommended.</p>
+					<p class="default">(OS default setting or SSP -> Internationalization -> Default charset -> Text definition)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="name,シェル名">
-				<dt class="entry">name,シェル名</dt>
+			<dl id="name,(shell name)">
+				<dt class="entry">name,(shell name)</dt>
 				<dd class="entry">
-					<p>そのシェルの名前。</p>
-					<p class="default">省略不可</p>
+					<p>Name of the shell.</p>
+					<p class="default">Cannot be omitted</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -316,14 +324,14 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="id,ID名">
-				<dt class="entry">id,ID名</dt>
+			<dl id="id,(ID name)">
+				<dt class="entry">id,(ID name)</dt>
 				<dd class="entry">
-					<p>そのシェルのID名。半角英数のみ。(SSPは全文字許容)
-					<br />今のところ起動時のコンソールのような表示に出てくる以外の用途はない。
-					<br />SSPは設定-一般-透明ステータス表示ウインドウを有効にする をONしないと見えない。</p>
+					<p>ID name of the shell. Single-byte alphanumeric characters only. (All characters are acceptable in SSP)
+					<br />So far it has no use other than to appear in a console-like display at startup.
+					<br />In SSP, this setting is invisible unless Preferences → General → Show Transparent Status Display Window is turned on.</p>
 					
-					<p class="default">値なし</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -331,11 +339,11 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="type,種別">
-				<dt class="entry">type,種別</dt>
+			<dl id="type,(type)">
+				<dt class="entry">type,(type)</dt>
 				<dd class="entry">
-					<p>ファイルセットの種別。シェルの場合はshell。</p>
-					<p class="default">省略不可/SSPの場合はシェルフォルダ内にあるものはshellと自動識別される</p>
+					<p>Fileset type. For shells, "shell".</p>
+					<p class="default">Cannot be omitted/In SSP, anything in the shell folder is automatically identified as shell</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -343,11 +351,11 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="craftman,作者名">
-				<dt class="entry">craftman,作者名</dt>
+			<dl id="craftman,(author name)">
+				<dt class="entry">craftman,(author name)</dt>
 				<dd class="entry">
-					<p>そのシェルの作者名。半角英数のみ。</p>
-					<p class="default">値なし</p>
+					<p>The name of the author of the shell. Alphanumeric characters only.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -355,11 +363,11 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="craftmanw,作者名">
-				<dt class="entry">craftmanw,作者名</dt>
+			<dl id="craftmanw,(author name)">
+				<dt class="entry">craftmanw,(author name)</dt>
 				<dd class="entry">
-					<p>そのシェルの作者名。</p>
-					<p class="default">値なし</p>
+					<p>The name of the author of the shell.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -370,8 +378,8 @@ kero.menuitem3,2
 			<dl id="craftmanurl,URL">
 				<dt class="entry">craftmanurl,URL</dt>
 				<dd class="entry">
-					<p>作者のURL。</p>
-					<p class="default">値なし</p>
+					<p>Author's URL.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -382,17 +390,17 @@ kero.menuitem3,2
 			<dl id="homeurl,URL">
 				<dt class="entry">homeurl,URL</dt>
 				<dd class="entry">
-					<p>ネットワーク更新用のURL。</p>
-					<p class="default">値なし</p>
+					<p>Network update URL.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="readme,ファイル名">
-				<dt class="entry">readme,ファイル名</dt>
+			<dl id="readme,(filename)">
+				<dt class="entry">readme,(filename)</dt>
 				<dd class="entry">
-					<p>インストール時やメニューから開かれるシェルの説明テキストファイル名。</p>
+					<p>The name of the shell explanation text file that is opened during installation or from the menu.</p>
 					<p class="default">readme.txt</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -400,11 +408,11 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="readme.charset,文字コード">
-				<dt class="entry">readme.charset,文字コード</dt>
+			<dl id="readme.charset,(character code)">
+				<dt class="entry">readme.charset,(character code)</dt>
 				<dd class="entry">
-					<p>説明テキストファイルの文字コード。</p>
-					<p class="default">(OSの標準設定またはSSP->国際化->省略時の文字コード->readme)</p>
+					<p>Character code of the explanation text file.</p>
+					<p class="default">(OS default setting or SSP → Internationalization → Default charset → readme)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.10</li>
 					</ul>
@@ -413,18 +421,18 @@ kero.menuitem3,2
 			<dl id="menu,hidden">
 				<dt class="entry">menu,hidden</dt>
 				<dd class="entry">
-					<p>シェルをゴーストのシェル切り替えメニューに表示しなくなる。</p>
-					<p class="default">値なし</p>
+					<p>Hide shells from the shell-switching menu of the ghost.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.name,名前">
-				<dt class="entry">sakura.name,名前</dt>
+			<dl id="sakura.name,(name)">
+				<dt class="entry">sakura.name,(name)</dt>
 				<dd class="entry">
-					<p>本題側のゴーストの名前。</p>
-					<p class="default">ghostのdescript設定</p>
+					<p>The name of the main character of the ghost.</p>
+					<p class="default">Ghost descript settings</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -432,21 +440,21 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.name2,名前">
-				<dt class="entry">sakura.name2,名前</dt>
+			<dl id="sakura.name2,(name)">
+				<dt class="entry">sakura.name2,(name)</dt>
 				<dd class="entry">
-					<p>本題側のゴーストの名前。愛称等。</p>
-					<p class="default">ghostのdescript設定</p>
+					<p>The name of the main character of the ghost. Nickname, etc.</p>
+					<p class="default">Ghost descript settings</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.name,名前">
-				<dt class="entry">kero.name,名前</dt>
+			<dl id="kero.name,(name)">
+				<dt class="entry">kero.name,(name)</dt>
 				<dd class="entry">
-					<p>相方側のゴーストの名前。</p>
-					<p class="default">ghostのdescript設定</p>
+					<p>The name of the side character of the ghost.</p>
+					<p class="default">Ghost descript settings</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -454,140 +462,140 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.name,名前">
-				<dt class="entry">char*.name,名前</dt>
+			<dl id="char*.name,(name)">
+				<dt class="entry">char*.name,(name)</dt>
 				<dd class="entry">
-					<p>\p[*]の名前。</p>
-					<p class="default">ghostのdescript設定</p>
+					<p>Name of the \p[*] character.</p>
+					<p class="default">Ghost descript settings</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="seriko.zorder,スコープID,スコープID,_">
-				<dt class="entry">seriko.zorder,スコープID,スコープID,...</dt>
+			<dl id="seriko.zorder,(Scope ID),(Scope ID),_">
+				<dt class="entry">seriko.zorder,(Scope ID),(Scope ID),...</dt>
 				<dd class="entry">
 					<p></p>
-					<p><a href="./list_sakura_script.html#_!_set,zorder,スコープID,スコープID,_">\![set,zorder,スコープID,スコープID,...]</a>のdescript版。タグを実行しなくてもあらかじめ設定できる。</p>
-					<p class="default">値なし</p>
+					<p>Descript version of <a href="./list_sakura_script.html#_!_set,zorder,スコープID,スコープID,_">\![set,zorder,スコープID,スコープID,...]</a>. It can be preconfigured with no need to run the tag.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.4</li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="seriko.sticky-window,スコープID,スコープID,_">
-				<dt class="entry">seriko.sticky-window,スコープID,スコープID,...</dt>
+			<dl id="seriko.sticky-window,(Scope ID),(Scope ID),_">
+				<dt class="entry">seriko.sticky-window,(Scope ID),(Scope ID),...</dt>
 				<dd class="entry">
-					<p><a href="./list_sakura_script.html#_!_set,sticky-window,スコープID,スコープID,_">\![set,sticky-window,スコープID,スコープID,...]</a>のdescript版。タグを実行しなくてもあらかじめ設定できる。</p>
-					<p class="default">値なし</p>
+					<p>Descript version of <a href="./list_sakura_script.html#_!_set,sticky-window,スコープID,スコープID,_">\![set,sticky-window,スコープID,スコープID,...]</a>. It can be preconfigured with no need to run the tag.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.4</li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="seriko.alignmenttodesktop,位置情報">
-				<dt class="entry">seriko.alignmenttodesktop,位置情報</dt>
+			<dl id="seriko.alignmenttodesktop,(position)">
+				<dt class="entry">seriko.alignmenttodesktop,(position)</dt>
 				<dd class="entry">
-					<p>全体のサーフェスのデフォルト<a href="#caption_surfaceposition">※表示位置情報</a>。<br><a href="descript_ghost.html#seriko.alignmenttodesktop,位置情報">ゴースト側指定</a>より優先度が高く、シェル側個別指定（<a href="#sakura.seriko.alignmenttodesktop,位置情報">sakura.seriko.alignmenttodesktop</a>など）より優先度が低い。<br>※ゴースト側全体指定＜ゴースト側スコープ個別指定＜これ＜シェル側スコープ個別指定</p>
-					<p class="default">値なし</p>
+					<p>Default <a href="#caption_surfaceposition">※display position information</a> for the entire surface.<br>Higher priority than <a href="descript_ghost.html#seriko.alignmenttodesktop,(position)">ghost side specification</a>, and lower priority than shell side individual specification (such as <a href="#sakura.seriko.alignmenttodesktop,(position)">sakura.seriko.alignmenttodesktop</a>).<br>※Ghost side overall specification < ghost side scope individual specification < this setting < shell side scope individual specification.</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.seriko.alignmenttodesktop,位置情報">
-				<dt class="entry">sakura.seriko.alignmenttodesktop,位置情報</dt>
+			<dl id="sakura.seriko.alignmenttodesktop,(position)">
+				<dt class="entry">sakura.seriko.alignmenttodesktop,(position)</dt>
 				<dd class="entry">
-					<p>本体側のデフォルト<a href="#caption_surfaceposition">※表示位置情報</a>。<br>シェル側全体指定（<a href="#seriko.alignmenttodesktop,位置情報">seriko.alignmenttodesktop</a>）より優先度が高い。すなわち全てのalignmenttodesktop系指定で一番優先度が高い。<br>※ゴースト側全体指定＜ゴースト側スコープ個別指定＜シェル側全体指定＜これ</p>
-					<p class="default">値なし</p>
+					<p>本体側のデフォルト<a href="#caption_surfaceposition">※表示位置情報</a>。<br>シェル側全体指定（<a href="#seriko.alignmenttodesktop,(position)">seriko.alignmenttodesktop</a>）より優先度が高い。すなわち全てのalignmenttodesktop系指定で一番優先度が高い。<br>※ゴースト側全体指定＜ゴースト側スコープ個別指定＜シェル側全体指定＜これ</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.seriko.alignmenttodesktop,位置情報">
-				<dt class="entry">kero.seriko.alignmenttodesktop,位置情報</dt>
+			<dl id="kero.seriko.alignmenttodesktop,(position)">
+				<dt class="entry">kero.seriko.alignmenttodesktop,(position)</dt>
 				<dd class="entry">
-					<p>相方側のデフォルト<a href="#caption_surfaceposition">※表示位置情報</a>。<br>シェル側全体指定（<a href="#seriko.alignmenttodesktop,位置情報">seriko.alignmenttodesktop</a>）より優先度が高い。すなわち全てのalignmenttodesktop系指定で一番優先度が高い。<br>※ゴースト側全体指定＜ゴースト側スコープ個別指定＜シェル側全体指定＜これ</p>
-					<p class="default">値なし</p>
+					<p>相方側のデフォルト<a href="#caption_surfaceposition">※表示位置情報</a>。<br>シェル側全体指定（<a href="#seriko.alignmenttodesktop,(position)">seriko.alignmenttodesktop</a>）より優先度が高い。すなわち全てのalignmenttodesktop系指定で一番優先度が高い。<br>※ゴースト側全体指定＜ゴースト側スコープ個別指定＜シェル側全体指定＜これ</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.seriko.alignmenttodesktop,位置情報">
-				<dt class="entry">char*.seriko.alignmenttodesktop,位置情報</dt>
+			<dl id="char*.seriko.alignmenttodesktop,(position)">
+				<dt class="entry">char*.seriko.alignmenttodesktop,(position)</dt>
 				<dd class="entry">
-					<p>2人目以降の相方側のデフォルト<a href="#caption_surfaceposition">※表示位置情報</a>。<br>シェル側全体指定（<a href="#seriko.alignmenttodesktop,位置情報">seriko.alignmenttodesktop</a>）より優先度が高い。すなわち全てのalignmenttodesktop系指定で一番優先度が高い。<br>※ゴースト側全体指定＜ゴースト側スコープ個別指定＜シェル側全体指定＜これ</p>
-					<p class="default">値なし</p>
+					<p>2人目以降の相方側のデフォルト<a href="#caption_surfaceposition">※表示位置情報</a>。<br>シェル側全体指定（<a href="#seriko.alignmenttodesktop,(position)">seriko.alignmenttodesktop</a>）より優先度が高い。すなわち全てのalignmenttodesktop系指定で一番優先度が高い。<br>※ゴースト側全体指定＜ゴースト側スコープ個別指定＜シェル側全体指定＜これ</p>
+					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.defaultx,X座標">
-				<dt class="entry">sakura.defaultx,X座標</dt>
+			<dl id="sakura.defaultx,(X coordinate)">
+				<dt class="entry">sakura.defaultx,(X coordinate)</dt>
 				<dd class="entry">
 					<p>本体側の画像ベースX座標。</p>
-					<p class="default">ghostのdescript設定（無ければ画像中央）</p>
+					<p class="default">Ghost descript settings (center of image if none)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.defaultx,X座標">
-				<dt class="entry">kero.defaultx,X座標</dt>
+			<dl id="kero.defaultx,(X coordinate)">
+				<dt class="entry">kero.defaultx,(X coordinate)</dt>
 				<dd class="entry">
 					<p>相方側の画像ベースX座標。</p>
-					<p class="default">ghostのdescript設定（無ければ画像中央）</p>
+					<p class="default">Ghost descript settings (center of image if none)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.defaultx,X座標">
-				<dt class="entry">char*.defaultx,X座標</dt>
+			<dl id="char*.defaultx,(X coordinate)">
+				<dt class="entry">char*.defaultx,(X coordinate)</dt>
 				<dd class="entry">
 					<p>2人目以降の相方側の画像ベースX座標。</p>
-					<p class="default">ghostのdescript設定（無ければ画像中央）</p>
+					<p class="default">Ghost descript settings (center of image if none)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.defaulty,Y座標">
-				<dt class="entry">sakura.defaulty,Y座標</dt>
+			<dl id="sakura.defaulty,(Y coordinate)">
+				<dt class="entry">sakura.defaulty,(Y coordinate)</dt>
 				<dd class="entry">
 					<p>本体側の画像ベースY座標。</p>
-					<p class="default">ghostのdescript設定（無ければ画像下端）</p>
+					<p class="default">Ghost descript settings (bottom of image if none)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.defaulty,Y座標">
-				<dt class="entry">kero.defaulty,Y座標</dt>
+			<dl id="kero.defaulty,(Y coordinate)">
+				<dt class="entry">kero.defaulty,(Y coordinate)</dt>
 				<dd class="entry">
 					<p>相方側の画像ベースY座標。</p>
-					<p class="default">ghostのdescript設定（無ければ画像下端）</p>
+					<p class="default">Ghost descript settings (bottom of image if none)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.defaulty,Y座標">
-				<dt class="entry">char*.defaulty,Y座標</dt>
+			<dl id="char*.defaulty,(Y coordinate)">
+				<dt class="entry">char*.defaulty,(Y coordinate)</dt>
 				<dd class="entry">
 					<p>2人目以降の相方側の画像ベースY座標。</p>
-					<p class="default">ghostのdescript設定（無ければ画像下端）</p>
+					<p class="default">Ghost descript settings (bottom of image if none)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.defaultleft,X座標">
-				<dt class="entry">sakura.defaultleft,X座標</dt>
+			<dl id="sakura.defaultleft,(X coordinate)">
+				<dt class="entry">sakura.defaultleft,(X coordinate)</dt>
 				<dd class="entry">
 					<p>本体側のディスプレイ上でのデフォルトX座標。</p>
 					<p class="default">ghostのdescript設定</p>
@@ -596,8 +604,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.defaultleft,X座標">
-				<dt class="entry">kero.defaultleft,X座標</dt>
+			<dl id="kero.defaultleft,(X coordinate)">
+				<dt class="entry">kero.defaultleft,(X coordinate)</dt>
 				<dd class="entry">
 					<p>相方側のディスプレイ上でのデフォルトX座標。</p>
 					<p class="default">ghostのdescript設定</p>
@@ -606,8 +614,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.defaultleft,X座標">
-				<dt class="entry">char*.defaultleft,X座標</dt>
+			<dl id="char*.defaultleft,(X coordinate)">
+				<dt class="entry">char*.defaultleft,(X coordinate)</dt>
 				<dd class="entry">
 					<p>2人目以降の相方側のディスプレイ上でのデフォルトX座標。</p>
 					<p class="default">ghostのdescript設定</p>
@@ -616,41 +624,41 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.defaulttop,Y座標">
-				<dt class="entry">sakura.defaulttop,Y座標</dt>
+			<dl id="sakura.defaulttop,(Y coordinate)">
+				<dt class="entry">sakura.defaulttop,(Y coordinate)</dt>
 				<dd class="entry">
 					<p>本体側のディスプレイ上でのデフォルトY座標。<br />
-					<a href="#seriko.alignmenttodesktop,位置情報">seriko.alignmenttodesktop</a>がfreeである場合のみ有効。</p>
+					<a href="#seriko.alignmenttodesktop,(position)">seriko.alignmenttodesktop</a>がfreeである場合のみ有効。</p>
 					<p class="default">ghostのdescript設定</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.defaulttop,Y座標">
-				<dt class="entry">kero.defaulttop,Y座標</dt>
+			<dl id="kero.defaulttop,(Y coordinate)">
+				<dt class="entry">kero.defaulttop,(Y coordinate)</dt>
 				<dd class="entry">
 					<p>相方側のディスプレイ上でのデフォルトY座標。<br />
-					<a href="#seriko.alignmenttodesktop,位置情報">seriko.alignmenttodesktop</a>がfreeである場合のみ有効。</p>
+					<a href="#seriko.alignmenttodesktop,(position)">seriko.alignmenttodesktop</a>がfreeである場合のみ有効。</p>
 					<p class="default">ghostのdescript設定</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.defaulttop,Y座標">
-				<dt class="entry">char*.defaulttop,Y座標</dt>
+			<dl id="char*.defaulttop,(Y coordinate)">
+				<dt class="entry">char*.defaulttop,(Y coordinate)</dt>
 				<dd class="entry">
 					<p>2人目以降の相方側のディスプレイ上でのデフォルトY座標。<br />
-					<a href="#seriko.alignmenttodesktop,位置情報">seriko.alignmenttodesktop</a>がfreeである場合のみ有効。</p>
+					<a href="#seriko.alignmenttodesktop,(position)">seriko.alignmenttodesktop</a>がfreeである場合のみ有効。</p>
 					<p class="default">ghostのdescript設定</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_1_sakura.balloon.offsetx,座標">
-				<dt class="entry">sakura.balloon.offsetx,座標</dt>
+			<dl id="_1_sakura.balloon.offsetx,(coordinate)">
+				<dt class="entry">sakura.balloon.offsetx,(coordinate)</dt>
 				<dd class="entry">
 					<p>本体側バルーン位置X座標。<br />
 					後ろにl,rをつける (例：offsetxr) と、バルーンを左右に表示する時のオフセットを個別に設定できる(SSP 2.4.58～)。<br />
@@ -663,8 +671,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_1_sakura.balloon.offsety,座標">
-				<dt class="entry">sakura.balloon.offsety,座標</dt>
+			<dl id="_1_sakura.balloon.offsety,(coordinate)">
+				<dt class="entry">sakura.balloon.offsety,(coordinate)</dt>
 				<dd class="entry">
 					<p>本体側バルーン位置Y座標。<br />
 					後ろにl,rをつける (例：offsetxr) と、バルーンを左右に表示する時のオフセットを個別に設定できる(SSP 2.4.58～)。<br />
@@ -677,8 +685,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_1_kero.balloon.offsetx,座標">
-				<dt class="entry">kero.balloon.offsetx,座標</dt>
+			<dl id="_1_kero.balloon.offsetx,(coordinate)">
+				<dt class="entry">kero.balloon.offsetx,(coordinate)</dt>
 				<dd class="entry">
 					<p>相方側バルーン位置X座標。<br />
 					後ろにl,rをつける (例：offsetxr) と、バルーンを左右に表示する時のオフセットを個別に設定できる(SSP 2.4.58～)。<br />
@@ -691,8 +699,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_1_kero.balloon.offsety,座標">
-				<dt class="entry">kero.balloon.offsety,座標</dt>
+			<dl id="_1_kero.balloon.offsety,(coordinate)">
+				<dt class="entry">kero.balloon.offsety,(coordinate)</dt>
 				<dd class="entry">
 					<p>相方側バルーン位置Y座標。<br />
 					後ろにl,rをつける (例：offsetxr) と、バルーンを左右に表示する時のオフセットを個別に設定できる(SSP 2.4.58～)。<br />
@@ -705,10 +713,10 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.balloon.alignment,位置情報">
-				<dt class="entry">sakura.balloon.alignment,位置情報</dt>
+			<dl id="sakura.balloon.alignment,(position)">
+				<dt class="entry">sakura.balloon.alignment,(position)</dt>
 				<dd class="entry">
-					<p>本体側の吹き出しの<a href="#caption_balloonposition">※位置情報</a>。</p>
+					<p>本体側の吹き出しの<a href="#caption_balloonposition">※(position)</a>。</p>
 					<p class="default">ghostのdescript設定</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -717,10 +725,10 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.balloon.alignment,位置情報">
-				<dt class="entry">kero.balloon.alignment,位置情報</dt>
+			<dl id="kero.balloon.alignment,(position)">
+				<dt class="entry">kero.balloon.alignment,(position)</dt>
 				<dd class="entry">
-					<p>相方側の吹き出しの<a href="#caption_balloonposition">※位置情報</a>。</p>
+					<p>相方側の吹き出しの<a href="#caption_balloonposition">※(position)</a>。</p>
 					<p class="default">ghostのdescript設定</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -730,7 +738,7 @@ kero.menuitem3,2
 				</dd>
 			</dl>
 			<dl id="sakura.balloon.dontmove_">
-				<dt class="entry">sakura.balloon.dontmove,数値</dt>
+				<dt class="entry">sakura.balloon.dontmove,(numeric value)</dt>
 				<dd class="entry">
 					<p>本体側の吹き出しのユーザーによる移動操作を禁止する。1(もしくはtrue)で禁止。<br />
 					ユーザーの操作を阻害するので、濫用しないこと。</p>
@@ -741,7 +749,7 @@ kero.menuitem3,2
 				</dd>
 			</dl>
 			<dl id="kero.balloon.dontmove_">
-				<dt class="entry">kero.balloon.dontmove,数値</dt>
+				<dt class="entry">kero.balloon.dontmove,(numeric value)</dt>
 				<dd class="entry">
 					<p>相方側の吹き出しのユーザーによる移動操作を禁止する。1(もしくはtrue)で禁止。</p>
 					<p class="default">ghostのdescript設定(balloon.dontmove)</p>
@@ -751,7 +759,7 @@ kero.menuitem3,2
 				</dd>
 			</dl>
 			<dl id="char*.balloon.dontmove_">
-				<dt class="entry">char*.balloon.dontmove,数値</dt>
+				<dt class="entry">char*.balloon.dontmove,(numeric value)</dt>
 				<dd class="entry">
 					<p>2人目以降の吹き出しのユーザーによる移動操作を禁止する。1(もしくはtrue)で禁止。</p>
 					<p class="default">ghostのdescript設定(balloon.dontmove)</p>
@@ -760,8 +768,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.font.name,フォント名">
-				<dt class="entry">menu.font.name,フォント名</dt>
+			<dl id="menu.font.name,(font name)">
+				<dt class="entry">menu.font.name,(font name)</dt>
 				<dd class="entry">
 					<p>オーナードローメニューに使用するフォント。</p>
 					<p class="default">OSで設定されたUI標準フォント</p>
@@ -770,8 +778,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.font.height,フォントサイズ">
-				<dt class="entry">menu.font.height,フォントサイズ</dt>
+			<dl id="menu.font.height,(font size)">
+				<dt class="entry">menu.font.height,(font size)</dt>
 				<dd class="entry">
 					<p>オーナードローメニューに使用する文字の大きさ。</p>
 					<p class="default">OSで設定されたUI標準フォントの高さ</p>
@@ -780,8 +788,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.background.bitmap.filename,ファイル名">
-				<dt class="entry">menu.background.bitmap.filename,ファイル名</dt>
+			<dl id="menu.background.bitmap.filename,(filename)">
+				<dt class="entry">menu.background.bitmap.filename,(filename)</dt>
 				<dd class="entry">
 					<p>バックグラウンド表示画像ファイル名。</p>
 					<p class="default">ベースウェア標準の画像</p>
@@ -792,8 +800,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.foreground.bitmap.filename,ファイル名">
-				<dt class="entry">menu.foreground.bitmap.filename,ファイル名</dt>
+			<dl id="menu.foreground.bitmap.filename,(filename)">
+				<dt class="entry">menu.foreground.bitmap.filename,(filename)</dt>
 				<dd class="entry">
 					<p>フォアグラウンド表示画像ファイル名。</p>
 					<p class="default">ベースウェア標準の画像</p>
@@ -804,8 +812,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.sidebar.bitmap.filename,ファイル名">
-				<dt class="entry">menu.sidebar.bitmap.filename,ファイル名</dt>
+			<dl id="menu.sidebar.bitmap.filename,(filename)">
+				<dt class="entry">menu.sidebar.bitmap.filename,(filename)</dt>
 				<dd class="entry">
 					<p>サイドバー表示画像ファイル名。</p>
 					<p class="default">ベースウェア標準の画像</p>
@@ -816,8 +824,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.background.font.color.r,数値">
-				<dt class="entry">menu.background.font.color.r,数値</dt>
+			<dl id="menu.background.font.color.r,(numeric value)">
+				<dt class="entry">menu.background.font.color.r,(numeric value)</dt>
 				<dd class="entry">
 					<p>バックグラウンド文字色赤(0～255)</p>
 					<p class="default">OSで設定されたメニュー文字色</p>
@@ -828,8 +836,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.background.font.color.g,数値">
-				<dt class="entry">menu.background.font.color.g,数値</dt>
+			<dl id="menu.background.font.color.g,(numeric value)">
+				<dt class="entry">menu.background.font.color.g,(numeric value)</dt>
 				<dd class="entry">
 					<p>バックグラウンド文字色緑(0～255)</p>
 					<p class="default">OSで設定されたメニュー文字色</p>
@@ -840,8 +848,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.background.font.color.b,数値">
-				<dt class="entry">menu.background.font.color.b,数値</dt>
+			<dl id="menu.background.font.color.b,(numeric value)">
+				<dt class="entry">menu.background.font.color.b,(numeric value)</dt>
 				<dd class="entry">
 					<p>バックグラウンド文字色青(0～255)</p>
 					<p class="default">OSで設定されたメニュー文字色</p>
@@ -852,8 +860,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.foreground.font.color.r,数値">
-				<dt class="entry">menu.foreground.font.color.r,数値</dt>
+			<dl id="menu.foreground.font.color.r,(numeric value)">
+				<dt class="entry">menu.foreground.font.color.r,(numeric value)</dt>
 				<dd class="entry">
 					<p>フォアグラウンド文字色赤(0～255)</p>
 					<p class="default">OSで設定されたハイライト文字色</p>
@@ -864,8 +872,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.foreground.font.color.g,数値">
-				<dt class="entry">menu.foreground.font.color.g,数値</dt>
+			<dl id="menu.foreground.font.color.g,(numeric value)">
+				<dt class="entry">menu.foreground.font.color.g,(numeric value)</dt>
 				<dd class="entry">
 					<p>フォアグラウンド文字色緑(0～255)</p>
 					<p class="default">OSで設定されたハイライト文字色</p>
@@ -876,8 +884,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.foreground.font.color.b,数値">
-				<dt class="entry">menu.foreground.font.color.b,数値</dt>
+			<dl id="menu.foreground.font.color.b,(numeric value)">
+				<dt class="entry">menu.foreground.font.color.b,(numeric value)</dt>
 				<dd class="entry">
 					<p>フォアグラウンド文字色青(0～255)</p>
 					<p class="default">OSで設定されたハイライト文字色</p>
@@ -888,8 +896,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.separator.color.r,数値">
-				<dt class="entry">menu.separator.color.r,数値</dt>
+			<dl id="menu.separator.color.r,(numeric value)">
+				<dt class="entry">menu.separator.color.r,(numeric value)</dt>
 				<dd class="entry">
 					<p>セパレータ色赤(0～255)</p>
 					<p class="default">menu.background.font.color.r</p>
@@ -900,8 +908,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.separator.color.g,数値">
-				<dt class="entry">menu.separator.color.g,数値</dt>
+			<dl id="menu.separator.color.g,(numeric value)">
+				<dt class="entry">menu.separator.color.g,(numeric value)</dt>
 				<dd class="entry">
 					<p>セパレータ色緑(0～255)</p>
 					<p class="default">menu.background.font.color.g</p>
@@ -912,8 +920,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.separator.color.b,数値">
-				<dt class="entry">menu.separator.color.b,数値</dt>
+			<dl id="menu.separator.color.b,(numeric value)">
+				<dt class="entry">menu.separator.color.b,(numeric value)</dt>
 				<dd class="entry">
 					<p>セパレータ色青(0～255)</p>
 					<p class="default">menu.background.font.color.b</p>
@@ -924,8 +932,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.frame.color.r,数値">
-				<dt class="entry">menu.frame.color.r,数値</dt>
+			<dl id="menu.frame.color.r,(numeric value)">
+				<dt class="entry">menu.frame.color.r,(numeric value)</dt>
 				<dd class="entry">
 					<p>枠の色赤(0～255)</p>
 					<p class="default">0</p>
@@ -934,8 +942,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.frame.color.g,数値">
-				<dt class="entry">menu.frame.color.g,数値</dt>
+			<dl id="menu.frame.color.g,(numeric value)">
+				<dt class="entry">menu.frame.color.g,(numeric value)</dt>
 				<dd class="entry">
 					<p>枠の色緑(0～255)</p>
 					<p class="default">0</p>
@@ -944,8 +952,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.frame.color.b,数値">
-				<dt class="entry">menu.frame.color.b,数値</dt>
+			<dl id="menu.frame.color.b,(numeric value)">
+				<dt class="entry">menu.frame.color.b,(numeric value)</dt>
 				<dd class="entry">
 					<p>枠の色青(0～255)</p>
 					<p class="default">0</p>
@@ -990,10 +998,10 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.background.alignment,位置">
-				<dt class="entry">menu.background.alignment,位置</dt>
+			<dl id="menu.background.alignment,(alignment)">
+				<dt class="entry">menu.background.alignment,(alignment)</dt>
 				<dd class="entry">
-					<p>バックグラウンド画像の位置を指定する。<a href="#caption_menualign">メニュー画像の位置指定</a>を参照。</p>
+					<p>バックグラウンド画像の位置を指定する。<a href="#caption_menualign">Positioning of menu images</a>を参照。</p>
 					<p class="default">lefttop</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1002,10 +1010,10 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.foreground.alignment,位置">
-				<dt class="entry">menu.foreground.alignment,位置</dt>
+			<dl id="menu.foreground.alignment,(alignment)">
+				<dt class="entry">menu.foreground.alignment,(alignment)</dt>
 				<dd class="entry">
-					<p>フォアグラウンド画像の位置を指定する。<a href="#caption_menualign">メニュー画像の位置指定</a>を参照。</p>
+					<p>フォアグラウンド画像の位置を指定する。<a href="#caption_menualign">Positioning of menu images</a>を参照。</p>
 					<p class="default">lefttop</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1014,10 +1022,10 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="menu.sidebar.alignment,位置">
-				<dt class="entry">menu.sidebar.alignment,位置</dt>
+			<dl id="menu.sidebar.alignment,(alignment)">
+				<dt class="entry">menu.sidebar.alignment,(alignment)</dt>
 				<dd class="entry">
-					<p>サイドバー画像の位置を指定する。<a href="#caption_menualign">メニュー画像の位置指定</a>を参照。</p>
+					<p>サイドバー画像の位置を指定する。<a href="#caption_menualign">Positioning of menu images</a>を参照。</p>
 					<p class="default">bottom</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1026,8 +1034,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名">
-				<dt class="entry">sakura.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名</dt>
+			<dl id="sakura.bindgroup*.name,(category name),(part name),(thumbnail name)">
+				<dt class="entry">sakura.bindgroup*.name,(category name),(part name),(thumbnail name)</dt>
 				<dd class="entry">
 					<p>
 						アニメーションID*番のパーツにカテゴリ名とパーツ名を定義。(本体側)<br />
@@ -1042,8 +1050,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.bindgroup*.default,数値">
-				<dt class="entry">sakura.bindgroup*.default,数値</dt>
+			<dl id="sakura.bindgroup*.default,(numeric value)">
+				<dt class="entry">sakura.bindgroup*.default,(numeric value)</dt>
 				<dd class="entry">
 					<p>アニメーションID*番の着せ替えを最初から表示するか否か。1で表示、0で非表示。(本体側)</p>
 					<p class="default">0</p>
@@ -1063,8 +1071,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.bindoption*.group,カテゴリ名,オプション">
-				<dt class="entry">sakura.bindoption*.group,カテゴリ名,オプション</dt>
+			<dl id="sakura.bindoption*.group,(category name),(option)">
+				<dt class="entry">sakura.bindoption*.group,(category name),(option)</dt>
 				<dd class="entry">
 					<p>その着せ替えカテゴリにオプションを設定。*は単に0から始まる通し番号(本体側)。<br />mustselectでパーツを必ず1つ選択、multipleで複数のパーツを選択可能。<br />オプションは+区切りで複数可。</p>
 					<p class="default">選択解除可能、複数選択不可</p>
@@ -1084,8 +1092,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.menuitemex*,メニュー名,ID">
-				<dt class="entry">sakura.menuitemex*,メニュー名,ID</dt>
+			<dl id="sakura.menuitemex*,(menu name),(ID)">
+				<dt class="entry">sakura.menuitemex*,(menu name),(ID)</dt>
 				<dd class="entry">
 					<p>着せ替えメニュー上の*の位置にそのアニメーションIDの着せ替えを「メニュー名」で示した階層以下に表示。*は0から始まる通し番号。(本体側)<br />IDの代わりに「-」を指定すると、その位置に仕切り線表示。</p>
 					<p class="default">動作なし</p>
@@ -1095,8 +1103,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="sakura.menu,autoまたはhidden">
-				<dt class="entry">sakura.menu,autoまたはhidden</dt>
+			<dl id="sakura.menu,(auto or hidden)">
+				<dt class="entry">sakura.menu,(auto or hidden)</dt>
 				<dd class="entry">
 					<p>シェルの本体側の着せ替えメニューの表示。<br />autoで自動表示、hiddenで非表示。</p>
 					<p class="default">動作なし（手動設定）</p>
@@ -1105,8 +1113,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名">
-				<dt class="entry">kero.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名</dt>
+			<dl id="kero.bindgroup*.name,(category name),(part name),(thumbnail name)">
+				<dt class="entry">kero.bindgroup*.name,(category name),(part name),(thumbnail name)</dt>
 				<dd class="entry">
 					<p>
 						アニメーションID*番のパーツにカテゴリ名とパーツ名を定義。(相方側)<br />
@@ -1121,8 +1129,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.bindgroup*.default,数値">
-				<dt class="entry">kero.bindgroup*.default,数値</dt>
+			<dl id="kero.bindgroup*.default,(numeric value)">
+				<dt class="entry">kero.bindgroup*.default,(numeric value)</dt>
 				<dd class="entry">
 					<p>アニメーションID*番の着せ替えを最初から表示するか否か。1で表示、0で非表示。(相方側)</p>
 					<p class="default">0</p>
@@ -1142,8 +1150,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.bindoption*.group,カテゴリ名,オプション">
-				<dt class="entry">kero.bindoption*.group,カテゴリ名,オプション</dt>
+			<dl id="kero.bindoption*.group,(category name),(option)">
+				<dt class="entry">kero.bindoption*.group,(category name),(option)</dt>
 				<dd class="entry">
 					<p>その着せ替えカテゴリにオプションを設定。*は単に0から始まる通し番号(相方側)。<br />mustselectでパーツを必ず1つ選択、multipleで複数のパーツを選択可能。<br />オプションは+区切りで複数可。</p>
 					<p class="default">選択解除可能、複数選択不可</p>
@@ -1163,8 +1171,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.menuitemex*,メニュー名,ID">
-				<dt class="entry">kero.menuitemex*,メニュー名,ID</dt>
+			<dl id="kero.menuitemex*,(menu name),(ID)">
+				<dt class="entry">kero.menuitemex*,(menu name),(ID)</dt>
 				<dd class="entry">
 					<p>着せ替えメニュー上の*の位置にそのアニメーションIDの着せ替えを「メニュー名」で示した階層以下に表示。*は0から始まる通し番号。(相方側)<br />IDの代わりに「-」を指定すると、その位置に仕切り線表示。</p>
 					<p class="default">動作なし</p>
@@ -1173,8 +1181,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="kero.menu,autoまたはhidden">
-				<dt class="entry">kero.menu,autoまたはhidden</dt>
+			<dl id="kero.menu,(auto or hidden)">
+				<dt class="entry">kero.menu,(auto or hidden)</dt>
 				<dd class="entry">
 					<p>シェルの相方側の着せ替えメニューの表示。<br />autoで自動表示、hiddenで非表示。</p>
 					<p class="default">動作なし（手動設定）</p>
@@ -1183,8 +1191,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名">
-				<dt class="entry">char*.bindgroup*.name,カテゴリ名,パーツ名,サムネイル名</dt>
+			<dl id="char*.bindgroup*.name,(category name),(part name),(thumbnail name)">
+				<dt class="entry">char*.bindgroup*.name,(category name),(part name),(thumbnail name)</dt>
 				<dd class="entry">
 					<p>
 						アニメーションID*番のパーツにカテゴリ名とパーツ名を定義。(3人目以降)<br />
@@ -1198,8 +1206,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.bindgroup*.default,数値">
-				<dt class="entry">char*.bindgroup*.default,数値</dt>
+			<dl id="char*.bindgroup*.default,(numeric value)">
+				<dt class="entry">char*.bindgroup*.default,(numeric value)</dt>
 				<dd class="entry">
 					<p>アニメーションID*番の着せ替えを最初から表示するか否か。1で表示、0で非表示。(3人目以降)</p>
 					<p class="default">0</p>
@@ -1218,8 +1226,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.bindoption*.group,カテゴリ名,オプション">
-				<dt class="entry">char*.bindoption*.group,カテゴリ名,オプション</dt>
+			<dl id="char*.bindoption*.group,(category name),(option)">
+				<dt class="entry">char*.bindoption*.group,(category name),(option)</dt>
 				<dd class="entry">
 					<p>その着せ替えカテゴリにオプションを設定。*は単に0から始まる通し番号(3人目以降)。<br />mustselectでパーツを必ず1つ選択、multipleで複数のパーツを選択可能。<br />オプションは+区切りで複数可。</p>
 					<p class="default">選択解除可能、複数選択不可</p>
@@ -1238,8 +1246,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.menuitemex*,メニュー名,ID">
-				<dt class="entry">char*.menuitemex*,メニュー名,ID</dt>
+			<dl id="char*.menuitemex*,(menu name),(ID)">
+				<dt class="entry">char*.menuitemex*,(menu name),(ID)</dt>
 				<dd class="entry">
 					<p>着せ替えメニュー上の*の位置にそのアニメーションIDの着せ替えを「メニュー名」で示した階層以下に表示。*は0から始まる通し番号。(3人目以降)<br />IDの代わりに「-」を指定すると、その位置に仕切り線表示。</p>
 					<p class="default">動作なし</p>
@@ -1248,8 +1256,8 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="char*.menu,autoまたはhidden">
-				<dt class="entry">char*.menu,autoまたはhidden</dt>
+			<dl id="char*.menu,(auto or hidden)">
+				<dt class="entry">char*.menu,(auto or hidden)</dt>
 				<dd class="entry">
 					<p>シェルの3人目以降の着せ替えメニューの表示。<br />autoで自動表示、hiddenで非表示。</p>
 					<p class="default">動作なし（手動設定）</p>
@@ -1258,18 +1266,18 @@ kero.menuitem3,2
 					</ul>
 				</dd>
 			</dl>
-			<dl id="seriko.paint_transparent_region_black,数値">
-				<dt class="entry">seriko.paint_transparent_region_black,数値</dt>
+			<dl id="seriko.paint_transparent_region_black,(numeric value)">
+				<dt class="entry">seriko.paint_transparent_region_black,(numeric value)</dt>
 				<dd class="entry">
 					<p>画像の透過色（画像左上の色）になっているにも関わらず、透明度の値では透明でない領域の表示設定。<br />0の場合は画像本来の色（透過色）を指定の透明度で表示する。<br />1の場合は画像の色の替わりに黒で塗りつぶされてから指定の透明度で表示する。<br />例えば0を指定した上で全面真っ白のpnaを用意した画像は、透過色なしで画像のまま表示される。</p>
-					<p class="default">指定なし（pnaを透明度としている画像では1相当、<a href="#seriko.use_self_alpha,数値">画像自体のアルファチャンネルを透明度としている画像</a>では0相当の動作になる）</p>
+					<p class="default">指定なし（pnaを透明度としている画像では1相当、<a href="#seriko.use_self_alpha,(numeric value)">画像自体のアルファチャンネルを透明度としている画像</a>では0相当の動作になる）</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="seriko.use_self_alpha,数値">
-				<dt class="entry">seriko.use_self_alpha,数値</dt>
+			<dl id="seriko.use_self_alpha,(numeric value)">
+				<dt class="entry">seriko.use_self_alpha,(numeric value)</dt>
 				<dd class="entry">
 					<p>数値が1だった場合はpnaでなく画像自体（32bitPNG）のアルファチャンネルを透明度として使用する。<br />なお、1の場合でもアルファチャンネルを持たない画像についてはpnaが有効。</p>
 					<p class="default">0</p>
@@ -1279,7 +1287,7 @@ kero.menuitem3,2
 				</dd>
 			</dl>
 			<div class="caption" id="caption_surfaceposition">
-				<h1>サーフェスの位置情報</h1>
+				<h1>Surface position information</h1>
 				<dl>
 					<dt>top</dt>
 					<dd>上部に貼り付き表示。</dd>
@@ -1290,7 +1298,7 @@ kero.menuitem3,2
 				</dl>
 			</div>
 			<div class="caption" id="caption_balloonposition">
-				<h1>バルーンの位置情報</h1>
+				<h1>Balloon position information</h1>
 				<dl>
 					<dt>none</dt>
 					<dd>自動調整、shellのY座標が画面中央より左なら右、右なら左に表示。</dd>
@@ -1301,7 +1309,7 @@ kero.menuitem3,2
 				</dl>
 			</div>
 			<div class="caption" id="caption_menualign">
-				<h1>メニュー画像の位置指定</h1>
+				<h1>Positioning of menu images</h1>
 				<p>寄せる方向のいずれか+繰り返し(タイリング)指定 という形式で指定する。
 				<br />例：lefttop
                 <br />例：leftbottom+repeat-x+repeat-y</p>
