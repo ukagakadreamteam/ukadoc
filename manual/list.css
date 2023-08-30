@@ -143,7 +143,10 @@ a:hover {
 .navigation-bar > .navigation-category span[data-supported='true'] {
 	color: #393;
 }
-.navigation-bar > .navigation-category span[data-supported='false'] {
+.navigation-bar>.navigation-category span[data-is_reg_event='true'] {
+	color: #aa3;
+}
+.navigation-bar>.navigation-category span[data-supported='false'][data-is_reg_event='false'] {
 	color: #933;
 }
 .navigation-bar > .navigation-category li.caption {
