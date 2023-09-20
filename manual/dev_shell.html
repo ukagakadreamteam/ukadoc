@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か,シェル">
-<title>UKADOC Project シェルの作成</title>
+<title>UKADOC Project Shell Creation</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,71 +25,81 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>シェルの作成</h1>
-<section>
+<h1>Shell Creation</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
 	<div class="passage">
-		<p>ここでは基本的なシェルの作成手順について解説しています。</p>
-		<p>ただし設定ファイルの記述についてが中心で、作画や画像の加工などについてはほとんど触れていませんのでご了承ください。</p>
-		<p>ファイル構成の<a href="manual_shell.html">シェル</a>も参照してください。</p>
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/descript_ghost.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
 	</div>
 </section>
+<section>
+	<div class="passage">
+		<p>This page describes the basic shell creation process.</p>
+		<p>Please note, however, that this page mainly focuses on the contents of the settings files, and hardly touches on drawing or image processing.</p>
+		<p>See also the <a href="manual_shell.html">shell</a> file structure.</p>
+	</div>
+</section>
+
 <nav>
-	<h1>目次</h1>
+	<h1>Table of Contents</h1>
 	<ol>
-		<li><a href="#chapter1">立ち絵となる画像を用意する</a></li>
-		<li><a href="#chapter2">descript.txtを書く</a></li>
-		<li><a href="#chapter3">surfaces.txtを書く</a>
+		<li><a href="#chapter1">Prepare an image</a></li>
+		<li><a href="#chapter2">Write descript.txt</a></li>
+		<li><a href="#chapter3">Write surfaces.txt</a>
 			<ol>
-				<li><a href="#chapter3-1">surfaces.txtを書く - 当たり判定編</a></li>
-				<li><a href="#chapter3-2">surfaces.txtを書く - アニメーション編</a></li>
-				<li><a href="#chapter3-3">surfaces.txtを書く - element合成編</a></li>
+				<li><a href="#chapter3-1">Write surfaces.txt - Collision section</a></li>
+				<li><a href="#chapter3-2">Write surfaces.txt - Animation section</a></li>
+				<li><a href="#chapter3-3">Write surfaces.txt - element synthesis section</a></li>
 			</ol>
 		</li>
-		<li><a href="#chapter4">readme.txtを書く</a></li>
+		<li><a href="#chapter4">Write readme.txt</a></li>
 	</ol>
 	<ol class="ex">
-		<li><a href="#chapterEX1">半透明のサーフェスについて</a></li>
-		<li><a href="#chapterEX2">追加シェルのネットワーク更新について</a></li>
-		<li><a href="#chapterEX3">着せ替えについて</a></li>
-		<li><a href="#chapterEX4">複数のサーフェスで共通の設定をまとめる</a></li>
-		<li><a href="#chapterEX5">オーナードローメニューの設定</a></li>
-		<li><a href="#chapterEX6">サムネイル画像の設定</a></li>
+		<li><a href="#chapterEX1">About translucent surfaces</a></li>
+		<li><a href="#chapterEX2">Network updates for additional shells</a></li>
+		<li><a href="#chapterEX3">About dressups</a></li>
+		<li><a href="#chapterEX4">Consolidating settings common to multiple surfaces</a></li>
+		<li><a href="#chapterEX5">Owner draw menu settings</a></li>
+		<li><a href="#chapterEX6">Thumbnail image settings</a></li>
 	</ol>
 </nav>
+
 <section id="chapter1" class="ordered">
-	<h1>立ち絵となる画像を用意する</h1>
+	<h1>Prepare an image</h1>
 	<div class="passage">
-		<p>まずは立ち絵とする画像を用意します。</p>
-		<p>自分で絵を描くか、フリーシェルと呼ばれる配布されている既成シェルを使用するなどします。</p>
+		<p>First, prepare an image to be displayed on the desktop.</p>
+		<p>You can either draw your own image, or use a ready-made shell that has been distributed, called a freeshell.</p>
 	</div>
 	<aside class="passage hint">
-		<p>フリーシェルは以下のようなサイトから探す事ができます。</p>
+		<p>Freeshells can be found at the following site:</p>
 		<p><a href="http://wikiwiki.jp/feeshell/">freeshell wiki</a></p>
 	</aside>
 	<div class="passage">
-		<p>ゴーストにおける画像形式の基本はpngです。</p>
-		<p>jpg、bmp等は使えません（SSPでは可）。</p>
-		<p>pngを使用していれば大きさ、色数に制限はありませんが、透明度は基本的に無効です（SSPのみ設定次第で有効。後述の<a href="#chapterEX1">半透明のサーフェスについて</a>参照）。</p>
-		<p>ファイルサイズを小さくしたい場合は何らかのツールで減色してください。</p>
+		<p>The default image format for ghosts is png.</p>
+		<p>jpg, bmp, etc., cannot be used (except in SSP).</p>
+		<p>If png is used, there are no restrictions on size or the number of colors, but transparency is invalid. (In SSP only, it can be enabled depending on the settings. See below section <a href="#chapterEX1">About translucent surfaces</a>).</p>
+		<p>If you want to reduce file size, use a tool to optimize the color.</p>
 	</div>
 	<div class="passage">
-		<p>シェルを構成する立ち絵の一枚一枚や、後述のアニメーションの一コマは、<em>サーフェス</em>と言う単位で管理されます。</p>
-		<p>サーフェスは、「surface○○.png」（○○部分には0以上の数字が入る）という名前の画像を用意するか、<a href="#chapter5">後述のsurfaces.txt</a>で複数の画像を合成する事で用意します。</p>
+		<p>Each of the images that make up the shell, as well as each frame of animation as described below, is managed as a unit called a <em>surface</em>.</p>
+		<p>Surfaces can be created by preparing an image named "surface*.png" (where the "*" part is a number greater than or equal to 0), or by combining multiple images in <a href="#chapter5">surfaces.txt</a> as described below.</p>
 	</div>
 	<div class="passage">
-		<p><em class="filename">surface0.png</em>と<em class="filename">surface10.png</em>の二つの画像は基本的に必須です。</p>
-		<p><em class="filename">surface0.png</em>はメイン側の基本サーフェス、<em class="filename">surface10.png</em>は相方側の基本サーフェスとなります。</p>
-		<p>ゴーストとしてキャラクターが一人だけで相方が要らない場合でも、単色で塗り潰した画像(＝全て透明表示。後述)などを<em class="filename">surface10.png</em>として用意してください。</p>
+		<p><em class="filename">surface0.png</em> and <em class="filename">surface10.png</em> are mandatory for basic use.</p>
+		<p><em class="filename">surface0.png</em> is the basic surface for the main character side, and<em class="filename">surface10.png</em> is the basic surface for the partner character side.</p>
+		<p>Even if you only have one character as a ghost and do not need a partner character, please prepare a single-color, filled-in image (which will be displayed completely as transparency, see below) as <em class="filename">surface10.png</em></p>
 	</div>
 	<div class="passage">
-		<p>サーフェスは<em class="filename">surface0000.png</em>、<em class="filename">surface0010.png</em>等の様に記述しても<em class="filename">surface0.png</em>、<em class="filename">surface10.png</em>と同様に認識されます。</p>
+		<p>Surfaces can be written as <em class="filename">surface0000.png</em>, <em class="filename">surface0010.png</em>, etc., and will be recognized as <em class="filename">surface0.png</em>, <em class="filename">surface10.png</em>, etc.</p>
 	</div>
 	<div class="passage">
-		<p>サーフェス画像では左上端の1ドットが「透過色」としてゴーストとしての表示上透過されます。</p>
-		<p>透過色と同じ色がキャラクター内にもあった場合、その部分も透過されてしまいますので、透過色にはキャラクターに使っていない系統の色を用いるなどしてください。</p>
+		<p>In the surface image, the pixel at the upper left corner is displayed as a "transparency color".</p>
+		<p>If the same color as the transparency color is also in the character, that area will also be transparent, so use a color that is not used in the character for the transparency color.</p>
 	</div>
 	<div class="passage">
-		<p>サーフェスとして用いる画像を自分で用意する場合、注意すべき特徴として輪郭の処理があります。</p>
+		<p>If you prepare your own images to be used as surfaces, one feature to be aware of is the handling of outlines.</p>
 		<table class="exmp-surface">
 			<tr>
 				<td><img src="image/surface0_alias1.gif" width="225" height="239" alt=""></td>
@@ -97,7 +107,7 @@
 				<td><img src="image/surface0_alias2.gif" width="225" height="239" alt=""></td>
 			</tr>
 		</table>
-		<p>キャラクターの輪郭が半透明になって背景と混ざった結果、右のように表示されてしまいます。</p>
+		<p>As a result of the character's outline becoming translucent and blending with the background, it will appear as shown on the right.</p>
 		<table class="exmp-surface">
 			<tr>
 				<td><img src="image/surface0_alias3.gif" width="225" height="239" alt=""></td>
@@ -105,68 +115,68 @@
 				<td><img src="image/surface0_alias4.gif" width="225" height="239" alt=""></td>
 			</tr>
 		</table>
-		<p>この様に輪郭が背景と混ざらないようにすると綺麗に色が抜けます。</p>
+		<p>If the outline is not mixed with the background, like this, the color will be removed cleanly.</p>
 	</div>
 	<aside class="passage hint">
-		<p>Photoshopをして作成する場合、<a href="http://homepage3.nifty.com/khsoft/cbs/">ClearBrain Systems</a>の<a href="http://homepage3.nifty.com/khsoft/cbs/software/">シェル＆縮小サーフェス制作補助プラグインセット for Photoshop</a>を使うと効率よく作業ができると思います。</p>
-		<p>また輪郭を識別して「ふち」をつけてくれる「<a href="http://ukiya.sakura.ne.jp/index.php?%E8%87%AA%E4%BD%9C%E3%82%BD%E3%83%95%E3%83%88%E4%B8%80%E8%A6%A7%2F%E3%81%B5%E3%81%A1%E3%81%A9%E3%82%8A%E3%80%82">ふちどり</a>」というツールが公開されています。</p>
+		<p>If you are working in Photoshop, you can use <a href="http://homepage3.nifty.com/khsoft/cbs/">ClearBrain Systems'</a> <a href="http://homepage3.nifty.com/khsoft/cbs/software/">Shell & Reduced Surface Creation Aid plug-in set for Photoshop</a> to work more efficiently.</p>
+		<p>There is also a tool called "<a href="http://ukiya.sakura.ne.jp/index.php?%E8%87%AA%E4%BD%9C%E3%82%BD%E3%83%95%E3%83%88%E4%B8%80%E8%A6%A7%2F%E3%81%B5%E3%81%A1%E3%81%A9%E3%82%8A%E3%80%82">Fuchidori</a>" that identifies outlines and adds "edges".</p>
 	</aside>
 </section>
 <section id="chapter2" class="ordered">
-	<h1>descript.txtを書く</h1>
+	<h1>Write descript.txt</h1>
 	<div class="passage">
-		<p><em class="filename">descript.txt</em>は、そのシェルの基本的な情報を設定するためのファイルです。</p>
-		<p><em class="filename">descript.txt</em>が適切に用意されていないと、シェルがゴーストに認識してもらえません。</p>
+		<p>The file <em class="filename">descript.txt</em> is used to set up basic information about the shell.</p>
+		<p>If the <em class="filename">descript.txt</em> is not prepared properly, the shell will not be recognized by the ghost.</p>
 	</div>
 	<div class="passage">
-		<p>とりあえずは以下の内容をコピーして<em class="filename">descript.txt</em>という名前のテキストに貼り付け、自分のシェルに適切な内容へ書き替えましょう。</p>
+		<p>For now, copy and paste the following into a text file named <em class="filename">descript.txt</em> and rewrite it as appropriate for your shell.</p>
 	</div>
 	<div class="passage">
 <pre class="exmp-descript">
-charset,Shift_JIS
+charset,UTF-8
 type,shell
-name,このシェルの名前
+name,Name of this shell
 
-craftman,制作者名(英数のみで書いてください)
-craftmanw,制作者名(日本語表記でも可能)
-craftmanurl,制作者のURL(配布サイトurlなど)
+craftman,Name of the author (please write in alphanumeric characters only)
+craftmanw,Name of the author (can be written in any characters)
+craftmanurl,URL of the author (e.g., distribution site URL)
 </pre>
 	</div>
 	<div class="passage">
-		<p>charsetは基本的にShift_JISにしておいてください。</p>
-		<p>他にも色々設定できる項目はありますが、最低限必要なのは上記ぐらいです（厳密にはnameとtypeだけ必須）。</p>
-		<p>ここで取り上げていない設定や、各設定のより詳細な説明などは、「<a href="descript_shell.html">Shell設定</a>」のページを参照してください。</p>
+		<p>In basically all cases, the charset should be UTF-8. (Translator note: The original document recommends SHIFT_JIS, but as this is only suitable for developing ghosts in Japanese, it has been replaced with UTF-8 in this translation. UTF-8 is the recommendation for all international ghosts.)</p>
+		<p>There are many other items that can be set, but the above are the minimum required (strictly speaking, only name and type are required).</p>
+		<p>For settings not covered here, and more detailed descriptions of each setting, see the "<a href="descript_shell.html">Shell Settings</a>" page.</p>
 	</div>
 	<div class="passage">
-		<p>例として一つだけあげると、シェル全体の基本バルーン位置を変えるには</p>
+		<p>As an example, to change the default balloon position for the entire shell:</p>
 <pre class="exmp-descript">
 sakura.balloon.offsetx,0
 sakura.balloon.offsety,0
 kero.balloon.offsetx,0
 kero.balloon.offsety,0
 </pre>
-		<p>といった項目を書き足す事になります。</p>
-		<p>sakura.balloon.offsetがメイン側、kero.balloon.offsetが相方側のバルーン位置の変更になります。</p>
-		<p>数字を増やすとx座標はキャラクター寄りにy座標は下に表示されます。</p>
-		<p>マイナスをつけると表示位置が逆の方向になり、x座標はキャラクターから離れ、y座標は上に表示されるようになります。</p>
+		<p>You will have to add the following items:</p>
+		<p>sakura.balloon.offset changes the balloon position on the main character's side, and kero.balloon.offset changes the balloon position on the side character's side.</p>
+		<p>If you increase the number, higher X coordinates will display the balloon closer to the character, and higher Y coordinates will display lower.</p>
+		<p>Adding a minus symbol reverses the display position, so that negative X values are displayed further away from the character, and negative Y values are displayed higher up.</p>
 	</div>
 	<div class="passage">
-		<p>着せ替えをメニューに表示する場合も<em class="filename">descript.txt</em>への記述が必要ですが、そのあたりについての説明は<a href="dev_bind.html">着せ替えの設定</a>のページをご覧ください。</p>
+		<p>If you would like to display the menu with the dressup items, you must also put the description of these in the <em class="filename">descript.txt</em> file, but please see the page on <a href="dev_bind.html">setting up dressups</a> for an explanation of how to do this.</p>
 	</div>
 </section>
 <section id="chapter3" class="ordered">
-	<h1>surfaces.txtを書く</h1>
+	<h1>Write surfaces.txt</h1>
 	<div class="passage">
-		<p>まずは<em class="filename">surfaces.txt</em>という名前のテキストを作ります。</p>
-		<p>これはアニメーションの設定や、画像の合成、マウスカーソルでキャラクターを操作する時の当たり判定の設定などを行うファイルです。</p>
-		<p>「<a href="descript_shell_surfaces.html">Shell設定 - surfaces.txt</a>」のページも合わせて参照してください。</p>
+		<p>First, create a text file named <em class="filename">surfaces.txt</em>.</p>
+		<p>This is the file for setting up animations, compositing images, and setting up collision areas for manipulating the character with the mouse cursor.</p>
+		<p>See also the page "<a href="descript_shell_surfaces.html">Shell Settings - surfaces.txt</a>".</p>
 	</div>
 	<div class="passage">
-		<p><em class="filename">surfaces.txt</em>を作ったら、まずは先頭に以下をコピーして下さい。</p>
+		<p>After creating <em class="filename">surfaces.txt</em>, first copy the following at the top.</p>
 	</div>
 	<div class="passage">
 <pre class="exmp-descript">
-charset,Shift_JIS
+charset,UTF-8
 
 descript
 {
@@ -175,39 +185,39 @@ version,1
 </pre>
 	</div>
 	<div class="passage">
-		<p>先頭の一行は<em class="filename">descript.txt</em>のものと同じ文字コードの指定です。特に理由がなければShift_JISで構いません。</p>
-		<p>それより下の記述は、アニメーションの設定方法の書式についてのの設定です。</p>
-		<p>もしこの記述が無い場合は、アニメーション関係を旧来の定義（SERIKO/1.x）で書かねばなりません。</p>
-		<p>このページで以下登場する例は、新しい定義（SERIKO/2.0）によるものなので、注意してください。</p>
+		<p>The first line specifies the same character coding as in <em class="filename">descript.txt</em>. If there is no particular reason to use another charset, UTF-8 is fine. (Translator note: As in the previous section, the original document recommends SHIFT_JIS. Since SHIFT_JIS is only suitable for Japanese ghosts, UTF-8 is recommended in this translation.)</p>
+		<p>Below that is a description of the formatting of formatting of the animation settings.</p>
+		<p>If this description is missing, the animation settings  must be written using the old definition (SERIKO/1.x).</p>
+		<p>Note that the examples that appear below on this page are based on the new definition (SERIKO/2.0).</p>
 	</div>
 	<aside class="passage hint">
-		<p>既に旧定義で書かれているsurfaces.txtは、以下のツールを用いて旧定義から新定義に変換する事が可能です。</p>
+		<p>Surfaces.txt which is already written in the old definition can be converted from the old definition to the new definition using the following tools:</p>
 		<ul>
 			<li>
-				<p><a href="http://gallnuts.webcrow.jp/etc/etc.shtml">サクラエディタ用マクロ「SERIKO1to2.js」</a></p>
-				<p>使用方法：<a href="http://sakura-editor.sourceforge.net/">サクラエディタ</a>を導入し、マクロとして使用します。詳細は付属のreadme.txt。</p>
+				<p><a href="http://gallnuts.webcrow.jp/etc/etc.shtml">"SERIKO1to2.js" macro for Sakura Editor</a></p>
+				<p>How to use: Install <a href="http://sakura-editor.sourceforge.net/">Sakura Editor</a> and use it as a macro. For details, see the attached readme.txt.</p>
 			</li>
 			<li>
-				<p><a href="http://typehoon.kusakage.com/zip/SurfacesTxtConverter.zip">surfaces.txtを旧定義から新定義に変換するツール</a></p>
-				<p>使用方法：解凍された.exeをsurfaces.txtと同じフォルダで実行して下さい。</p>
+				<p><a href="http://typehoon.kusakage.com/zip/SurfacesTxtConverter.zip">Tool to convert surfaces.txt from old definition to new definition</a></p>
+				<p>How to use: Run the extracted .exe in the same folder as surfaces.txt.</p>
 			</li>
 		</ul>
 	</aside>
 	<section id="chapter3-1" class="ordered">
-		<h1>surfaces.txtを書く - 当たり判定編</h1>
+		<h1>Write surfaces.txt - Collision section</h1>
 		<div class="passage">
-			<p>サーフェスに当たり判定を定義することから始めてみましょう。</p>
-			<p>最初に、以下を<em class="filename">surfaces.txt</em>に追記してください。</p>
+			<p>Let's start by defining a collision area on the surface.</p>
+			<p>First, add the following to <em class="filename">surfaces.txt</em>.</p>
 <pre class="exmp-descript">
 surface0
 {
 }
 </pre>
-			<p>これは、このブレス（{}中括弧）の中で、surface0について設定する、と言うような意味になります。</p>
-			<p>当たり判定に限らず、後に触れるアニメーションやelementの設定もこの中に書いて行きます。</p>
+			<p>This would mean something like, in these braces ({} braces) are settings for surface0.</p>
+			<p>This is not only for collisions; the animation and element settings that are covered later will also be written in this section.</p>
 		</div>
 		<div class="passage">
-			<p>ここに以下のように書くと、当たり判定の定義になります。</p>
+			<p>If you write the following here, it will define a collision area.</p>
 <pre class="exmp-descript2">
 surface0
 {
@@ -217,36 +227,36 @@ surface0
 </pre>
 		</div>
 		<div class="passage">
-			<p>上のように当たり判定１箇所ごとにcollision0、collision1、collision2と順番に書いていきます。</p>
-			<p>番号は一つのサーフェス内で重複しないようにしてください。</p>
-			<p>1サーフェス辺りのcollision最大個数は256個です。</p>
+			<p>As shown above, write collision0, collision1, collision2, in order for each collision area.</p>
+			<p>Make sure that the numbers are unique within a single surface.</p>
+			<p>The maximum number of collisions per surface is 256.</p>
 		</div>
 		<div class="passage">
-			<p>それに続く4つの数字は座標指定です。</p>
-			<p>サーフェス画像自体の左上を0,0として、四角形の左上x,y座標、右下のx,y座標と言う並びになっています。</p>
+			<p>The four numbers after that are coordinate specifications.</p>
+			<p>The sequence of coordinates is the upper left X and Y coordinates, then the lower right X and Y coordinates. The upper left corner of the surface image itself is 0,0.</p>
 		</div>
 		<div class="passage">
-			<p>最後の文字列はゴースト側で用いる当たり判定の名前になります。</p>
-			<p>なお、同じ名前（上例のFace、Bust）の当り判定を複数回設定しても構いません（例えば手をHandという名前の当たり判定にしたいとき、多くの場合右手と左手で領域が分かれるはずなので、Handを指定する行も2行に分かれるでしょう）。</p>
+			<p>The last string will be the name of the collision area to be used on the ghost side.</p>
+			<p>Note that you can set collision areas with the same name (names such as Face and Bust in the above example) multiple times. (For example, if you want to set a collision area with the name Hand, in most cases the areas will be separated for left and right hands. Therefore, the collision definition for Hand will also have to be split into two lines.)</p>
 		</div>
 		<aside class="passage hint">
-			<p>当たり判定の座標の取得には<a href="http://ukgk.s34.xrea.com/poskoma/#content_1_11" target="_blank">Coordin</a>というツールが便利です。</p>
-			<p>Coordinに画像をドロップしドラッグで四角い当たり判定を作ります。</p>
-			<p>自動的にクリップボードに座標がコピーされているので当たり判定の数字に貼り付けてください。</p>
+			<p>The tool <a href="http://ukgk.s34.xrea.com/poskoma/#content_1_11" target="_blank">Coordin</a> is useful for obtaining coordinates for collision areas.</p>
+			<p>Drop the image onto Coordin, then click and drag to create a rectangle collision area.</p>
+			<p>The coordinates are automatically copied to the clipboard and should be pasted into the collision area numbers.</p>
 		</aside>
 		<aside class="passage hint">
-			<p>MATERIAの場合、設定で開発インターフェイスにチェックするとオーナードローメニューから当たり判定領域を確認できるようになります。</p>
-			<p>SSPの場合、設定→本体設定の「一般」で開発者機能をオンにして、機能→開発用パレットを開き、当たり判定を表示で確認できます。</p>
+			<p>In MATERIA, you can check the development interface in the settings to see the collision areas from the owner draw menu.</p>
+			<p>In SSP, turn on the developer functions in Options → Preferences → General</p>
 		</aside>
 	</section>
 	<section id="chapter3-2" class="ordered">
-		<h1>surfaces.txtを書く - アニメーション編</h1>
+		<h1>Write surfaces.txt - Animation section</h1>
 		<div class="passage">
-			<p>伺かにおけるアニメーション（SERIKOと呼ばれます）は、静止画を連続で描画する事で表現されます。</p>
-			<p>ここではアニメーションの実行タイミング、一枚一枚の静止画の重なり方等の設定方法について簡単に紹介します。</p>
+			<p>Animation in ukagaka (called SERIKO) is expressed by drawing a series of still images.</p>
+			<p>Here is a brief introduction on how to set the timing of the animation execution, how each still image overlaps, etc.</p>
 		</div>
 		<div class="passage">
-			<p>以下surface0をまばたきをさせる例でアニメーションを説明します。</p>
+			<p>Below is an example of making surface0 blink to illustrate animations.</p>
 		</div>
 		<div class="passage">
 <pre class="exmp-descript2">
@@ -264,70 +274,70 @@ collision1,115,174,174,217,Bust
 </pre>
 		</div>
 		<div class="passage">
-			<p>surface0.pngにアニメーションさせるにはこのようにsurface0と書き、その下のブレス（{}中括弧）内にアニメーションの内容を定義していきます。</p>
+			<p>To animate surface0.png, write surface0 like this, and define the animation content in the braces ({} braces) below it.</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript">animation0.interval,sometimes</pre>
-			<p>animation*,intervalという行は、その番号のアニメーションが実行されるタイミングの定義です。</p>
-			<p>「animation」に続く数字は、そのアニメーション定義（タイミングの設定であるintervalと、後に続く「コマ」の設定であるpatternなどのセット）のIDになります。</p>
-			<p>アニメーションIDは自由な番号でよく、連番である必要もありませんが、<em>同じ意味のアニメーションについて同じID</em>が与えられることが期待されます<a href="#note1" class="note" id="note1-symbol">※</a>。</p>
+			<p>The line that starts with animation*.interval defines when the animation with that number will be executed.</p>
+			<p>The number after the word "animation" is the ID of the animation definition (the timing settings (interval), and subsequent "frame" settings (pattern, etc.))</p>
+			<p>Animation IDs can be any number and do not have to be sequential, but it is expected that <em>animations with the same meaning will be given the same ID</em><a href="#note1" class="note" id="note1-symbol">※</a>.</p>
 		</div>
 		<div class="passage">
-			<p>animation0.interval,に続く「sometimes」がインターバル定義の内容です。</p>
-			<p>例のようにsometimesを指定した場合、そのアニメーションは時々（１秒当たり２分の１の確率）勝手に実行されます。</p>
-			<p>つまり「IDが0番のアニメーションは時々勝手に動く」といった指定をしている事になります。</p>
-			<p>他にどんなタイミング指定があるかについては、「Shell設定 - surfaces.txt」の<a href="descript_shell_surfaces.html#sometimes">アニメーションインターバルについての節</a>をご覧ください。</p>
+			<p>The "sometimes" following animation0.interval is the content of the interval definition.</p>
+			<p>If sometimes is specified, as in the example, the animation will run on its own occasionally (With a chance of 1/2 per second).</p>
+			<p>In other words, you are specifying something like "the animation with ID 0 sometimes runs on its own".</p>
+			<p>See the <a href="descript_shell_surfaces.html#sometimes">section on animation intervals</a> in "Shell Settings - surfaces.txt" for what other timing specifications are available.</p>
 		</div>
 		<div class="passage">
-			<p>続けてアニメーションを構成する静止画（コマ）一枚一枚の定義を行います。</p>
-			<p>それぞれpattern0、pattern1、pattern2というように順番に書いていきます。パターン番号の抜け・重複はできません。</p>
-			<p>先頭に同じアニメーション群のID（animation*）を入れるのを忘れないでください。</p>
-			<p>また、interval定義行と一連のpattern定義行は別々の場所に分けて書いたりせずに、連続して書くようにしてください。</p>
+			<p>This is followed by the definition of each still image (frame) that makes up the animation.</p>
+			<p>Write each pattern in order: pattern0, pattern1, pattern2, and so on. Pattern numbers cannot be omitted or duplicated.</p>
+			<p>Do not forget to put the ID (animation*) of the animation group at the beginning.</p>
+			<p>Also, the interval definition line and the series of pattern definition lines should be written consecutively, not in separate places.</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">animation0.pattern0,<em>overlay</em>,100,50,0,0</pre>
-			<p>overlayの部分は描画方法の指定です。</p>
-			<p>overlayとは元の画像の上に重ねて画像を表示する描画方法です。</p>
-			<p>この他にも様々な描画方法が用意されています。</p>
-			<p>詳しくは「Shell設定 - surfaces.txt」の<a href="descript_shell_surfaces.html#base">サーフェス描画メソッドについての節</a>をご覧ください。</p>
+			<p>The overlay part specifies the drawing method.</p>
+			<p>Overlay is a drawing method that overlays an image on top of the original image.</p>
+			<p>Various other drawing methods are also available.</p>
+			<p>For details, see <a href="descript_shell_surfaces.html#base">the section on surface drawing methods</a> in "Shell Settings - surfaces.txt".</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">animation0.pattern0,overlayfast,<em>100</em>,50,0,0</pre>
-			<p>100という部分は、このコマで描画するのはsurface100だという意味です。</p>
-			<p>基本的には<em class="filename">surface100.png</em>のことだと考えてよいです。</p>
-			<p>101とすれば<em class="filename">surface101.png</em>の画像が用いられます。</p>
-			<p>-1とすると、そのアニメーションの描画を停止してベース画像（上例の場合はsurface0）の表示にリセットされます。</p>
+			<p>The 100 part means that surface100 is what is drawn in this frame.</p>
+			<p>Basically, you can think of it as <em class="filename">surface100.png</em>.</p>
+			<p>If you specify 101, <em class="filename">surface101.png</em> is used.</p>
+			<p>A value of -1 will stop drawing the animation and reset the display to the base image (surface0 in the above example).</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">animation0.pattern0,overlayfast,100,<em>50</em>,0,0</pre>
-			<p>50の部分は表示時間（単位:ミリ秒）です。</p>
-			<p>そのコマに<em>切り替わるまでの時間</em>を指定してください。</p>
-			<p>そのコマ自身の表示時間ではないので注意しましょう。</p>
+			<p>The 50 part is the display time (unit: milliseconds).</p>
+			<p>Please specify the time <em>until</em> it switches to this frame.</p>
+			<p>Note that it is not the display time of the frame itself.</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">animation0.pattern0,overlayfast,100,50,<em>0,0</em></pre>
-			<p>最後の0,0の部分はコマの表示位置です（x座標,y座標）。</p>
-			<p>元の画像からどれだけずらして表示するか指定します。</p>
-			<p>x方向は右が正、y方向は下が正です。</p>
+			<p>The last 0,0 part is the display position of the frame (X coordinate, Y coordinate).</p>
+			<p>This specifies how much to shift the image from the original image's position.</p>
+			<p>Positive X values move towards the right direction, and positive Y values move downwards.</p>
 		</div>
 		<aside class="passage note" id="note1">
 			<h1><a href="#note1-symbol">※1</a></h1>
-			<p>例えばキャラクターに正面向きのポーズのsurface0と横向きのポーズのsurface5があったとして、その両方で「まばたき」アニメーションをしたいとします。</p>
-			<p>この時、上例のようにsurface0で瞬き定義をする他に、surface5でも同じような定義をすることになりますが、横向きと正面向きという違いがあるために、コマとして用いるサーフェス（画像）は異なるはずです。</p>
-			<p>しかし、両方同じように扱われる「まばたき」ではあるので、同じアニメーションID（例えば0）にする事が望ましいでしょう。</p>
-			<p>このルールは特に、別項で説明する「<a href="dev_bind.html">着せ替え</a>」の場合においては必須となります。</p>
+			<p>For example, suppose a character has a front-facing pose, surface0, and a side-facing pose, surface5, and we want to do a "blink" animation for both of them.</p>
+			<p>In this case, in addition to defining the blinking on surface0 as seen in the above example, you will also make a similar definition on surface5. But since there is a difference between the angle for front-facing and side-facing poses, the surfaces (images) used as frames should be different.</p>
+			<p>However, since both are "blinks" and are treated in the same way, it would be desirable to use the same animation ID for both (e.g., 0).</p>
+			<p>This rule is especially essential in the case of "<a href="dev_bind.html">dressup</a>", which will be explained in another section.</p>
 		</aside>
 	</section>
 	<section id="chapter3-3" class="ordered">
-		<h1>surfaces.txtを書く - element合成編</h1>
+		<h1>Write surfaces.txt - element synthesis section</h1>
 		<div class="passage">
-			<p>elementは、複数のパーツ画像を合成して1枚のサーフェスとして扱うための仕組みです。</p>
-			<p>例えば、全てのサーフェスを必ずsurface0.pngといった画像として用意しなければならないなら、キャラクターの表情を増やす場合には、例え口の形が少し違うだけであっても、表情の数だけ全身の立ち絵を用意する必要があります。</p>
-			<p>しかし、身体パーツと表情パーツを分け、それを合成する事ができるならば、表情を増やす場合にも、画像としては表情差分だけ用意すればよくなるので、シェル全体の容量はずいぶん減るでしょう。</p>
-			<p>さらにもし目元と口元のパーツを分ければ、目と口の組み合わせで様々な表情になるので、実際にその表情自体を作画することなしに、ある程度の表情を作り出すことさえできます。</p>
+			<p>element is a mechanism for combining images made of multiple parts and treating them as a single surface.</p>
+			<p>For example, if all surfaces must be prepared as images such as surface0.png, then if you want to add more facial expressions to a character, you must prepare as many full-body images as there are facial expressions, even if the only difference is a slightly different mouth shape.</p>
+			<p>However, if it is possible to separate body parts and facial expression parts and composite them, then even if you want to add more facial expressions you will only need to prepare images with the different facial expressions. Thus, the overall shell size will be reduced considerably.</p>
+			<p>Furthermore, if the eye and mouth parts are separated, you can create expressions by combining different eyes and mouths without having to draw the full expression itself.</p>
 		</div>
 		<div class="passage">
-			<p>以下がelement定義の記述例となります。</p>
+			<p>The following is an example of an element definition.</p>
 <pre class="exmp-descript2">
 surface1
 {
@@ -335,70 +345,70 @@ surface1
 <em>element1,overlay,face1.png,0,0</em>
 }
 </pre>
-			<p>これで、「body0.png」の上に「face1.png」を重ねたものがsurface1として定義されます。</p>
-			<p>重ねたいパーツの数だけいくつでも書き足して行く事ができます。</p>
-			<p>なおこの場合surface1.pngは不要です。</p>
+			<p>Now "face1.png" overlaid on top of "body.png" is defined as surface1.</p>
+			<p>You can add as many parts as you want to overlap.</p>
+			<p>In this case, surface1.png is not necessary.</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">element<em>0</em>,overlay,body0.png,0,0</pre>
-			<p>「element」のすぐ後に続く数字は、そのサーフェスにおけるelementのID（通し番号）です。</p>
-			<p>IDは0から始まる連番です。数字が小さい方が、より下（画面奥側）に合成されるパーツになります。</p>
-			<p>なお、surface*.pngのような名前のpng画像は、element0より下のパーツとみなされる点に注意してください。</p>
+			<p>The number immediately following "element" is the ID (serial number) of the element on this surface.</p>
+			<p>IDs are sequential numbers starting from 0. The smaller the number, the lower (at the back of the screen) the part to be composited.</p>
+			<p>Note that a png image with a name like surface*.png is considered to be a part below element0.</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">element0,<em>overlay</em>,body0.png,0,0</pre>
-			<p>続くキーワードは描画メソッドです。</p>
-			<p>基本的に<a href="descript_shell_surfaces.html#base">アニメーションのものと同じ</a>ですが、startやmoveなど、純粋に画像を合成するのでない一部のメソッドは使用できません。</p>
+			<p>The keyword that follows is the drawing method.</p>
+			<p>It is basically the <a href="descript_shell_surfaces.html#base">same as in animation</a>, but some methods that do not purely combine images, such as "start" and "move", cannot be used.</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">element0,overlay,<em>body0.png</em>,0,0</pre>
-			<p>続けて合成するファイル名を指定します。</p>
-			<p>任意名のpngファイルが指定可能です。</p>
+			<p>Specify the name of the file to be composited.</p>
+			<p>A png file with any name can be specified.</p>
 		</div>
 		<div class="passage">
 			<pre class="exmp-descript2">element0,overlay,body0.png,<em>0,0</em></pre>
-			<p>最後の二つの数字は合成位置の指定です（x座標,y座標）。</p>
-			<p>ベース画像に対してどれだけずらして合成するかを指定します。</p>
-			<p>x方向は右が正、y方向は下が正です。</p>
+			<p>The last two numbers specify the composite position (X coordinate, Y coordinate).</p>
+			<p>This specifies how much the image should be shifted relative to the base image for compositing.</p>
+			<p>Positive X values move towards the right direction, and positive Y values move downwards.</p>
 		</div>
 		<div class="passage">
-			<p>ところで今回の例では、先述の<a href="#chapter3-1">当たり判定</a>や<a href="chapter=3-2">アニメーション</a>の例の時と違って、surface0ではなくsurface1にelementの定義しています。</p>
-			<p>あくまで例示についての話ではありますが、これには一応理由があります<a href="#note2" class="note" id="note2-symbol">※</a>。</p>
-			<p>シェル（ゴースト）そのものの動作だけ考える時には、surface0や10でelementを用いる事にはまったく問題はありません。</p>
+			<p>By the way, in this example, unlike the previous <a href="#chapter3-1">collision area</a> and <a href="chapter=3-2">animation</a>sections, the elements are defined on surface1 instead of surface0.</p>
+			<p>Although we are only talking about examples, there is a reason for this<a href="#note2" class="note" id="note2-symbol">※</a>.</p>
+			<p>When considering only the behavior of the shell (ghost) itself, there is no problem with using elements on surfaces 0 and 10.</p>
 		</div>
 		<aside class="passage note" id="note2">
 			<h1><a href="#note2-symbol">※2</a></h1>
-			<p>例えばゴーストのデータベースのようなWebサービスなどで、ゴーストのプレビューを表示したい場合を考えます。</p>
-			<p><a href="#chapter1" title="立ち絵となる画像を用意する">先にも述べた通り</a>、surface0とsurface10は基本サーフェスとされ、基本的に省略できません。</p>
-			<p>つまりsurface0と10は必ずあるものと考えられますから、プレビューに用いるのには都合が良いでしょう。</p>
-			<p>しかし、もしsurface0や10がelement合成によって構成されていると、プレビュー表示者はelement定義を読み取って意図どおりに合成する必要が出てきてしまいます。</p>
-			<p>これは人力はもとよりプログラムで自動化するシステムにおいてもいくらかの障壁になります。</p>
-			<p>従って、そうしたサービスの利用を視野に入れる場合には、surface0と10は実体のpngとして用意した方がよいかもしれません。</p>
-			<p>なお、こうしたプレビュー表示を行っているサービスとして、更新フィード「<a href="https://sirefaso.appspot.com/">SiReFaSo</a>」があげられます。</p>
+			<p>Consider, for example, a web service such as a ghost database, where you want to display a preview of the ghost.</p>
+			<p><a href="#chapter1" title="Prepare an image">As mentioned earlier</a>, surface0 and surface10 are considered basic surfaces and basically cannot be omitted.</p>
+			<p>In other words, surfaces 0 and 10 are always considered to be present, so it is convenient to use them for preview.</p>
+			<p>However, if surfaces 0 and 10 are composed by element compositing, the previewer would have to read the element definitions and composite them as intended.</p>
+			<p>This poses some hurdles not only for human-powered systems, but also for systems that are automated by programs.</p>
+			<p>Therefore, when considering the use of such services, it may be better to prepare surfaces 0 and 10 as actual pngs.</p>
+			<p>On such service that provides such previews is the "<a href="https://sirefaso.appspot.com/">SiReFaSo</a>" update feed.</p>
 		</aside>
 	</section>
 </section>
 <section id="chapter4" class="ordered">
-	<h1>readme.txtを書く</h1>
+	<h1>Write readme.txt</h1>
 	<div class="passage">
-		<p><em class="filename">readme.txt</em>というファイルがあるとオーナードローメニューやインストール時などに表示できます。</p>
-		<p>省略できますが、ゴーストの作者とシェル作者が異なる場合などは、連絡先を明記した方がよいかもしれません。</p>
-		<p>シェルの説明や連絡事項など必要な事を記入してください。</p>
+		<p>If there is a file called <em class="filename">readme.txt</em>, it can be displayed in the owner draw menu, or during installation.</p>
+		<p>Although it can be omitted, if the ghost author and shell author are different, it may be a good idea to include contact information.</p>
+		<p>Please fill in a description of the shell, contact information, and other necessary details.</p>
 	</div>
 	<div class="passage">
-		<p>reamdeも他のファイル同様、1行目にcharset,UTF-8などと書いておくか、BOMを含んでおけばShift JIS以外も使えます。</p>
+		<p>Like other files, readme can also use charsets other than SHIFT_JIS if you write "charset,UTF-8", etc., on the first line, or include BOM.</p>
 	</div>
 </section>
 <section id="chapterEX1" class="ordered ex">
-	<h1>半透明のサーフェスについて</h1>
+	<h1>About translucent surfaces</h1>
 	<div class="passage">
-		<p>半透明にするには半透明にしたい画像と同じファイル名の「pna」を作ります。</p>
-		<p>例えば<em class="filename">surface0.png</em>に対して<em class="filename">surface0.pna</em>となります。</p>
-		<p>SSPの場合、<a href="#chapter3-3">element合成</a>のパーツにも用意できます。<em class="filename">face1.png</em>に対して<em class="filename">face1.pna</em>といった具合です。</p>
+		<p>To make an image translucent, create a "pna" file with the same filename as the image you want to make translucent.</p>
+		<p>For example, <em class="filename">surface0.pna</em> will be used for <em class="filename">surface0.png</em>.</p>
+		<p>In SSP, it can also be prepared as a part of <a href="#chapter3-3">element composition</a>. For example, <em class="filename">face1.pna</em> will be used for <em class="filename">face1.png</em>.</p>
 	</div>
 	<div class="passage">
-		<p>pnaは透明度をグレースケールで表したpngを単にリネームしたものです。</p>
-		<p>pnaで完全に白くした部分が不透明、完全に黒くした部分が透明となり、その中間が半透明となります。</p>
+		<p>pna is simply a renamed png, which represents transparency in grayscale.</p>
+		<p>In a pna, completely white areas are opaque, completely black areas are transparent, and areas that are in between are translucent.</p>
 	</div>
 	<table class="exmp-surface">
 		<tr>
@@ -413,58 +423,58 @@ surface1
 			<td></td>
 			<td>surface0.pna</td>
 			<td></td>
-			<td>デスクトップの表示</td>
+			<td>Desktop display</td>
 		</tr>
 	</table>
 	<div class="passage">
-		<p>半透明の部分はキャラクターとしてクリックできます。</p>
-		<p>ですので透明部分は完全な黒(RGBが0,0,0)色にしてください。</p>
+		<p>Translucent areas are clickable as part of the character.</p>
+		<p>Therefore, transparent areas should be completely black (RGB=0,0,0).</p>
 	</div>
 	<div class="passage">
-		<p>またSSPの場合、pnaを用いずに、<em class="filename">surface*.png</em>画像をアルファチャンネル付きPNGとして作成し、そのアルファチャンネルを透明度として利用する事ができます。</p>
-		<p>その場合、<em class="filename">descript.txt</em>に以下の記述を追加する必要があります。</p>
+		<p>In the case of SSP, you can create a <em class="filename">surface*.png</em> as a PNG with an alpha channel and use that alpha channel as the transparency, without using pna.</p>
+		<p>In that case, the following statement must be added to the <em class="filename">descript.txt</em> file:</p>
 		<pre class="exmp-descript">seriko.use_self_alpha,1</pre>
-		<p>なおアルファチャンネル付きPNGの作成方法自体は各種ペイントソフトなどの説明を参照してください（ソフトによっては扱えないこともあります。透明度付きPNG、32bitPNG、αPNGなどのキーワードでも検索してみてください）。</p>
+		<p>For details on how to create a PNG with an alpha channel, please refer to the instructions for various painting software (some software may not be able to handle it. Try searching for keywords such as PNG, 32bitPNG, αPNG, etc.).</p>
 	</div>
 </section>
 <section id="chapterEX2" class="ordered ex">
-	<h1>追加シェルのネットワーク更新について</h1>
+	<h1>Network updates for additional shells</h1>
 	<div class="passage">
-		<p>SSPでは、シェル自体にネットワーク更新機能をつける事ができます。</p>
-		<p>詳しくは「<a href="dev_update.html">ネットワーク更新への対応</a>」のページをお読みください。</p>
+		<p>SSP allows you to add netword update functionality to the shell itself.</p>
+		<p>For more information, please read the "<a href="dev_update.html">Support for Network Updates</a>" page.</p>
 	</div>
 </section>
 <section id="chapterEX3" class="ordered ex">
-	<h1>着せ替えについて</h1>
+	<h1>About dressups</h1>
 	<div class="passage">
-		<p>伺かでは、着せ替えはアニメーションの一種として設定されます。</p>
-		<p>詳しくは「<a href="dev_bind.html">着せ替えの設定</a>」のページをお読みください。</p>
+		<p>In ukagaka, dressup is set up as a type of animation.</p>
+		<p>For more information, please read the "<a href="dev_bind.html">dressup settings</a>" page.</p>
 	</div>
 </section>
 <section id="chapterEX4" class="ordered ex">
-	<h1>複数のサーフェスで共通の設定をまとめる</h1>
+	<h1>Consolidating settings common to multiple surfaces</h1>
 	<div class="passage">
-		<p>例えばキャラクターの姿勢が同じサーフェスがいくつもある場合、当たり判定やアニメーション指定なども全く同じというサーフェスが存在するかもしれません。</p>
-		<p>そうした場合、それぞれのsurfaceのブレスに何度も同じ設定をコピペする以外にも、便利な記述方法がいくつかあります。</p>
-		<p>ただし、そのうちのほとんどは<em>SSP限定</em>の方法です。</p>
-		<p>詳細は「Shell設定 - surfaces.txt」のページ内の「<a href="descript_shell_surfaces.html#caption_surfacebraceID">surface*ブレスで可能なID指定</a>」をご覧ください。</p>
+		<p>For example, if there are several surfaces with the same character posture, there may be surfaces with exactly the same collision areas, animation specifications, and so on.</p>
+		<p>In such cases, there are several convenient ways to write the settings besides copying and pasting the same settings over and over again for each surface brace.</p>
+		<p>However, most of these methods are <em>SSP only</em>.</p>
+		<p>For more information, see "<a href="descript_shell_surfaces.html#caption_surfacebraceID">ID specifications possible for surface* braces</a>" in the "Shell settings - surfaces.txt page.</p>
 	</div>
 </section>
 <section id="chapterEX5" class="ordered ex">
-	<h1>オーナードローメニューを設定する</h1>
+	<h1>Owner draw menu settings</h1>
 	<div class="passage">
-		<p>オーナードローメニュー（右クリックメニュー）の背景画像や文字色なども、シェルで設定できます。</p>
-		<p>詳しくは「<a href="dev_ownerdrow.html">オーナードローメニューの設定</a>」を参照してください。</p>
+		<p>The background image and text color of the owner draw menu (right-click menu) can also be set in the shell.</p>
+		<p>For more information, please refer to "<a href="dev_ownerdrow.html">Owner draw menu settings</a>".</p>
 	</div>
 </section>
 <section id="chapterEX6" class="ordered ex">
-	<h1>サムネイル画像を設定する</h1>
+	<h1>Thumbnail image settings</h1>
 	<div class="passage">
-		<p>オーナードローメニューのシェル選択で、シェルにカーソルが乗った時にサムネイル画像を表示することができます。</p>
-		<p>シェルが複数あるなどして一目でわかりやすくしたい場合などに用意するとよいでしょう。</p>
+		<p>The shell selection in the owner draw menu allows thumbnail images to be displayed when the cursor is hovered over a shell.</p>
+		<p>It is recommended to prepare a thumbnail when there are multiple shells and you want to make it easy to identify them at a glance.</p>
 	</div>
 	<div class="passage">
-		<p><em class="filename">thumbnail.png</em>という画像が同じフォルダに入っていれば自動的に使用されます。</p>
+		<p>If an image called <em class="filename">thumbnail.png</em> is in the same folder as the shell, it will be used automatically.</p>
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -475,7 +485,7 @@ surface1
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadocバナー">
