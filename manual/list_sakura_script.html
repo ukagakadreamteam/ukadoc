@@ -4074,7 +4074,14 @@
 			<dl id="_!_open,dateinput,ID,表示時間,年,月,日,オプション_">
 				<dt class="entry">\![open,dateinput,(ID),(display time),(year),(month),(day),(option)]</dt>
 				<dd class="entry">
-					<p>Opens a date InputBox.<br>The display time is specified in milliseconds.<br>Year, month, and day are the initial values.<br>The SHIORI event <a href="list_shiori_event.html#OnUserInput">OnUserInput</a> is run on confirmation, and Reference1 stores the year,month,day separated by commas.<br>If it times out, it will contain "Timeout."<br><a href="#notes_inputbox-option">※Options</a> may be specified using --option=○○.<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">inputbox</a>.</p>
+					<p>Opens a date InputBox.
+					<br>The display time is specified in milliseconds.
+					<br>Year, month, and day are the initial values.
+					<br>The SHIORI event <a href="list_shiori_event.html#OnUserInput">OnUserInput</a> is run on confirmation, and Reference1 stores the year,month,day separated by commas.
+					<br><a href="list_shiori_event.html#OnUserInputCancel">OnUserInputCancel</a> is run when the display time has expired (timeout), or when the close button is pressed.
+					<br>If it times out, it will contain "Timeout."
+					<br><a href="#notes_inputbox-option">※Options</a> may be specified using --option=○○.
+					<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">inputbox</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
