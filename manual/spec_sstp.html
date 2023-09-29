@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -135,142 +135,142 @@
 		<section class="navigation-category">
 			<h1>SSTP/1.x</h1>
 			<ul>
-				<li><a href="#sstp">概要</a></li>
+				<li><a href="#sstp">Summary</a></li>
 				<li><a href="#direct">Direct SSTP</a></li>
 				<li><a href="#http">SSTP over HTTP</a></li>
 				<li><a href="#req_res">request/response</a></li>
-				<li><a href="#method_notify">メソッド：NOTIFY</a></li>
-				<li><a href="#method_send">メソッド：SEND</a></li>
-				<li><a href="#method_communicate">メソッド：COMMUNICATE</a></li>
-				<li><a href="#method_execute">メソッド：EXECUTE</a></li>
-				<li><a href="#method_give">メソッド：GIVE</a></li>
+				<li><a href="#method_notify">Method: NOTIFY</a></li>
+				<li><a href="#method_send">Method: SEND</a></li>
+				<li><a href="#method_communicate">Method: COMMUNICATE</a></li>
+				<li><a href="#method_execute">Method: EXECUTE</a></li>
+				<li><a href="#method_give">Method: GIVE</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="categories">
 		<section class="category caption introduction" id="chapter0">
 			<h1>SSTP/1.x</h1>
-			<p>参考：<a href="http://usada.sakura.vg/contents/sstp.html">SSTP</a>（外部サイト）</p>
-			<p>現在のところDirectSSTPについてはWindowsの仕様に大きく依存しており、他OSでの実装を想定していません。
-			<br />IPCの仕組み自体は他OSにも存在するため、別途仕様を規定することが望ましいと思われます。
-			<br />もし仕様が決定した場合は別途掲載を考えておりますので、<a href="https://github.com/ponapalt/ukadoc">Ukadoc Project</a>までご連絡ください。</p>
+			<p>Reference: <a href="http://usada.sakura.vg/contents/sstp.html">SSTP</a> (External site)</p>
+			<p>Currently, DirectSSTP relies heavily on Windows specifications and is not intended for implementation on other operating systems.
+			<br />Since the IPC mechanism itself exists in other OSs, it would be desirable to define a separate specification.
+			<br />If the specifications are decided, we will consider publishing them separately, so please contact <a href="https://github.com/ponapalt/ukadoc">Ukadoc Project</a>.</p>
 		</section>
 		<section class="category" id="sstp">
-			<h1>概要</h1>
-			<p>SSTPはゴースト間の汎用通信仕様です。単純なSakuraScriptの再生や、外部からのイベント通知等に使えます。
-			<br />通信は基本的にはTCP/IPで行われます。ポート9801または9821(SSPのみ)をリスニングしており、SSTPプロトコルに従ってリクエストを投げると、処理結果が返ってきます。
-			<br />セキュリティ上の都合で、現在は設定を変更しない限りlocalhost限定でのリスニングとなり、端末外部からは通信できません。また、昔はポート11000番もリスニングしていましたが、マルウェアによる通信と誤認されたことから現在では廃止されています。
-			<br /><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=sakura+script">IANAのPort number registory</a>には7743と9801番が登録されていますが、実運用されているのは9801番のみです。
-			<br />同じ略称のプロトコルにMicrosoftが策定したVPN通信のためのSecure Socket Tunneling Protocolがありますが、技術上の関連性はありません。
-			<br />パフォーマンスの必要な頻繁な通信を考慮しておらず、HTTPのようなkeep-aliveの仕組みはありません。毎回通信終了時に切断されます。</p>
+			<h1>Summary</h1>
+			<p>SSTP is a general-purpose communication specification between ghosts. It can be used for simple SakuraScript playback, external event notification, etc.
+			<br />Essentially, communication is done via TCP/IP. It listens on port 9801 or 9821 (SSP only), and when you send a request according to the SSTP protocol, the results of the processing are returned.
+			<br />For security reasons, unless you change the settings, listening is now limited to localhost, and communication from outside the terminal is not possible. In the past, it also listened to port 11000, but this has now been discontinued as it was misidentified as communication by malware.
+			<br />Although 7743 and 98901 are registered in <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=sakura+script">IANA's port number registry</a>, only 9801 is in actual operation.
+			<br />There is a protocol with the same abbreviation, Secure Socket Tunneling Protocol, developed by Microsoft for VPN communication. There is no technical relationship between the two.
+			<br />It does not take into account frequent communication that requires high performance, and does not have a keep-alive mechanism like HTTP. It disconnects at the end of each communication.</p>
 		</section>
 		
 		
 		<section class="category" id="direct">
 			<h1>Direct SSTP</h1>
-			<p>Direct SSTPはOSに強く依存したIPCの仕組みを利用した通信仕様です。プロトコル仕様は(Socket) SSTPと同じですが、比較的処理が重いTCP/IPを使用せず、直接ゴーストを指定して軽量な通信を行うことを目的としています。
-			<br />現在のところWindows上のみ仕様が決まっており、下記の通りとなります。</p>
+			<p>Direct SSTP is a communication specification that uses an IPC mechanism that is highly dependent on the OS. The protocol specifications are the same as (Socket) SSTP, but the purpose is to directly specify a ghost for lightweight communication without using TCP/IP, which requires relatively heavy processing.
+			<br />Currently, the specifications have been determined only for Windows, and are as follows.</p>
 			<section class="caption">
-				<p><a href="https://docs.microsoft.com/en-us/windows/win32/dataxchg/wm-copydata">WM_COPYDATA</a>をSendMessage系関数で送信(Postは不可)
-				<br />SendMessageのhWnd = 通信先ゴーストのHWND <a href="spec_fmo_mutex.html">FMOから取得</a>
-				<br />wParam = 返信先の「自身の」HWND レスポンスはWM_COPYDATAを指定したHWND（ウインドウ）で受ける。
-				<br />lParam = <a href="https://docs.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-copydatastruct">COPYDATASTRUCT</a>へのポインタ
-				<br />copydatastruct.lpData = SSTPプロトコルに従った文字列
-				<br />copydatastruct.cbData = 文字列の長さ
+				<p>Send <a href="https://docs.microsoft.com/en-us/windows/win32/dataxchg/wm-copydata">WM_COPYDATA</a> using the SendMessage function (Post is not allowed)
+				<br />hWnd in SendMessage = HWND of the target ghost, <a href="spec_fmo_mutex.html">obtained from FMO</a>
+				<br />wParam = "own" HWND to which the reply is sent. The response is received by the HWND (window) that specified WM_COPYDATA.
+				<br />lParam = pointer to <a href="https://docs.microsoft.com/en-us/windows/win32/api/winuser/ns-winuser-copydatastruct">COPYDATASTRUCT</a>
+				<br />copydatastruct.lpData = String according to SSTP protocol
+				<br />copydatastruct.cbData = String length
 				<br />copydatastruct.dwData = 9801
-				<br />備考：
-				<br />送信側は安全のためlpDataにゼロ終端の文字列を用意し、cbDataにはゼロ終端を含むことが望ましい。
-				<br />受信側は安全のためゼロ終端を期待せず、必ずcbDataを考慮して処理を行うこと。
-				<br />受信側は通信先として指定されたHWNDを、受信すべきゴーストがSSTPプロトコル内で指定されたものと同等として取り扱い、できる限りそのゴーストを優先する。
-				<br />受信側・送信側共にウインドウを1つ以上持つGUIアプリのみを想定しており、コンソールアプリでは使用できない。</p>
+				<br />Note:
+				<br />For safety reasons, the sender should provide a zero-terminated string in lpData, and it is desirable that cbData also include a zero-termination.
+				<br />For safety reasons, the receiver should not expect zero-termination, and should always take cbData into consideration when processing.
+				<br />The receiving side should treat the HWND that was specified as the communication target as being equivalent to the ghost that was specified to receive in the SSTP protocol, and give priority to that ghost as much as possible.
+				<br />It is intended only for GUI applications that have at least one window on both the receiving and sending sides, and cannot be used with console applications.</p>
 			</section>
 		</section>
 		
 		
 		<section class="category" id="http">
 			<h1>SSTP over HTTP</h1>
-			<p>SSTP over HTTPは、SSP 2.6.32で実装された、HTTPリクエストメッセージボディにSSTPリクエストをそのまま突っ込み、HTTPレスポンスボディにSSTPレスポンスがそのまま返ってくるきわめて単純な仕組みです。
-			<br />ElectronなどJavaScriptを使ってアプリを作った時に、より簡単にSSTP通信をやりとりするために使うのを想定しています。
-			<br />localhost:9801(または別途指定されたSSTPポート) に対して、 /api/sstp/v1 に Content-Type: text/plainでHTTP/1.1でPOSTしてください。
-			<br />レスポンスもそのまま、HTTP/1.1 200 OKのContent-Type: text/plainで返ってきます。
-			<br />SSTPがエラーでもHTTPは200 OKな点に注意してください。
-			<br />なお、Content-Lengthヘッダは必須で、無ければエラーになります。</p>
+			<p>SSTP over HTTP, implemented in SSP 2.6.32, is an extremely simple mechanism that plugs the SSTP request directly into the HTTP request message body, and returns the SSTP response directly in the HTTP response body.
+			<br />It is intended to be used to more easily exchange SSTP communications when an application is built using JavaScript, such as Electron.
+			<br />POST to /api/sstp/v1 using HTTP/1.1 with Content-Type: text/plain, to localhost:9801 (or a separately specified SSTP port).
+			<br />The response is also returned as-is, with HTTP/1.1 200 OK Content-Type: text/plain.
+			<br />Note that even if the SSTP response is an error, HTTP is 200 OK.
+			<br />Note that the Content-Length header is required, and an error will result if it is not present.</p>
 			
-			<p><a href="http://localhost:9801/api/sstp/v1">お試し</a></p>
+			<p><a href="http://localhost:9801/api/sstp/v1">Demo</a></p>
 			
-			<p>注意：Originヘッダがlocalhostを指していない場合は、強制的にリモートアドレスからのSSTPリクエストとして扱われ、SakuraScriptタグや実行できるSSTPメソッドに強い制約がかかり、かつSecurityLevelヘッダも無視されます。
-			<br />この制約は、HTTPのOriginがlocalhost、かつSSTPのSecurityLevelがlocalの場合のみ緩和されます。</p>
+			<p>Note: If the Origin header does not point to localhost, the request is forced to be treated as an SSTP request from a remote address. In that case, strong restrictions are placed on SakuraScript tags and SSTP methods that can be executed, and the SecurityLevel header is ignored.
+			<br />This restriction is relaxed only when the Origin of HTTP is localhost and the SecurityLevel of SSTP is local.</p>
 		</section>
 		
 		
 		<section class="category" id="req_res">
 			<h1>request/response</h1>
-			<p>SHIORIなど他のプロトコルと同じく、HTTPに似せた独自プロトコルです。
-			<br />リクエストのCharset指定は必須で、指定が無い場合はエラーとなるか、OS標準指定の文字コードとして解釈されます。</p>
+			<p>Like other protocols such as SHIORI, it is a proprietary protocol similar to HTTP.
+			<br />It is mandatory to specify the Charset in the request; if it is not specified, an error will occur, or it will be interpreted as the charset specified by the OS standard.</p>
 
 			<ul>
-				<li>改行コードはCR+LF。</li>
-				<li>リクエストの最後は空行（前行の終端と合わせて(CR+LF)x2）で終わる。</li>
-				<li>レスポンスの最後にはEXECUTEなどの場合追加データが入ることがある。ヘッダ終了後空行を一つ挟み、追加データが入り、さらに空行が1つ入って終了となる。追加データが無い場合はヘッダ直後の空行だけで終わる場合がある。</li>
-				<li>追加データありのレスポンスでは、互換性の都合でCharsetを含むヘッダが一切無く追加データだけが返る場合がある。その場合はリクエストの文字コードと同じと仮定して良い。</li>
-				<li>リクエストとレスポンスのSSTPバージョンが異なる場合がある。バージョン番号に依存する解釈はしないこと。</li>
+				<li>The line feed code is CR+LF</li>
+				<li>The request ends with a blank line (combined with the previous line, (CR+LF)x2).</li>
+				<li>Additional data may be added at the end of the response in cases such as EXECUTE. After the header, a blank line is inserted, followed by additional data, and then another blank line to end the response. If there is no additional data, the response may end with a blank line immediately after the header.</li>
+				<li>For compatibility reasons, responses with additional data may not have any headers, including Charset, and only the additional data may be returned. In that case, it can be assumed that the charset is the same as that of the request.</li>
+				<li>The SSTP version of the request and the response may be different. Do not make interpretations that depend on the version number.</li>
 			</ul>
 
 <h2>request</h2>
 
 			<section class="caption">
-				<h1>requestサンプル</h1>
+				<h1>request sample</h1>
 <pre><!--
 -->SEND SSTP/1.0
 Charset: UTF-8
-Sender: SSTPクライアント
-Script: \h\s0テストー。\u\s[10]テストやな。
+Sender: SSTP client
+Script: \h\s0Test.\u\s[10]It's a test.
 Option: notranslate
 
 </pre>
-				<h1>requestの各メソッドに共通するヘッダ</h1>
-				<p>メソッド固有のものについては、後ろのメソッド別の説明を確認すること。</p>
+				<h1>Headers common to each method of request</h1>
+				<p>For method-specific information, check the explanations for each method below.</p>
 				<dl>
 					<dt>Charset</dt>
-					<dd>リクエストの文字コード。一番最初の行に現れるのが望ましい。
-					<br />特に理由がなければUTF-8を推奨する。</dd>
+					<dd>Character code of the request. Should appear on the very first line.
+					<br />UTF-8 is recommended if there is no particular reason to use otherwise.</dd>
 					
 					<dt>Sender</dt>
-					<dd>送信者を示す文字列。「SSTP送信ツール」など。COMMUNICATEメソッドの場合は、送信元のゴースト\0名。</dd>
+					<dd>A string indicating the sender. For example, "SSTP sender tool". For the COMMUNICATE method, the sending ghost's \0 name.</dd>
 					
 					<dt>SecurityLevel</dt>
-					<dd>SHIORIやSakuraScriptで処理する際のセキュリティレベルの指定。local/externalのいずれか。
-					<br />DirectSSTP、または127.0.0.1等明らかにローカルから来たリクエストのみ有効。</dd>
+					<dd>Specify the security level when processing with SHIORI or SakuraScript, either local or external.
+					<br />Only valid for DirectSSTP or requests that are clearly local, such as 127.0.0.1.</dd>
 					
 					<dt>Option</dt>
-					<dd>SSTPで実行されるSakuraScriptがどのように扱われるかのオプションを指定する。
-					<br />カンマ区切りで複数指定可能。指定する文字列は以下の通り。
-					<br />nodescript : バルーンのSSTP表示を無効にする(リモートからのSSTPは無効)
-					<br />notranslate : OnTranslateやMAKOTOでのトランスレート処理を行わない
-					<br />nobreak : 現在実行中のスクリプトを中断せず、終わるまで待つ</dd>
+					<dd>Specify options for how SakuraScript executed by SSTP is handled.
+					<br />Multiple options can be specified by separating them with commas. The strings that can be specified are as follows.
+					<br />nodescript - Disable SSTP display on the balloon (disabled for SSTP from remote).
+					<br />notranslate - No translate processing with OnTranslate or MAKOTO
+					<br />nobreak - Do not interrupt the currently running script; wait until it finishes.</dd>
 					
 					<dt>ID</dt>
-					<dd>"Owned SSTP"と呼ばれるもの。<a href="list_shiori_event.html#uniqueid">SHIORI uniqueid</a>で送られてきたIDか、<a href="spec_fmo_mutex.html">FMOの識別ID(SSPのみ)</a>を指定すると、各種セキュリティチェックやロック等を無視して、本SSTPをゴースト内部での処理と同じ優先度で扱う。
-					<br />SecurityLevel指定がlocalになり、さらに\tなどの割り込み禁止状態でも強制的に割り込み再生を可能とする。</dd>
+					<dd>"Owned SSTP", which is an ID sent by the <a href="list_shiori_event.html#uniqueid">SHIORI uniqueid</a> or <a href="spec_fmo_mutex.html">FMO's identification ID (SSP only)</a>. This SSTP is treated with the same priority as the ghost's internal processes, ignoring various security checks, locks, etc.
+					<br />SecurityLevel specification becomes local, and it also enables forced interrupt of playback even in interrupt-disabled states such as \t.</dd>
 					
-					<dt>X-SSTP-PassThru-(任意の文字列)</dt>
-					<dd>NOTIFYなどゴースト側との通信の際に、SHIORIに直接渡されるヘッダ。
-					<br />文字コード変換等最低限の処理が行われるだけで、(任意の文字列)の部分や中身はそのまま中継される。</dd>
+					<dt>X-SSTP-PassThru-(arbitrary string)</dt>
+					<dd>Header passed directly to SHIORI when communicating with the ghost side, such as NOTIFY.
+					<br />Only minimal processing such as character code conversion is performed, and the (arbitrary string) part and contents are relayed as-is.</dd>
 					
 					<dt>HWnd</dt>
-					<dd>DirectSSTP限定で、responseを返信すべきウインドウハンドルを示す。
-					<br />ウインドウハンドル(ポインタ相当)のデータを符号なし10進整数として扱い、それを文字列化したもの。
-					<br />省略時はWM_COMMUNICATEのwParam。</dd>
+					<dd>For DirectSSTP only. Indicates the window handle to which the response should be returned.
+					<br />The window handle (equivalent to a pointer) data is treated as an unsigned decimal integer and converted to a string.
+					<br />If omitted, wParam of WM_COMMUNICATE.</dd>
 					
 					<dt>ReceiverGhostHWnd [SSP 2.5.57]</dt>
-					<dd>(Socket)SSTP限定で、requestを送るべきゴーストの\0のウインドウハンドルを示す。
-					<br />これを指定すると、処理すべきゴーストが固定され、Socket経由でもDirectSSTPと同じ処理が可能になる。
-					<br />見つからなかった場合は、404 Not Foundで即時エラー終了する。</dd>
+					<dd>For (Socket)SSTP only. Indicates the ghost's \0 window handle to which the request should be sent.
+					<br />By specifying this, the ghost to be processed is fixed, and the same processing as DirectSSTP is possible via Socket.
+					<br />If not found, an immediate error termination with 404 Not Found will occur.</dd>
 					
 					<dt>ReceiverGhostName [SSP 2.5.57]</dt>
-					<dd>(Socket)SSTP限定で、requestを送るべきゴーストの\0名を示す。
-					<br />これを指定すると、処理すべきゴーストが固定され、Socket経由でもDirectSSTPと同じ処理が可能になる。HWndの名前版。
-					<br />見つからなかった場合は、404 Not Foundで即時エラー終了する。</dd>
+					<dd>For (Socket)SSTP only. Indicates the \0 name of the ghost to which the request should be sent.
+					<br />By specifying this, the ghost to be processed is fixed, and the same processing as DirectSSTP is possible via Socket. Name version of HWnd.
+					<br />If not found, an immediate error termination with 404 Not Found will occur.</dd>
 				</dl>
 
 			</section>
@@ -278,340 +278,340 @@ Option: notranslate
 			<h2>response</h2>
 
 			<section class="caption">
-				<h1>responseサンプル(データなし)</h1>
+				<h1>response sample (no data)</h1>
 <pre><!--
 -->SSTP/1.4 200 OK
 Charset: UTF-8
-Script: \h\s0テストー。\u\s[10]テストやな。
+Script: \h\s0Test.\u\s[10]It's a test.
 
 </pre>
-				<h1>responseサンプル(データあり)</h1>
+				<h1>response sample (data available)</h1>
 <pre><!--
 -->SSTP/1.4 200 OK
 Charset: UTF-8
-Script: \h\s0テストー。\u\s[10]テストやな。
+Script: \h\s0Test.\u\s[10]It's a test.
 
-追加データはここ
+Additional data here
 
 </pre>
 
-				<h1>responseの各メソッドに共通するヘッダ</h1>
+				<h1>Headers common to each method of response</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>リクエストの文字コード。一番最初の行に現れるのが望ましい。
-					<br />特に理由がなければUTF-8を推奨する。
-					<br />互換性の問題解消のため、わざと省略される場合がある。その場合はrequestと同じ文字コードと仮定すること。</dd>
-					<dt>X-SSTP-PassThru-(任意の文字列)</dt>
-					<dd>NOTIFYなどゴースト側との通信の際に、SHIORIから直接返されてきたヘッダ。
-					<br />文字コード変換等最低限の処理が行われるだけで、(任意の文字列)の部分や中身はそのまま中継される。</dd>
+					<dd>Character code of the request. Should appear on the very first line.
+					<br />UTF-8 is recommended if there is no particular reason to use otherwise.
+					<br />It may be intentionally omitted to solve compatibility problems. In such cases, it should be assumed that the character coode is the same as that of the request.</dd>
+					<dt>X-SSTP-PassThru-(arbitrary string)</dt>
+					<dd>Headers returned directly from SHIORI when communicating with the ghost side, such as NOTIFY.
+					<br />Only minimal processing such as character code conversion is performed, and the (arbitrary string) part and contents are relayed as-is.</dd>
 				</dl>
 
-				<h1>responseのステータスコード</h1>
-				<p>HTTPと同じく、200番台は正常受理、その他はエラー。</p>
+				<h1>Status code of response</h1>
+				<p>As with HTTP, numbers in the 200s are accepted as normal, and others are errors.</p>
 				<dl>
 					<dt>200 OK</dt>
-					<dd>正常終了（返り値つき）</dd>
+					<dd>Normal completion (with return value)</dd>
 					<dt>204 No Content</dt>
-					<dd>正常終了（返り値なし）</dd>
+					<dd>Normal completion (no return value)</dd>
 					<dt>210 Break</dt>
-					<dd>実行はされたがスクリプト実行中にブレークされた
-					<br />※EntryつきのSEND/1.xなど極めて限られた状況に限り、通常は即時200か204リターン。</dd>
+					<dd>Executed but broken during script execution
+					<br />※Only in very limited circumstances, such as SEND/1.x with Entry. Usually an immediate 200 or 204 return.</dd>
 					<dt>400 Bad Request</dt>
-					<dd>リクエストに何かしらカバーしきれない不備がある</dd>
-					<dt>404 Not Found ※SSPのみ</dt>
-					<dd>ゴースト指定のSSTPで該当ゴーストがインストールや起動がされていない</dd>
+					<dd>There is something wrong with the request that cannot be covered.</dd>
+					<dt>404 Not Found ※SSP only</dt>
+					<dd>The ghost specified by SSTP has not been installed or is not running.</dd>
 					<dt>408 Request Timeout</dt>
-					<dd>タイムアウト：ゴースト/SHIORI側と通信できない時など（普段はほぼ起こらない）</dd>
+					<dd>Timeout: When unable to communicate with the Ghost/SHIORI side (usually a very rare occurrence)</dd>
 					<dt>409 Conflict</dt>
-					<dd>\tタグなどの割り込み禁止状態か、他のリクエストの処理中</dd>
-					<dt>413 Payload Too Large ※SSPのみ</dt>
-					<dd>SSTPリクエストが長すぎて処理を拒否した</dd>
+					<dd>Interrupts are disabled, such as via a \t tag, or other requests are being processed.</dd>
+					<dt>413 Payload Too Large ※SSP only</dt>
+					<dd>SSTP request was too long and was refused for processing.</dd>
 					<dt>420 Refuse</dt>
-					<dd>ゴースト側の設定の都合で受信拒否された</dd>
-					<dt>500 Internal Server Error ※SSPのみ</dt>
-					<dd>処理系内部で検出されたなにかしらの問題で処理しきれなかった</dd>
+					<dd>Reception was rejected due to ghost side settings.</dd>
+					<dt>500 Internal Server Error ※SSP only</dt>
+					<dd>The processing could not be completed due to some problem detected within the processing system.</dd>
 					<dt>501 Not Implemented</dt>
-					<dd>未実装のコマンドなどが含まれて処理できなかった</dd>
+					<dd>Could not be processed because it contained unimplemented commands, etc.</dd>
 					<dt>503 Service Unavailable</dt>
-					<dd>処理系内部の都合でSSTPを受け付けられない状態</dd>
-					<dt>505 Version Not Supported ※SSPのみ</dt>
-					<dd>SSTPのバージョンがおかしい（1.0未満、3.0以上など）</dd>
+					<dd>SSTP cannot be accepted due to internal circumstances within the processing system.</dd>
+					<dt>505 Version Not Supported ※SSP only</dt>
+					<dd>The SSTP version is incorrect (less than 1.0, more than 3.0, etc.)</dd>
 					<dt>512 Invisible</dt>
-					<dd>最小化などでゴーストが表示されておらず、何も処理できない状態</dd>
+					<dd>Ghost is not visible, e.g. because it is minimized, and nothing can be processed.</dd>
 				</dl>
 			</section>
 		</section>
 
 
 		<section class="category" id="method_notify">
-			<h1>メソッド：NOTIFY</h1>
+			<h1>Method: NOTIFY</h1>
 
-			<p>ゴーストにイベントを通知するためのメソッドです。
-			<br />Eventヘッダ＝SHIORI/3.0 IDに対応し、Reference*はそのままです。</p>
+			<p>Methods for notifying ghosts of events.
+			<br />Event header = corresponds to SHIORI/3.0 ID, Reference* remains the same.</p>
 
 			<section class="caption">
-				<h1>イベント通知のみサンプル(NOTIFY/1.0)</h1>
+				<h1>Event notification only sample (NOTIFY/1.0)</h1>
 <pre><!--
 -->NOTIFY SSTP/1.0
 Charset: UTF-8
 Sender: Media Player
 Event: OnMusicPlay
-Reference0: 自由の翼
+Reference0: Wings of Freedom
 Reference1: Linked Horizon
 
 </pre>
 
 			</section>
 
-			<p>ゴースト側で指定したイベントIDに反応しない場合に、「保険用の」スクリプトを指定して再生させることができます。
-			<br />その際に、IfGhostヘッダを指定すると、直後にあるScriptヘッダは指定したゴースト専用のスクリプトとして扱います。</p>
+			<p>If the ghost does not respond to the specified event ID, you can specify an "insurance" script to play.
+			<br />In such a case, if an IfGhost header is specified, the Script header immediately following is treated as a script exclusively for the specified ghost.</p>
 
 			<section class="caption">
-				<h1>保険反応つきサンプル(NOTIFY/1.1)</h1>
+				<h1>Sample with insurance response (NOTIFY/1.1)</h1>
 <pre><!--
 -->NOTIFY SSTP/1.1
 Charset: UTF-8
 Sender: Media Player
 Event: OnMusicPlay
-Reference0: 紅蓮の弓矢
+Reference0: Bow and arrow of red lotus
 Reference1: Linked Horizon
 IfGhost: Emily,Teddy
-Script: \0\s[6]その日、エミリは思い出した…\n\s[7]まだ今日は芋食べてない！\1\s[11]わざわざ今思い出したの？
+Script: \0\s[6]That day, Emily recalled...\n\s[7]I haven't eaten a potato yet today!\1\s[11]Why did you bother to remember now?
 IfGhost: ラーシェ,ティセ
-Script: \0\s[3]巨人っていっても、身長は列車数両分しかないよね。\1\s[14]それが縦に立ち上がるとさすがに大きいと思うけどね。
+Script: \0\s[3]Even though he's a giant, he's only a few train cars tall.\1\s[14]When it stands up vertically, I think it's big indeed.
 
 </pre>
-				<h1>request固有ヘッダ</h1>
+				<h1>request specific header</h1>
 				<dl>
 					<dt>Event</dt>
-					<dd>イベントID。SHIORI/3.0ではIDヘッダの指定として取り扱われる。</dd>
+					<dd>Event ID. In SHIORI/3.0, it is treated as an ID header specification.</dd>
 					<dt>Reference*</dt>
-					<dd>イベントのReferenceヘッダ。SHIORIには文字コード変換等最低限の処理を行い、そのまま引き渡される。</dd>
+					<dd>Reference header of the event, which is passed to SHIORI after minimal processing such as character code conversion.</dd>
 					<dt>Script</dt>
-					<dd>イベントに反応しなかった場合に再生されるSakuraScript。</dd>
+					<dd>SakuraScript to be played if the event is not responded to.</dd>
 					<dt>IfGhost</dt>
-					<dd>\0側名,\1側名 の書式でゴーストの名前を指定すると、直後に来たScriptヘッダを特定のゴースト専用として取り扱う。
-					<br />IfGhostの直後ではないScriptヘッダが存在した場合は、IfGhostに該当しない場合のデフォルト処理用Scriptとなる。
-					<br />省略した場合はどのゴーストに対しても同じScriptヘッダが再生される。
-					<br />SSTPのゴースト起動オプションを有効にしていた場合は、ここで指定したゴーストが一時的に起動される。</dd>
+					<dd>If you specify a ghost name in the format "\0 side name, \1 side name", the Script header that comes immediately after is treated as dedicated to that specific ghost.
+					<br />If there is a Script header that is not immediately after IfGhost, it will be the Script for default processing when IfGhost is not applicable.
+					<br />If omitted, the same Script header is played for all ghosts.
+					<br />If the SSTP ghost startup option is enabled, the ghost specified here will be temporarily launched.</dd>
 				</dl>
-				<h1>response固有ヘッダ</h1>
+				<h1>response specific header</h1>
 				<dl>
 					<dt>Script</dt>
-					<dd>イベント通知の結果再生されたスクリプト。現在SSPのみ対応。</dd>
+					<dd>Script played as a result of event notification. Currently only SSP is supported.</dd>
 				</dl>
 			</section>
 		</section>
 
 
 		<section class="category" id="method_send">
-			<h1>メソッド：SEND</h1>
-			<p>(執筆中)</p>
+			<h1>Method: SEND</h1>
+			<p>(To be written)</p>
 		</section>
 
 
 		<section class="category" id="method_communicate">
-			<h1>メソッド：COMMUNICATE</h1>
+			<h1>Method: COMMUNICATE</h1>
 			
-			<p>COMMUNICATEメソッドで、ゴーストに外部から任意の文字列を与えて、反応させることができます。
-			<br />基本的にゴースト内部でのコミュニケートボックスを使った反応と同じになりますが、SSTPなのでゴースト側で受理されない場合があります。</p>
+			<p>Using the COMMUNICATE method, you can give an arbitrary string to the ghost from the outside and have it react.
+			<br />Basically, the reaction is the same as using the communication box inside the ghost, but since it is SSTP, it may not be accepted by the ghost.</p>
 			
 			<section class="caption">
-				<h1>単純なCOMMUNICATE(COMMUNICATE/1.1)</h1>
+				<h1>Simple COMMUNICATE (COMMUNICATE/1.1)</h1>
 <pre><!--
 -->COMMUNICATE SSTP/1.1
 Charset: UTF-8
 Sender: User
-Sentence: おはよう。
+Sentence: Good morning.
 
 </pre>
 			</section>
 
-			<p>コミュニケートはSSTPサーバ同士（≒ゴースト同士）で送受信を繰り返すことができます。
-			<br />SHIORI/3.0のレスポンスReference0での送信の場合は、SSTP送信タイミングはSakuraScriptを再生し終わった時となります。
-			<br />これを用いて、同時起動しているゴースト同士が会話しているような処理を組むことが可能となります。</p>
+			<p>Communicate can be sent and received repeatedly between SSTP servers (≒ ghosts).
+			<br />When sending with response Reference0 of SHIORI/3.0, the timing for sending SSTP is when SakuraScript has finished playing.
+			<br />This makes it possible to set up a process in which ghosts that are running simultaneously have a conversation with each other.</p>
 
 			<section class="caption">
-				<h1>ゴースト間コミュニケート(COMMUNICATE/1.2)</h1>
+				<h1>Ghost to ghost communication (COMMUNICATE/1.2)</h1>
 
 <pre><!--
 -->COMMUNICATE SSTP/1.2
 Charset: UTF-8
 Sender: Emily
 HWnd: 28236
-Sentence: \0\s[5]ちゃっらーん！エミリでーす！\nボクのお腹にはまだ若干の余裕が…？\1\s[11]そんなこと言ってたらまた太るよ？
+Sentence: \0\s[5]Charaaaan! My name is Emily!\nI still have some room in my stomach...?\1\s[11]If you say that, won't you gain weight again?
 Surface: 5,11
-Reference0: 芋ちょうだい
-Reference1: たくさんちょうだい
-Reference2: 今すぐちょうだい
+Reference0: Please give me a sweet potato
+Reference1: Give me a lot
+Reference2: Give it to me now
 
 </pre>
 
-				<h1>request固有ヘッダ</h1>
+				<h1>request specific header</h1>
 				<dl>
 					<dt>Reference*</dt>
-					<dd>コミュニケートの拡張情報。SHIORI/3.0ではReference2以降に格納される。SSTP Reference0 = SHIORI Reference2。</dd>
+					<dd>Communicate extended information. In SHIORI/3.0, it is stored in Reference2 or later. SSTP Reference0 = SHIORI Reference2.</dd>
 					<dt>Surface</dt>
-					<dd>送信元ゴーストのコミュニケート送信時点（≒スクリプト実行終了時点）での\0と\1のサーフィス番号。
-					<br />OnCommunicateイベントでSurfaceヘッダとして渡される。</dd>
+					<dd>Surface numbers of \0 and \1 at the time the sender ghost sends the communication (≒ at the end of the script execution).
+					<br />Passed as Surface header in OnCommunicate event.</dd>
 					<dt>Option</dt>
-					<dd><em class="specsign">[旧仕様]</em>substituteを指定すると、Sentenceの内容を\1が喋る。 ※SSP未実装</dd>
+					<dd><em class="specsign">[Old specification]</em>When "substitute" is specified, \1 speaks the contents of Sentence. ※Not implemented in SSP.</dd>
 				</dl>
 			</section>
 		</section>
 
 
 		<section class="category" id="method_execute">
-			<h1>メソッド：EXECUTE</h1>
-			<p>EXECUTEメソッドで、ゴーストの各種情報取得や、SakuraScriptによらない各種コマンド実行などを行うことができます。。
-			<br />このメソッドの実行では、ゴーストは喋りませんが、内部状態が書き換わる可能性があります。</p>
+			<h1>Method: EXECUTE</h1>
+			<p>Using the EXECUTE method, you can obtain various information about ghosts and execute various commands that do not rely on SakuraScript.
+			<br />Execution of this method will not cause the ghost to speak, but its internal state may be rewritten.</p>
 			
 			<section class="caption">
-				<h1>EXECUTEサンプル</h1>
+				<h1>EXECUTE sample</h1>
 <pre><!--
 -->EXECUTE SSTP/1.1
 Charset: UTF-8
-Sender: SSTPクライアント
+Sender: SSTP Client
 Command: GetName
 
 </pre>
-				<h1>request固有ヘッダ</h1>
+				<h1>request specific header</h1>
 				<dl>
-					<dt>Command または Command[param1,param2...]</dt>
-					<dd>実行すべきコマンド。実行する内容と返ってくる情報は後述。
-					<br />大かっこ以降は実行すべきコマンドに渡すパラメータを指定する。</dd>
+					<dt>Command or Command[param1,param2...]</dt>
+					<dd>The command to be executed. The content to be executed and the information returned are described below.
+					<br />After the brackets, specify the parameters to be passed to the command to be executed.</dd>
 					
 					<dt>Reference* [SSP]</dt>
-					<dd>大かっこ指定の代わりにReference0～のヘッダでパラメータを指定することもできる。</dd>
+					<dd>Parameters can also be specified in the header of Reference0~ instead of specifying them in brackets.</dd>
 				</dl>
 			</section>
 			
-			<p>Commandヘッダに指定できる文字列と、responseの「追加データ」で返ってくる結果については、下記を参照してください。</p>
+			<p>See below for the strings that can be specified in the Command header and the results returned by the "additional data" in the response.</p>
 			
 			<section class="caption">
-				<h1>Commandヘッダに指定できるコマンドと、返ってくる追加データ</h1>
+				<h1>Commands that can be specified in the Command header, and additional data that will be returned</h1>
 				<dl>
 					<dt>GetName</dt>
-					<dd>起動中のゴーストの (\0名),(\1名) カンマ区切り</dd>
+					<dd>(\0 name),(\1 name) of running ghosts, separated by commas</dd>
 					
-					<dt>GetNames [SSP] [リモート不可]</dt>
-					<dd>現在インストールされている\0名のリスト。改行区切り。空行で終端。</dd>
+					<dt>GetNames [SSP] [Not supported in Remote]</dt>
+					<dd>List of the \0 names of currently installed ghosts. Newline delimited. Terminated by a blank line.</dd>
 					
-					<dt>GetFMO [SSP 2.5.57] [リモート制限あり]</dt>
-					<dd><a href="spec_fmo_mutex.html">FMO</a>の中身と同等の情報を取得する。
-					<br />ただしSSTPで通信したアプリケーション内部での管理分に限り、同時実行中のアプリケーション群共用である本来のFMOとは異なる。
-					<br />主にウインドウを持たずDirect SSTPを送信できないコンソールアプリなどで、Socket SSTPのみでReceiverGhostHWndヘッダを活用しDirect SSTP相当の機能を実現するために用いられる。
-					<br />改行区切り、空行で終端。
-					<br />リモートからの要求の場合は、各パス情報が抜け、ヘッダとhwndがダミーに置き換わる。</dd>
+					<dt>GetFMO [SSP 2.5.57] [Restricted in Remote]</dt>
+					<dd>Obtain information equivalent to the contents of the <a href="spec_fmo_mutex.html">FMO</a>.
+					<br />However, this differs from the original FMO (which is shared by a group of concurrently running applications), as it is limited to the internal management of applications that communicate using SSTP.
+					<br />It is mainly used in console applications that do not have a window and cannot send Direct SSTP, and is used to implement functions equivalent to Direct SSTP by utilizing the ReceiverGhostHWnd header with Socket SSTP only.
+					<br />Newline delimited, terminated by a blank line.
+					<br />In the case of a remote request, each path information is omitted, and the header and hwnd are replaced with a dummy.</dd>
 					
 					<dt>GetGhostName [SSP]</dt>
-					<dd>起動中のゴースト本体の名前(descript.txtのname)</dd>
+					<dd>Name of the running ghost (name in descript.txt)</dd>
 					
 					<dt>GetShellName [SSP]</dt>
-					<dd>起動中のゴーストの現在使用中のシェルの名前</dd>
+					<dd>Name of the shell currently in use by the running ghost</dd>
 					
 					<dt>GetBalloonName [SSP]</dt>
-					<dd>起動中のゴーストの現在使用中のバルーンの名前</dd>
+					<dd>Name of the balloon currently in use by the running ghost</dd>
 					
 					<dt>GetVersion</dt>
-					<dd>ベースウェア(実行中のソフト)のバージョン</dd>
+					<dd>Baseware (running software) version</dd>
 					
-					<dt>Quiet [リモート不可]</dt>
-					<dd>Restoreを実行するか、16秒間が経過するまで黙る。追加データなし(ステータスコード200番台で成功)</dd>
+					<dt>Quiet [Not supported in Remote]</dt>
+					<dd>Perform a Restore or remain silent until 16 seconds have elapsed. No additional data (status code 200 successful)</dd>
 					
 					<dt>Restore</dt>
-					<dd>Quietを解除。追加データなし(ステータスコード200番台で成功)</dd>
+					<dd>Quiet is cancelled. No additional data (status code 200 successful)</dd>
 					
-					<dt>CompressArchive [SSP] [リモート不可]</dt>
-					<dd>指定したフォルダ内のファイル群を圧縮ファイルに圧縮する。
-					<br />処理が終わるまでレスポンスが返らないので注意。
-					<br />パラメータ0：圧縮ファイル名
-					<br />パラメータ1：圧縮すべきフォルダのフルパス
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<dt>CompressArchive [SSP] [Not supported in Remote]</dt>
+					<dd>Compresses a group of files in a specified folder into a compressed file.
+					<br />Note that no response will be returned until the process is completed.
+					<br />Parameter 0: Compressed file name
+					<br />Parameter 1: Full path of the folder to be compressed
+					<br />No additional data (status code 200 successful)</dd>
 					
-					<dt>ExtractArchive [SSP] [リモート不可]</dt>
-					<dd>指定した圧縮ファイルを解凍する。
-					<br />処理が終わるまでレスポンスが返らないので注意。
-					<br />パラメータ0：圧縮ファイル名
+					<dt>ExtractArchive [SSP] [Not supported in Remote]</dt>
+					<dd>Decompresses the specified compressed file.
+					<br />Note that no response will be returned until the process is completed.
+					<br />Parameter 0: Compressed file name
 					<br />パラメータ1：解凍先のフォルダのフルパス
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<br />No additional data (status code 200 successful)</dd>
 
-					<dt>DumpSurface [SSP 2.5.98] [リモート不可]</dt>
-					<dd>合成済みのサーフェス画像を指定したディレクトリに出力する。パラメータは<a href="list_sakura_script.html#_!_execute,dumpsurface,ディレクトリ,スコープID,サーフェスリスト_">\![execute,dumpsurface]</a>と同じ。
-					<br />処理が終わるまでレスポンスが返らないので注意。
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<dt>DumpSurface [SSP 2.5.98] [Not supported in Remote]</dt>
+					<dd>Outputs a composited surface image to the specified directory. Parameters are the same as <a href="list_sakura_script.html#_!_execute,dumpsurface,ディレクトリ,スコープID,サーフェスリスト_">\![execute,dumpsurface]</a>.
+					<br />Note that no response will be returned until the process is completed.
+					<br />No additional data (status code 200 successful)</dd>
 
-					<dt>MoveAsync [SSP] [リモート不可]</dt>
-					<dd><a href="list_sakura_script.html#notes_move">\![moveasync]</a>と同じことをSakuraScriptを介さずに実行する。パラメータ指定方法はSakuraScript版と同じ。
-					<br />SSTPのタイムアウトまでにresponseを返せないのとデッドロックの原因になるため、asyncなしのmoveは実行できない。
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<dt>MoveAsync [SSP] [Not supported in Remote]</dt>
+					<dd>Perform the same thing as <a href="list_sakura_script.html#notes_move">\![moveasync]</a> without SakuraScript. The method of specifying parameters is the same as the SakuraScript version.
+					<br />Move without async cannot be performed because the response cannot be returned before the SSTP timeout, and it will cause a deadlock.
+					<br />No additional data (status code 200 successful)</dd>
 					
-					<dt>SetTrayIcon [SSP] [リモート不可]</dt>
-					<dd><a href="list_sakura_script.html#_!_set,tasktrayicon,%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D,%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88_">\![set,tasktrayicon]</a>と同じことをSakuraScriptを介さずに実行する。パラメータ指定方法はSakuraScript版と同じ。
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<dt>SetTrayIcon [SSP] [Not supported in Remote]</dt>
+					<dd>Perform the same thing as <a href="list_sakura_script.html#_!_set,tasktrayicon,%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D,%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88_">\![set,tasktrayicon]</a> without SakuraScript. The method of specifying parameters is the same as the SakuraScript version.
+					<br />No additional data (status code 200 successful)</dd>
 					
-					<dt>SetTrayBalloon [SSP] [リモート不可]</dt>
-					<dd><a href="list_sakura_script.html#_!_set,trayballoon,%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3,%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3,%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3..._">\![set,trayballoon]</a>と同じことをSakuraScriptを介さずに実行する。パラメータ指定方法はSakuraScript版と同じ。
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<dt>SetTrayBalloon [SSP] [Not supported in Remote]</dt>
+					<dd>Perform the same thing as <a href="list_sakura_script.html#_!_set,trayballoon,%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3,%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3,%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3..._">\![set,trayballoon]</a> without SakuraScript. The method of specifying parameters is the same as the SakuraScript version.
+					<br />No additional data (status code 200 successful)</dd>
 					
-					<dt>SetProperty [SSP] [リモート不可]</dt>
-					<dd><a href="list_propertysystem.html">プロパティシステム</a>に値を書き込む。
-					<br />パラメータ0：プロパティの名前
-					<br />パラメータ1：設定すべき値
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<dt>SetProperty [SSP] [Not supported in Remote]</dt>
+					<dd>Writes values to the <a href="list_propertysystem.html">property system</a>.
+					<br />Parameter 0: Property name
+					<br />Parameter 1: Value to be set
+					<br />No additional data (status code 200 successful)</dd>
 					
 					<dt>GetProperty [SSP]</dt>
-					<dd><a href="list_propertysystem.html">プロパティシステム</a>から値を読み出す。
-					<br />パラメータ0：プロパティの名前
-					<br />追加データは取得したプロパティの値。</dd>
+					<dd>Read values from the <a href="list_propertysystem.html">property system</a>.
+					<br />Parameter 0: Property name
+					<br />Additional data is the value of the acquired property.</dd>
 					
 					<dt>SetCookie</dt>
-					<dd>Senderで指定したクライアント名ごとに保存される、汎用データ保存領域に書き込む。
-					<br />ブラウザの「クッキー」と同様の使い方を想定している。
-					<br />パラメータ0：クッキーの名前
-					<br />パラメータ1：設定すべき値
-					<br />追加データなし(ステータスコード200番台で成功)</dd>
+					<dd>Writes to the general data storage area, which is saved for each client name specified in Sender.
+					<br />It is intended to be used similarly to browser "cookies".
+					<br />Parameter 0: Name of cookie
+					<br />Parameter 1: Value to be set
+					<br />No additional data (status code 200 successful)</dd>
 					
 					<dt>GetCookie</dt>
-					<dd>Senderで指定したクライアント名ごとに保存される、汎用データ保存領域から読み出す。
-					<br />パラメータ0：クッキーの名前
-					<br />追加データは取得したクッキーの値。</dd>
+					<dd>Read from the general data storage area, which is saved for each client name specified in Sender.
+					<br />Parameter 0: Name of cookie
+					<br />Additional data is the value of the cookie obtained.</dd>
 				</dl>
 			</section>
 		</section>
 
 
 		<section class="category" id="method_give">
-			<h1>メソッド：GIVE</h1>
-			<p><em class="specsign">[旧仕様]</em> ゴーストに各種データを与え、処理したり反応させたりするためのメソッドです。
-			<br />相当昔の仕様であり、現在これを使用する意味はありません。NOTIFYやCOMMUNICATEを使用してください。</p>
+			<h1>Method: GIVE</h1>
+			<p><em class="specsign">[Old specification]</em> Methods for giving various data to ghost to be processed or reacted to.
+			<br />This is a very old specification and there is no point in using it now. Please use NOTIFY or COMMUNICATE.</p>
 			
 			<section class="caption">
-				<h1>requestサンプル</h1>
+				<h1>request sample</h1>
 <pre><!--
 -->GIVE SSTP/1.1
 Charset: UTF-8
-Sender: SSTPクライアント
-Document: まず水や。それから粉やな。
+Sender: SSTP client
+Document: First, water. Then the powder.
 
 </pre>
 
 <pre><!--
 -->GIVE SSTP/1.1
 Charset: UTF-8
-Sender: SSTPクライアント
-Song: 佐世保の時雨
+Sender: SSTP client
+Song: Sasebo no Shigure
 
 </pre>
 
-				<h1>request固有ヘッダ</h1>
+				<h1>request specific header</h1>
 				<dl>
 					<dt>Document</dt>
-					<dd>文書（汎用的な文字列）<br />
-					SHIORI/3.0ではユーザーコミュニケートと同じ扱いとなり、OnCommunicateイベントが発生する。</dd>
+					<dd>Document (generic string)<br />
+					In SHIORI/3.0, it is treated the same as a user communicate, and the OnCommunicate event is fired.</dd>
 					<dt>Song</dt>
-					<dd>歌の名前。<br />
-					SHIORI/3.0ではOnMusicPlayイベントが発生し、Reference0がSongヘッダに指定された文字列となる。</dd>
+					<dd>Name of song.<br />
+					In SHIORI/3.0, the OnMusicPlay event occurs, and Reference0 becomes the string specified in the Song header.</dd>
 				</dl>
 			</section>
 		</section>
