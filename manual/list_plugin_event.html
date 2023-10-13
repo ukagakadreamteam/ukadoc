@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project PLUGIN Eventリスト</title>
+<title>UKADOC Project PLUGIN Event List</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">PLUGIN Eventリスト</h1>
+	<h1 id="page-title">PLUGIN Event List</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -148,26 +148,34 @@
 				<li><a href="#OnGhostInfoUpdate">OnGhostInfoUpdate</a></li>
 				<li><a href="#OnMenuExec">OnMenuExec</a></li>
 				<li><a href="#OnInstallComplete">OnInstallComplete</a></li>
-				<li><a href="#OnChoiceSelect_Ex_/OnAnchorSelect_Ex_/_q等に指定された任意名イベント">OnChoiceSelect(Ex)/OnAnchorSelect(Ex)/\q等に指定された任意名イベント</a></li>
-				<li><a href="#_!_raiseplugin_および_!_notifyplugin_に指定された任意名イベント">\![raiseplugin]および\![notifyplugin]に指定された任意名イベント</a></li>
+				<li><a href="#OnChoiceSelect_Ex_/OnAnchorSelect_Ex_/arbitrary_event_name_specified_in__q">OnChoiceSelect(Ex)/OnAnchorSelect(Ex)/Arbitrary event name specified in \q</a></li>
+				<li><a href="#arbitrary_event_name_specified_in__!_raiseplugin__and__!_notifyplugin_">Arbitrary event name specified in \![raiseplugin] and \![notifyplugin]</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="categories">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<ul>
+				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
+				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/list_plugin_event.html">here</a>.</li>
+				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
+			</ul>
+		</section>
 		<div class="caption">
-			<p>このページでは、ベースウェアからプラグイン<em>に対して</em>通知されるイベントについてまとめています。</p>
-			<p>PLUGIN/2.0の通信仕様そのものについて等は、<a href="spec_plugin.html">PLUGIN/2.0</a>のページにあります。</p>
+			<p>This page summarizes the events that are notified <em>to plugins</em> by the baseware.</p>
+			<p>For more information on the PLUGIN/2.0 communication specification itself, see the <a href="spec_plugin.html">PLUGIN/2.0</a> page.</p>
 		</div>
 		<div class="caption">
-			<p><em class="specsign">[NOTIFY]</em>の表示があるイベントは、必ずNOTIFYコマンドで通知されます。<br />NOTIFYコマンドで通知されたイベントにスクリプトを返却しても一切無視されます。</p>
-			<p>特に表示がないイベントは、状況によってNOTIFY、GETのいずれでも通知される可能性があります。</p>
+			<p>Events marked with <em class="specsign">[NOTIFY]</em> are always notified using the NOTIFY command.<br />Even if you return a script to an event notified by the NOTIFY command, it will be completely ignored.</p>
+			<p>Events not specifically indicated may be notified by NOTIFY or GET, depending on the circumstances.</p>
 		</div>
 		<section class="category">
 			<h1>PLUGIN Event</h1>
 			<dl id="version">
 				<dt class="entry">version</dt>
 				<dd class="entry">
-					<p>プラグインのロード直後に発生。<br />プラグインはこのイベントに対し、Valueヘッダでプラグインのバージョン情報を返却する。<br />Charsetヘッダで文字コードを指定すると、以後のリクエストに用いる文字コードを指定可能（規定値Shift_JIS）。<br />他のイベントとレスポンス形式が異なる事に注意。</p>
+					<p>Occurs immedaitely after the plugin is loaded.<br />The plugin returns the plugin version information in the Value header for this event.<br />If a character encoding is specified in the Charset header, the character encoding to be used for subsequent requests can be specified (the default value is SHIFT_JIS).<br />Note that the response format is different from other events.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -176,10 +184,10 @@
 			<dl id="installedplugin">
 				<dt class="entry">installedplugin</dt>
 				<dd class="entry">
-					<p>インストール済プラグインを列挙して通知。<em class="specsign">[NOTIFY]</em></p>
+					<p>Enumerate and notify installed plugins. <em class="specsign">[NOTIFY]</em></p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>バイト値1区切りで、プラグイン名,プラグインID</dd>
+						<dd>Plugin name, plugin ID, separated by 1 byte value.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -189,10 +197,10 @@
 			<dl id="ghostpathlist">
 				<dt class="entry">ghostpathlist</dt>
 				<dd class="entry">
-					<p>読み込んでいるゴーストフォルダのパス。<em class="specsign">[NOTIFY]</em></p>
+					<p>The path of the ghost folder being read. <em class="specsign">[NOTIFY]</em></p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>読み込んでいるゴーストフォルダのフルパス。<br />複数フォルダが指定されている場合Reference1以降もありうる。</dd>
+						<dd>The full path of the ghost folder being read.<br />If multiple folders are specified, they may be listed in Reference1, etc.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -202,10 +210,10 @@
 			<dl id="balloonpathlist">
 				<dt class="entry">balloonpathlist</dt>
 				<dd class="entry">
-					<p>読み込んでいるバルーンフォルダのパス。<em class="specsign">[NOTIFY]</em></p>
+					<p>Path of the balloon folder being read. <em class="specsign">[NOTIFY]</em></p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>読み込んでいるバルーンフォルダのフルパス。</dd>
+						<dd>The full path of the balloon folder being read.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -215,10 +223,10 @@
 			<dl id="headlinepathlist">
 				<dt class="entry">headlinepathlist</dt>
 				<dd class="entry">
-					<p>読み込んでいるヘッドラインフォルダのパス。<em class="specsign">[NOTIFY]</em></p>
+					<p>Path of the headline folder being read. <em class="specsign">[NOTIFY]</em></p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>読み込んでいるヘッドラインフォルダのフルパス。</dd>
+						<dd>The full path of the headline folder being read.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -228,10 +236,10 @@
 			<dl id="pluginpathlist">
 				<dt class="entry">pluginpathlist</dt>
 				<dd class="entry">
-					<p>読み込んでいるプラグインフォルダのパス。<em class="specsign">[NOTIFY]</em></p>
+					<p>Path of the plugin folder being read. <em class="specsign">[NOTIFY]</em></p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>読み込んでいるプラグインフォルダのフルパス。</dd>
+						<dd>The full path of the loaded plugin folder.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -241,7 +249,7 @@
 			<dl id="OnSecondChange">
 				<dt class="entry">OnSecondChange</dt>
 				<dd class="entry">
-					<p>秒経過で発生。<br />何秒ごとに通知されるかは、descript.txtの<a href="descript_plugin.html#secondchangeinterval,秒数">secondchangeintervalで設定可能。</a></p>
+					<p>Occurs after a second has elapsed.<br />The number of seconds between notifications can be set by<a href="descript_plugin.html#secondchangeinterval,number_of_seconds">secondchangeinterval</a>, in descript.txt.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -250,20 +258,20 @@
 			<dl id="OnOtherGhostTalk">
 				<dt class="entry">OnOtherGhostTalk</dt>
 				<dd class="entry">
-					<p>ゴーストが話した際に発生。<br />descript.txtの<a href="descript_plugin.html#otherghosttalk,オプション">otherghosttalkで設定可能。</a></p>
+					<p>Occurs when a ghost speaks.<br />Can be set by <a href="descript_plugin.html#otherghosttalk,オプション">otherghosttalk</a> in descript.txt.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ゴースト名。</dd>
+						<dd>Ghost name.</dd>
 						<dt>Reference1</dt>
-						<dd>ゴーストの本体側名。</dd>
+						<dd>Ghost main side name.</dd>
 						<dt>Reference2</dt>
-						<dd>トークを中断した場合、break。<br />コミュニケートの場合、communicate。<br />SSTP SENDの場合、sstp-send。<br />Owned SSTPの場合、owned。<br />非ローカルSSTPの場合、remote。<br />トランスレートしない指定の場合、notranslate<br />プラグインからのスクリプトの場合、plugin-script<br />プラグインからのイベント反応の場合、plugin-event<br />該当するものがカンマ区切りで返る。</dd>
+						<dd>break if the talk is interrupted.<br />communicate for communications.<br />sstp-send for SSTP SEND.<br />owned for Owned SSTP.<br />remote for non-local SSTP.<br />notranslate if no translate is specified.<br />plugin-script for scripts from plugins.<br />plugin-event for an event response from a plugin.<br />The corresponding items are returned separated by commas.</dd>
 						<dt>Reference3</dt>
-						<dd>ゴーストの話したイベントID。</dd>
+						<dd>Event ID that the ghost responded to.</dd>
 						<dt>Reference4</dt>
-						<dd>ゴーストの話した内容のスクリプト。</dd>
+						<dd>Script of what the ghost talked about.</dd>
 						<dt>Reference5</dt>
-						<dd>バイト値1区切りのゴーストに渡されたReference。</dd>
+						<dd>References passed to the ghost, delimited by byte value 1.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -273,18 +281,18 @@
 			<dl id="OnGhostBoot">
 				<dt class="entry">OnGhostBoot</dt>
 				<dd class="entry">
-					<p>ゴースト起動時に発生。</p>
+					<p>Occurs when a ghost starts.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バイト値1区切りで、起動したゴーストの\0以降各キャラクターウィンドウのHWND。<br />未構築の場合等、0が入る場合がある。</dd>
+						<dd>HWND of each character window after \0 of the launched ghost, separated by byte value 1.<br />0 may be included if it has not yet been constructed.</dd>
 						<dt>Reference1</dt>
-						<dd>起動したゴースト名。</dd>
+						<dd>Name of the launched ghost.</dd>
 						<dt>Reference2</dt>
-						<dd>起動したゴーストの現在のシェル名。</dd>
+						<dd>Current shell name of the launched ghost.</dd>
 						<dt>Reference3</dt>
-						<dd>起動したゴーストのID (Owned SSTPで送られるものと同じ）。</dd>
+						<dd>ID of the launched ghost (same as sent by Owned SSTP).</dd>
 						<dt>Reference4</dt>
-						<dd>起動したゴーストのフルパス。</dd>
+						<dd>Full path of the launched ghost.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -294,18 +302,18 @@
 			<dl id="OnGhostExit">
 				<dt class="entry">OnGhostExit</dt>
 				<dd class="entry">
-					<p>ゴースト終了時に発生。<em class="specsign">[NOTIFY]</em></p>
+					<p>Occurs when a ghost closes. <em class="specsign">[NOTIFY]</em></p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バイト値1区切りで、終了したゴーストの\0以降各キャラクターウィンドウのHWND。<br />未構築の場合等、0が入る場合がある。</dd>
+						<dd>HWND of each character window after \0 of the closed ghost, separated by byte value 1.<br />0 may be included if it has not yet been constructed.</dd>
 						<dt>Reference1</dt>
-						<dd>終了したゴースト名。</dd>
+						<dd>Closed ghost name.</dd>
 						<dt>Reference2</dt>
-						<dd>終了したゴーストの現在のシェル名。</dd>
+						<dd>Current shell name of the closed ghost.</dd>
 						<dt>Reference3</dt>
-						<dd>終了したゴーストのID (Owned SSTPで送られるものと同じ）。</dd>
+						<dd>Closed ghost ID (same as sent by Owned SSTP).</dd>
 						<dt>Reference4</dt>
-						<dd>終了したゴーストのフルパス。</dd>
+						<dd>Full path of the closed ghost.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -315,18 +323,18 @@
 			<dl id="OnGhostInfoUpdate">
 				<dt class="entry">OnGhostInfoUpdate</dt>
 				<dd class="entry">
-					<p>ゴーストの情報が変更されたときに発生。<br />ロード時にも発生する事がある。<em class="specsign">[NOTIFY]</em></p>
+					<p>Occurs when ghost information is changed.<br />Can also occur during loading. <em class="specsign">[NOTIFY]</em></p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バイト値1区切りで、変更があったゴーストの\0以降各キャラクターウィンドウのHWND。<br />未構築の場合等、0が入る場合がある。</dd>
+						<dd>HWND of each character window after \0 of the ghost that has changes, separated by byte value 1.<br />0 may be included if it has not yet been constructed.</dd>
 						<dt>Reference1</dt>
-						<dd>変更があったゴースト名。</dd>
+						<dd>Name of the ghost that has changes.</dd>
 						<dt>Reference2</dt>
-						<dd>変更があったゴーストの現在のシェル名。</dd>
+						<dd>Current shell name of the ghost that has changes.</dd>
 						<dt>Reference3</dt>
-						<dd>変更があったゴーストのID (Owned SSTPで送られるものと同じ）。</dd>
+						<dd>ID of the ghost that has changes (same as sent by Owned SSTP).</dd>
 						<dt>Reference4</dt>
-						<dd>変更があったゴーストのフルパス。</dd>
+						<dd>Full path of the ghost that has changes.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -336,18 +344,18 @@
 			<dl id="OnMenuExec">
 				<dt class="entry">OnMenuExec</dt>
 				<dd class="entry">
-					<p>オーナードローメニューからプラグインが実行された際に発生。<br />何らかのリアクション推奨。</p>
+					<p>Occurs when a plugin is executed from the owner draw menu.<br />Some kind of reaction is recommended.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バイト値1区切りで、プラグインを呼び出したゴーストの\0以降各キャラクターウィンドウのHWND。<br />未構築の場合等、0が入る場合がある。</dd>
+						<dd>HWND of each character window after \0 of the ghost that called the plugin, separated by byte value 1.<br />0 may be included if it has not yet been constructed.</dd>
 						<dt>Reference1</dt>
-						<dd>プラグインを呼び出したゴースト名。</dd>
+						<dd>Name of the ghost that called the plugin.。</dd>
 						<dt>Reference2</dt>
-						<dd>プラグインを呼び出したゴーストの現在のシェル名。</dd>
+						<dd>Current shell name of the ghost that called the plugin.</dd>
 						<dt>Reference3</dt>
-						<dd>プラグインを呼び出したゴーストのID (Owned SSTPで送られるものと同じ）。</dd>
+						<dd>ID of the ghost that called the plugin (same as sent by Owned SSTP).</dd>
 						<dt>Reference4</dt>
-						<dd>プラグインを呼び出したゴーストのフルパス。</dd>
+						<dd>Full path of the ghost that called the plugin.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -357,40 +365,40 @@
 			<dl id="OnInstallComplete">
 				<dt class="entry">OnInstallComplete</dt>
 				<dd class="entry">
-					<p>何かのインストールが完了した際に発生。</p>
+					<p>Occurs when installation of something is completed.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バイト値1区切りで、インストールタイプ。</dd>
+						<dd>Installation type, separated by a byte 1 value.</dd>
 						<dt>Reference1</dt>
-						<dd>バイト値1区切りで、インストールされたものの名前。</dd>
+						<dd>The name of what was installed, separated by a byte 1 value.</dd>
 						<dt>Reference2</dt>
-						<dd>バイト値1区切りで、インストールされたもののフルパス。</dd>
+						<dd>Full path of what was installed, separated by a byte 1 value.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="OnChoiceSelect_Ex_/OnAnchorSelect_Ex_/_q等に指定された任意名イベント">
-				<dt class="entry">OnChoiceSelect(Ex)/OnAnchorSelect(Ex)/\q等に指定された任意名イベント</dt>
+			<dl id="OnChoiceSelect_Ex_/OnAnchorSelect_Ex_/arbitrary_event_name_specified_in__q">
+				<dt class="entry">OnChoiceSelect(Ex)/OnAnchorSelect(Ex)/Arbitrary event name specified in \q</dt>
 				<dd class="entry">
-					<p>選択肢・アンカー選択時に発生するSHIORI Eventのプラグイン側フック。<br />プラグインがゴーストに送信したスクリプトおよび、プラグインがゴーストに通知したイベントに対してゴーストから返信されたスクリプトに、選択肢・アンカー系のさくらスクリプトタグが含まれる場合、その一回に限って選択肢・アンカー選択時にSHIORI側に通知されるのと同じイベントが、プラグイン側にも横流し通知される。</p>
+					<p>Plugin side hook for SHIORI event that occurs when a choice or anchor is selected.<br />If a script sent by a plugin to a ghost, or a script sent back from a ghost in response to an event notified to a ghost by a plugin contains a choice/anchor SakuraScript tag, the choice/anchor tag is sent only once. The same event that is notified to the SHIORI side when an anchor is selected is also notified to the plugin side.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>発生した選択肢・アンカー系SHIORI EventのReference。</dd>
+						<dd>Reference of the choice/anchor SHIORI event that occured.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_raiseplugin_および_!_notifyplugin_に指定された任意名イベント">
-				<dt class="entry">\![raiseplugin]および\![notifyplugin]に指定された任意名イベント</dt>
+			<dl id="arbitrary_event_name_specified_in__!_raiseplugin__and__!_notifyplugin_">
+				<dt class="entry">Arbitrary event name specified in \![raiseplugin] and \![notifyplugin]</dt>
 				<dd class="entry">
-					<p><a href="list_sakura_script.html#_!_raiseplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![raiseplugin]</a>および<a href="list_sakura_script.html#_!_notifyplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![notifyplugin]</a>の実行で発生。<br />\![notifyplugin]の場合は<em class="specsign">[NOTIFY]</em></p>
+					<p>Occurs when executing <a href="list_sakura_script.html#_!_raiseplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![raiseplugin]</a> and <a href="list_sakura_script.html#_!_notifyplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![notifyplugin]</a>.<br /><em class="specsign">[NOTIFY]</em> for \![notifyplugin].</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>指定された任意の引数。</dd>
+						<dd>Any arguments specified.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
