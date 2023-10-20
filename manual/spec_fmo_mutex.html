@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -137,78 +137,86 @@
 			<ul>
 				<li><a href="#mutex">Mutex</a></li>
 				<li><a href="#fmo">FMO</a></li>
-				<li><a href="#fmo-mutex">FMO用Mutex</a></li>
+				<li><a href="#fmo-mutex">Mutex for FMO</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="categories">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<div class="passage">
+				<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+				<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/spec_fmo_mutex.html">here</a>.</p>
+				<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+			</div>
+		</section>
 		<section class="category caption introduction" id="chapter0">
 			<h1>FMO/Mutex</h1>
-			<p>参考：<a href="http://usada.sakura.vg/contents/objects.html">メモリオブジェクト</a>（外部サイト）</p>
-			<p>現在のところ本仕様はWindowsの仕様に大きく依存しており、他OSでの実装を想定していません。
-			<br />共有メモリ・Mutex自体は他OSにも存在するため、別途仕様を規定することが望ましいと思われます。
-			<br />もし仕様が決定した場合は別途掲載を考えておりますので、<a href="https://github.com/ponapalt/ukadoc">Ukadoc Project</a>までご連絡ください。</p>
+			<p>Reference: <a href="http://usada.sakura.vg/contents/objects.html">Memory Objects</a> (External site)</p>
+			<p>Currently, this specification is heavily dependent on the Windows specification and is not intended for implementation on other operating systems.
+			<br />Since shared memory and Mutex itself exist in other OSes, it would be desirable to define a separate specification.
+			<br />If the specifications are decided, we will consider publishing them separately, so please contact <a href="https://github.com/ponapalt/ukadoc">Ukadoc Project</a>.</p>
 		</section>
 		<section class="category" id="mutex">
 			<h1>Mutex</h1>
-			<p>ベースウェアが起動中であることを示すため、SSPは"ssp"、MateriaとCROWは"sakura"という名前のMutexを保持しています。
-			<br />この名前つきMutexの存在を確認することで、起動中かどうかをローコストに判定できます。
-			<br />Mutex自体の状態は決められておらず、シグナル状態か否かの確認は不要です。</p>
+			<p>To indicate that the baseware is running, SSP holds a Mutex named "ssp", and Materia and CROW hold a Mutex named "sakura".
+			<br />By checking for the presence of this named Mutex, you can determine whether it is running or not at a low cost.
+			<br />The state of the Mutex itself is not determined, and there is no need to check whether or not it is in a signal state.</p>
 
 			<section class="caption">
-				<h1>存在確認のみのコード例(C++)</h1>
+				<h1>Example code for existence check only (C++)</h1>
 <pre><code><!--
 -->HANDLE hmutex = OpenMutex(MUTEX_ALL_ACCESS,FALSE,"ssp");
 if ( hmutex ) {
-  // いる
+  // Exists
   CloseHandle(hmutex);
 }
 else {
-  //いない
+  // Does not exist
 }
 </code></pre>
 			</section>
 		</section>
 		<section class="category" id="fmo">
 			<h1>FMO (File Mapping Object)</h1>
-			<p>すべてのベースウェアは起動中に名前つきファイルマッピングオブジェクト(FMO)を保持しています。
-			<br />このプロセス間共有メモリを読み取ることで、起動中のゴーストを比較的低コストで取得できます。
-			<br />書き込み中の不完全な情報の読み取りを避けるため、排他制御は<a href="#fmo-mutex">FMO用Mutex</a>で行っています。あわせて確認してください。</p>
+			<p>All baseware maintains a named file mapping object (FMO) while running.
+			<br />By reading this inter-process shared memory, the running ghost can be obtained at relatively low cost.
+			<br />To avoid incomplete information while writing, exclusive control is performed by <a href="#fmo-mutex">Mutex for FMO</a>. Please check these together.</p>
 			
 			<section>
 				<dl>
-					<dt class="entry">FMOの名前と文字コード</dt>
-					<dd class="entry"><p>Sakura : OS依存、日本語OS上はShift JIS
-					<br />SakuraUnicode : UTF-8固定 [SSP 2.5.26以降～]</p></dd>
+					<dt class="entry">FMO name and character code</dt>
+					<dd class="entry"><p>Saura: OS dependent, Shift JIS on Japanese OS
+					<br />SakuraUnicode: Fixed to UTF-8 [SSP 2.5.26 or later]</p></dd>
 					
-					<dt class="entry">FMOのサイズ</dt>
-					<dd class="entry"><p>最初の4バイト(0～3バイト目)は確保されているFMOのサイズを示します。
-					<br />これは書き込まれている情報の長さではなく、あくまでもFMO自体の確保サイズを示す固定値です。
-					<br />値は現在のところリトルエンディアンで0x00010000、つまり64KB固定になります。
-					<br />他プログラムとの互換性確保のため、現在のところサイズ変更は考慮されていません。</p></dd>
+					<dt class="entry">FMO size</dt>
+					<dd class="entry"><p>The first 4 bytes (bytes 0-3) indicate the size of the allocated FMO.
+					<br />This is not the length of the information being written, but is a fixed value that indicates the allocated size of the FMO itself.
+					<br />The value is currently fixed at 0x00010000 in little-endian, or 64kb.
+					<br />To ensure compatibility with other programs, size changes are not currently considered.</p></dd>
 					
-					<dt class="entry">データ本体</dt>
-					<dd class="entry"><p>4バイト目以降はFMOのデータ本体になります。これは以下のフォーマットになります。
-					<br />(32バイトの識別ID).(キー名)[\1]値[\r\n]
-					<br />[\1]はバイト値1、[\r\n]はCR+LF(改行)になります。
-					<br />このフォーマットを複数行繰り返す形になります。</p></dd>
+					<dt class="entry">Data body</dt>
+					<dd class="entry"><p>The 4th and subsequent bytes are the main body of the FMO data. This will be in the following format.
+					<br />(32-byte distinguishing ID).(key name)[\1]value[\r\n]
+					<br />[\1] is byte value 1, [\r\n] is CR_LF (line feed).
+					<br />This format is repeated on multiple lines.</p></dd>
 					
-					<dt class="entry">データ終端</dt>
-					<dd class="entry"><p>データ終端はC言語文字列と同じバイト値0になります。
-					<br />ゆえに、データ本体で使用可能な最大サイズは65531バイト(65536 - 4 - 1)になります。
-					<br />FMOに書き込む必要がある場合、サイズの限界を超えそうな場合は、不完全な情報の書き込みにならないよう留意してください。
-					<br />サイズを超えそうな場合は1組分のデータを丸々書き込まないようにするのが望ましく、それが無理な場合でも1行の途中で終わらないようにしてください。</p>
+					<dt class="entry">Data end</dt>
+					<dd class="entry"><p>The end of the data is a byte value of 0, the same as for a C string.
+					<br />Hence, the maximum size available for the data body is 65531 bytes (65536 - 4 - 1).
+					<br />If you need to write to FOM and are about to exceed the size limit, be careful not to write incomplete information.
+					<br />If the size is likely to be exceeded, it is preferable not to write a whole set of data. Even if this is not possible, do not end in the middle of a single line.</p>
 					</dd>
 				</dl>
 			</section>
 			<section class="caption">
-				<h1>データ本体の例</h1>
+				<h1>Example of data body</h1>
 			
 <pre><code><!--
 -->ssp_fmo_header_00004468_000f0dea.path[\1]D:\ssp\
 ssp_fmo_header_00004468_000f0dea.hwnd[\1]986602
-ssp_fmo_header_00004468_000f0dea.name[\1]ラーシェ
-ssp_fmo_header_00004468_000f0dea.keroname[\1]ティセ
+ssp_fmo_header_00004468_000f0dea.name[\1]Lache
+ssp_fmo_header_00004468_000f0dea.keroname[\1]Tisse
 ssp_fmo_header_00004468_000f0dea.sakura.surface[\1]0
 ssp_fmo_header_00004468_000f0dea.kero.surface[\1]10
 ssp_fmo_header_00004468_000f0dea.kerohwnd[\1]1052114
@@ -228,41 +236,41 @@ ssp_fmo_header_00004468_00120da6.ghostpath[\1]D:\ssp\ghost\emily4\
 			
 			<section>
 				<dl>
-					<dt class="entry">32バイトの識別ID</dt>
-					<dd class="entry"><p>ゴースト1組分を示すユニークな識別IDです。少なくともFMO内では他と重複しない文字列を選ぶ必要があります。
-					<br />何かユニークな情報を組み合わせてMD5ハッシュを取ったり、HWND(ウインドウハンドル)を組み合わせたりしている場合が多いです。
-					<br />Materiaでの規格上は長さは規定されていませんが、互換性のため32バイト固定長とすべきです。</p></dd>
-					<dt class="entry">キー名・値</dt>
-					<dd class="entry"><p>情報の種類を示すキーと情報本体です。以下の通りです。</p>
+					<dt class="entry">32-byte distinguishing ID</dt>
+					<dd class="entry"><p>This is a unique distinguishing ID that indicates one group of ghosts. You must choose a string that is unique, at least within the FMO.
+					<br />In many cases, some unique information is combined to obtain an MD5 hash or a combination of HWND (window handle).
+					<br />Although the length is not specified in the Materia standard, it should be a fixed length of 32 bytes for compatibility.</p></dd>
+					<dt class="entry">Key name/value</dt>
+					<dd class="entry"><p>A key indicating the type of information and the information body. It is as follows.</p>
 						<dl class="property">
 							<dt>path</dt>
-							<dd>起動しているベースウェアのルートフォルダのフルパス。</dd>
+							<dd>Full path to the root folder of the running baseware.</dd>
 							<dt>hwnd</dt>
-							<dd>メインとなるウインドウのウインドウハンドル。10進表記。</dd>
+							<dd>Window handle of the main window, in decimal notation.</dd>
 							<dt>name</dt>
-							<dd>descript.txtのsakura.nameと同じもの。</dd>
+							<dd>Same as sakura.name in descript.txt.</dd>
 							<dt>keroname</dt>
-							<dd>descript.txtのkero.nameと同じもの。</dd>
+							<dd>Same as kero.name in descript.txt.</dd>
 							<dt>sakura.surface</dt>
-							<dd>\0側で現在表示しているサーフィスID。10進表記。</dd>
+							<dd>Surface ID currently displayed on the \0 side, in decimal notation.</dd>
 							<dt>kero.surface</dt>
-							<dd>\1側で現在表示しているサーフィスID。10進表記。</dd>
+							<dd>Surface ID currently displayed on the \1 side, in decimal notation.</dd>
 							<dt>kerohwnd</dt>
-							<dd>\1側ウインドウのウインドウハンドル。10進表記。[SSPのみ]</dd>
+							<dd>The window handle for the \1 side window, in decimal notation. [SSP only]</dd>
 							<dt>hwndlist</dt>
-							<dd>現在使用しているウインドウハンドルをすべてカンマ区切りで列挙。10進表記。[SSPのみ]</dd>
+							<dd>Comma-separated list of all window handles currently in use, in decimal notation. [SSP only]</dd>
 							<dt>ghostpath</dt>
-							<dd>起動中ゴーストのフルパス。[SSPのみ]</dd>
+							<dd>Full path of the running ghost. [SSP only]</dd>
 							<dt>fullname</dt>
-							<dd>起動中ゴーストのdescript.txtのnameエントリ。[SSP 2.5.58～]</dd>
+							<dd>Name entry in descript.txt of the running ghost. [SSP 2.5.58~]</dd>
 							<dt>modulestate</dt>
-							<dd>起動中のゴーストに読み込まれているモジュール群の状態を示すカンマ区切りの文字列。[SSP 2.5.79～]
-							<br />shiori:running SHIORIがロードされている(ロードされていない場合は文字列自体が存在しない)
-							<br />makoto-ghost:running ゴースト側のMAKOTOがロードされている
-							<br />makoto-shell:running シェル側のMAKOTOがロードされている
-							<br />compatible:running 互換モードに切り替わりscript.txtなどがロードされている
-							<br />SSPと各種モジュール群の間の通信に異常がある場合は、runningの代わりにcriticalが入る
-							<br />例： ssp_fmo_header_00004468_00120da6.modulestate[\1]shiori:running,makoto-ghost:running\r\n</dd>
+							<dd>A comma-separated string that indicates the status of the group of modules loaded into the running ghost. [SSP 2.5.79~]
+							<br />shiori:running SHIORI is loaded (if not, the string itself does not exist).
+							<br />makoto-ghost:running MAKOTO on the ghost side is loaded.
+							<br />makoto-shell:running MAKOTO on the shell side is loaded.
+							<br />compatible:running Compatibility mode is selected and script.txt, etc., are loaded.
+							<br />If there is an abnormality between SSP and the various modules, "critical" is written instead of "running".
+							<br />Example: ssp_fmo_header_00004468_00120da6.modulestate[\1]shiori:running,makoto-ghost:running\r\n</dd>
 						</dl>
 					</dd>
 				</dl>
@@ -270,30 +278,30 @@ ssp_fmo_header_00004468_00120da6.ghostpath[\1]D:\ssp\ghost\emily4\
 		</section>
 
 		<section class="category" id="fmo-mutex">
-			<h1>FMO用Mutex</h1>
+			<h1>Mutex for FMO</h1>
 			
-			<p>FMO自体に排他制御の仕組みはないため、書き込み・読み取りの衝突を避けるために、別途Mutexを保持しています。
-			<br />FMO名+"FMO"という名前になり、例えば以下のようになります。
+			<p>Since FMO itself does not have an exclusive control mechanism, a separate Mutex is maintained to avoid write/read conflicts.
+			<br />The name will be FMO name + "FMO". For example:
 			<br />FMO = Sakura : Mutex = SakuraFMO
 			<br />FMO = SakuraUnicode : Mutex = SakuraUnicodeFMO
-			<br />こちらはシグナル状態・非シグナル状態の判定が重要になります。
-			<br />読み書きを行う際は、必ずWaitForSingleObjectや同等の待機関数を使い所有権を取得し、終わったらReleaseMutexで所有権を開放してください。</p>
+			<br />The determination of signal and non-signal status is important here.
+			<br />When reading or writing, be sure to use WaitForSingleObject or an equivalent wait function to acquire ownership, and ReleaseMutex to release ownership when finished.</p>
 			
-			<p>旧いベースウェア等でFMO用Mutexに対応していない場合があるので、Mutexの取得に失敗してもエラーにはしないでください。
-			<br />ただしこの場合は、不完全な書き込み中のFMOを取得する可能性を考慮して、できるだけ安全に処理できるコードを書くよう留意してください。</p>
+			<p>Old baseware may not support Mutex for FMO, so please do not generate an error if you fail to obtain Mutex.
+			<br />In this case, please keep in mind the possibility of obtaining an incomplete FMO during writing, and write code that can handle this as safely as possible.</p>
         
 			<section class="caption">
-				<h1>FMOを読み書きするコード例(C++)</h1>
+				<h1>Code sample for reading and writing FMO (C++)</h1>
 <pre><code><!--
--->//ベースウェア等の保持すべきアプリは代わりにCreateMutexを使う
+-->//Use CreateMutex instead for apps that should be retained, such as baseware
 HANDLE hMutex = OpenMutex(MUTEX_ALL_ACCESS,FALSE,"SakuraFMO");
 
-//FMO用Mutexに対応していないベースウェアもあるので、見つからなかったら単にスキップ
+//Some baseware is not compatible with Mutex for FMO, so simply skip if not found
 bool isWaitSuccess = true;
 
 if ( hMutex ) {
 
-    //INFINITEで待機すると永遠に待ち続けてGUIが止まるので適宜工夫すること
+    //If you wait with INFINITE, it will wait forever and the GUI will freeze, so be creative accordingly
     DWORD result = WaitForSingleObject(hMutex,INFINITE);
     
     if ( result != WAIT_OBJECT_0 ) {
@@ -303,7 +311,7 @@ if ( hMutex ) {
 
 if ( isWaitSuccess ) {
 
-    //保持すべきアプリは代わりにCreateMutexを使う
+    //Apps that should be retained use CreateMutex instead
     HANDLE hFMO = OpenFileMapping(FILE_MAP_ALL_ACCESS,FALSE,"Sakura");
 
     if ( hFMO ) {
@@ -312,23 +320,23 @@ if ( isWaitSuccess ) {
 
         if ( pDataStart ) {
 
-            //頭の4バイトはFMO最大サイズ。
-            //文字列終端（C言語文字列のゼロ終端）とは異なるので注意。
+            //The 4 bytes at the head are the FMO maximum size.
+            //Note that this is different from string termination (zero termination of C strings).
             unsigned long length = *reinterpret_cast&lt;unsigned long*&gt;(pDataStart);
 
             char *pData = pDataStart;
             pData += 4;
 
             //****************************************
-            //ここでpDataとlengthをつかってなにかやる
+            //Do something with pData and length here
             //****************************************
 
-            //MapViewOfFileの解除
+            //Release MapViewOfFile
             UnmapViewOfFile(pDataStart);
         }
             
-        //FMOハンドルを開放
-        //ベースウェア等の保持すべきアプリは開放せず持ち続けること
+        //Open FMO handle
+        //Keep apps that should be retained, such as baseware, without opening them
         CloseHandle(hFMO);
     }
 }
@@ -336,12 +344,12 @@ if ( isWaitSuccess ) {
 if ( hMutex ) {
     if ( isWaitSuccess ) {
     
-        //WaitForSingleObjectでMutexが非シグナル状態になるので、シグナル状態に戻す(Release)
+        //WaitForSingleObject causes Mutex to go to non-signal state, return to original state (Release)
         ReleaseMutex(hMutex);
     }
 
-    //最後にMutexのハンドルも要らないので開放
-    //ベースウェア等の保持すべきアプリは開放せず持ち続けること
+    //Finally, the Mutex handle is also released since it is not needed
+    //Keep apps that should be retained, such as baseware, without opening them
     CloseHandle(hMutex);
 }
 

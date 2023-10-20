@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -135,68 +135,76 @@
 		<section class="navigation-category">
 			<h1>PLUGIN/2.0</h1>
 			<ul>
-				<li><a href="#chapter0">前書</a></li>
-				<li><a href="#chapter1">バージョンの設計思想と影響評価</a></li>
-				<li><a href="#chapter2">実体</a></li>
+				<li><a href="#chapter0">Preface</a></li>
+				<li><a href="#chapter1">Version design philosophy and impact assessment</a></li>
+				<li><a href="#chapter2">entity</a></li>
 				<li><a href="#chapter3">DLL</a></li>
-				<li><a href="#chapter4">repuest規定</a></li>
-				<li><a href="#chapter5">response規定</a></li>
-				<li><a href="#chapter6">プラグインID</a></li>
+				<li><a href="#chapter4">request provisions</a></li>
+				<li><a href="#chapter5">response provisions</a></li>
+				<li><a href="#chapter6">Plugin ID</a></li>
 				<li><a href="#chapter7">descript.txt</a></li>
-				<li><a href="#chapter8">ゴースト側拡張</a></li>
+				<li><a href="#chapter8">Ghost side extension</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<div class="passage">
+				<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+				<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/spec_plugin.html">here</a>.</p>
+				<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+			</div>
+		</section>
 		<div class="caption">
-			<p>最終変更：<time>2013-08-10</time></p>
+			<p>Last modified: <time>2013-08-10</time></p>
 		</div>
 		<div class="caption">
-			<p>参考：<a href="http://usada.sakura.vg/contents/plugin.html">PLUGIN/1.0</a>（外部サイト）</p>
+			<p>Reference: <a href="http://usada.sakura.vg/contents/plugin.html">PLUGIN/1.0</a> (External site)</p>
 		</div>
 		<section id="chapter0">
-			<h1>前書</h1>
-			<p>PLUGIN/2.0は、旧来仕様（1.0）の改訂版です。SSPで実装。</p>
-			<p>整備中の規格であり、大幅な変更の可能性があります。</p>
+			<h1>Preface</h1>
+			<p>PLUGIN/2.0 is a revision of the old specification (1.0), implemented in SSP.</p>
+			<p>This standard is under development and is subject to significant changes.</p>
 		</section>
 		<section id="chapter1">
-			<h1>バージョンの設計思想と影響評価</h1>
+			<h1>Version design philosophy and impact assessment</h1>
 			<section>
-				<h1>設計思想</h1>
-				<p>手軽に本体やゴーストとやりとりできるよう改修し、SAORI群としてゴーストごとに分散してしまったもののうち「便利機能」にあたる部分を統合し、利用者側の利便性を改善する。</p>
-				<p>プラグイン開発者から実行環境へ負担を移すほうが良いでしょう……多分。</p>
+				<h1>Design concept</h1>
+				<p>The SAORI group will be modified so that users can easily communicate with the main unit and ghosts, and the "convenience functions" that have been dispersed among the ghosts will be integrated to improve convenience for users.</p>
+				<p>It would be better to shift the burden from the plugin developer to the execution environment... maybe.</p>
 			</section>
 			<section>
-				<h1>処理系</h1>
-				<p>処理系にいろいろ負担を移すことを前提としていますので、覚悟してください（苦笑</p>
+				<h1>Processing system</h1>
+				<p>Please be prepared as this assumes that various burdens will be transferred to the processing system. </p>
 			</section>
 			<section>
-				<h1>プラグイン作者</h1>
-				<p>新たにコール用にrequestエクスポートを定義するので、PLUGIN/1.0との衝突は考慮する必要はありません。</p>
-				<p>スクリプトやイベント等のゴーストへの通知が非常に楽になる。</p>
+				<h1>Plugin author</h1>
+				<p>Since a new request export is defined for the call, there is no need to consider conflicts with PLUGIN/1.0.</p>
+				<p>Notifying ghosts of scripts, events, etc. becomes very easy.</p>
 			</section>
 			<section>
-				<h1>ゴースト作者</h1>
-				<p>特定のプラグインにたとえ対応していなくてもデフォルトスクリプト仕様（後述）があるので致命的な事にならない。</p>
-				<p>どうしてもデフォルトスクリプトで雰囲気を壊されたくない場合は対応しましょう……</p>
+				<h1>Ghost author</h1>
+				<p>Even if a particular plugin is not supported, it is not fatal because of the default script specification (see below).</p>
+				<p>If you really don't want the default script to ruin the atmosphere, let's deal with it...</p>
 			</section>
 			<section>
-				<h1>バージョンの影響評価</h1>
-				<p>ゴーストごとにちりぢりになった機能群をまとめて扱えるので便利かつ楽。</p>
+				<h1>Version impact assessment</h1>
+				<p>It's convenient and easy to use because you can handle a small group of functions for each ghost all at once.</p>
 			</section>
 		</section>
 		<section id="chapter2">
-			<h1>実体</h1>
-			<p>設定ファイル「descript.txt」とdllファイルの2つが必要です。</p>
+			<h1>entity</h1>
+			<p>Two files are required: a configuration file "descript.txt" and a dll file.</p>
 		</section>
 		<section id="chapter3">
 			<h1>DLL</h1>
-			<p><a href="spec_dll.html">DLLのページ</a>を参照してください。</p>
-			<p><em>※YAYA/KAWARI as PLUGIN利用者・モジュール作者は読み飛ばして大丈夫です。</em></p>
+			<p>See the <a href="spec_dll.html">DLL page</a>.</p>
+			<p><em>※YAYA/KAWARI as PLUGIN users and module authors can skip this section.</em></p>
 		</section>
 		<section id="chapter4">
-			<h1>request規定</h1>
-			<p>典型的なリクエスト例は以下の通り。※改行コード＝CR+LF</p>
+			<h1>request provisions</h1>
+			<p>A typical example of a request is as follows. ※Line feed vode = CR+LF</p>
 <pre><code>GET PLUGIN/2.0
 ID: OnGhostChange
 Charset: UTF-8
@@ -205,18 +213,18 @@ Reference0: 54
 <pre><code>NOTIFY PLUGIN/2.0
 ID: OnMenuExec
 Charset: UTF-8
-Sender: 晶子
+Sender: Crystallite
 Reference0: 17982
 </code></pre>
-			<p>空行で終了。他のDLL仕様といっしょで、ゼロ終端とは限らないので注意してください。</p>
-			<p>PLUGIN/2.0のフォーマットは基本的にSHIORI/3.0仕様に準じています。<br />イベント識別子のIDヘッダと、任意の数(8以降あり)の追加情報であるReferenceヘッダから構成されます。<br />Referenceの内容はIDによって変わります。</p>
-			<p>Reference等の内容に改行等を含めたい場合、また含めなければならないと規定したい場合は、%8f%73のように、回避したい文字のみURLエンコードして渡すよう規定することを *強く推奨* します（仕様ではありませんが）</p>
-			<p>Senderの内容は、後述するゴースト側からの呼び出し仕様によって呼び出された場合、ゴースト名となります。<br />本体側からコールされた場合はSenderヘッダ自体が消滅するか空文字列が代入されます。<br />SHIORIのように「本体の名前（SSPとかCROWとか）」が入るわけではないので注意してください。</p>
-			<p>通知されるリクエストの種類（ID）については、<a href="list_plugin_event.html">PLUGIN Eventのページ</a>を参照してください。</p>
+			<p>Terminate with a blank line. Note that, as with other DLL specifications, it is not necessarily zero-terminated.</p>
+			<p>The PLUGIN/2.0 format basically follows the SHIORI/3.0 specification.<br />It consists of an ID header, which is an event identifier, and a Reference header, which is an arbitrary number (8 or more) of additional information.<br />The contents of the Reference will vary depending on the ID.</p>
+			<p>If you want to include newlines in the contents of References, etc., or if you want to specify that they must be included, it is *strongly recommended* (though not a specification) that you specify that only the characters you want to avoid are URL-encoded such as %8f%73.</p>
+			<p>The contents of Sender will be the name of the ghost when invoked, according to the calling specifications from the ghost side described later.<br />When called from the main side, the Sender header itself will disappear or an empty string will be assigned.<br />Note that it does not include "the name of the main unit (SSP, CROW, etc.) like SHIORI.</p>
+			<p>See the <a href="list_plugin_event.html">PLUGIN Event page</a> for the type of request (ID) that will be notified.</p>
 		</section>
 		<section id="chapter5">
-			<h1>response規定</h1>
-			<p>レスポンスの例は以下の通り。※改行コード＝CR+LF</p>
+			<h1>response provisions</h1>
+			<p>An example response is shown below. ※Line feed code = CR+LF</p>
 <pre><code><!--
 -->PLUGIN/2.0 200 OK
 Charset: Shift_JIS
@@ -226,58 +234,58 @@ EventOption: notify
 Reference0: 19
 Reference1: 31
 Reference2: 65
-Script: すくりぷと～
+Script: Script~
 ScriptOption: nobreak,notranslate
 </code></pre>
-			<p>※複数起動対応の処理系のみ※ 現在起動中のゴーストでTargetに該当するゴーストがいたらそれで処理されます。<br />"__SYSTEM_ALL_GHOST__"が指定されている場合は、「起動中の全ゴースト」に通知されます。</p>
-			<p>該当しない場合、何も指定しない場合は処理系に応じて適当なゴースト「1体」で処理されます。<br />また、後述のゴースト側からの呼び出し仕様で呼ばれた場合は、Targetヘッダで明示的に指定がされない限り、呼んだゴーストに返ります。</p>
-			<p>※対応していない処理系ではそもそも1体しかありませんのでそのゴーストが毎度呼び出されます。</p>
+			<p>※Only for processing systems that support multiple launches※ If there is a ghost that matches the Target among the currently running ghosts, it will be processed by that ghost.<br />If "__SYSTEM_ALL_GHOST__" is specified, "all running ghosts" will be notified.</p>
+			<p>If not applicable, or if nothing is specified, an appropriate ghost will process it depending on the system.<br />In addition, if called using the call specifications from the ghost side described below, it will return to the calling ghost unless explicitly specified in the Target header.</p>
+			<p>※In a processing system that does not support it, there is only one ghost in the first place, so that ghost will be called every time.</p>
 			<section>
 				<h1>Event/Reference</h1>
-				<p>EventヘッダとReferenceヘッダはゴースト側に送るイベントです。<br />これにゴーストが反応しない場合、デフォルトスクリプトであるScriptヘッダが再生されます。</p>
+				<p>The Event and Reference headers are events sent to the ghost side.<br />If the ghost does not respond to this, the default script, the Script header, is played.</p>
 			</section>
 			<section>
 				<h1>ScriptOption</h1>
-				<p>ScriptOptionは、Scriptヘッダ内容にのみ適用されるオプション指定です。</p>
+				<p>ScirptOption is an option specification that applies only to Script header content.</p>
 				<dl>
 					<dt>notranslate</dt>
-					<dd>ゴーストのトランスレートを介さない</dd>
+					<dd>Don't go through ghost translation.</dd>
 					<dt>nobreak</dt>
-					<dd>現在喋っているトークを中断せず最後まで喋った後で指定したスクリプトを実行する</dd>
+					<dd>Execute the specified script after the end of the current talk, without interrupting.</dd>
 				</dl>
 			</section>
 			<section>
 				<h1>EventOption</h1>
-				<p>EventOptionは、Eventヘッダ内容にのみ適用されるオプション指定です。</p>
+				<p>EventOption is an optional specification that applies only to Event header content.</p>
 				<dl>
 					<dt>notify</dt>
-					<dd>指定したイベントをゴーストにnotifyで通知する</dd>
+					<dd>Notify ghosts of specified events via notify</dd>
 				</dl>
 			</section>
-			<p>Event,EventOption,Reference,Target,Script,ScriptOptionはすべて省略可能です。<br />例えばイベントだけ送りたい、デフォルトスクリプトは不要な場合はScript/ScriptOptionヘッダを省略してください。<br />※スクリプトだけ送りたい場合はその逆です。</p>
+			<p>Event, EventOption, Reference, Target, Script, and ScriptOption are all optional.<br />For example, if you only want to send events and do not need the default script, omit the Script/ScriptOption header.<br />※If you only want to send the script, the opposite is true.</p>
 		</section>
 		<section id="chapter6">
-			<h1>プラグインID</h1>
-			<p><a href="descript_plugin.html#id,ID">Plugin設定のIDの項</a>を参照してください。
+			<h1>Plugin ID</h1>
+			<p>See the <a href="descript_plugin.html#id,ID">ID section of the Plugin Settings</a>.
 		</section>
 		<section id="chapter7">
 			<h1>descript.txt</h1>
-			<p><a href="descript_plugin.html">Plugin設定のページ</a>を参照してください。</p>
+			<p>See the <a href="descript_plugin.html">Plugin Settings page</a>.</p>
 		</section>
 		<section id="chapter8">
-			<h1>ゴースト側拡張</h1>
+			<h1>Ghost side extension</h1>
 			<section>
-				<h1>スクリプト拡張</h1>
+				<h1>Script extensions</h1>
 <pre><code><!--
--->\![raiseplugin,プラグイン名またはID,イベント,Reference0...]
-\![notifyplugin,プラグイン名またはID,イベント,Reference0...]
+-->\![raiseplugin,(Plugin name or ID),(Event),Reference0...]
+\![notifyplugin,(Plugin name or ID),(Event),Reference0...]
 </code></pre>
-				<p>指定したプラグインに指定したイベントを送信します。 プラグイン側でTarget指定がない限り(system_any)、プラグインからのレスポンスはraisepluginしたゴーストに優先的に割り振られますので、SAORIもどき的な使い方も可能です。</p>
-				<p>送信コマンドは、<a href="list_sakura_script.html#_!_raiseplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![raiseplugin]</a>の場合はGET、<a href="list_sakura_script.html#_!_notifyplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![notifyplugin]</a>の場合はNOTIFYとなります。</p>
+				<p>Sends the specified event to the specified plugin. Unless a target is specified on the plugin side (system_any), the response from the plugin is preferentially assigned to the ghost that executed raiseplugin, so it can be used in a similar way to SAORI.</p>
+				<p>The send command is GET in the case of <a href="list_sakura_script.html#_!_raiseplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![raiseplugin]</a>, and NOTIFY in the case of <a href="list_sakura_script.html#_!_notifyplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![notifyplugin]</a>.</p>
 			</section>
 			<section>
-				<h1>SHIORIイベント拡張</h1>
-				<p><a href="list_shiori_event.html#installedplugin">installedpluginの項目</a>を参照してください。</p>
+				<h1>SHIORI Event extension</h1>
+				<p>See the <a href="list_shiori_event.html#installedplugin">installedplugin section</a>.</p>
 			</section>
 		</section>
 	</div>
