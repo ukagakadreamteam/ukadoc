@@ -197,7 +197,7 @@ else {
 					
 					<dt class="entry">Data body</dt>
 					<dd class="entry"><p>The 4th and subsequent bytes are the main body of the FMO data. This will be in the following format.
-					<br />(32-byte distinguishing ID).(key name)[\1]value[\r\n]
+					<br />(32-byte unique ID).(key name)[\1]value[\r\n]
 					<br />[\1] is byte value 1, [\r\n] is CR_LF (line feed).
 					<br />This format is repeated on multiple lines.</p></dd>
 					
@@ -236,8 +236,8 @@ ssp_fmo_header_00004468_00120da6.ghostpath[\1]D:\ssp\ghost\emily4\
 			
 			<section>
 				<dl>
-					<dt class="entry">32-byte distinguishing ID</dt>
-					<dd class="entry"><p>This is a unique distinguishing ID that indicates one group of ghosts. You must choose a string that is unique, at least within the FMO.
+					<dt class="entry">32-byte unique ID</dt>
+					<dd class="entry"><p>This is a unique unique ID that indicates one group of ghosts. You must choose a string that is unique, at least within the FMO.
 					<br />In many cases, some unique information is combined to obtain an MD5 hash or a combination of HWND (window handle).
 					<br />Although the length is not specified in the Materia standard, it should be a fixed length of 32 bytes for compatibility.</p></dd>
 					<dt class="entry">Key name/value</dt>
