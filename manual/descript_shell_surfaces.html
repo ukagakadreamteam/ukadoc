@@ -520,7 +520,7 @@ animation10.pattern3,overlay,-1,700,0,0
 					<h1>Summary</h1>
 					<p>Ukagaka shells have a mechanism called "dressup". This is used for displaying/hiding parts, such as additional outfits, and switching between different kinds of outfits within a single shell.</p>
 					<p>Dressup in an ukagaka shell is considered a type of animation.<br>However, unlike other animations it does not move frame by frame, and instead all frames (patterns) and the base surface are immediately composited when the animation is started, and are treated as a single image thereafter (thus, the "wait" parameter in in the pattern definition is ignored).<br>This property of "the drawing behaves as if it were integrated with the base surface" is well suited for the purpose of expressing things like clothing.</p>
-					<p>The start and end of dressup animations is mainly controlled by switching in the "dressup" section of the owner draw menu. In SSP, it can additionally be controlled from the ghost side using the <a href="list_sakura_script.html#_!_bind,%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E5%90%8D,%E3%83%91%E3%83%BC%E3%83%84%E5%90%8D,%E6%95%B0%E5%80%A4_">\![bind]</a> SakuraScript tag.<br>The settings on the owner draw menu side are done in <a href="descript_shell.html">descript.txt</a>, not surfaces.txt, so refer to that page.</p>
+					<p>The start and end of dressup animations is mainly controlled by switching in the "dressup" section of the owner draw menu. In SSP, it can additionally be controlled from the ghost side using the <a href="list_sakura_script.html#_!_bind,category_name,part_name,value_">\![bind]</a> SakuraScript tag.<br>The settings on the owner draw menu side are done in <a href="descript_shell.html">descript.txt</a>, not surfaces.txt, so refer to that page.</p>
 					<p>This specification for a series of animations in surfaces.txt is given the name MAYUNA.</p>
 				</section>
 				<section>
@@ -1256,7 +1256,7 @@ animation0.pattern3,overlay,-1,100,168,67
 				<dl id="never">
 					<dt class="entry">never</dt>
 					<dd class="entry">
-						<p>Will not execute automatically. Specify this for animations that should not play except when called by start or alternativestart methods from other animations, or by commands such as SakuraScript's <a href="list_sakura_script.html#_i_ID%E7%95%AA%E5%8F%B7_">\i[*]</a> tag.</p>
+						<p>Will not execute automatically. Specify this for animations that should not play except when called by start or alternativestart methods from other animations, or by commands such as SakuraScript's <a href="list_sakura_script.html#_i_ID_number_">\i[*]</a> tag.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>

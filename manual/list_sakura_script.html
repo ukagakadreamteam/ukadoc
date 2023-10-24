@@ -180,11 +180,11 @@
 				<li><a href="#_5">\5</a></li>
 				<li><a href="#_!_move_">\![move]</a></li>
 				<li><a href="#_!_moveasync_">\![moveasync]</a></li>
-				<li><a href="#_!_set,position,x,y,character_ID_">\![set,position,(x),(y),(character ID)]</a></li>
+				<li><a href="#_!_set,position,x,y,scope_ID_">\![set,position,(x),(y),(scope ID)]</a></li>
 				<li><a href="#_!_reset,position_">\![reset,position]</a></li>
-				<li><a href="#_!_set,zorder,character_ID,character_ID,_">\![set,zorder,(character ID),(character ID),...]</a></li>
+				<li><a href="#_!_set,zorder,scope_ID,scope_ID,_">\![set,zorder,(scope ID),(scope ID),...]</a></li>
 				<li><a href="#_!_reset,zorder_">\![reset,zorder]</a></li>
-				<li><a href="#_!_set,sticky-window,character_ID,character_ID,_">\![set,sticky-window,(character ID),(character ID),...]</a></li>
+				<li><a href="#_!_set,sticky-window,scope_ID,scope_ID,_">\![set,sticky-window,(scope ID),(scope ID),...]</a></li>
 				<li><a href="#_!_reset,sticky-window_">\![reset,sticky-window]</a></li>
 			</ul>
 			<ul>
@@ -337,56 +337,56 @@
 				<li><a href="#_a">\a</a></li>
 				<li><a href="#_!_updatebymyself_">\![updatebymyself,(option),(option),...)]</a></li>
 				<li><a href="#_!_update,platform_">\![update,platform]</a></li>
-				<li><a href="#_!_update,更新対象_">\![update,(update target),(option),(option),...)]</a></li>
+				<li><a href="#_!_update,update_target_">\![update,(update target),(option),(option),...)]</a></li>
 				<li><a href="#_!_updateother_">\![updateother,(update target)/(options),...]</a></li>
 				<li class="caption"><a href="#notes_update_options">Update option specifications</a></li>
 				<li><a href="#_6">\6</a></li>
 				<li><a href="#_7">\7</a></li>
 				<li><a href="#_!_executesntp_">\![executesntp]</a></li>
-				<li><a href="#_!_execute,headline,ヘッドライン名_">\![execute,headline,(headline name)]</a></li>
+				<li><a href="#_!_execute,headline,headline_name_">\![execute,headline,(headline name)]</a></li>
 				<li><a href="#_!_biff_">\![biff,(account name)]</a></li>
 				<li><a href="#_!_vanishbymyself_">\![vanishbymyself]</a></li>
 				<li><a href="#_+">\+</a></li>
 				<li><a href="#__+">\_+</a></li>
-				<li><a href="#_!_change,ghost,ゴースト名_">\![change,ghost,(ghost name)]</a></li>
-				<li><a href="#_!_change,shell,シェル名_">\![change,shell,(shell name)]</a></li>
-				<li><a href="#_!_change,balloon,バルーン名_">\![change,balloon,(balloon name)]</a></li>
-				<li><a href="#_!_call,ghost,ゴースト名_">\![call,ghost,(ghost name)]</a></li>
+				<li><a href="#_!_change,ghost,ghost_name_">\![change,ghost,(ghost name)]</a></li>
+				<li><a href="#_!_change,shell,shell_name_">\![change,shell,(shell name)]</a></li>
+				<li><a href="#_!_change,balloon,balloon_name_">\![change,balloon,(balloon name)]</a></li>
+				<li><a href="#_!_call,ghost,ghost_name_">\![call,ghost,(ghost name)]</a></li>
 				<li><a href="#_v">\v</a></li>
 				<li><a href="#_!_set,windowstate,stayontop_">\![set,windowstate,stayontop]</a></li>
 				<li><a href="#_!_set,windowstate,!stayontop_">\![set,windowstate,!stayontop]</a></li>
 				<li><a href="#_!_set,windowstate,minimize_">\![set,windowstate,minimize]</a></li>
-				<li><a href="#_!_set,wallpaper,ファイル名,オプション_">\![set,wallpaper,(file name),(option)]</a></li>
-				<li><a href="#_!_set,tasktrayicon,ファイル名,テキスト_">\![set,tasktrayicon,(file name).ico,(text),--duration=(wait time),--runcount=(times to repeat)]</a></li>
-				<li><a href="#_!_set,trayballoon,オプション,オプション,オプション..._">\![set,trayballoon,(option),(option),(option),...]</a></li>
+				<li><a href="#_!_set,wallpaper,file_name,option_">\![set,wallpaper,(file name),(option)]</a></li>
+				<li><a href="#_!_set,tasktrayicon,file_name,text_">\![set,tasktrayicon,(file name).ico,(text),--duration=(wait time),--runcount=(times to repeat)]</a></li>
+				<li><a href="#_!_set,trayballoon,option,option,option..._">\![set,trayballoon,(option),(option),(option),...]</a></li>
 				<li><a href="#_!_set,otherghosttalk,true_false_before_after_">\![set,otherghosttalk,(true|false|before|after)]</a></li>
-				<li><a href="#_!_set,othersurfacechange,trueかfalse_">\![set,othersurfacechange,(true|false)]</a></li>
-				<li><a href="#_!_raise,イベント名,r0,r1,r2..._">\![raise,(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_embed,イベント名,r0,r1,r2..._">\![embed,(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_timerraise,時間,繰り返すか否か,イベント名,r0,r1,r2..._">\![timerraise,(time),(repetition),(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_raiseother,ゴースト名,イベント名,r0,r1,r2..._">\![raiseother,(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_timerraiseother,時間,繰り返すか否か,ゴースト名,イベント名,r0,r1,r2..._">\![timerraiseother,(time),(repetition),(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_raiseplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![raiseplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_timerraiseplugin,時間,繰り返すか否か,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![timerraiseplugin,(time),(repetition),(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_notify,イベント名,r0,r1,r2..._">\![notify,(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_notifyother,ゴースト名,イベント名,r0,r1,r2..._">\![notifyother,(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
-				<li><a href="#_!_notifyplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">\![notifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_set,othersurfacechange,true_false_">\![set,othersurfacechange,(true|false)]</a></li>
+				<li><a href="#_!_raise,event_name,r0,r1,r2..._">\![raise,(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_embed,event_name,r0,r1,r2..._">\![embed,(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_timerraise,time,repetition,event_name,r0,r1,r2..._">\![timerraise,(time),(repetition),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_raiseother,ghost_name,event_name,r0,r1,r2..._">\![raiseother,(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_timerraiseother,time,repetition,ghost_name,event_name,r0,r1,r2..._">\![timerraiseother,(time),(repetition),(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_raiseplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![raiseplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_timerraiseplugin,time,repetition,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![timerraiseplugin,(time),(repetition),(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_notify,event_name,r0,r1,r2..._">\![notify,(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_notifyother,ghost_name,event_name,r0,r1,r2..._">\![notifyother,(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_notifyplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![notifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
 			<h1>Sound Commands</h1>
 			<ul>
-				<li><a href="#_8_ファイル名_">\8[(file name)]</a></li>
-				<li><a href="#__v_ファイル名_">\_v[(file name)]</a></li>
+				<li><a href="#_8_file_name_">\8[(file name)]</a></li>
+				<li><a href="#__v_file_name_">\_v[(file name)]</a></li>
 				<li><a href="#__V">\_V</a></li>
-				<li><a href="#_!_sound,play,ファイル名_">\![sound,play,(file name),(option),...]</a></li>
-				<li><a href="#_!_sound,load,ファイル名_">\![sound,load,(file name),(option),...]</a></li>
-				<li><a href="#_!_sound,cdplay,トラックNo._">\![sound,cdplay,(track no.)]</a></li>
-				<li><a href="#_!_sound,loop,ファイル名_">\![sound,loop,(file name)]</a></li>
+				<li><a href="#_!_sound,play,file_name_">\![sound,play,(file name),(option),...]</a></li>
+				<li><a href="#_!_sound,load,file_name_">\![sound,load,(file name),(option),...]</a></li>
+				<li><a href="#_!_sound,cdplay,track_no._">\![sound,cdplay,(track no.)]</a></li>
+				<li><a href="#_!_sound,loop,file_name_">\![sound,loop,(file name)]</a></li>
 				<li><a href="#_!_sound,wait_">\![sound,wait]</a></li>
-				<li><a href="#_!_sound,pause,ファイル名_">\![sound,pause,(file name)]</a></li>
-				<li><a href="#_!_sound,resume,ファイル名_">\![sound,resume,(file name)]</a></li>
-				<li><a href="#_!_sound,stop,ファイル名_">\![sound,stop,(file name)]</a></li>
+				<li><a href="#_!_sound,pause,file_name_">\![sound,pause,(file name)]</a></li>
+				<li><a href="#_!_sound,resume,file_name_">\![sound,resume,(file name)]</a></li>
+				<li><a href="#_!_sound,stop,file_name_">\![sound,stop,(file name)]</a></li>
 				<li><a href="#_!_sound,option_">\![sound,option,(file name),(option),...]</a></li>
 				<li class="caption"><a href="#notes_sound">sound play/load/option options</a></li>
 			</ul>
@@ -395,24 +395,24 @@
 			<h1>Open Commands</h1>
 			<ul>
 				<li><a href="#_j_ID_">\j[ID]</a></li>
-				<li><a href="#_!_open,browser,パラメータ_">\![open,browser,(parameter)]</a></li>
-				<li><a href="#_!_open,mailer,パラメータ_">\![open,mailer,(parameter)]</a></li>
-				<li><a href="#_!_open,editor,パラメータ_">\![open,editor,(parameter),(display line number)]</a></li>
-				<li><a href="#_!_open,explorer,パラメータ_">\![open,explorer,(file)]</a></li>
+				<li><a href="#_!_open,browser,parameter_">\![open,browser,(parameter)]</a></li>
+				<li><a href="#_!_open,mailer,parameter_">\![open,mailer,(parameter)]</a></li>
+				<li><a href="#_!_open,editor,parameter_">\![open,editor,(parameter),(display line number)]</a></li>
+				<li><a href="#_!_open,explorer,parameter_">\![open,explorer,(file)]</a></li>
 				<li><a href="#___t">\__t</a></li>
 				<li><a href="#_!_open,teachbox_">\![open,teachbox]</a></li>
 				<li><a href="#_!_close,teachbox_">\![close,teachbox]</a></li>
 				<li><a href="#___c">\__c</a></li>
 				<li><a href="#_!_open,communicatebox_">\![open,communicatebox]</a></li>
 				<li><a href="#_!_close,communicatebox_">\![close,communicatebox]</a></li>
-				<li><a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">\![open,inputbox,(ID),(display time),(text),(option),...]</a></li>
-				<li><a href="#_!_open,passwordinput,ID,表示時間,テキスト,オプション_">\![open,passwordinput,(ID),(display time),(text),(option)]</a></li>
+				<li><a href="#_!_open,inputbox,ID,display_time,text,option,..._">\![open,inputbox,(ID),(display time),(text),(option),...]</a></li>
+				<li><a href="#_!_open,passwordinput,ID,display_time,text,option_">\![open,passwordinput,(ID),(display time),(text),(option)]</a></li>
 				<li><a href="#_!_close,inputbox,ID_">\![close,inputbox,ID]</a></li>
-				<li><a href="#_!_open,dateinput,ID,表示時間,年,月,日,オプション_">\![open,dateinput,(ID),(display time),(year),(month),(day),(option)]</a></li>
-				<li><a href="#_!_open,sliderinput,ID,表示時間,現在値,最小,最大,オプション_">\![open,sliderinput,ID,(display time),(current value),(minimum),(maximum),(option)]</a></li>
-				<li><a href="#_!_open,timeinput,ID,表示時間,時,分,秒,オプション_">\![open,timeinput,(ID),(display time),(hour),(minute),(second),(option)]</a></li>
-				<li><a href="#_!_open,ipinput,ID,表示時間,IPアドレス,オプション_">\![open,ipinput,(ID),(display time),(IP address),(option)]</a></li>
-				<li><a href="#_!_open,configurationdialog,ダイアログID_">\![open,configurationdialog,(dialog ID)]</a></li>
+				<li><a href="#_!_open,dateinput,ID,display_time,year_month_day,option_">\![open,dateinput,(ID),(display time),(year),(month),(day),(option)]</a></li>
+				<li><a href="#_!_open,sliderinput,ID,display_time,current_value,minimum,maximum,option_">\![open,sliderinput,ID,(display time),(current value),(minimum),(maximum),(option)]</a></li>
+				<li><a href="#_!_open,timeinput,ID,display_time,hour_minute_second,option_">\![open,timeinput,(ID),(display time),(hour),(minute),(second),(option)]</a></li>
+				<li><a href="#_!_open,ipinput,ID,display_time,IP_address,option_">\![open,ipinput,(ID),(display time),(IP address),(option)]</a></li>
+				<li><a href="#_!_open,configurationdialog,dialogue_ID_">\![open,configurationdialog,(dialog ID)]</a></li>
 				<li><a href="#_!_open,ghostexplorer_">\![open,ghostexplorer]</a></li>
 				<li><a href="#_!_open,shellexplorer_">\![open,shellexplorer]</a></li>
 				<li><a href="#_!_open,balloonexplorer_">\![open,balloonexplorer]</a></li>
@@ -422,15 +422,15 @@
 				<li><a href="#_!_open,rateofusegraphballoon_">\![open,rateofusegraphballoon]</a></li>
 				<li><a href="#_!_open,rateofusegraphtotal_">\![open,rateofusegraphtotal]</a></li>
 				<li><a href="#_!_open,calendar_">\![open,calendar]</a></li>
-				<li><a href="#_!_open,help,ダイアログID_">\![open,help,(dialog ID)]</a></li>
+				<li><a href="#_!_open,help,dialogue_ID_">\![open,help,(dialog ID)]</a></li>
 				<li><a href="#_!_open,messenger_">\![open,messenger]</a></li>
 				<li><a href="#_!_open,readme_">\![open,readme]</a></li>
 				<li><a href="#_!_open,terms_">\![open,terms]</a></li>
-				<li><a href="#_!_open,file,ファイル名_">\![open,file,(file name)]</a></li>
-				<li><a href="#_!_open,dialog,open,パラメータ_">\![open,dialog,open,(parameter)]</a></li>
-				<li><a href="#_!_open,dialog,save,パラメータ_">\![open,dialog,save,(parameter)]</a></li>
-				<li><a href="#_!_open,dialog,folder,パラメータ_">\![open,dialog,folder,(parameter)]</a></li>
-				<li><a href="#_!_open,dialog,color,パラメータ_">\![open,dialog,color,(parameter)]</a></li>
+				<li><a href="#_!_open,file,file_name_">\![open,file,(file name)]</a></li>
+				<li><a href="#_!_open,dialog,open,parameter_">\![open,dialog,open,(parameter)]</a></li>
+				<li><a href="#_!_open,dialog,save,parameter_">\![open,dialog,save,(parameter)]</a></li>
+				<li><a href="#_!_open,dialog,folder,parameter_">\![open,dialog,folder,(parameter)]</a></li>
+				<li><a href="#_!_open,dialog,color,parameter_">\![open,dialog,color,(parameter)]</a></li>
 				<li><a href="#_!_close,dialog,ID_">\![close,dialog,(ID)]</a></li>
 				<li><a href="#_!_open,surfacetest_">\![open,surfacetest]</a></li>
 				<li><a href="#_!_open,aigraph_">\![open,aigraph]</a></li>
@@ -446,33 +446,33 @@
 		<section class="navigation-category">
 			<h1>Property System Manipulation Commands</h1>
 			<ul>
-				<li><a href="#_!_set,property,プロパティ名,値_">\![set,property,(property name),(value)]</a></li>
-				<li><a href="#_!_get,property,イベント名,プロパティ名,プロパティ名,..._">\![get,property,(event name),(property name),(property name),...]</a></li>
+				<li><a href="#_!_set,property,property_name,value_">\![set,property,(property name),(value)]</a></li>
+				<li><a href="#_!_get,property,event_name,property_name,property_name,..._">\![get,property,(event name),(property name),(property name),...]</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
 			<h1>Miscellaneous Commands</h1>
 			<ul>
 				<li><a href="#_!_execute,http-get,URL_">\![execute,http-get,(URL)]</a></li>
-				<li><a href="#_!_execute,http-get,URL,パラメータ_">\![execute,http-get,(URL),(parameter)]</a></li>
-				<li><a href="#_!_execute,http-post,URL,パラメータ_">\![execute,http-post,(URL),(parameter)]</a></li>
+				<li><a href="#_!_execute,http-get,URL,parameter_">\![execute,http-get,(URL),(parameter)]</a></li>
+				<li><a href="#_!_execute,http-post,URL,parameter_">\![execute,http-post,(URL),(parameter)]</a></li>
 				
-				<li><a href="#_!_execute,http-get,URL,オプション,オプション,オプション..._">\![execute,http-get,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-post,URL,オプション,オプション,オプション..._">\![execute,http-post,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-head,URL,オプション,オプション,オプション..._">\![execute,http-head,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-put,URL,オプション,オプション,オプション..._">\![execute,http-put,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-delete,URL,オプション,オプション,オプション..._">\![execute,http-delete,(URL),(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,http-get,URL,option,option,option..._">\![execute,http-get,(URL),(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,http-post,URL,option,option,option..._">\![execute,http-post,(URL),(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,http-head,URL,option,option,option..._">\![execute,http-head,(URL),(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,http-put,URL,option,option,option..._">\![execute,http-put,(URL),(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,http-delete,URL,option,option,option..._">\![execute,http-delete,(URL),(option),(option),(option),...]</a></li>
 				
-				<li><a href="#_!_execute,rss-get,URL,オプション,オプション,オプション..._">\![execute,rss-get,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,rss-post,URL,オプション,オプション,オプション..._">\![execute,rss-post,(URL),(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,rss-get,URL,option,option,option..._">\![execute,rss-get,(URL),(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,rss-post,URL,option,option,option..._">\![execute,rss-post,(URL),(option),(option),(option),...]</a></li>
 				
-				<li><a href="#_!_execute,extractarchive,ファイル名,ディレクトリ名_">\![execute,extractarchive,(file name),(directory name)]</a></li>
-				<li><a href="#_!_execute,compressarchive,ファイル名,ディレクトリ名_">\![execute,compressarchive,(file name),(directory name)]</a></li>
-				<li><a href="#_!_execute,dumpsurface,ディレクトリ,スコープID,サーフェスリスト_">\![execute,dumpsurface,(directory),(scope ID),(surface list),(prefix),(event ID),(zero position cutoff)]</a></li>
-				<li><a href="#_!_execute,install,path,ファイル名_">\![execute,install,path,(file name)]</a></li>
-				<li><a href="#_!_execute,install,url,URL,feedまたはnar_">\![execute,install,url,(URL),(feed|nar)]</a></li>
-				<li><a href="#_!_execute,ping,パラメータ1,パラメータ2,..._">\![execute,ping,(parameter 1),(parameter 2),...]</a></li>
-				<li><a href="#_!_execute,nslookup,パラメータ1,パラメータ2,..._">\![execute,nslookup,(parameter 1),(parameter 2),...]</a></li>
+				<li><a href="#_!_execute,extractarchive,file_name,directory_name_">\![execute,extractarchive,(file name),(directory name)]</a></li>
+				<li><a href="#_!_execute,compressarchive,file_name,directory_name_">\![execute,compressarchive,(file name),(directory name)]</a></li>
+				<li><a href="#_!_execute,dumpsurface,directory,scope_ID,surface_list_">\![execute,dumpsurface,(directory),(scope ID),(surface list),(prefix),(event ID),(zero position cutoff)]</a></li>
+				<li><a href="#_!_execute,install,path,file_name_">\![execute,install,path,(file name)]</a></li>
+				<li><a href="#_!_execute,install,url,URL,feed_nar_">\![execute,install,url,(URL),(feed|nar)]</a></li>
+				<li><a href="#_!_execute,ping,parameter_1,parameter_2,..._">\![execute,ping,(parameter 1),(parameter 2),...]</a></li>
+				<li><a href="#_!_execute,nslookup,parameter_1,parameter_2,..._">\![execute,nslookup,(parameter 1),(parameter 2),...]</a></li>
 				<li><a href="#_!_execute,createnar">\![execute,createnar]</a></li>
 				<li><a href="#_!_execute,createupdatedata">\![execute,createupdatedata]</a></li>
 				<li><a href="#_!_execute,emptyrecyclebin">\![execute,emptyrecyclebin]</a></li>
@@ -480,13 +480,13 @@
 				<li><a href="#_!_leave,passivemode_">\![leave,passivemode]</a></li>
 				<li><a href="#_!_enter,inductionmode_">\![enter,inductionmode]</a></li>
 				<li><a href="#_!_leave,inductionmode_">\![leave,inductionmode]</a></li>
-				<li><a href="#_!_enter,selectmode,モード(rect),左,上,右,下__!_enter,selectmode,モード(rect),当たり判定名__!_enter,selectmode,モード(rect)_">\![enter,selectmode,(mode(rect)),(left),(up),(right),(down)]\![enter,selectmode,(mode(rect)),(collision name)]\![enter,selectmode,(mode(rect))]</a></li>
+				<li><a href="#_!_enter,selectmode,mode(rect),left_up_right_down__!_enter,selectmode,mode(rect),collision_name__!_enter,selectmode,mode(rect)_">\![enter,selectmode,(mode(rect)),(left),(up),(right),(down)]\![enter,selectmode,(mode(rect)),(collision name)]\![enter,selectmode,(mode(rect))]</a></li>
 				<li><a href="#_!_leave,selectmode_">\![leave,selectmode]</a></li>
 				<li><a href="#_!_enter,collisionmode__!_enter,collisionmode,rect_">\![enter,collisionmode]\![enter,collisionmode,rect]</a></li>
 				<li><a href="#_!_leave,collisionmode_">\![leave,collisionmode]</a></li>
 				<li><a href="#_!_reloadsurface_">\![reloadsurface]</a></li>
 				<li><a href="#_!_reload,descript_">\![reload,descript]</a></li>
-				<li><a href="#_!_reload,descript,パラメータ_">\![reload,descript,(parameter)]</a></li>
+				<li><a href="#_!_reload,descript,parameter_">\![reload,descript,(parameter)]</a></li>
 				<li><a href="#_!_reload,shiori_">\![reload,shiori]</a></li>
 				<li><a href="#_!_reload,makoto_">\![reload,makoto]</a></li>
 				<li><a href="#_!_reload,shell_">\![reload,shell]</a></li>
@@ -542,7 +542,7 @@
 				<li><a href="#_lastghostname">%lastghostname</a></li>
 				<li><a href="#_lastobjectname">%lastobjectname</a></li>
 				<li><a href="#_*2">%*</a></li>
-				<li><a href="#_property_取得内容_">%property[(property name)]</a></li>
+				<li><a href="#_property_property_name_">%property[(property name)]</a></li>
 			</ul>
 		</section>
 	</section>
@@ -573,10 +573,7 @@
 			</ul>
 		</section>
 		<section class="category">
-			<h1>Character Commands</h1>
-				<dd class="entry">
-					<p>Translator Note: These are often referred to as "Scope Commands" in Japanese.</p>
-				</dd>
+			<h1>Scope Commands</h1>
 			<dl id="_0_or__h">
 				<dt class="entry">\0 or \h</dt>
 				<dd class="entry">
@@ -780,7 +777,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_anim,add,text,x,y,width,height,string,display_time,r,g,b,font_size,character_identifier_">
+			<dl id="_!_anim,add,text,x,y,width,height,string,display_time,r,g,b,font_size,scope_IDentifier_">
 				<dt class="entry">\![anim,add,text,(x),(y),(width),(height),(string),(display time),(r),(g),(b),(font size),(character identifier)]</dt>
 				<dd class="entry">
 					<p>Displays text on top of the surface.<br>Arguments after the string are optional.</p>
@@ -1085,8 +1082,8 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_set,position,x,y,character_ID_">
-				<dt class="entry">\![set,position,(x),(y),(character ID)]</dt>
+			<dl id="_!_set,position,x,y,scope_ID_">
+				<dt class="entry">\![set,position,(x),(y),(scope ID)]</dt>
 				<dd class="entry">
 					<p>Fixes the specified character to the entered x and y coordinates. (The character will no longer be movable by dragging.)</p>
 					<ul class="supported-baseware">
@@ -1103,16 +1100,16 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_set,zorder,character_ID,character_ID,_">
-				<dt class="entry">\![set,zorder,(character ID),(character ID),...]</dt>
+			<dl id="_!_set,zorder,scope_ID,scope_ID,_">
+				<dt class="entry">\![set,zorder,(scope ID),(scope ID),...]</dt>
 				<dd class="entry">
 					<p>Layers the windows of the specified characters such that the leftmost character is on top.<br>
 					Example: With \![set,zorder,1,0], \1's window will be displayed on top of \0's.</p>
 					
-					<p>By running multiple tags each with different character IDs, separate groups can be made.<br>
+					<p>By running multiple tags each with different scope IDs, separate groups can be made.<br>
 					Example: With \![set,zorder,1,0] \![set,zorder,3,2], \1's window will be displayed on top of \0's, and \p[3]'s window will be displayed on top of \p[2]'s.</p>
 					
-					<p>There is no technical limit on the number of character IDs that can be specified in the command, but large amounts may cause the ghost to slow down somewhat, so using two to three IDs is recommended.<br>
+					<p>There is no technical limit on the number of scope IDs that can be specified in the command, but large amounts may cause the ghost to slow down somewhat, so using two to three IDs is recommended.<br>
 					Running the command again with a character that has already been paired with another will cause an error. When changing the pairing of the characters, \![reset] must be run first before ordering the windows again.</p>
 					
 					<p>Effective until the ghost is closed.</p>
@@ -1142,16 +1139,16 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_set,sticky-window,character_ID,character_ID,_">
-				<dt class="entry">\![set,sticky-window,(character ID),(character ID),...]</dt>
+			<dl id="_!_set,sticky-window,scope_ID,scope_ID,_">
+				<dt class="entry">\![set,sticky-window,(scope ID),(scope ID),...]</dt>
 				<dd class="entry">
 					<p>The windows of the specified characters will be moved as a set when dragged or by using the move command.<br>
 					For example, if 1,0 is specified, dragging a character with the mouse will move the windows of both \0 and \1 together as a set.</p>
 					
-					<p>By running multiple tags each with different character IDs, separate groups can be made.<br>
+					<p>By running multiple tags each with different scope IDs, separate groups can be made.<br>
 					Example: With \![set,sticky-window,1,0] \![set,sticky-window,3,2], \1 will be paired with \0, and \p[3] with \p[2].</p>
 					
-					<p>There is no technical limit on the number of character IDs that can be specified in the command, but large amounts will cause the ghost to become <strong>very</strong> slow, so using two to three IDs is recommended.<br>
+					<p>There is no technical limit on the number of scope IDs that can be specified in the command, but large amounts will cause the ghost to become <strong>very</strong> slow, so using two to three IDs is recommended.<br>
 					Running the command again with a character that has already been paired with another will cause an error. When changing the pairing of the characters, \![reset] must be run first before setting the pairs again.</p>
 					
 					<p>When there is a restriction on the ghost's movement caused by commands such as \![set,alignmenttodesktop], the restriction will be prioritised, and the window will only follow along either x or y, depending on which it is free to move in.<br>
@@ -3042,7 +3039,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_update,更新対象_">
+			<dl id="_!_update,update_target_">
 				<dt class="entry">\![update,(update target),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Starts the network update event for the update target.
@@ -3140,7 +3137,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,headline,ヘッドライン名_">
+			<dl id="_!_execute,headline,headline_name_">
 				<dt class="entry">\![execute,headline,(headline name)]</dt>
 				<dd class="entry">
 					<p>Starts the headline sense event.<br>If the headline name is specified as random, a random headline will be chosen.<br>If specified as lastinstalled, the last headline to be installed will be started.</p>
@@ -3194,7 +3191,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_vanishbymyself,ゴースト名_">
+			<dl id="_!_vanishbymyself,ghost_name_">
 				<dt class="entry">\![vanishbymyself,(ghost name)]</dt>
 				<dd class="entry">
 					<p>Uninstalls the ghost that ran the command, specifying the ghost that will be called after uninstallation is complete.<br>It is important to keep in mind that when this command is executed, the uninstallation will happen immediately without a confirmation dialog.<br>Whether the ghost will be deleted or not is determined by the user's SSP settings.<br>If the specified ghost is not installed, the next ghost to be called will be chosen randomly.</p>
@@ -3241,7 +3238,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_change,ghost,ゴースト名_">
+			<dl id="_!_change,ghost,ghost_name_">
 				<dt class="entry">\![change,ghost,(ghost name),--option=raise-event]</dt>
 				<dd class="entry">
 					<p>Changes to the specified ghost.<br>
@@ -3270,7 +3267,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_change,shell,シェル名_">
+			<dl id="_!_change,shell,shell_name_">
 				<dt class="entry">\![change,shell,(shell name),--option=raise-event]</dt>
 				<dd class="entry">
 					<p>Changes to the specified shell.<br>
@@ -3297,7 +3294,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_change,balloon,バルーン名_">
+			<dl id="_!_change,balloon,balloon_name_">
 				<dt class="entry">\![change,balloon,(balloon name)]</dt>
 				<dd class="entry">
 					<p>Changes to the specified balloon.<br>
@@ -3319,7 +3316,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_call,ghost,ゴースト名_">
+			<dl id="_!_call,ghost,ghost_name_">
 				<dt class="entry">\![call,ghost,(ghost name),--option=raise-event]</dt>
 				<dd class="entry">
 					<p>Calls the specified ghost.<br>
@@ -3410,7 +3407,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_set,wallpaper,ファイル名,オプション_">
+			<dl id="_!_set,wallpaper,file_name,option_">
 				<dt class="entry">\![set,wallpaper,(file name),(option)]</dt>
 				<dd class="entry">
 					<p>Sets the specified file as the wallpaper.<br>
@@ -3442,7 +3439,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_set,tasktrayicon,ファイル名,テキスト_">
+			<dl id="_!_set,tasktrayicon,file_name,text_">
 				<dt class="entry">\![set,tasktrayicon,(file name).ico,(text),--duration=(wait time),--runcount=(times to repeat)]</dt>
 				<dd class="entry">
 					<p>Uses the specified icon file as the icon in the notification area (system tray).
@@ -3461,7 +3458,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_set,trayballoon,オプション,オプション,オプション..._">
+			<dl id="_!_set,trayballoon,option,option,option..._">
 				<dt class="entry">\![set,trayballoon,(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Displays a system tray notification balloon.<br>OnTrayBalloonClick is run when the balloon is closed by being clicked on.<br>OnTrayBalloonTimeout is run when the balloon is closed with the close button or from timing out.<br>The specifiable options are as below.</p>
@@ -3513,7 +3510,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_set,othersurfacechange,trueかfalse_">
+			<dl id="_!_set,othersurfacechange,true_false_">
 				<dt class="entry">\![set,othersurfacechange,(true|false)]</dt>
 				<dd class="entry">
 					<p>Sets whether <a href="list_shiori_event.html#OnOtherSurfaceChange">OnOtherSurfaceChange</a> will be notified or not. The default value is false.<br>When set to true, OnOtherSurfaceChange will be notified when other ghosts that are open at the same time change surfaces.</p>
@@ -3529,7 +3526,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_raise,イベント名,r0,r1,r2..._">
+			<dl id="_!_raise,event_name,r0,r1,r2..._">
 				<dt class="entry">\![raise,(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Raises an event.<br>Values from the third argument onwards are stored in order starting from Reference0.</p>
@@ -3546,7 +3543,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_embed,イベント名,r0,r1,r2..._">
+			<dl id="_!_embed,event_name,r0,r1,r2..._">
 				<dt class="entry">\![embed,(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>A special tag that <strong>"embeds"</strong> the results of an event into the script currently being run in real-time.<br>
@@ -3568,7 +3565,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_timerraise,時間,繰り返すか否か,イベント名,r0,r1,r2..._">
+			<dl id="_!_timerraise,time,repetition,event_name,r0,r1,r2..._">
 				<dt class="entry">\![timerraise,(time),(repetition),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Raises an event with a wait time specified.<br>If repetition is specified as 0, the event will be run every time the specified amount of time passes, and if any values that are 1 or higher are specified, the event will only be run once.<br>Values from the fifth argument onwards are references.<br>Multiple events with different names can be specified separately, but if an event of the same name is raised more than once, the first setting will be overwritten.<br>Can be canceled by running SakuraScript specifying the same event with a wait time of 0.<br>The timer is kept after network updates.</p>
@@ -3584,7 +3581,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_raiseother,ゴースト名,イベント名,r0,r1,r2..._">
+			<dl id="_!_raiseother,ghost_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![raiseother,(ghost name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Sends an event notification to another currently running ghost.<br>Values from the fourth argument onwards are references.<br>If the ghost name is specified as __SYSTEM_ALL_GHOST__, a notification will be sent to all other running ghosts.<br>The ghost name can only be specified directly. Multiple can be specified by separating them using the byte value 1.</p>
@@ -3599,7 +3596,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_timerraiseother,時間,繰り返すか否か,ゴースト名,イベント名,r0,r1,r2..._">
+			<dl id="_!_timerraiseother,time,repetition,ghost_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![timerraiseother,(time),(repetition),(ghost name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Sends an event notification to another currently running ghost with a wait time specified (milliseconds).<br>If repetition is specified as 0, the event will be run every time the specified amount of time passes, and if any values that are 1 or higher are specified, the event will only be run once.<br>Values from the sixth argument onwards are references.<br>Multiple events with different names can be specified separately, but if an event of the same name is raised more than once, the first setting will be overwritten.<br>Can be canceled by running SakuraScript specifying the same event with a wait time of 0.<br>If the ghost name is specified as __SYSTEM_ALL_GHOST__, a notification will be sent to all other running ghosts.<br>Multiple ghost names can be specified by separating them using the byte value 1.</p>
@@ -3614,7 +3611,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_raiseplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">
+			<dl id="_!_raiseplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![raiseplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Sends the specified event to the plugin.<br>If the plugin name is specified as random, a random plugin will be chosen.<br>If specified as lastinstalled, the last installed plugin will be started.</p>
@@ -3629,7 +3626,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_timerraiseplugin,時間,繰り返すか否か,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">
+			<dl id="_!_timerraiseplugin,time,repetition,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![timerraiseplugin,(time),(repetition),(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Sends the specified event to the plugin with a wait time specified (milliseconds).<br>If repetition is specified as 0, the event will be run every time the specified amount of time passes, and if any values that are 1 or higher are specified, the event will only be run once.<br>Multiple events with different names can be specified separately, but if an event of the same name is raised more than once, the first setting will be overwritten.<br>Can be canceled by running SakuraScript specifying the same event with a wait time of 0.</p>
@@ -3644,7 +3641,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_notify,イベント名,r0,r1,r2..._">
+			<dl id="_!_notify,event_name,r0,r1,r2..._">
 				<dt class="entry">\![notify,(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Runs a Notify event.<br>Values from the third argument onwards are references.<br>Functionally almost the same as \![raise,(event name),(r0),(r1),(r2),...], differing only in that any values from this notification event will not be output by SSP.</p>
@@ -3659,7 +3656,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_notifyother,ゴースト名,イベント名,r0,r1,r2..._">
+			<dl id="_!_notifyother,ghost_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![notifyother,(ghost name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Sends a Notify event notification to another currently running ghost.<br>Values from the fourth argument onwards are references.<br>If the ghost name is specified as __SYSTEM_ALL_GHOST__, a notification will be sent to all other running ghosts.<br>Multiple ghost names can be specified by separating them using the byte value 1.<br>Functionally almost the same as \![raiseother,(ghost name),(event name),(r0),(r1),(r2),...], differing only in that any values from this notification event will not be output by SSP.</p>
@@ -3674,7 +3671,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_notifyplugin,プラグインのIDまたは名前,イベント名,r0,r1,r2..._">
+			<dl id="_!_notifyplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![notifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Sends the specified Notify event to the plugin.<br>If the plugin name is specified as random, a random plugin will be chosen.<br>If specified as lastinstalled, the last installed plugin will be started.<br>Functionally almost the same as  \![raiseplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...], differing only in that any values from this notification event will not be output by SSP.</p>
@@ -3692,7 +3689,7 @@
 		</section>
 		<section class="category">
 			<h1>Sound Commands</h1>
-			<dl id="__v_ファイル名_">
+			<dl id="__v_file_name_">
 				<dt class="entry">\8[(file name)]</dt>
 				<dd class="entry">
 					<p>Plays a wave file from the folder of the ghost.</p>
@@ -3715,7 +3712,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_8_ファイル名_">
+			<dl id="_8_file_name_">
 				<dt class="entry">\_V</dt>
 				<dd class="entry">
 					<p>Waits until the playback of the file played by \_v ends.<br>The command is ignored if it has already ended or the folder does not exist.</p>
@@ -3732,7 +3729,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_sound,play,ファイル名_">
+			<dl id="_!_sound,play,file_name_">
 				<dt class="entry">\![sound,play,(file name),<a href="#notes_sound">(option)</a>,...]</dt>
 				<dd class="entry">
 					<p>Functionally the same as \_v. However, <a href="#notes_sound">options</a> may be specified.</p>
@@ -3747,7 +3744,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_sound,load,ファイル名_">
+			<dl id="_!_sound,load,file_name_">
 				<dt class="entry">\![sound,load,(file name),<a href="#notes_sound">(option)</a>,...]</dt>
 				<dd class="entry">
 					<p>Load the file in advance so that it can be played immediately when requested. The specification method is the same as play.</p>
@@ -3756,7 +3753,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_sound,cdplay,トラックNo._">
+			<dl id="_!_sound,cdplay,track_no._">
 				<dt class="entry">\![sound,cdplay,(Track No.)]</dt>
 				<dd class="entry">
 					<p>SSP plays a music CD. The command is ignored if there is no music CD.<br>\_V is ignored, even while playing a track. Specifying another track with \![sound,cdplay,(track no.)] during playback will also be ignored. Instead, \![sound,stop] should be used to stop the playback once before specifying the next track.</p>
@@ -3771,7 +3768,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_sound,loop,ファイル名_">
+			<dl id="_!_sound,loop,file_name_">
 				<dt class="entry">\![sound,loop,(file name)]</dt>
 				<dd class="entry">
 					<p>Loops a track. \_V does not apply to this command.<br>Playback can be stopped with \![sound,stop].</p>
@@ -3891,7 +3888,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,browser,パラメータ_">
+			<dl id="_!_open,browser,parameter_">
 				<dt class="entry">\![open,browser,(parameter)]</dt>
 				<dd class="entry">
 					<p>Opens the browser set in the baseware.<br>This is set in the Applications -&gt; Browser option in the baseware settings, accessed from the user menu.</p>
@@ -3908,7 +3905,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,mailer,パラメータ_">
+			<dl id="_!_open,mailer,parameter_">
 				<dt class="entry">\![open,mailer,(parameter)]</dt>
 				<dd class="entry">
 					<p>Opens the mailer set in the baseware.<br>This is set in the Applications -&gt; Mailer option in the baseware settings, accessed from the user menu.</p>
@@ -3924,7 +3921,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,editor,パラメータ_">
+			<dl id="_!_open,editor,parameter_">
 				<dt class="entry">\![open,editor,(file),(display line number)]</dt>
 				<dd class="entry">
 					<p>Edits the specified file with the editor set in the baseware.<br>This is set in the Applications -&gt; Editor option in the baseware settings, accessed from the user menu.<br>The display line number moves the cursor to the specified line in advance when the file is opened.</p>
@@ -3934,7 +3931,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_open,explorer,パラメータ_">
+			<dl id="_!_open,explorer,parameter_">
 				<dt class="entry">\![open,explorer,(file)]</dt>
 				<dd class="entry">
 					<p>Opens the file location of the specified file with the file manager set in the baseware.<br>This is set in the Applications -&gt; File Manager option in the baseware settings, accessed from the user menu.</p>
@@ -4027,7 +4024,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">
+			<dl id="_!_open,inputbox,ID,display_time,text,option,..._">
 				<dt class="entry">\![open,inputbox,(ID),(display time),(text),(option),...]</dt>
 				<dd class="entry">
 					<p>
@@ -4056,10 +4053,10 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,passwordinput,ID,表示時間,テキスト,オプション_">
+			<dl id="_!_open,passwordinput,ID,display_time,text,option_">
 				<dt class="entry">\![open,passwordinput,(ID),(display time),(text),(option)]</dt>
 				<dd class="entry">
-					<p>Opens an InputBox that hides the characters. Other than that, functions the same as <a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">inputbox</a>.</p>
+					<p>Opens an InputBox that hides the characters. Other than that, functions the same as <a href="#_!_open,inputbox,ID,display_time,text,option,..._">inputbox</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -4072,7 +4069,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,dateinput,ID,表示時間,年,月,日,オプション_">
+			<dl id="_!_open,dateinput,ID,display_time,year_month_day,option_">
 				<dt class="entry">\![open,dateinput,(ID),(display time),(year),(month),(day),(option)]</dt>
 				<dd class="entry">
 					<p>Opens a date InputBox.
@@ -4082,7 +4079,7 @@
 					<br><a href="list_shiori_event.html#OnUserInputCancel">OnUserInputCancel</a> is run when the display time has expired (timeout), or when the close button is pressed.
 					<br>If it times out, it will contain "Timeout."
 					<br><a href="#notes_inputbox-option">※Options</a> may be specified using --option=○○.
-					<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">inputbox</a>.</p>
+					<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,display_time,text,option,..._">inputbox</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -4095,10 +4092,10 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,sliderinput,ID,表示時間,現在値,最小,最大,オプション_">
+			<dl id="_!_open,sliderinput,ID,display_time,current_value,minimum,maximum,option_">
 				<dt class="entry">\![open,sliderinput,(ID),(display time),(current value),(minimum),(maximum),(option)]</dt>
 				<dd class="entry">
-					<p>Opens an InputBox with a slider.<br>The SHIORI event <a href="list_shiori_event.html#OnUserInput">OnUserInput</a> is run on confirmation, and Reference1 stores the input value.<br><a href="#notes_inputbox-option">※Options</a> may be specified using --option=○○.<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">inputbox</a>.<br>The minimum possible value is -2147483648 and the maximum is 2147483647.</p>
+					<p>Opens an InputBox with a slider.<br>The SHIORI event <a href="list_shiori_event.html#OnUserInput">OnUserInput</a> is run on confirmation, and Reference1 stores the input value.<br><a href="#notes_inputbox-option">※Options</a> may be specified using --option=○○.<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,display_time,text,option,..._">inputbox</a>.<br>The minimum possible value is -2147483648 and the maximum is 2147483647.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -4111,10 +4108,10 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,timeinput,ID,表示時間,時,分,秒,オプション_">
+			<dl id="_!_open,timeinput,ID,display_time,hour_minute_second,option_">
 				<dt class="entry">\![open,timeinput,(ID),(display time),(hour),(minute),(second),(option)]</dt>
 				<dd class="entry">
-					<p>Opens a time InputBox.<br>Hour, minute, and second are the initial values. Uses 24 hour time.<br>The input value is stored in OnUserInput's Reference1 as hour,minute,second separated by commas.<br><a href="#notes_inputbox-option">※Options</a> may also be specified using --option=○○.<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">inputbox</a>.<p></p>
+					<p>Opens a time InputBox.<br>Hour, minute, and second are the initial values. Uses 24 hour time.<br>The input value is stored in OnUserInput's Reference1 as hour,minute,second separated by commas.<br><a href="#notes_inputbox-option">※Options</a> may also be specified using --option=○○.<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,display_time,text,option,..._">inputbox</a>.<p></p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -4127,13 +4124,13 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,ipinput,ID,表示時間,IPアドレス,オプション_">
+			<dl id="_!_open,ipinput,ID,display_time,IP_address,option_">
 				<dt class="entry">\![open,ipinput,(ID),(display time),(IP line 1),(IP line 2),(IP line 3),(IP line 4),(option)]</dt>
 				<dd class="entry">
 					<p>Opens an IP address InputBox.
 					<br>Due to input limitations on Windows, only IPv4 addresses will be accepted.
 					<br><a href="#notes_inputbox-option">※Options</a> may also be specified using --option=○○.
-					<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,表示時間,テキスト,オプション,..._">inputbox</a>.<p></p>
+					<br>Other than that, functions the same as <a href="#_!_open,inputbox,ID,display_time,text,option,..._">inputbox</a>.<p></p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -4161,7 +4158,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,configurationdialog,ダイアログID_">
+			<dl id="_!_open,configurationdialog,dialogue_ID_">
 				<dt class="entry">\![open,configurationdialog,(dialog ID)]</dt>
 				<dd class="entry">
 					<p>Opens the configuration dialog (baseware settings, accessed from the user menu).<br>The dialog ID specifies which section to show (when omitted, it will be the last opened section).<br>Refer to the SHIORI Event ※<a href="list_shiori_event.html#OnConfigurationDialogHelp">OnConfigurationDialogHelp</a>'s Reference0.</p>
@@ -4318,7 +4315,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,help,ダイアログID_">
+			<dl id="_!_open,help,dialogue_ID_">
 				<dt class="entry">\![open,help,(dialog ID)]</dt>
 				<dd class="entry">
 					<p>Opens the SSP help page.<br>Specifying a configuration section's ID name (refer to ※<a href="list_shiori_event.html#OnConfigurationDialogHelp">OnConfigurationDialogHelp's Reference0</a>) will open the related help page. Opens the index page if omitted.</p>
@@ -4381,7 +4378,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,file,ファイル名_">
+			<dl id="_!_open,file,file_name_">
 				<dt class="entry">\![open,file,(file name)]</dt>
 				<dd class="entry">
 					<p>Executes a file. Absolute paths or relative paths from [(folder of the ghost executing the command)]/ghost/master/ can be specified.<br>The Windows environment variables (%SYSTEMROOT%,%SYSTEM%, %TEMP% etc.) can be used.<br>When the file to be executed is specified as the file name, the path will be searched for automatically.</p>
@@ -4398,7 +4395,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,dialog,open,パラメータ_">
+			<dl id="_!_open,dialog,open,parameter_">
 				<dt class="entry">\![open,dialog,open,(parameter)]</dt>
 				<dd class="entry">
 					<p>Opens the file opening dialog. Selecting a file with this dialog will not open the file.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialog">OnSystemDialog</a> is run on confirmation, and Reference0 stores "open" and Reference2 stores the file path, so the actual process is made and executed by each ghost creator.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialogCancel">OnSystemDialogCancel</a> is run when closed.<br><a href="#notes_selectfile">Specifications for the parameter argument are as below</a>, and multiple may be specified by separating them with commas.</p>
@@ -4413,7 +4410,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,dialog,save,パラメータ_">
+			<dl id="_!_open,dialog,save,parameter_">
 				<dt class="entry">\![open,dialog,save,(parameter)]</dt>
 				<dd class="entry">
 					<p>Opens the file saving dialog. Saving a file with this dialog will not save the file.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialog">OnSystemDialog</a> is run on confirmation, and Reference0 stores "save" and Reference2 stores the file path, so the actual process is made and executed by each ghost creator.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialogCancel">OnSystemDialogCancel</a> is run when closed.<br><a href="#notes_selectfile">Specifications for the parameter argument are as below</a>, and multiple may be specified by separating them with commas.</p>
@@ -4428,7 +4425,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,dialog,folder,パラメータ_">
+			<dl id="_!_open,dialog,folder,parameter_">
 				<dt class="entry">\![open,dialog,folder,(parameter)]</dt>
 				<dd class="entry">
 					<p>Opens the folder selection dialog. Selecting a folder with this dialog will not lead to anything happening.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialog">OnSystemDialog</a> is run on confirmation, and Reference0 stores "folder" and Reference2 stores the folder path, so the actual process is made and executed by each ghost creator.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialogCancel">OnSystemDialogCancel</a> is run when closed.<br><a href="#notes_selectfile">Specifications for the parameter argument are as below</a>, and multiple may be specified by separating them with commas.</p>
@@ -4443,7 +4440,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_open,dialog,color,パラメータ_">
+			<dl id="_!_open,dialog,color,parameter_">
 				<dt class="entry">\![open,dialog,color,(parameter)]</dt>
 				<dd class="entry">
 					<p>Opens the color palette dialog. Specifying a color with this dialog will not lead to anything happening.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialog">OnSystemDialog</a> is run on confirmation, and Reference0 stores "color" and Reference2 stores the selected color in the R,G,B format, so the actual process is made and executed by each ghost creator.<br>The SHIORI event <a href="list_shiori_event.html#OnSystemDialogCancel">OnSystemDialogCancel</a> is run when closed.<br>Specifications for the parameter argument are as below, and multiple may be specified by separating them with commas.</p>
@@ -4621,7 +4618,7 @@
 		</section>
 		<section class="category">
 			<h1>Property System Manipulation Commands</h1>
-			<dl id="_!_set,property,プロパティ名,値_">
+			<dl id="_!_set,property,property_name,value_">
 				<dt class="entry">\![set,property,(property name),(value)]</dt>
 				<dd class="entry">
 					<p>Inputs a value into the property system.<br>※Refer to the <a href="list_propertysystem.html">Property System</a> page for details about the property system.</p>
@@ -4637,7 +4634,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_get,property,イベント名,プロパティ名,プロパティ名,..._">
+			<dl id="_!_get,property,event_name,property_name,property_name,..._">
 				<dt class="entry">\![get,property,(event name),(property name),(property name),...]</dt>
 				<dd class="entry">
 					<p>Gets a property system value.<br>The event specified is run, and each property system value is stored in references from reference0 onwards.<br>※Refer to the <a href="list_propertysystem.html">Property System</a> page for details about the property system.</p>
@@ -4672,7 +4669,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,http-get,URL,パラメータ_">
+			<dl id="_!_execute,http-get,URL,parameter_">
 				<dt class="entry">\![execute,http-get,(URL),(parameter)]</dt>
 				<dd class="entry">
 					<p>Executes an http get request with a parameter and stores the response in a file.<br>The file is stored in the  [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
@@ -4687,7 +4684,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,http-post,URL,パラメータ_">
+			<dl id="_!_execute,http-post,URL,parameter_">
 				<dt class="entry">\![execute,http-post,URL,(parameter)]</dt>
 				<dd class="entry">
 					<p>Executes an http post request with a parameter and stores the response in a file.<br>The file is stored in the [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
@@ -4702,7 +4699,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,http-get,URL,オプション,オプション,オプション..._">
+			<dl id="_!_execute,http-get,URL,option,option,option..._">
 				<dt class="entry">\![execute,http-get,(URL),(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Executes an http get request with <a href="#notes_executehttp">※options</a> and stores the response in a file.<br>The file is stored in the [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
@@ -4717,7 +4714,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,http-post,URL,オプション,オプション,オプション..._">
+			<dl id="_!_execute,http-post,URL,option,option,option..._">
 				<dt class="entry">\![execute,http-post,URL,(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Executes an http post request with <a href="#notes_executehttp">※options</a> and stores the response in a file.<br>The file is stored in the [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
@@ -4732,7 +4729,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,http-head,URL,オプション,オプション,オプション..._">
+			<dl id="_!_execute,http-head,URL,option,option,option..._">
 				<dt class="entry">\![execute,http-head,URL,(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Executes an http head request with <a href="#notes_executehttp">※options</a>.</p>
@@ -4741,7 +4738,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_execute,http-put,URL,オプション,オプション,オプション..._">
+			<dl id="_!_execute,http-put,URL,option,option,option..._">
 				<dt class="entry">\![execute,http-put,URL,(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Executes an http put request with <a href="#notes_executehttp">※options</a>.</p>
@@ -4750,7 +4747,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_execute,http-delete,URL,オプション,オプション,オプション..._">
+			<dl id="_!_execute,http-delete,URL,option,option,option..._">
 				<dt class="entry">\![execute,http-delete,URL,(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Executes an http delete request with <a href="#notes_executehttp">※options</a>.</p>
@@ -4759,7 +4756,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_execute,rss-get,URL,オプション,オプション,オプション..._">
+			<dl id="_!_execute,rss-get,URL,option,option,option..._">
 				<dt class="entry">\![execute,rss-get,URL,(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Executes an http get request with <a href="#notes_executehttp">※options</a>, parses the response as an RSS/Atom feed, and sends a notification of the parsing result in the form of an event.<br />The parameter specifications are the same as http-post.</p>
@@ -4768,7 +4765,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_execute,rss-post,URL,オプション,オプション,オプション..._">
+			<dl id="_!_execute,rss-post,URL,option,option,option..._">
 				<dt class="entry">\![execute,rss-post,URL,(option),(option),(option),...]</dt>
 				<dd class="entry">
 					<p>Executes an http post request with <a href="#notes_executehttp">※options</a>, parses the response as an RSS/Atom feed, and sends a notification of the parsing result in the form of an event.<br />The parameter specifications are the same as http-post.</p>
@@ -4777,7 +4774,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_execute,extractarchive,ファイル名,ディレクトリ名_">
+			<dl id="_!_execute,extractarchive,file_name,directory_name_">
 				<dt class="entry">\![execute,extractarchive,(file name),(directory name)]</dt>
 				<dd class="entry">
 					<p>Extracts a zip file. Full paths must be specified (relative paths cannot be specified).
@@ -4795,7 +4792,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,compressarchive,ファイル名,ディレクトリ名_">
+			<dl id="_!_execute,compressarchive,file_name,directory_name_">
 				<dt class="entry">\![execute,compressarchive,(file name),(directory name)]</dt>
 				<dd class="entry">
 					<p>Compresses a file into a zip file. Full paths must be specified (relative paths cannot be specified).
@@ -4813,7 +4810,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,dumpsurface,ディレクトリ,スコープID,サーフェスリスト_">
+			<dl id="_!_execute,dumpsurface,directory,scope_ID,surface_list_">
 				<dt class="entry">\![execute,dumpsurface,(directory),(scope ID),(surface list),(prefix),(event ID),(zero position cutoff)]</dt>
 				<dd class="entry">
 					<p>Dumps a combined surface image to the specified directory.
@@ -4833,7 +4830,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_execute,install,path,ファイル名_">
+			<dl id="_!_execute,install,path,file_name_">
 				<dt class="entry">\![execute,install,path,(file name)]</dt>
 				<dd class="entry">
 					<p>Installs the specified nar file. Full paths must be specified (relative paths cannot be specified).</p>
@@ -4848,7 +4845,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,install,url,URL,feedまたはnar_">
+			<dl id="_!_execute,install,url,URL,feed_nar_">
 				<dt class="entry">\![execute,install,url,(URL),(feed|nar|homeurl)]</dt>
 				<dd class="entry">
 					<p>Installs the nar file or registers the RSSFeed from the specified URL.<br>feed, nar, and homeurl can be omitted.<br>Automatically downloads the file to a folder for temporary files, and conducts the installation process as is appropriate.</p>
@@ -4864,7 +4861,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,ping,パラメータ1,パラメータ2,..._">
+			<dl id="_!_execute,ping,parameter_1,parameter_2,..._">
 				<dt class="entry">\![execute,ping,(parameter 1),(parameter 2),...]</dt>
 				<dd class="entry">
 					<p>Pings the specified host. Made for IPv6.<br>The parameters are as below.</p>
@@ -4890,7 +4887,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,nslookup,パラメータ1,パラメータ2,..._">
+			<dl id="_!_execute,nslookup,parameter_1,parameter_2,..._">
 				<dt class="entry">\![execute,nslookup,(parameter 1),(parameter 2),...]</dt>
 				<dd class="entry">
 					<p>Searches for the IP when the host name is entered and searches for the host name when the IP is entered. Made for IPv6.<br>The parameters are as below.</p>
@@ -5005,7 +5002,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_enter,selectmode,モード(rect),左,上,右,下__!_enter,selectmode,モード(rect),当たり判定名__!_enter,selectmode,モード(rect)_">
+			<dl id="_!_enter,selectmode,mode(rect),left_up_right_down__!_enter,selectmode,mode(rect),collision_name__!_enter,selectmode,mode(rect)_">
 				<dt class="entry">\![enter,selectmode,(mode(rect)),(left),(up),(right),(down)]\![enter,selectmode,(mode(rect)),(collision name)]\![enter,selectmode,(mode(rect))]</dt>
 				<dd class="entry">
 					<p>Starts select mode. When executed, transparent areas are also displayed, and the area can be specified by dragging with the mouse.<br>After execution, <a href="list_shiori_event.html#OnSelectModeBegin">OnSelectModeBegin</a> is run. Refer also to OnSelectModeMouseUp, OnSelectModeMouseDown, OnSelectModeCancel, OnSelectModeComplete.<br>Currently, only the rectangular selection mode "rect" can be specified. Additionally, when nothing is specified, it will function the same as rect.<br>The initial position of the selection can be specified in the arguments after the mode specification. Either coordinates or the name of the collision to be set to the same size can be input.<br>
@@ -5099,7 +5096,7 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_reload,descript,パラメータ_">
+			<dl id="_!_reload,descript,parameter_">
 				<dt class="entry">\![reload,descript,(parameter)]</dt>
 				<dd class="entry">
 					<p>Reloads the specified descript.txt.<br>Multiple descript.txts may be specified with a half-width space as a delimiter.<br>ghost shell balloon headline plugin</p>
@@ -5713,7 +5710,7 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_property_取得内容_">
+			<dl id="_property_property_name_">
 				<dt class="entry">%property[(property name)]</dt>
 				<dd class="entry">
 					<p>Returns the value of the specified property system.<br>※For details on the property system, refer to the <a href="list_propertysystem.html">Property System</a> page.</p>
