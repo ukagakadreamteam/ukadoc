@@ -5,7 +5,7 @@
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project SHIORI Eventリスト</title>
+<title>UKADOC Project SHIORI Event List</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script src="ghost_status.js"></script>
@@ -2349,7 +2349,7 @@
 					<p>Occurs when the file being installed is specified to be for another ghost.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The main character name of the ghost that was specified (the <a href="descript_install.html#accept,本体側名">accept</a> specification in install.txt, in other words the intended recipient of the file).</dd>
+						<dd>The main character name of the ghost that was specified (the <a href="descript_install.html#accept,main_side_name">accept</a> specification in install.txt, in other words the intended recipient of the file).</dd>
 						<dt>Reference1</dt>
 						<dd>The <a href="#caption_install-identifier">※identifier</a> of the file that failed to install.</dd>
 						<dt>Reference2</dt>
@@ -2368,7 +2368,7 @@
 					<p>Occurs when the file being installed is specified to be for another ghost, and that ghost is open at the same time. Install events following this will occur for the intended recipient ghost.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>The main character name of the ghost that was specified (the <a href="descript_install.html#accept,本体側名">accept</a> specification in install.txt, in other words the intended recipient of the file).</dd>
+						<dd>The main character name of the ghost that was specified (the <a href="descript_install.html#accept,main_side_name">accept</a> specification in install.txt, in other words the intended recipient of the file).</dd>
 						<dt>Reference1</dt>
 						<dd>The <a href="#caption_install-identifier">※identifier</a> of the installed file.</dd>
 						<dt>Reference2</dt>
@@ -2470,9 +2470,9 @@
 						<br />Delimited by a 1-byte value when there are multiple. The following is an example on Windows.
 						
 						<ul>
-							<li>PC(マイコンピュータ) = ::{20D04FE0-3AEA-1069-A2D8-08002B30309D}</li>
-							<li>ゴミ箱 = ::{645FF040-5081-101B-9F08-00AA002F954E}</li>
-							<li>(マイ)ネットワーク = ::{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}</li>
+							<li>PC (My computer) = ::{20D04FE0-3AEA-1069-A2D8-08002B30309D}</li>
+							<li>Recycle bin = ::{645FF040-5081-101B-9F08-00AA002F954E}</li>
+							<li>(My) Network = ::{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}</li>
 						</ul>
 						
 						</dd>
@@ -2730,7 +2730,7 @@
 						<br />The others are passed to <a href="list_sakura_script.html#_!_execute,install,url,URL,feed_nar_">\![execute,install,url]</a> and the process continues.</dd>
 					</dl>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> Ref3は2.6.35</li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> Ref3 is 2.6.35</li>
 					</ul>
 				</dd>
 			</dl>
@@ -3898,7 +3898,7 @@
 						<dd>Title [\1] URL [\1] Time of update (comma-separated format: Year,month,day,hour,minute,second)  [\1] Creator name [\1] Contents or summary<br>When there are updates, the references continue from 0,1,2~ according to the number of RSS elements.<br>[\1] is the 1-byte value.</dd>
 					</dl>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> Creator name・Contents 2.4.10~</li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> Creator name/Contents 2.4.10~</li>
 					</ul>
 				</dd>
 			</dl>
@@ -4379,7 +4379,7 @@
 						Ex: 0,0,1600,900,32,1,bottom,1560</dd>
 					</dl>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.4.09/タスクバーは2.6.35</li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.4.09/taskbar is 2.6.35</li>
 					</ul>
 				</dd>
 			</dl>
@@ -4576,7 +4576,7 @@
 						<dd>The main character name of the ghost that ran the tag (sakuraname).</dd>
 					</dl>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.04/Ref4は2.6.35</li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.04/Ref4 is 2.6.35</li>
 					</ul>
 				</dd>
 			</dl>
@@ -4610,7 +4610,7 @@
 						<dd>Always empty (a dummy Reference for compatibility with OnRecycleBinEmpty).</dd>
 					</dl>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.04/Ref4は2.6.35</li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.04/Ref4 is 2.6.35</li>
 					</ul>
 				</dd>
 			</dl>

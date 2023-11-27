@@ -1615,7 +1615,7 @@
 			<dl id="_!_set,balloonalign,ID_">
 				<dt class="entry">\![set,balloonalign,(ID)]</dt>
 				<dd class="entry">
-					<p>Switches the balloon to the display direction of one of the following IDs. The definition methods below can be used for the ID.<br>Using the positions below as the base, <a href="descript_shell.html#_1_sakura.balloon.offsetx,座標">the values of balloon.offsetx and balloon.offsety in the shell's descript.txt</a> and <a href="descript_shell_surfaces.html#_2_sakura.balloon.offsetx,座標">the values of balloon.offsetx and balloon.offsety in surfaces.txt</a> are reflected. The initial value is none.</p>
+					<p>Switches the balloon to the display direction of one of the following IDs. The definition methods below can be used for the ID.<br>Using the positions below as the base, <a href="descript_shell.html#_1_sakura.balloon.offsetx,coordinate">the values of balloon.offsetx and balloon.offsety in the shell's descript.txt</a> and <a href="descript_shell_surfaces.html#_2_sakura.balloon.offsetx,coordinate">the values of balloon.offsetx and balloon.offsety in surfaces.txt</a> are reflected. The initial value is none.</p>
 					<p>Effective until the ghost is closed.</p>
 					<dl>
 						<dt>left</dt>
@@ -1884,7 +1884,7 @@
 			<dl id="_f_align,alignment_side_">
 				<dt class="entry">\f[align,(alignment side)]</dt>
 				<dd class="entry">
-					<p>Sets align right (\f[align,right]) ・ center (\f[align,center]) ・ align left (\f[align,left]) for text.
+					<p>Sets align right (\f[align,right]) / center (\f[align,center]) / align left (\f[align,left]) for text.
 					<br />This setting is applied until the next \n, \_l, or other "intentional linebreak".
 					<br />Additionally, if this command is run in the middle of adding characters and such, the string already in the same line will also be moved.
 					<br />Text is returned to align left when an \_l tag is used.
@@ -1903,7 +1903,7 @@
 			<dl id="_f_valign,alignment_side_">
 				<dt class="entry">\f[valign,(alignment side)]</dt>
 				<dd class="entry">
-					<p>Sets align bottom (\f[align,bottom]) ・ center (\f[align,center]) ・ align top (\f[align,top]) for text.
+					<p>Sets align bottom (\f[align,bottom]) / center (\f[align,center]) / align top (\f[align,top]) for text.
 					<br />Additionally, if this command is run in the middle of adding characters and such, the string already in the same line will also be moved.
 					<br />Unlike align, this command will not be reset with \n or \_l.</p>
 					<ul class="supported-baseware">
