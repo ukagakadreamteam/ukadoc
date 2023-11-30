@@ -164,7 +164,7 @@ figcaption {
 	text-align: center;
 }
 figcaption:before {
-	content:"図: ";
+	content:"Figure: ";
 }
 
 
@@ -240,7 +240,7 @@ main figure img {
 }
 main figure.ordered.pict > figcaption:before {
 	counter-increment: figure-pict;
-	content: "図"counter(figure-pict)": ";
+	content: "Figure"counter(figure-pict)": ";
 }
 main > h1 {
 	width: 100%;
