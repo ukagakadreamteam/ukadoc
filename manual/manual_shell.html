@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="ukadoc,伺か,シェル">
-<title>UKADOC Project シェル</title>
+<meta name="keywords" content="ukadoc,伺か,Shell">
+<title>UKADOC Project Shell</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,10 +25,18 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>シェル</h1>
+<h1>Shell</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/manual_shell.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
 	<div class="passage">
-		<p>シェルフォルダのファイルは以下の通り。</p>
+		<p>The files in the shell folder are as follows.</p>
 	</div>
 	<div class="passage">
 <pre>
@@ -42,16 +50,16 @@
 　　　　　　<em class="filename">+-(element).png</em>
 　　　　　　<em class="filename">+-(element).pna</em>
 　　　　　　<em class="filename">+-surfaces.txt</em>
-　　　　　　<em class="filename">+-surfaces**.txt</em> （SSPのみ）
-　　　　　　<em class="filename">+-alias.txt</em>（旧仕様）
+　　　　　　<em class="filename">+-surfaces**.txt</em> (SSP only)
+　　　　　　<em class="filename">+-alias.txt</em> (Old specification)
 　　　　　　<em class="filename">+-thumbnail.png</em>
 　　　　　　<em class="filename">+-makoto.dll</em>
-　　　　　　<em class="filename">+-surfacetable.txt</em> (SSPのみ)
+　　　　　　<em class="filename">+-surfacetable.txt</em> (SSP only)
 　　　　　　+-menu_background.png
 　　　　　　+-menu_foreground.png
 　　　　　　+-menu_sidebar.png
 </pre>
-		<p>※menu_background.png、menu_foreground.png、menu_sidebar.pngについては「<a href="manual_owner_draw_menu.html">オーナードローメニュー</a>」のページへ。</p>
+		<p>※For menu_background.png, menu_foreground.png, and menu_sidebar.png, see the "<a href="manual_owner_draw_menu.html">Owner Draw Menu</a>" page.</p>
 	</div>
 </section>
 <section>
@@ -59,15 +67,15 @@
 		<dl class="component"
 			<dt><a href="descript_shell.html">descript.txt</a></dt>
 			<dd>
-				<p>シェルを識別し、基本的な設定を行うためのファイル。</p>
-				<p>テキスト内の記載事項は<a href="descript_shell.html">リンク先</a>を参照。</p>
+				<p>A file to identify the shell and perform basic configuration.</p>
+				<p>See <a href="descript_shell.html">link</a> for descriptions of items in the text.</p>
 			</dd>
 
 			<dt>readme.txt</dt>
 			<dd>
-				<p>シェル製作者が配布元などを記載するためのもの。</p>
-				<p>省略可能だが、用意しておくと、インストール時やベースウェアのメニューなどから参照できる。</p>
-				<p>特にゴースト作者とシェル作者が異なるような場合には、なるべく用意される事が望ましい。</p>
+				<p>For shell authors to indicate the source of distribution, etc.</p>
+				<p>Can be omitted, but if provided, it can be referenced during installation or from the baseware menu, etc.</p>
+				<p>It is desirable to provide as much as possible, especially when the ghost author and shell author are different.</p>
 			</dd>
 		</dl>
 	</div>
@@ -78,31 +86,31 @@
 			<dt>surface*.png</dt>
 			<dd>
 				<div class="passage">
-					<p>サーフェスファイル。</p>
-					<p>デスクトップに表示される絵。</p>
-					<p>画像サイズ、色数に制限は無い。</p>
-					<p>ファイル形式はPNG<a href="#note1" class="note" id="note1-symbol">※</a>。</p>
+					<p>Surface file.</p>
+					<p>A picture that appears on the desktop.</p>
+					<p>There are no restrictions on image size or number of colors.</p>
+					<p>The file format is PNG<a href="#note1" class="note" id="note1-symbol">※</a>.</p>
 				</div>
 				<div class="passage">
-					<p>画像左上の1ドット(座標0,0)と同色の領域は透過色（抜き色）とされ、表示上透過される。</p>
+					<p>The pixel in the top left corner of the image (coordinates 0,0) is considered to be the transparency color (invisible color), and is transparent on the display.</p>
 				</div>
 				<div class="passage">
-					<p>サーフェスの番号は<a href="descript_shell_surfaces.html#caption_standarddef">ある程度の標準的な割り振り</a>があるものの、基本的には自由。</p>
-					<p>ただし、surface0とsurface10は必須（SSPの場合推奨だが必須ではない）とされる。</p>
-					<p>そのためたとえキャラクター一人のゴーストであっても、surface10.pngとして単色塗りつぶしの画像を用意するなどの必要がある。
+					<p>For surface numbers, although there is <a href="descript_shell_surfaces.html#caption_standarddef">a standard assignment</a>, they can be assigned freely.</p>
+					<p>However, surface0 and surface10 are considered mandatory (recommended but not required for SSP).</p>
+					<p>Therefore, even if it is a ghost of a single character, it is necessary to prepare an image for surface10. For example, an image filled with a single color.
 				</div>
 				<div class="passage">
-					<p>サーフェス番号はベースウェアがMATERIA（embryo、本家の伺か）なら0～8192まで。</p>
-					<p>その他のベースウェアは制限なし。</p>
+					<p>Surface numbers range from 0 to 8192 if the baseware is MATERIA (embryo, original Ukagaka).</p>
+					<p>Other baseware have no restrictions.</p>
 				</div>
 			</dd>
 
 			<dt>surface*.pna</dt>
 			<dd>
 				<div class="passage">
-					<p>サーフェスのアルファチャンネル定義ファイル。</p>
-					<p>グレースケール（黒：透明←→不透明：白）のpng画像の拡張子部分pnaにリネームしたもの。</p>
-					<p>サーフェス番号と同じ番号のpnaファイルを置くことによってサーフェスの半透明化ができる。</p>
+					<p>Alpha channel definition file for a surface.</p>
+					<p>A grayscale png image (black = transparent ←→ opaque = white) renamed to the extension pna.</p>
+					<p>Surfaces can be made semi-transparent by creating a pna file with the same number as the surface number.</p>
 				</div>
 				<div class="passage">
 					<table class="exmp-surface">
@@ -118,29 +126,29 @@
 							<td></td>
 							<td>surface0.pna</td>
 							<td></td>
-							<td>デスクトップの表示</td>
+							<td>Desktop display</td>
 						</tr>
 					</table>
 				</div>
 				<div class="passage">
-					<p>透過が完全でない場所は当たり判定が発生する。</p>
-					<p>またWindows9xや非常に古いグラフィックボードなど、非対応環境ではpnaは無視される。</p>
+					<p>Areas that are not completely transparent can be detected as collisions.</p>
+					<p>Also, pna is ignored in unsupported environments such as Windows 9x and very old graphics boards.</p>
 				</div>
 				<div class="passage">
-					<p>なおSSPでは、<a href="descript_shell.html#seriko.use_self_alpha,%E6%95%B0%E5%80%A4">設定</a>によりpng自体のアルファチャンネル（透明度情報）を使用するようにもできる。</p>
+					<p>In SSP, it is also possible to use the alpha channel (transparency information) of the png itself, via <a href="descript_shell.html#seriko.use_self_alpha,number">settings</a>.</p>
 				</div>
 			</dd>
 
 			<dt>(element).png</dt>
 			<dd>
-				<p><a href="descript_shell_surfaces.html#element*,%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%AE%9A%E7%BE%A9,%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D,X%E5%BA%A7%E6%A8%99,Y%E5%BA%A7%E6%A8%99">element</a>仕様によって、任意名のPNG画像<a href="#note1" class="note" id="note2-symbol">※</a>をパーツとして合成し、一つのsurfaceとして扱う事ができる。そのためのパーツ用画像。</p>
-				<p>※(element)の部分を好きな名前に読み換えてよい。何枚でも使用可能で、当然なくてもよい。</p>
-				<p>詳しくは後述の「surfaces.txt」も参照。</p>
+				<p>According to the <a href="descript_shell_surfaces.html#element*,drawing_method,filename,x_coordinate,y_coordinate">element</a> specification, PNG images<a href="#note1" class="note" id="note2-symbol">※</a> with arbitrary names can be combined as parts and handled as a single surface. This is the image for the parts.</p>
+				<p>※You can replace (element) with any name you like. You may use any number of pieces, but they are of course not required.</p>
+				<p>See also "surfaces.txt" below for details.</p>
 			</dd>
 
 			<dt>(element).pna</dt>
 			<dd>
-				<p>各element合成用パーツ画像ごとのpna。</p>
+				<p>pna for each element (composite parts) image.</p>
 			</dd>
 		</dl>
 	</div>
@@ -151,28 +159,28 @@
 			<dt><a href="descript_shell_surfaces.html">surfaces.txt</a></dt>
 			<dd>
 				<div class="passage">
-					<p>サーフェスのID割り当て、レイヤー合成、アニメーション、当たり判定などを定義するファイル。</p>
-					<p>定義内容については<a href="descript_shell.html">surfaces.txt</a>参照。</p>
+					<p>A file that defines surface ID assignment, layer composition, animations, hitboxes, etc.</p>
+					<p>See <a href="descript_shell.html">surfaces.txt</a> for definitions.</p>
 				</div>
 				<div class="passage">
-					<p>アニメーション、着せ替えについては<a href="manual_animation.html">アニメーション</a>を参照。</p>
+					<p>For animations and dressup, see <a href="manual_animation.html">animation</a>.</p>
 				</div>
 			</dd>
 
 			<dt><a href="descript_shell_surfaces.html">surfaces**.txt</a></dt>
 			<dd>
-				<p>SSP専用。</p>
-				<p>**には任意の文字列を与えてよい。</p>
-				<p>2.01系以降でsurfaces2.txtの名前に対応し、任意の文字列がつけられるようになったのは2.2.57以降。</p>
-				<p>機能は<em class="filename">surfaces.txt</em>と同じ。</p>
-				<p>互換性を維持しつつSSP専用の機能を使うためのもの。</p>
-				<p>このファイルは省略可能。必要な部分のみを追記する形でも問題ない。</p>
+				<p>For SSP only.</p>
+				<p>** can be any string.</p>
+				<p>The name surfaces2.txt has been supported since the 2.01 series, and any string can be used since 2.2.57.</p>
+				<p>The function is the same as <em class="filename">surfaces.txt</em>.</p>
+				<p>This is for using SSP-specific functions while maintaining compatibility.</p>
+				<p>This file can be omitted. It is also acceptable to add only the necessary parts.</p>
 			</dd>
 
 			<dt><a href="descript_shell_surfaces.html#caption_aliastxt">alias.txt</a></dt>
 			<dd>
-				<p>旧仕様。sakura(kero).aliasブレスを記述するためのテキストファイル。</p>
-				<p>現在はsurfaces.txtに機能が統合されている。</p>
+				<p>Old specification. File for writing sakura(kero).alias braces.</p>
+				<p>The functionality is now integrated into surfaces.txt.</p>
 			</dd>
 		</dl>
 	</div>
@@ -182,25 +190,25 @@
 		<dl class="component">
 			<dt>thumbnail.png</dt>
 			<dd>
-				<p>メニューツリーでシェルの選択時に表示されるサムネイル。</p>
-				<p>使用可能な画像形式はpngもしくはjpg。</p>
-				<p>pngをpnrにリネームすると画像左上の1ドット(座標0,0)と同色が透過される。</p>
-				<p>このファイルは省略可能。</p>
+				<p>Thumbnail displayed when a shell is selected in the menu tree.</p>
+				<p>Acceptable image formats are png or jpg.</p>
+				<p>A png renamed to pnr treats the color in the upper left corner of the image (coordinates 0,0) as transparency.</p>
+				<p>This file can be omitted.</p>
 			</dd>
 
 			<dt><a href="manual_translator.html">makoto.dll</a></dt>
 			<dd>
-				<p>トランスレート機能を使うためのもの。</p>
-				<p><a href="manual_ghost.html">ゴースト側</a>に用意できるものと同じ。詳しくは<a href="manual_translator.html">リンク先</a>を参照。</p>
-				<p>このファイルは省略可能。</p>
+				<p>For using the translate function.</p>
+				<p>Same as what can be provided on the <a href="manual_ghost.html">ghost side</a>. See <a href="manual_translator.html">link</a> for details.</p>
+				<p>This file is optional.</p>
 			</dd>
 
 			<dt><a href="descript_shell_surfacetable.html">surfacetable.txt</a></dt>
 			<dd>
-				<p>SSP専用。</p>
-				<p>SSP開発用パレットの「サーフィステスト」機能や、そのほかのシェル作成支援ユーティリティでの利用を目的としたサーフェス内容の定義ファイル。</p>
-				<p>詳しくは<a href="descript_shell_surfacetable.html">リンク先</a>を参照。</p>
-				<p>このファイルは省略可能。</p>
+				<p>SSP only.</p>
+				<p>Suface content definition files for use with the "surface test" function of the SSP development palette and other shell creation support utilities.</p>
+				<p>See the <a href="descript_shell_surfacetable.html">link</a> for more information.</p>
+				<p>This file is optional.</p>
 			</dd>
 		</dl>
 	</div>
@@ -209,9 +217,9 @@
 	<dl>
 		<dt id="note1"><a href="#note1-symbol">※1</a>,<a href="#note2-symbol">※2</a></dt>
 		<dd>
-			<p>SSPでは暗号化PNG(DAP/DDP/DFP/DGP)・GIF（非アニメ）・JPEG・BMPも使用可能だが、<em>非推奨</em>。</p>
-			<p>過去互換の為読み込みは可能だが、今後追加される機能や仕様についてPNG以外の形式がサポートされる保証はない。</p>
-			<p>また現時点でも、PNG以外の全形式で透明度仕様（pnaおよび<a href="descript_shell.html#seriko.use_self_alpha,%E6%95%B0%E5%80%A4">seriko.use_self_alpha</a>）が利用不可であるし、JPEGについては圧縮によって色がずれやすいため透過色と相性が悪いという弊害もある。</p>
+			<p>Encrypted PNG (DAP/DDP/DFP/DGP), GIF, JPEG, and BMP are also available in SSP, but are <em>deprecated</em>.。</p>
+			<p>Although reading is possible due to past compatibility, there is no guarantee that formats other than PNG will be supported for functions and specifications added in the future.</p>
+			<p>Also, at present, transparency specifications (pna and <a href="descript_shell.html#seriko.use_self_alpha,%E6%95%B0%E5%80%A4">seriko.use_self_alpha</a>) are not available for formats other than PNG. JPEG has the disadvantage that it is incompatible with transparency colors because the color tends to shift due to compression.</p>
 		</dd>
 	</dl>
 </aside>
@@ -223,7 +231,7 @@
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">
