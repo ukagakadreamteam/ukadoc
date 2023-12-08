@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="ゴースト,install,インストール">
-<title>UKADOC Project インストール</title>
+<meta name="keywords" content="ghost,install">
+<title>UKADOC Project Install</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,65 +25,72 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>インストール</h1>
+<h1>Install</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/manual_install.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
 	<div class="passage">
-		<p>配布用アーカイブの作成方法自体は「<a href="dev_nar.html">配布用ファイルの作成</a>」のページを参照。</p>
+		<p>See the "<a href="dev_nar.html">Creating files for distribution</a>" page for information on how to create an archive itself for distribution.</p>
 	</div>
 	<div class="passage">
-		<p>ゴーストは一般的に<em class="filename">nar</em>という拡張子のアーカイブで配布される（なー。Nanika ARchive）。</p>
-		<p>narはzipの拡張子を変えただけのもので、実体はzipなので、サーバによってはzipで配布する場合もある。</p>
-		<p>lzhでも解凍DLLがあればインストール可能ではあるがよほどの理由が無い場合は使用しない。</p>
-		<p>SSPではcabや自己解凍exeでも一応インストール可能。</p>
+		<p>Ghosts are generally distributed in archives with the extension <em class="filename">nar</em> (Nanika ARchive).</p>
+		<p>nar is just a different extension on a zip, but the entity is a zip, so some servers may distribute it as zip.</p>
+		<p>Although it is possible to install lzh with a decompression DLL, it should not be used unless there is a good reason to do so.</p>
+		<p>SSP can install cab or self-extracting exe as well.</p>
 	</div>
 	<div class="passage">
-		<p>アーカイブは解凍して手動でインストールすることもできるが、<em class="filename">install.txt</em>が適切に用意されていれば、D&amp;Dなどの手段でインストーラ機能が働き、自動的にインストールできる。</p>
+		<p>The archive can be unzipped and installed manually, but if the <em class="filename">install.txt</em> file is properly prepated, the installer function can work and install files automatically when they are dragged and dropped, or other such means.</p>
 	</div>
 	<div class="passage">
-		<p>narはinstall.txtを含んだゴーストフォルダをベースウェア（SSP）本体にD&amp;Dすることによって作成可能。</p>
-		<p>手動でzip圧縮しリネームしたものと同等だが、その場合フォルダの階層を深くしてしまわないように注意。</p>
+		<p>nar can be created by dragging and dropping a ghost folder containing install.txt to the baseware (SSP) itself.</p>
+		<p>It is equivalent to manually zipping and renaming, but be careful not to make the file hierarchy too deep.</p>
 	</div>
 	<div class="passage">
-		<p>ゴーストを配布する際にゴーストとシェルのフォルダにあるprofileフォルダや、セーブデータ等を含めないように注意すること。</p>
-		<p>ネットワーク更新でも同じことがいえる。</p>
-		<p>SSPでは、その制御のために<em class="filename">developer_options.txt</em>が用意されている。</p>
+		<p>When distributing ghosts, be careful not to include the profile folder in the ghsot and shell folders, save data, etc.</p>
+		<p>The same can be said for network updates.</p>
+		<p>SSP provides <em class="filename">developer_options.txt</em> to control this.</p>
 	</div>
 	<div class="passage">
 		<dl>
-			<dt>標準的なゴーストの場合</dt>
+			<dt>For a standard ghost</dt>
 			<dd>
 <pre>
 +-(myghost)
 　　+-ghost
 　　+-shell
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　+-readme.txt
 　　+-thumbnail.png
 　　:
 　　:
 </pre>
 				<div class="passage hint">
-					<p><em>supplement</em>の場合、上記の内容の<em>フォルダ構造はそのまま</em>、追加するファイルのみ含めた状態でアーカイブ化する。</p>
-					<p>例えばdic_supplement.txtというファイルをghost/master/に追加したいなら</p>
+					<p>In the case of <em>supplement</em>, the folder structure of the above contents will be left as is, with only the files to be added included.</p>
+					<p>For example, if you want to add the file dic_supplement.txt to ghost/master/ it will be structured like so:</p>
 <pre>
 +-(mysupplement)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　+-ghost
 　　　　+-master
 　　　　　　+-dic_supplement.txt
 </pre>
-					<p>となる。</p>
 				</div>
 			</dd>
 
-			<dt>標準的な追加シェルの場合</dt>
+			<dt>For standard additional shells</dt>
 			<dd>
 <pre>
 +-(additional_shell)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　+-descript.txt
 　　+-readme.txt
 　　+-thumbnail.png
@@ -94,12 +101,12 @@
 </pre>
 			</dd>
 
-			<dt>標準的なバルーンの場合</dt>
+			<dt>For standard balloons</dt>
 			<dd>
 <pre>
 +-(myballoon)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　+-descript.txt
 　　+-balloonc*.png
 　　+-balloons*.png
@@ -109,12 +116,12 @@
 </pre>
 			</dd>
 
-			<dt>ゴーストにバルーンなどを同梱する場合</dt>
+			<dt>If you wish to include balloons or other items with the ghost</dt>
 			<dd>
 <pre>
 +-(myghost)
 　　<em class="filename">+-install.txt</em>
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　+-ghost
 　　+-shell
 　　+-(myballoon)
@@ -123,36 +130,36 @@
 　　　　:
 　　　　:
 </pre>
-				<p>プラグインなどでも同様（シェルを同梱する場合はこうせずに普通にshellフォルダ以下に置けばよい）。</p>
-				<p>また、同梱される側（上例のバルーン）にはinstall.txt不要。あっても無視される。</p>
+				<p>The same applies to plugins, etc. (If you want to include a shell in the package, just put it under the shell folder normally instead of doing this).</p>
+				<p>Also, the item to be included (the balloon in the above example) does not need install.txt. Even if it exists, it will be ignored.</p>
 			</dd>
 
-			<dt>(SSP専用)複数インストール用パッケージ</dt>
+			<dt>(SSP only) Package for multiple installations</dt>
 			<dd>
 <pre>
 +-(mypackage)
-　　<em class="filename">+-install.txt</em> (package用)
+　　<em class="filename">+-install.txt</em> (For package)
 　　+-(myghost1)
-　　　　<em class="filename">+-install.txt</em> (myghost1用)
-　　　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　　　<em class="filename">+-install.txt</em> (For myghost1)
+　　　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　　　+-ghost
 　　　　+-shell
 　　　　:
 　　+-(myghost2)
-　　　　<em class="filename">+-install.txt</em> (myghost2用)
-　　　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　　　<em class="filename">+-install.txt</em> (For myghost2)
+　　　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　　　+-ghost
 　　　　+-shell
 　　　　:
 </pre>
-			<p>パッケージ用および個別の内容用それぞれに、別のinstall.txtが必要な点に注意。</p>
-			<p>ghostに限らず単体のアーカイブにできるあらゆるものを同梱可能だが、shellやsupplementなど特定の対象があるものは、異なる対象のものを混ぜないように注意。</p>
+			<p>Note that a separate install.txt file is required for the package and for the individual items.</p>
+			<p>Any item that can be included in a stand-alone archive, not just Ghost, can be included. But be careful not to mix different objects if there is a specific target, such as with shell or supplement.</p>
 			</dd>
 		</dl>
 	</div>
 
 	<div class="passage">
-		その他、ヘッドラインセンサ、プラグイン単体配布なども同様に、その一番上のディレクトリにinstall.txtを置く。
+		Others, such as headline sensors, stand-alone plugin distribution, etc., should similarly place install.txt at the top of their directory. 
 	</div>
 </section>
 <section>
@@ -160,19 +167,19 @@
 		<dl class="component">
 			<dt><a href="descript_install.html">install.txt</a></dt>
 			<dd>
-				<p>インストール設定を記載するテキスト。</p>
-				<p>このファイルがなければD&amp;Dなどによる自動インストール機能は動作しない。</p>
-				<p>アーカイブの内容種別、アーカイブ名称、ディレクトリ名などを設定する。</p>
-				<p>詳細は<a href="descript_install.html" title="install.txt">リンク先</a>を参照。</p>
+				<p>Text describing installation settings.</p>
+				<p>Without this file, the automatic installation function via dragging and dropping or other methods will not work.</p>
+				<p>Set the archive content type, archive name, directory name, etc.</p>
+				<p>See <a href="descript_install.html" title="install.txt">link</a> for details.</p>
 			</dd>
 
 			<dt><a href="descript_install.html#developer_options.txt">developer_options.txt</a></dt>
 			<dd>
-				<p>SSPのみ。省略可。</p>
-				<p>install.txtと同じ場所に配置する。</p>
-				<p>ただし複数インストール用パッケージの場合、最上位のinstall.txtではなく、各コンテンツのinstall.txtのある場所に用意する点に注意。</p>
-				<p>SSPでnarを作る場合に、対象に含めないファイルなどを設定するためのファイル。</p>
-				<p>書式など詳しくは<a href="descript_install.html#developer_options.txt" title="developer_options.txt">リンク先</a>を参照。</p>
+				<p>SSP only. May be omitted.</p>
+				<p>Place it in the same location as install.txt.</p>
+				<p>Note, however, that in the case of a package for multiple installations, it should be placed in the location where the install.txt of each item is located, not the top-level install.txt.</p>
+				<p>A file for setting which files should be excluded when creating nar with SSP.</p>
+				<p>See <a href="descript_install.html#developer_options.txt" title="developer_options.txt">link</a> for formatting and other details.</p>
 			</dd>
 		</dl>
 	</div>
@@ -185,7 +192,7 @@
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="伺か,アニメーション,着せ替え,ukadoc,ゴースト">
-<title>UKADOC Project アニメーション/着せ替えの設定</title>
+<meta name="keywords" content="伺か,Animation,Dressup,ukadoc,Ghost">
+<title>UKADOC Project Animation/Dressup settings</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,38 +25,46 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>着せ替えの設定</h1>
+<h1>Dressup settings</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/dev_bind.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
-	<h1 id="manual_mayuna">着せ替え</h1>
+	<h1 id="manual_mayuna">Dressup</h1>
 	<div class="passage">
-		<p>伺かのシェルには<em>着せ替え</em>を持たせることができます（着せ替え自体の説明は「Shell設定 - surfaces.txt」の「<a href="descript_shell_surfaces.html#introduction_mayuna">着せ替え（MAYUNA）</a>」を参照）。</p>
-		<p>着せ替えを利用すれば、オーナードローメニューから選択した場合に、単一のシェル内でキャラクターの外見の一部を切り替えたり、オン・オフすることができるようになります。</p>
-		<p>SSPの場合は<a href="list_sakura_script.html#_!_bind,category_name,part_name,value_">さくらスクリプトの命令</a>からも着せ替えを切り替えることが可能です。</p>
+		<p>Ukagaka shells can have <em>dressups</em>. (For an explanation of the dressup itself, see "Shell settings - surfaces.txt" (specifically <a href="descript_shell_surfaces.html#introduction_mayuna">dressup (MAYUNA)</a>).</p>
+		<p>Dressups allow you to switch parts of your character's appearance on and off within a single shell, when selected from the owner draw menu.</p>
+		<p>In the case of SSP, dressups can also be toggled with <a href="list_sakura_script.html#_!_bind,category_name,part_name,value_">Sakura Script commands.</a></p>
 	</div>
 	<div class="passage">
-		<p>着せ替えはMATERIA、SSPのみ可能で、CROWでは着せ替え初期配置のみで表示されます。</p>
-		<p>ただし、MATERIAはバグにより\0側しか着せ替えメニューが表示されません。</p>
-		<p>従って\1以降も含めて完全に実装されているのは実質SSPのみとなっています。</p>
+		<p>Dressup is only possible in MATERIA and SSP, and in CROW only the initial dressup configuration is displayed.</p>
+		<p>However, due to a bug, MATERIA only displays the dressup menu on the \0 side.</p>
+		<p>Therefore, SSP is the only one that is fully implemented, including characters from \1 and after.</p>
 	</div>
 	<div class="passage">
-		<p>なおこのページの解説は、アニメーションの設定自体には一定の理解がある事が前提となっています。</p>
-		<p>アニメーション設定については、「シェルの作成」のページの「<a href="dev_shell.html#chapter3-2">surfaces.txtを書く - アニメーション編</a>」の節を参照してください。</p>
+		<p>The explanations on this page assume a certain level of understanding of animation settings themselves.</p>
+		<p>For more information on setting up animations, please refer to the "<a href="dev_shell.html#chapter3-2">Write surfaces.txt - Animation section</a>" of the "Shell Creation" page.</p>
 	</div>
 </section>
 <nav>
-	<h1>目次</h1>
+	<h1>Table of Contents</h1>
 	<ol>
-		<li><a href="#chapter1">surfaces.txtでの設定</a></li>
-		<li><a href="#chapter2">descript.txtでの設定</a></li>
+		<li><a href="#chapter1">surfaces.txt setup</a></li>
+		<li><a href="#chapter2">descript.txt setup</a></li>
 	</ol>
 	<ol class="ex">
-		<li>（準備中）SSPの着せ替えメニュー設定あれこれ</li>
-		<li>（準備中）動きのある着せ替え</li>
-		<li>（準備中）ある着せ替えが他の着せ替えの前後にまたがる三次元構造の場合</li>
+		<li>(To be written) SSP dressup menu settings</li>
+		<li>(To be written) Dressups with motion</li>
+		<li>(To be written) The case of a dressup with a three-dimensional structure, where one dressup is behind and in front of another dressup</li>
 	</ol>
 </nav>
 <section id="chapter1" class="ordered">
-	<h1>surfaces.txtでの設定</h1>
+	<h1>surfaces.txt setup</h1>
 	<div class="passage">
 <pre class="exmp-descript2">
 surface0
@@ -70,38 +78,38 @@ animation0.pattern3,add,103,0,0,0
 </pre>
 	</div>
 	<div class="passage">
-		<p>上記のように、intervalにbindを指定したアニメーションが、着せ替えになります。</p>
-		<p>add、reduceといった描画メソッドについては後述します。</p>
-		<p>ウェイト指定は0になっていますが、intervalがbindのアニメーションの（つまり着せ替えの）設定の場合、ウェイトに何を指定しても無視されます。</p>
-		<p>X座標・Y座標のオフセット位置指定は普通のアニメーションパターンと同様に指定できます。</p>
-		<p>また、animation0の「0」と言う数字は、アニメーションのIDですが、着せ替えの場合特にこのIDが重要になります。</p>
+		<p>As sown above, animations with the bind interval are dressups.</p>
+		<p>Drawing methods such as add and reduce are described below.</p>
+		<p>The wait specitication is set to 0. If the interval of an animation is set to bind (i.e. it is a dressup), the wait is ignored no matter what it is specified as.</p>
+		<p>Offset positions with the X and Y coordinates can be specified in the same way as with ordinary animation patterns.</p>
+		<p>Also, the number "0" in animation0 is the ID of the animation, and this is especially important in the case of dressups.</p>
 	</div>
 	<section id="chapter1-1">
-		<h1>着せ替えの描画メソッドについて</h1>
+		<h1>About dressup drawing methods</h1>
 		<div class="passage">
-			<p>本家伺かでは着せ替えは基本的にbind、add、reduce、insertの4つのメソッドを使う事になっていました。</p>
-			<p>SSPでは、それに加えてbase、overlay、overlayfast、replace、interpolate、asisなどのメソッドが、通常のアニメーションと共通して使える事になっています。</p>
-			<p>ただし、startやstop、moveなどの単純に画像を合成するのでないメソッドは使用できません。</p>
+			<p>In the original ukagaka, dressup was done using four methods: bind, add, reduce, and insert.</p>
+			<p>In SSP, methods such as base, overlay, overlayfast, replace, interpolate, and asis can additionally be used, the same as with normal animation.</p>
+			<p>However, methods that do not simply composite images, such as start, stop, and move, cannot be used.</p>
 		</div>
 	</section>
 </section>
 <section class="ordered" id="chapter1">
-	<h1>descript.txtでの設定</h1>
+	<h1>descript.txt setup</h1>
 	<div class="passage">
-		<p>descript.txtで行う内容は、一言で言えば着せ替えをオーナードローメニューの着せ替えメニューに表示するための準備です。</p>
-		<p>以下のように記述します。</p>
+		<p>In short, what you do in descript.txt is to prepare the dressups to display in the dressup section of the owner draw menu.</p>
+		<p>Write it as follows.</p>
 <pre class="exmp-descript2">
-sakura.bindgroup0.name,服,エプロンドレス,apron.png
-sakura.bindgroup1.name,リボン,白リボン,ribbonwhite.png
-sakura.bindgroup2.name,服,黒服,black.png
-sakura.bindgroup3.name,リボン,黒リボン,ribbonblack.png
+sakura.bindgroup0.name,Clothing,Apron dress,apron.png
+sakura.bindgroup1.name,Ribbon,White ribbon,ribbonwhite.png
+sakura.bindgroup2.name,Clothing,Black dress,black.png
+sakura.bindgroup3.name,Ribbon,Black ribbon,ribbonblack.png
 
 sakura.bindgroup0.default,1
 sakura.bindgroup1.default,1
 
-kero.bindgroup0.name,ネクタイ,ネクタイ
-kero.bindgroup1.name,腕章,黒腕章
-kero.bindgroup2.name,腕,ドリル
+kero.bindgroup0.name,Necktie,Necktie
+kero.bindgroup1.name,Arm band,Black armband
+kero.bindgroup2.name,Arm,Drill
 
 kero.bindgroup0.default,1
 kero.bindgroup1.default,1
@@ -119,46 +127,46 @@ kero.menuitem3,2
 </pre>
 	</div>
 	<div class="passage">
-		<p>上記のように記述することで本体側の着せ替えメニューに「エプロンドレス」「黒服」「白リボン」「黒リボン」</p>
-		<p>相方側のメニューに「ネクタイ」「腕章」「腕」が出現し、それらを自由に着脱することができるようになります。</p>
+		<p>By writing the above, "Apron dress", "Black dress", "White ribbon", and "Black ribbon" will appear in the dressup menu of the main character.</p>
+		<p>A "Necktie", "Armband", and "Arm" will appear in the menu on the partner character's side, and you will be able to take them on and off at will.</p>
 	</div>
 	<div class="passage">
-		<p>?.bindgroup*は左から順に、カテゴリ名、パーツ名、サムネイルファイル名をカンマで区切って記述します。</p>
-		<p>この時「bindgroup*」の*の数字は、surfaces.txtで設定した着せ替えのアニメーションIDと対応します。</p>
-		<p>従って、全サーフェス間で、同じ服（着せ替え）に同じアニメーションIDが与えられていなければならないことに注意してください。</p>
+		<p>?.bindgroup* specifies, from left to right, category name, part name, and thumbnail name separated by commas.</p>
+		<p>At this time, the * number in "bindgroup*" corresponds to the animation ID of the dressup set in surfaces.txt.</p>
+		<p>Therefore, please note that the same clothes (dressup) must be given the same animation ID across all surfaces.</p>
 	</div>
 	<div class="passage">
-		<p>?.bindgroup*.defaultは、アニメーションIDが「*」の着せ替えを、そのシェルの着せ替えの初期値としてを設定します。</p>
-		<p>上例の設定ではデフォルトでエプロンドレス＆白リボン、ネクタイ＆黒腕章になります。</p>
-		<p>0を指定もしくは省略すると着せ替えOFF状態となる。</p>
+		<p>?.bindgroup*.default sets the dressup with the animation ID of * as the default dressup for that shell.</p>
+		<p>The above example configuration defaults to Apron dress & White ribbon, Necktie & Black armband.</p>
+		<p>If 0 is specified or the setting is omitted, the dressup is off by default.</p>
 	</div>
 	<div class="passage">
-		<p>?.menuitem*,* はメニュー項目の構造を表しています。
-		<p>メニュー表示順に番号を割り振り、カンマで区切りbindgroup*の*にあたる番号を指定します（ここでの指定はアニメーションIDではないので注意）。</p>
-		<p>bindgroupIDの代わりに「-」と記述すると、メニュー内のその位置にセパレータ（区切り線）が表示されます。</p>
-		<p>上例だと本体側着せ替えメニューの表示は、上から順に黒服、黒リボン、（セパレータ）、エプロンドレス、白リボンとなります。</p>
+		<p>?.menuitem*,* represents the structure of the menu item.</p>
+		<p>Assign the numbers in the order in which the menu should be displayed, add a comma to separate, then specify the number corresponding to the * in bindgroup* (note that the specification here is not the animation ID).</p>
+		<p>If "-" is written in place of bindgroupID, a separator (a dividing line) will be displayed at that position in the menu.</p>
+		<p>In the example above, the dressup menu of the main character shows, in order from top to bottom, Black dress, Black ribbon, (separator), Apron dress, White ribbon.</p>
 	</div>
 	<div class="passage">
-		<p>サムネイルはメニュー選択時のガイドとして表示されます。</p>
-		<p>不要な場合省略して構いませんが、着せ替えの数が多い場合や、名前から着せ替え内容を連想し難いような場合には指定してあると便利でしょう。</p>
+		<p>Thumbnails are displayed as a guide for menu selection.</p>
+		<p>You may omit it if you do not need it, but it may be useful if you have a large number of dressups or if it is difficult to associate the name of the dressup with the content of the dressup.</p>
 	</div>
 </section>
 <section class="ordered ex" id="chapterEX1">
-	<h1>SSPの着せ替えメニュー設定あれこれ</h1>
+	<h1>SSP dressup menu settings</h1>
 	<div class="passage">
-		<p>準備中</p>
+		<p>To be written</p>
 	</div>
 </section>
 <section class="ordered ex" id="chapterEX2">
-	<h1>動きのある着せ替え</h1>
+	<h1>Dressups with motion</h1>
 	<div class="passage">
-		<p>準備中</p>
+		<p>To be written</p>
 	</div>
 </section>
 <section class="ordered ex" id="chapterEX3">
-	<h1>ある着せ替えが他の着せ替えの前後にまたがる三次元構造の場合</h1>
+	<h1>The case of a dressup with a three-dimensional structure, where one dressup is behind and in front of another dressup</h1>
 	<div class="passage">
-		<p>準備中</p>
+		<p>To be written</p>
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -169,7 +177,7 @@ kero.menuitem3,2
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">

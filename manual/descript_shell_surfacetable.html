@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project Shell設定 - surfacetable.txt</title>
+<title>UKADOC Project Shell Settings - surfacetable.txt</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">Shell設定 - surfacetable.txt</h1>
+	<h1 id="page-title">Shell Settings - surfacetable.txt</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -140,12 +140,12 @@
 		<section class="navigation-category">
 			<h1>surfacetable.txt</h1>
 			<ul>
-				<li><a href="#charset,文字コード">charset,文字コード</a></li>
-				<li><a href="#version,数値">version,数値</a></li>
-				<li><a href="#option,オプション1,オプション2,...">option,オプション1,オプション2,...</a></li>
-				<li><a href="#group,グループ名">group,グループ名</a></li>
-				<li><a href="#scope,数値">scope,数値</a></li>
-				<li><a href="#サーフェスID,名前">サーフェスID,名前</a></li>
+				<li><a href="#charset,character_code">charset,(character code)</a></li>
+				<li><a href="#version,number">version,(number)</a></li>
+				<li><a href="#option,option1,option2,...">option,(option1),(option2),...</a></li>
+				<li><a href="#group,group_name">group,(group name)</a></li>
+				<li><a href="#scope,number">scope,(number)</a></li>
+				<li><a href="#surface_ID,name">(surface ID),(name)</a></li>
 			</ul>
 		</section>
 	</section>
@@ -153,90 +153,91 @@
 		<section class="caption introduction" id="introduction_surfacetable.txt">
 			<h1>surfacetable.txt</h1>
 			<section>
-				<h1>概要</h1>
-				<p>SSP開発用パレットの「サーフィステスト」機能や、そのほかのシェル作成支援ユーティリティでの利用を目的としたサーフェス内容の定義ファイル。</p>
+				<h1>Summary</h1>
+				<p>A surface content definition file, intended for use with the "Surface Test" function of the SSP development palette and other shell creation support utilities.</p>
 			</section>
 			<section>
-				<h1>基本の書式</h1>
-				<p>記載例</p>
-<pre><code>charset,Shift_JIS
+				<h1>Basic format</h1>
+				<p>Sample description</p>
+<pre><code>charset,UTF-8
 version,1
 option,DisableNoDefineSurfaces
 
-//==========パーツ==========
+//==========Parts==========
 group,__disabled
 {
 	19,__parts
 }
 
-//==========クー==========
-group,[空]平日
+//==========Ku==========
+group,[Sora]Weekday
 {
 	scope,0
 	
-	0,素
-	1,照れ
-	3,不安
-	4,はぅー
-	5,笑
+	0,Default
+	1,Shy
+	3,Anxious
+	4,Relief
+	5,Laughter
 }
 </code></pre>
-				<p>// から始まる行はコメントとみなされ、完全に無視される。</p>
-				<p>半角スペースおよびタブによるインデントが可能。</p>
+				<p>(Translator note: In the above example, "Sora" and "Ku" are the name and nickname of a particular ghost character.)</p>
+				<p>Lines beginning with // are considered comments and are completely ignored.</p>
+				<p>Indentation with tabs and half-width spaces is possible.</p>
 			</section>
 		</section>
 		<section class="category">
 			<h1>surfacetable.txt</h1>
-			<dl id="charset,文字コード">
-				<dt class="entry">charset,文字コード</dt>
+			<dl id="charset,character_code">
+				<dt class="entry">charset,(character code)</dt>
 				<dd class="entry">
-					<p>表示する文字コード。記載は必ずファイルの一行目に。</p>
-					<p class="default">Shifi_JIS</p>
+					<p>Character code to be displayed. This description must be on the first line of the file.</p>
+					<p class="default">Shift_JIS</p>
 				</dd>
 			</dl>
-			<dl id="version,数値">
-				<dt class="entry">version,数値</dt>
+			<dl id="version,number">
+				<dt class="entry">version,(number)</dt>
 				<dd class="entry">
-					<p>srufacetable.txtの書式のバージョン。現在のところ常に1でよい。</p>
+					<p>Version of the format of surfacetable.txt. Currently it should always be 1.</p>
 					<p class="default">1</p>
 				</dd>
 			</dl>
-			<dl id="option,オプション1,オプション2,...">
-				<dt class="entry">option,オプション1,オプション2,...</dt>
+			<dl id="option,option1,option2,...">
+				<dt class="entry">option,(option1),(option2),...</dt>
 				<dd class="entry">
-					<p>オプション指定。カンマ区切りで複数列挙できる。<br>現在のところ指定できるのは「DisableNoDefineSurfaces」のみで、surfaces.txt等での定義がなく、surfacetable.txt内でも明示されていないサーフェスについて無視する。</p>
-					<p class="default">挙動なし</p>
+					<p>Option specification. Multiple options can be separated by commas.<br>Currently, only "DisableNoDefineSurfaces" can be specified, which ignores surfaces that are not defined in surfaces.txt or other documents and are not explicitly specified in surfacetable.txt.</p>
+					<p class="default">No behavior</p>
 				</dd>
 			</dl>
-			<dl id="group,グループ名">
-				<dt class="entry">group,グループ名</dt>
+			<dl id="group,group_name">
+				<dt class="entry">group,(group name)</dt>
 				<dd class="entry">
 					<p>
-						後述の<a href="#サーフェスID,名前">サーフェス名</a>定義行をまとめたグループに識別上の名前を与える。
-						<br>すぐ下に「{」のみの行を続け、「}」のみの行で閉じる。
-						<br>グループ名を「__disabled」とした場合、そのグループ内のサーフェスは使用されていないことを示す（SSPのサーフェステストではリストに表示されなくなる）。
+						Gives an identifying name to a group of <a href="#surface_ID,name">surface name</a> definition lines described below it.
+						<br>Continue immediately below with a line containing only "{", and close with a line containing only ")".
+						<br>A group name of "__disabled" indicates that surfaces in that group are not in use (they will not appear in the list in SSP's surface test).
 					</p>
-					<p class="default">挙動なし</p>
+					<p class="default">No behavior</p>
 				</dd>
 			</dl>
-			<dl id="scope,数値">
-				<dt class="entry">scope,数値</dt>
+			<dl id="scope,number">
+				<dt class="entry">scope,(number)</dt>
 				<dd class="entry">
-					<p>そのグループのサーフェスが主に属するスコープの番号。<br>グループ内に一つ記載する。<br>本体側なら0、相方側なら1など。</p>
-					<p class="default">挙動なし</p>
+					<p>The number of the scope to which the surfaces in that group primarily belong.<br>Write one item in each group.<br>0 for the main character, 1 for the side character, etc.</p>
+					<p class="default">No behavior</p>
 				</dd>
 			</dl>
-			<dl id="サーフェスID,名前">
-				<dt class="entry">サーフェスID,名前</dt>
+			<dl id="surface_ID,name">
+				<dt class="entry">(surface ID),(name)</dt>
 				<dd class="entry">
 					<p>
-						サーフェスIDに対して識別上の名前を与える。
-						<br>普通グループ内に記載する。
-						<br>グループ内で最初に書かれたものは、そのグループでの標準的なサーフェスとみなされる（scope,0なら0、scope,1なら10といったような）。
-						<br>名前を「__parts」とした場合、そのサーフェスは主にアニメーションや着せ替えなどのパーツとして用いられるものである事を示す（SSPのサーフェステストでは名前が無指定であるように扱われる）。
-						<br>名前を省略した場合、名前が未定義であることを明示できる。SSPのサーフィステストでは<a href="descript_shell_surfaces.html#caption_standarddef">特定サーフェス</a>のみ未指定でも初期値が与えられるため、そういったサーフェスについて指定を解除したい場合に利用する。
+						Give a unique name to the surface ID.
+						<br>It is usually listed within a group.
+						<br>The first one written in a group is considered the standard surface in that group (such as 0 for scope,0, and 10 for scope,1).
+						<br>The name "__parts" indicates that the surface is primarily used as a part for animations, dressups, etc. (treated as if the name were unspecified in SSP's surface test).
+						<br>If the name is omitted, it indicates that the name is undefined. In SSP's surface test, for <a href="descript_shell_surfaces.html#caption_standarddef">surfaces with initial values</a>, the initial value is used if nothing is specified. This setting can be used to cancel the specification for such a surface.
 					</p>
-					<p class="default">挙動なし/SSPのサーフィステストでは、特定のサーフェスのみ<a href="descript_shell_surfaces.html#caption_standarddef">標準的なサーフェス定義</a>。</p>
+					<p class="default">No behavior/standard surface definition for <a href="descript_shell_surfaces.html#caption_standarddef">certain surfaces</a> in SSP's surface test.</p>
 				</dd>
 			</dl>
 		</section>

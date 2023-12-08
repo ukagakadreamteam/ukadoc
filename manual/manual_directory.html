@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="ukadoc,伺か,ファイル構成">
-<title>UKADOC Project 全体の構成</title>
+<meta name="keywords" content="ukadoc,伺か,file configuration">
+<title>UKADOC Project Overall structure</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,14 +25,22 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>全体の構成</h1>
-<section>
-	<h1>ゴーストとシェル</h1>
+<h1>Overall structure</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
 	<div class="passage">
-		<p>ゴーストの構成ファイルは、ベースウェア(SSP,materiaなど)のゴースト格納フォルダに配置される。</p>
-		<p>全てのゴーストは必ずひとつのmasterゴーストとmasterシェルを持つ必要がある。</p>
-		<p>シェルの立場から見ると、全てのシェルは必ずいずれか一つのゴーストに所属している。</p>
-		<p>従って両者のファイル構成は、下記のようにシェルがゴーストに含まれる形になる。</p>
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/manual_directory.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
+<section>
+	<h1>Ghost and Shell</h1>
+	<div class="passage">
+		<p>Ghost configuration files are placed in the ghost storage folder of the baseware (SSP, materia, etc.).</p>
+		<p>All ghosts must have one master ghost and master shell.</p>
+		<p>From the shell's perspective, every shell always belongs to a ghost.</p>
+		<p>Therefore, the file structure of both will be such that the shell is included in the ghost as shown below.</p>
 	</div>
 <pre>
 <em class="filename">+-(myghost)</em>
@@ -52,53 +60,53 @@
 　　　　　　+-(element).png
 　　　　　　+-(element).pna
 　　　　　　+-surfaces.txt
-　　　　　　+-makoto.dll (必要な時のみ)
+　　　　　　+-makoto.dll (Only when necessary)
 　　　　　　+-menu_background.png
 　　　　　　+-menu_foreground.png
 　　　　　　+-menu_sidebar.png
-　　　　　　+-readme.txt (必要な時のみ)
+　　　　　　+-readme.txt (Only when necessary)
 　　　　　　+-thumbnail.png
-　　　　　　+-surfaces**.txt (SSPのみ）
-　　　　　　+-surfacetable.txt (必要な時のみ)(SSPのみ)
-　　　　　　+-alias.txt (必要な時のみ)(旧仕様）
+　　　　　　+-surfaces**.txt (SSP only)
+　　　　　　+-surfacetable.txt (Only when necessary) (SSP only)
+　　　　　　+-alias.txt (Only when necessary) (Old specification)
 　　　　<em class="filename">+-(additional_shell)</em>
-　　+-delete.txt (必要な時のみ)
-　　+-delete1.txt (delete[数字].txtも追加で認識できる)
-　　+-developer_options.txt (必要な時のみ)(SSPのみ)
-　　<em class="filename">+-readme.txt (必要な時のみ)</em>
-　　<em class="filename">+-terms.txt (必要な時のみ)</em>
+　　+-delete.txt (Only when necessary)
+　　+-delete1.txt (delete[number].txt will also be recognized)
+　　+-developer_options.txt (Only when necessary) (SSP only)
+　　<em class="filename">+-readme.txt (Only when necessary)</em>
+　　<em class="filename">+-terms.txt (Only when necessary)</em>
 　　<em class="filename">+-thumbnail.png</em>
 </pre>
 </section>
 <section>
-	<h1>バルーン</h1>
+	<h1>Balloon</h1>
 	<div class="passage">
-		<p>バルーンはゴーストごとでなく、一つのベースウェアの元に統括的に管理され、全ゴーストで共有される。</p>
-		<p>各バルーン構成ファイルはベースウェアのバルーン格納フォルダ以下に、下記のような形で配置される。</p>
+		<p>Balloons are managed centrally under a single baseware, not per-ghost, and are shared by all ghosts.</p>
+		<p>Each balloon configuration file is placed in the balloon storage folder of the baseware as shown below.</p>
 	</div>
 <pre>
 <em class="filename">+-(myballoon)</em>
 　　+-descript.txt
 　　+-balloons*s.txt
 　　+-balloonk*s.txt
-　　<em class="filename">+-readme.txt (必要な時のみ)</em>
-　　<em class="filename">+-terms.txt (必要な時のみ)</em>
+　　<em class="filename">+-readme.txt (Only when necessary)</em>
+　　<em class="filename">+-terms.txt (Only when necessary)</em>
 　　+-balloons*.png
 　　+-balloonk*.png
-　　+-balloons*.pna （MATERIA不可）
-　　+-balloonk*.pna （MATERIA不可）
+　　+-balloons*.pna (Not available in MATERIA)
+　　+-balloonk*.pna (Not available in MATERIA)
 　　+-balloonc*.png
 　　+-online*.png
 　　+-sstp.png
 　　+-arrow*.png
 　　+-thumbnail.png
-　　+-ok_down.png/ok_up.png （SSPのみ）
-　　+-cancel_down.png/cancel_up.png （SSPのみ）
-　　+-mode_down.png/mode_up.png （SSPのみ）
-　　+-sstp_new.png （SSPのみ）
-　　+-marker.png （SSPのみ）
-　　+-delete.txt (SSPのみ・必要な時のみ)
-　　+-delete1.txt (delete[数字].txtも追加で認識できる)
+　　+-ok_down.png/ok_up.png (SSP only)
+　　+-cancel_down.png/cancel_up.png (SSP only)
+　　+-mode_down.png/mode_up.png )SSP only)
+　　+-sstp_new.png (SSP only)
+　　+-marker.png (SSP only)
+　　+-delete.txt (SSP only, only when necessary)
+　　+-delete1.txt (delete[number].txt will also be recognized)
 </pre>
 </section>
 <section>
@@ -106,8 +114,8 @@
 		<dl class="component">
 			<dt>(myghost)\</dt>
 			<dd>
-				<p>各ゴーストホームディレクトリ（ルートフォルダ）。</p>
-				<p>フォルダ名称は英数推奨。</p>
+				<p>Each ghost's home directory (root folder).</p>
+				<p>Alphanumeric folder names are recommended.</p>
 			</dd>
 		</dl>
 	</div>
@@ -117,19 +125,19 @@
 		<dl class="component">
 			<dt><span class="directory">(myghost)\</span>ghost\</dt>
 			<dd>
-				<p>ゴーストの内部動作用ファイルのフォルダ。</p>
+				<p>Folder of files for internal operation of the ghost.</p>
 			</dd>
 
 			<dt><span class="directory">(myghost)\ghost\</span>master\</dt>
 			<dd>
-				<p>ゴーストのデフォルトで使用されるフォルダ。</p>
-				<p>現在はmasterしか使用されない（過去の設計の名残）。</p>
+				<p>Folder used by default for the ghost.</p>
+				<p>Currently only master is used (it is a remnant of past design).</p>
 			</dd>
 		</dl>
 	</div>
 	<div class="passage">
-		<p>ゴーストフォルダ内のファイル構成の詳細は「<a href="manual_ghost.html">ゴースト</a>」のページへ。</p>
-		<p>makoto.dllについては「<a href="manual_translator.html">トランスレータ</a>」のページへ。</p>
+		<p>For details on the file structure in the ghost folder, go to the "<a href="manual_ghost.html">Ghost</a>" page.</p>
+		<p>For more information on makoto.dll, go to the "<a href="manual_translator.html">translator</a>" page.</p>
 	</div>
 </section>
 <section>
@@ -137,23 +145,23 @@
 		<dl class="component">
 			<dt><span class="directory">(myghost)\</span>shell\</dt>
 			<dd>
-				<p>ゴーストのシェル（グラフィック表示用ファイル群）のフォルダを格納するフォルダ。</p>
+				<p>A folder that contains the folders of the ghost's shells (a group of files for displaying graphics).</p>
 			</dd>
 			<dt><span class="directory">(myghost)\shell\</span>master\</dt>
 			<dd>
-				<p>デフォルトシェルのフォルダ。必須。</p>
+				<p>Default shell folder. Required.</p>
 			</dd>
 			<dt><span class="directory">(myghost)\shell\</span>(additional_shell)\</dt>
 			<dd>
-				<p>追加シェルのフォルダ。任意名（英数字推奨）。ファイル構成はmasterと同じ。</p>
-				<p>いくつでも存在できる。存在するとオーナードローメニューなどから切替選択できる。</p>
+				<p>Folders for additional shells. The name is arbitrary (alphanumeric characters recommended). File structure is the same as master.</p>
+				<p>Any number of them can exist. If they exist, they can be switched to from the owner draw menu, etc.</p>
 			</dd>
 		</dl>
 	</div>
 	<div class="passage">
-		<p>シェルフォルダ内のファイル構成の詳細は「<a href="manual_shell.html">シェル</a>」のページへ。</p>
-		<p>menu_background.png、menu_foreground.png、menu_sidebar.pngについては「<a href="manual_owner_draw_menu.html">オーナードローメニュー</a>」のページへ。</p>
-		<p>makoto.dllについては「<a href="manual_translator.html">トランスレータ</a>」のページへ。</p>
+		<p>For details on the file structure in the shell folder, go to the "<a href="manual_shell.html">shell</a> page.</p>
+		<p>For menu_background.png, menu_foreground.png, and menu_sidebar.png, go to the "<a href="manual_owner_draw_menu.html">Owner Draw Menu</a>" page.</p>
+		<p>For more information on makoto.dll, go to the "<a href="manual_translator.html">translator</a>" page.</p>
 	</div>
 </section>
 <section>
@@ -161,41 +169,41 @@
 		<dl class="component">
 			<dt><span class="directory">(myghost)\</span><a href="descript_install.html#delete.txt">delete.txt</a></dt>
 			<dd>
-				<p>ファイルの削除設定ファイル。</p>
-				<p>詳細は<a href="descript_install.html#delete.txt" title="delete.txt">リンク先</a>を参照。</p>
-				<p>省略可能。</p>
+				<p>File deletion configuration file.</p>
+				<p>See <a href="descript_install.html#delete.txt" title="delete.txt">link</a> for details.</p>
+				<p>Optional.</p>
 			</dd>
 
 			<dt><span class="directory">(myghost)\</span><a href="descript_install.html#developter_options.txt">developer_options.txt</a></dt>
 			<dd>
-				<p>SSP専用。narおよび更新ファイル作成機能の設定ファイル。</p>
-				<p>詳細は<a href="descript_install.html#developer_options.txt" title="developer_options.txt">リンク先</a>を参照。</p>
-				<p>省略可能。</p>
+				<p>SSP only. Configuration file for nar and update file creation.</p>
+				<p>See <a href="descript_install.html#developer_options.txt" title="developer_options.txt">link</a> for details.</p>
+				<p>Optional.</p>
 			</dd>
 
 			<dt><span class="directory">(myghost)\</span>readme.txt</dt>
 			<dd>
-				<p>ゴースト全体のreadme。</p>
-				<p>配布者や配布元など明記するのが一般的。</p>
-				<p>1行目にcharset,UTF-8と書いておくか、BOMを含んでおけばShift JIS以外も使える。</p>
-				<p>インストール時に開かれるほか、オーナードローメニューなどからも開ける。</p>
-				<p>省略可能だが存在するのが望ましい。</p>
+				<p>Readme for the entire ghost.</p>
+				<p>It is common to indicate the distributor, source of distribution, etc.</p>
+				<p>If you write "charset,UTF-8" in the first line or include a BOM, you can use charsets other than Shift JIS.</p>
+				<p>It can be opened during installation or from the owner draw menu.</p>
+				<p>Can be omitted, but should be present.</p>
 			</dd>
 
 			<dt><span class="directory">(myghost)\</span>terms.txt</dt>
 			<dd>
-				<p>利用条件表示。NAR/ZIPファイルのインストール前にこの内容を表示するダイアログが出る。</p>
-				<p>インストールを中断してダイアログ表示するので、どうしても必要な場合のみ入れること。</p>
-				<p>readmeと同じく、1行目にcharset,UTF-8と書いておくか、BOMを含んでおけばShift JIS以外も使える。</p>
-				<p>省略可能、かつ<em>不要なら省略することが望ましい</em>。</p>
+				<p>Terms of use indication; a dialog box appears to display this content prior to installation of the NAR/ZIP file.</p>
+				<p>It will interrupt the installation and display a dialog, so only use it if absolutely necessary.</p>
+				<p>Like the readme, if you write "charset,UTF-8" in the first line or include a BOM, you can use charsets other than Shift JIS.</p>
+				<p>Can be omitted, and <em>should be omitted if unnecessary</em>.</p>
 			</dd>
 
 			<dt><span class="directory">(myghost)\</span>thumbnail.png</dt>
 			<dd>
-				<p>メニューツリーでゴーストの選択時に表示されるサムネイル。</p>
-				<p>使用可能な画像形式はpngもしくはjpg。</p>
-				<p>pngをpnrにリネームすると画像左上の1ドット(座標0,0)と同色が透過される。</p>
-				<p>省略可能。</p>
+				<p>Thumbnail displayed when the ghost is selected in the menu tree.</p>
+				<p>Acceptable image formats are png or jpg.</p>
+				<p>A png renamed to pnr treats the color in the upper left corner of the image (coordinates 0,0) as transparency.</p>
+				<p>Optional.</p>
 			</dd>
 		</dl>
 	</div>
@@ -205,13 +213,13 @@
 		<dl class="component">
 			<dt>(myballoon)\</dt>
 			<dd>
-				<p>各バルーンホームディレクトリ（ルートフォルダ）。</p>
-				<p>フォルダ名称は英数推奨。</p>
+				<p>Each balloon's home directory (root folder).</p>
+				<p>Alphanumeric folder names are recommended.</p>
 			</dd>
 		</dl>
 	</div>
 	<div class="passage">
-		<p>バルーンフォルダ内のファイル構成の詳細は「<a href="manual_balloon.html">バルーン</a>」のページへ。</p>
+		<p>For details on the file structure in the balloon folder, go to the "<a href="manual_balloon.html">balloon</a>" page.</p>
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -222,7 +230,7 @@
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">

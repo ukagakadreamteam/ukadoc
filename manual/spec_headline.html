@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -135,40 +135,48 @@
 		<section class="navigation-category">
 			<h1>HEADLINE/2.0</h1>
 			<ul>
-				<li><a href="#chapter0">前書</a></li>
-				<li><a href="#chapter1">ヘッドラインの実体</a></li>
+				<li><a href="#chapter0">Preface</a></li>
+				<li><a href="#chapter1">Headline substance</a></li>
 				<li><a href="#chapter2">DLL</a></li>
-				<li><a href="#chapter3">request - response 1: version取得</a></li>
-				<li><a href="#chapter4">request - response 2: ヘッドライン取得</a></li>
+				<li><a href="#chapter3">request - response 1: version acquisition</a></li>
+				<li><a href="#chapter4">request - response 2: Get Headlines</a></li>
 				<li><a href="#chapter5">desctipt.txt</a></li>
-				<li><a href="#chapter6">補足</a></li>
+				<li><a href="#chapter6">Supplement</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<div class="passage">
+				<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+				<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/spec_headline.html">here</a>.</p>
+				<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+			</div>
+		</section>
 		<div class="caption">
-			<p>最終変更：<time>2013-08-07</time></p>
+			<p>Last updated: <time>2013-08-07</time></p>
 		</div>
 		<div class="caption">
-			<p>参考：<a href="http://usada.sakura.vg/contents/headlinesenser.html">HEADLINE/1.1</a>（外部サイト）</p>
+			<p>Reference: <a href="http://usada.sakura.vg/contents/headlinesenser.html">HEADLINE/1.1</a> (External site)</p>
 		</div>
 		<section id="chapter0">
-			<h1>前書</h1>
-			<p>HEADLINE/2.0は、旧来仕様（1.1）の改訂版です。現在SSPのみ実装。</p>
-			<p>主な変更は文字コード指定の追加です。</p>
+			<h1>Preface</h1>
+			<p>HEADLINE/2.0 is a revised version of the old specification (1.1). It is currently only implemented in SSP.</p>
+			<p>The main change is the addition of a character code specification.</p>
 		</section>
 		<section id="chapter1">
-			<h1>ヘッドラインの実体</h1>
-			<p>設定ファイル「descript.txt」とexecute 関数をエクスポートするdllファイルの2つが必要です。</p>
+			<h1>Headline substance</h1>
+			<p>Two files are required: a configuration file called "descript.txt", and a dll file that includes the export of the execute function.</p> <!-- Translator note: I have no idea what "Export" means in this context, but that seems to be what the katakana say -->
 		</section>
 		<section id="chapter2">
 			<h1>DLL</h1>
-			<p><a href="spec_dll.html">DLLのページ</a>を参照してください。</p>
+			<p>Please refer to the <a href="spec_dll.html">DLL page</a>.</p>
 		</section>
 		<section id="chapter3">
-			<h1>request - response 1: version取得</h1>
+			<h1>request - response 1: version acquisition</h1>
 			<section>
-				<h1>request例</h1>
+				<h1>request example</h1>
 <pre><code><!--
 -->GET Version HEADLINE/2.0
 Charset: UTF-8
@@ -176,16 +184,16 @@ Sender: SSP
 </code></pre>
 			</section>
 			<section>
-				<h1>requestヘッダ詳細</h1>
+				<h1>request header details</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>文字コード</dd>
+					<dd>Character code</dd>
 					<dt>Sender</dt>
-					<dd>イベント送信元</dd>
+					<dd>Event source</dd>
 				</dl>
 			</section>
 			<section>
-				<h1>response例</h1>
+				<h1>response example</h1>
 <pre><code><!--
 -->HEADLINE/2.0 200 OK
 Charset: UTF-8
@@ -193,19 +201,19 @@ Value: HeadlineModule 1.1
 </code></pre>
 			</section>
 			<section>
-				<h1>responseヘッダ詳細</h1>
+				<h1>response header details</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>[省略可]文字コード。省略した場合は呼び出し側指定のもの。</dd>
+					<dd>[Optional] Character code. If omitted, it will be the one specified by the caller.</dd>
 					<dt>Value</dt>
-					<dd>[省略可]バージョン文字列</dd>
+					<dd>[Optional] Version string</dd>
 				</dl>
 			</section>
 		</section>
 		<section id="chapter4">
-			<h1>request - response 2: ヘッドライン取得</h1>
+			<h1>request - response 2: Get Headlines</h1>
 			<section>
-				<h1>request例</h1>
+				<h1>request example</h1>
 <pre><code><!--
 -->GET Headline HEADLINE/2.0
 Charset: UTF-8
@@ -215,64 +223,64 @@ Path: C:\SSP\temp\ad9326dc37cb86a9.html
 </code></pre>
 			</section>
 			<section>
-				<h1>requestヘッダ詳細</h1>
+				<h1>request header details</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>文字コード</dd>
+					<dd>Character code</dd>
 					<dt>Sender</dt>
-					<dd>イベント送信元</dd>
+					<dd>Event source</dd>
 					<dt>Option</dt>
-					<dd>[省略可]応答で解析可能なオプション。カンマ区切りで列挙。<br />現在urlのみ。responseのHeadlineヘッダの項参照。</dd>
+					<dd>[Optional] Options that can be parsed in the response. Comma-separated list.<br />Currently only URL. See Headline header section of response.</dd>
 					<dt>Path</dt>
-					<dd>ヘッドライン解析対象ファイルパス（フルパス）。</dd>
+					<dd>File path (full path) of the headline analysis target.</dd>
 				</dl>
 			</section>
 			<section>
-				<h1>response例</h1>
+				<h1>response example</h1>
 <pre><code><!--
 -->HEADLINE/2.0 200 OK
 Charset: UTF-8
-Headline: ほげほげ1
-Headline: ほげほげ2
-Headline: ほげほげ3
-Headline: ほげほげ4
-Headline: ほげほげ5
+Headline: example1
+Headline: example2
+Headline: example3
+Headline: example4
+Headline: example5
 </code></pre>
 			</section>
 			<section>
-				<h1>responseヘッダ詳細</h1>
+				<h1>response header details</h1>
 				<dl>
 					<dt>Charset</dt>
-					<dd>[省略可]文字コード。省略した場合は呼び出し側指定のもの。</dd>
+					<dd>[Optional] Character code. If omitted, it will be the one specified by the caller.</dd>
 					<dt>RequestCharset</dt>
-					<dd>[省略可]次の呼び出し時に希望する文字コード。省略した場合はCharset。</dd>
+					<dd>[Optional] The desired charset for the next call. If omitted, same as Charset.</dd>
 					<dt>Headline</dt>
-					<dd>ヘッドラインの内容。<br />呼び出し時にOption: urlというふうに、Optionヘッダにurlが入っていた場合、URL拡張に対応しています。<br />その場合は、バイト値1区切りで、 内容[1]URL という形式で応答すると、ゴーストにURLも通知され、ゴースト側が対応していれば項目をクリックするとその詳細にジャンプ、等ができるかもしれません。<br />尚、返却するのはさくらスクリプトの断片ではなく、タグは使えません。単なるプレーンテキストを返却します。</dd>
+					<dd>Headline content.<br />If a URL is included in the Option header when calling, such as Option: url, it supports URL expansion.<br />In this case, if you respond with the format "content[1]URL", with [1] representing a byte 1 value, the ghost will be notified of the URL. If the ghost supports it, you may be able jump to the details by clicking on the item, for example.<br />Note that the returned text is not a fragment of SakuraScript, and tags cannot be used. Just plain text is returned.</dd>
 				</dl>
 			</section>
 		</section>
 		<section id="chapter5">
 			<h1>descript.txt</h1>
-			<p><a href="descript_headline.html">Headline設定のページ</a>を参照してください。</p>
+			<p>Please refer to the <a href="descript_headline.html">Headline settings page</a>.</p>
 		</section>
 		<section id="chapter6">
 			<h1>SHIORI Event</h1>
-			<p>いずれも詳細は<a href="list_shiori_event.html">SHIORI Eventのページ</a>を参照してください。</p>
+			<p>For details, please refer to the <a href="list_shiori_event.html">SHIORI Event page</a>.</p>
 			<dl>
 				<dt><a href="list_shiori_event.html#OnHeadlinesenseBegin">OnHeadlinesenseBegin</a></dt>
-				<dd>ヘッドラインセンス開始時。</dd>
+				<dd>At the start of Headline Sense.</dd>
 				<dt><a href="list_shiori_event.html#OnHeadlinesense.OnFind">OnHeadlinesense.OnFind</a></dt>
-				<dd>読みあげる内容があった時。</dd>
+				<dd>When there is content to read out.</dd>
 				<dt><a href="list_shiori_event.html#OnHeadlinesenseComplete">OnHeadlinesenseComplete</a></dt>
-				<dd>ヘッドラインセンス正常終了時。</dd>
+				<dd>When the headline sense ends normally.</dd>
 				<dt><a href="list_shiori_event.html#OnHeadlinesenseFailure">OnHeadlinesenseFailure</a></dt>
-				<dd>ヘッドラインセンス失敗時。</dd>
+				<dd>When headline sense fails.</dd>
 			</dl>
 		</section>
 		<section id="chapter7">
-			<h1>補足</h1>
-			<p>GET Headlineは2回呼ばれます。1回目は古いファイルに対して、2回目は新しいファイルに対してです。ただし古->新の順番は実装によっては順番が逆になる可能性がありますので、順番に依存するような処理は組んではいけません。</p>
-			<p>デバッグ中など、常に表示したい場合（no updateにならない）は、descript.txtにalwaysdisplay,1と書いてみてください（デバッグ終了後に必ず消す事）。</p>
+			<h1>Supplement</h1>
+			<p>GET Headline is called twice, once for the old file and once for the new file. However, the order of old -> new may be reversed in some implementations, so do not create a process that depends on the order.</p>
+			<p>If you want it to always display while debugging (without "no update"), try writing alwaysdisplay,1 in the descript.txt file (be sure to delete it after debugging is finished).</p>
 		</section>
 	</div>
 </body>

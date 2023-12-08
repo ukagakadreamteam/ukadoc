@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="伺か,オーナードロー,右クリックメニュー,ukadoc">
-<title>UKADOC Project オーナードローメニューの設定</title>
+<meta name="keywords" content="伺か,Owner Draw,Right click menu,ukadoc">
+<title>UKADOC Project Owner Draw Menu Settings</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,35 +25,43 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>オーナードローメニューの設定</h1>
+<h1>Owner Draw Menu Settings</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/dev_ownerdraw.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
 	<div class="passage">
-		<p>オーナードローメニュー（右クリックメニュー）の表示を設定する方法について解説します。</p>
-		<p>ファイル構成の「<a href="manual_owner_draw_menu.html">オーナードローメニュー</a>」もあわせて参考にしてください。</p>
+		<p>This section explains how to set the display of the owner draw menu (right click menu).</p>
+		<p>See also the "<a href="manual_owner_draw_menu.html">owner draw menu</a>" page in the file structure section.</p>
 	</div>
 	<div class="passage">
-		<p>設定は、シェルの<em class="filename">descript.txt</em>に記載するか、リソース取得用に発行されるいくつかのSHIORI Eventに対するレスポンスとして設定します。</p>
+		<p>The settings can be in the shell's <em class="filename">descript.txt</em> file, or as a response to several SHIORI Events issued for resource acquisition.</p>
 	</div>
 </section>
 <nav>
-	<h1>目次</h1>
+	<h1>Table of Contents</h1>
 	<ol>
-		<li><a href="#chapter1">シェルのdescript.txtで設定する</a></li>
-		<li><a href="#chapter2">SHIORI Eventで設定する</a></li>
+		<li><a href="#chapter1">Configure in the shell's descript.txt</a></li>
+		<li><a href="#chapter2">Configure with SHIORI Event</a></li>
 	</ol>
 </nav>
 <section id="chapter1" class="ordered">
-	<h1>シェルのdescript.txtで設定する</h1>
+	<h1>Configure in the shell's descript.txt</h1>
 	<div class="passage">
-		<p>シェルの<em class="filename">descript.txt</em>で設定できるのは通常時・選択中の背景およびサイドバーとして使われる３枚の画像と、文字色です。</p>
-		<p>SSPのみ、文字サイズおよびフォントの指定も可能です。</p>
-		<p>また着せ替えメニューの項目の配置などもシェルの<em class="filename">descript.txt</em>で行いますが、これについては「<a href="dev_bind.html">着せ替えの設定</a>」のページを参照してください。</p>
+		<p>In the shell's<em class="filename">descript.txt</em> file, you can set the three images that will be used as the background and sidebar, and the text color.</p>
+		<p>For SSP only, text size and font can also be specified.</p>
+		<p>The arrangement of the dressup menu items is also done in the shell's <em class="filename">descript.txt</em> file. See the "<a href="dev_bind.html">dressup settings</a>" page for more information.</p>
 	</div>
 	<div class="passage">
-		<p>なお、同じ項目についてSHIORI Eventを利用する方法でも同時に設定されている場合、SHIORI Eventによる設定が優先されますので注意してください。</p>
+		<p>Note that if the same item is also set using the SHIORI Event method, the SHIORI Event setting will take precedence.</p>
 	</div>
 	<div class="passage">
-		<p>以下が<em class="filename">descript.txt</em>による記述の例です。</p>
+		<p>The following is an example of a description using <em class="filename">descript.txt</em>.</p>
 <pre class="exmp-descript">
 menu.background.bitmap.filename,background.png
 menu.foreground.bitmap.filename,foreground.png
@@ -76,7 +84,7 @@ menu.disable.font.color.120
 menu.disable.font.color.120
 menu.disable.font.color.120
 </pre>
-		<p>各行の詳細は、「<a href="descript_shell.html#menu.font.name,フォント名">Shell設定</a>」にありますが、以下大まかに説明します。</p>
+		<p>Details of each line can be found in "<a href="descript_shell.html#menu.font.name,フォント名">Shell Settings</a>", but a basic explanation will be given below.</p>
 	</div>
 	<div class="passage">
 <pre class="exmp-descript">
@@ -84,14 +92,14 @@ menu.background.bitmap.filename,background.png
 menu.foreground.bitmap.filename,foreground.png
 menu.sidebar.bitmap.filename,sidebar.png
 </pre>
-		<p>上記三行は、オーナードローメニューに使われる3種類の画像それぞれについての設定です。</p>
-		<p>backgroundは、通常時のメニュー背景です。</p>
-		<p>foregroundは、選択されている項目の背景画像です。少しわかり難いですが、オーナードローメニューの現在カーソルが載っている部分だけ、foreground画像のその位置の部分でbackground画像から置き換わります。</p>
-		<p>sidebarは、オーナードローメニューの左側に付属する画像です。</p>
+		<p>The three lines above are settings for each of the three types of images used in the owner draw menu.</p>
+		<p>background is the menu background when displayed normally.</p>
+		<p>foreground is the background image used for the selected item. It is a little confusing, but only the part of the owner draw menu where the cursor is currently located will replace the background image with the foreground image.</p>
+		<p>sidebar is the image attached to the left side of the owner draw menu.</p>
 		<figure id="model_shiori-event">
-			<p><a href="image/ownerdraw_materials.png"><img src="image/ownerdraw_materials.png" width="400" height="421"  alt="オーナードローメニューに使われる三つの画像"></a></p>
-			<p><a href="image/ownerdraw_view.png"><img src="image/ownerdraw_view.png" width="331" height="314"  alt="オーナードローメニューの表示"></a></p>
-			<figcaption>上が使われる3つの画像、下が実際の表示（例:Emily/Phase4.5）</figcaption>
+			<p><a href="image/ownerdraw_materials.png"><img src="image/ownerdraw_materials.png" width="400" height="421"  alt="The three images used in the owner draw menu"></a></p>
+			<p><a href="image/ownerdraw_view.png"><img src="image/ownerdraw_view.png" width="331" height="314"  alt="View of the owner draw menu"></a></p>
+			<figcaption>Above are the three images used, below is the actual display (Example from Emily/Phase4.5)</figcaption>
 		</figure>
 	</div>
 	<div class="passage">
@@ -100,8 +108,8 @@ menu.background.alignment,lefttop
 menu.foreground.alignment,lefttop
 menu.sidebar.alignment,bottom
 </pre>
-		<p>上記三行は、3種類の画像それぞれの配置についての設定です。</p>
-		<p>background、foregroundの画像は上例の場合左上を起点に配置され、もしメニューの文字数や項目数の関係で、メニューが背景画像よりも大きくなる時、はみ出す領域の右側及び下側は、それぞれ画像の右端と左端の色が延長されて表示されます。</p>
+		<p>The three lines above are settings for the placement of each of the three types of images.</p>
+		<p>In the above example, the background and foreground images are placed starting from the top left. If the menu becomes larger than the background image due to the number of characters or items in the menu, the right and bottom of the overflowing area will be extended with the color of the right edge and left edge of the image, respectively.</p>
 	</div>
 	<div class="passage">
 <pre class="exmp-descript">
@@ -118,22 +126,22 @@ menu.disable.font.color.120
 menu.disable.font.color.120
 menu.disable.font.color.120
 </pre>
-		<p>上記は文字色の設定です。</p>
-		<p>backgroundは通常時のメニュー文字色、foregroundは項目にカーソルが載っている時の文字色、separatorはメニューの区切り字の色、disableは例えば着せ替えがないシェルでの着せ替えメニューやネットワーク更新に非対応なゴーストでのネットワーク更新の項目など、非アクティブな項目の文字色です。</p>
-		<p>RGBカラーのそれぞれの色要素について、0～255の数値で指定します。rgb全てが255なら白、全てが0なら黒になります。</p>
+		<p>Above is the text color setting.</p>
+		<p>background is the normal menu text color, foreground is the text color when the cursor is on an item, separator is the menu separator color, and disable is the text color of inactive items. For example, the disable text color is used for the dressup menu in a shell without dressup or the network update item in a ghost that does not support network updates.</p>
+		<p>For each RGB color element, specify a number between 0 and 255. Red green and blue all set to 255 means white, and red green and blue all set to 0 means black.</p>
 	</div>
 </section>
 <section id="chapter2" class="ordered">
-	<h1>SHIORI Eventで設定する</h1>
+	<h1>Configure with SHIORI Event</h1>
 	<div class="passage">
-		<p>シェル側<em class="filename">descript.txt</em>による設定と同様の設定に加え、メニュー各項目の表示名や、お気に入り・ポータルのリンク集について内容の設定が可能です。</p>
-		<p>なお、同じ項目についてシェル側<em class="filename">descript.txt</em>に設定があったとしても、SHIORI Eventによる設定が優先されます。</p>
+		<p>In addition to the same settings as in the shell-side <em class="filename">descript.txt</em> file, you can configure the display name of each menu item, and the contents of the links in the Recommendations and Portal Site.</p>
+		<p>Note that even if there are settings for the same item in the shell's <em class="filename">descript.txt</em>, the SHIORI Event settings take precedence.</p>
 	</div>
 	<div class="passage">
-		<p>メニューに関するリソースを取得するためのSHIORI Eventに対して、どのように値を設定し・返却するかは各SHIORIの解説を参照する必要があります。</p>
-		<p>例えば里々の場合は以下のページが参考になるでしょう。</p>
-		<p><a href="http://soliton.sub.jp/satori/index.php?%B1%A6%A5%AF%A5%EA%A5%C3%A5%AF%A5%E1%A5%CB%A5%E5%A1%BC">里々wiki - 右クリックメニュー</a></p>
-		<p>その他どのようなSHIORI Eventがあるかについては「<a href="list_shiori_resource.html#menu.sidebar.bitmap.filename">SHIORI Resource</a>」のページを参照してください。</p>
+		<p>You need to refer to each SHIORI's description for how to set and return values for SHIORI Events to obtain resources related to the menu.</p>
+		<p>For example, in the case of Satori, the following pages may be helpful.</p>
+		<p><a href="http://soliton.sub.jp/satori/index.php?%B1%A6%A5%AF%A5%EA%A5%C3%A5%AF%A5%E1%A5%CB%A5%E5%A1%BC">Satori wiki - right-click menu</a></p>
+		<p>Please refer to the "<a href="list_shiori_resource.html#menu.sidebar.bitmap.filename">SHIORI Resource</a>" page to see what other SHIORI Events are available.</p>
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -144,7 +152,7 @@ menu.disable.font.color.120
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">
