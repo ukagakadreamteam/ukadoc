@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="伺か,makoto,トランスレータ">
-<title>UKADOC Project トランスレータ</title>
+<meta name="keywords" content="伺か,makoto,Translator">
+<title>UKADOC Project Translator</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,14 +25,22 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>トランスレータ</h1>
+<h1>Translator</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/manual_translator.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
 	<div class="passage">
-		<p>トランスレータのことをゴーストではMAKOTOと称する。</p>
-		<p>ゴースト側・シェル側の両方に配置できる（CROWはゴースト側のみ）。</p>
+		<p>The translator function in ghosts is called MAKOTO.</p>
+		<p>Can be placed on both the ghost and the shell side (in CROW it can only be on the ghost side).</p>
 	</div>
 	<div class="passage">
-		<p>ゴースト側で使用する場合はmaster直下に<em class="filename">makoto.dll</em>がある必要がある。</p>
+		<p>When used on the ghost side, <em class="filename">makoto.dll</em> must be located directly under the master folder.</p>
 <pre>
 +-(myghost)
 　　+-ghost
@@ -45,11 +53,11 @@
 </pre>
 	</div>
 	<div class="passage">
-		<p>シェル側で使用する場合は各シェルのフォルダ直下にmakoto.dllがある必要がある。</p>
+		<p>When used on the shell side, makoto.dll must be located directly under the folder of each shell.</p>
 <pre>
 +-(myghost)
 　　+-shell
-　　　　+-master(またはadditional_shell)
+　　　　+-master (or additional_shell)
 　　　　　　<em class="filename">+-makoto.dll</em>
 　　　　　　+-descript.txt
 　　　　　　+-surface*.png
@@ -62,18 +70,18 @@
 </section>
 <section>
 	<div class="passage">
-		<p>SHIORIが作成したスクリプトに対し、フィルタとして働き文字列を置き換えるための仕組み。</p>
-		<p>ゴースト側とシェル側療法にある場合、先にゴースト側のトランスレートが行われてから、続けてシェル側のトランスレートが行われる。</p>
-		<p>トランスレートのタイミングはバルーンに表示される直前。</p>
-		<p>SHIORI同様MAKOTOとして使用できるファイルは多数あり、詳しい使い方はそれぞれのドキュメントを参照する必要がある。</p>
+		<p>A mechanism to work as a filter and replace strings for scripts created by SHIORI.</p>
+		<p>If there is both ghost side and shell side translation, the ghost side is translated first, followed by the shell side.</p>
+		<p>Translation is performed just before the balloon is displayed.</p>
+		<p>Like SHIORI, there are many files that can be used as MAKOTO, and detailed usage instructions should be found in their respective documents.</p>
 	</div>
 	<div class="passage">
-		<p>過去、SHIORIのなかった時代にトークに変化を与えるために使用されていたが、今はそのような役割は主にSHIORIが担う。</p>
-		<p>現在では、シェルによって口調を変化させるなどの仕掛けに利用される事がある。</p>
+		<p>In the past, it was used to add variety to dialogue in times when there was no SHIORI. Now such a role is primarily played by the SHIORI.</p>
+		<p>Nowadays, they are sometimes used for tricks such as changing the tone of voice depending on the shell.</p>
 	</div>
 	<div class="passage">
-		<p>SHIORI EventのOnTranslateでもトランスレートが可能（＝SHIORIはゴースト側のMAKOTOを兼ねる）。</p>
-		<p>もしMAKOTOとSHIORIの両方でトランスレートをする場合の処理順序は、SHIORI→MAKOTO。</p>
+		<p>Translate is also possible with the SHIORI Event OnTranslate (i.e., SHIORI also serves as MAKOTO on the ghost side).</p>
+		<p>If both MAKOTO and SHIORI perform translation, the processing order is SHIORI → MAKOTO.</p>
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -84,7 +92,7 @@
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">

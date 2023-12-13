@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project Web関連</title>
+<title>UKADOC Project Web related</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">Web関連</h1>
+	<h1 id="page-title">Web related</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -131,7 +131,7 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>Web関連</h1>
+		<h1>Web related</h1>
 		<section class="navigation-category">
 			<ul>
 				<li><a href="#x-ukagaka-link">x-ukagaka-link</a></li>
@@ -140,39 +140,47 @@
 		</section>
 	</section>
 	<div class="categories">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<ul>
+				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
+				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/spec_web.html">here</a>.</li>
+				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
+			</ul>
+		</section>
 		<section class="category caption introduction" id="chapter0">
-			<h1>Web関連</h1>
-			<p>(執筆中)</p>
+			<h1>Web related</h1>
+			<p>(To be written)</p>
 		</section>
 		<section class="category" id="x-ukagaka-link">
-			<h1>x-ukagaka-link スキーム</h1>
-			<p>[現在SSP限定] ワンクリックでWebサイト上からなにかしらを実行するために、x-ukagaka-link というURLスキームを用意しています。
-			<br />必ず文字コードはUTF-8で、URLエンコードされた文字列である必要があります。
-			<br />書き方は以下の通りです。</p>
+			<h1>x-ukagaka-link scheme</h1>
+			<p>[Currently SSP only] A URL scheme called x-ukagaka-link is available to perform something from a website with a single click.
+			<br />The character encoding must always be UTF-8 and the string must be URL-encoded.
+			<br />Here is how to write it.</p>
 			
 			<section>
 				<dl>
-					<dt class="entry">x-ukagaka-link:type=event&amp;ghost=(ゴースト名)&amp;info=(追加情報)</dt>
-					<dd class="entry">URLを開くと<a href="list_shiori_event.html#OnXUkagakaLinkOpen">OnXUkagakaLinkOpen</a>イベントが発生する。
-					<br />(ゴースト名)はdescript.txtのnameかsakura.nameと同じもの、(追加情報)内は任意の文字列。
-					<br />サンプル：<a href="x-ukagaka-link:type=event&ghost=Emily&info=sweet-potato-feeding">x-ukagaka-link:type=event&amp;ghost=Emily&amp;info=sweet-potato-feeding</a></dd>
+					<dt class="entry">x-ukagaka-link:type=event&amp;ghost=(Ghost Name)&amp;info=(Additional information)</dt>
+					<dd class="entry">When the URL is opened, the <a href="list_shiori_event.html#OnXUkagakaLinkOpen">OnXUkagakaLinkOpen</a> event is fired.
+					<br />(Ghost name) is the same as name or sakura.name in descript.txt, and (Additional information) is an arbitrary string.
+					<br />Sample: <a href="x-ukagaka-link:type=event&ghost=Emily&info=sweet-potato-feeding">x-ukagaka-link:type=event&amp;ghost=Emily&amp;info=sweet-potato-feeding</a></dd>
 					
-					<dt class="entry">x-ukagaka-link:type=install&amp;url=(エンコード済URL)</dt>
-					<dd class="entry">URLを開くと、指定したURLにあるNARファイルをインストールする。
-					<br />(エンコード済URL)はURLエンコードされたNARの置き場所。
-					<br />サンプル：<a href="x-ukagaka-link:type=install&url=http%3A%2F%2Fssp.shillest.net%2Fghost%2Fbonsyou.nar">x-ukagaka-link:type=install&amp;url=http%3A%2F%2Fssp.shillest.net%2Fghost%2Fbonsyou.nar</a></dd>
+					<dt class="entry">x-ukagaka-link:type=install&amp;url=(Encoded URL)</dt>
+					<dd class="entry">When the URL is opened, the NAR file at the specified URL is installed.
+					<br />(Encoded URL) is the URL-encoded NAR location.
+					<br />Sample:<a href="x-ukagaka-link:type=install&url=http%3A%2F%2Fssp.shillest.net%2Fghost%2Fbonsyou.nar">x-ukagaka-link:type=install&amp;url=http%3A%2F%2Fssp.shillest.net%2Fghost%2Fbonsyou.nar</a></dd>
 
-					<dt class="entry">x-ukagaka-link:type=homeurl&amp;url=(エンコード済URL)</dt>
-					<dd class="entry">[2.5.76] URLを開くと、指定したURLを更新先URLとして認識し、ネットワーク更新と同じ方法でファイル群を取得した後、それをインストールする。
-					<br />(エンコード済URL)はURLエンコードされたNARの置き場所。
-					<br />サンプル：<a href="x-ukagaka-link:type=homeurl&url=http%3A%2F%2Fms.shillest.net%2Fghost%2Fmobilemaster%2F">x-ukagaka-link:type=homeurl&amp;url=http%3A%2F%2Fms.shillest.net%2Fghost%2Fghost%2Fmobilemaster%2F</a></dd>
+					<dt class="entry">x-ukagaka-link:type=homeurl&amp;url=(Encoded URL)</dt>
+					<dd class="entry">[2.5.76] When the URL is opened, it recognizes the specified URL as an update destination URL. It will obtain a group of files in the same way as sa network update, and then intalls them.
+					<br />(Encoded URL) is the URL-encoded NAR location.
+					<br />Sample:<a href="x-ukagaka-link:type=homeurl&url=http%3A%2F%2Fms.shillest.net%2Fghost%2Fmobilemaster%2F">x-ukagaka-link:type=homeurl&amp;url=http%3A%2F%2Fms.shillest.net%2Fghost%2Fghost%2Fmobilemaster%2F</a></dd>
 				</dl>
 			</section>
 		</section>
 		<section class="category" id="application-x-nar">
-			<h1>application/x-nar MIMEタイプ</h1>
-			<p>[現在SSP限定] NARファイル用に、application/x-nar というMIMEタイプを推奨しています。
-			<br />ただし、application/zip等も受け入れ可能です。</p>
+			<h1>application/x-nar MIME type</h1>
+			<p>[Currently SSP only] The MIME type of application/x-nar is recommended for NAR files.
+			<br />However, application/zip, etc., are also possible.</p>
 		</section>
 	</div>
 </body>

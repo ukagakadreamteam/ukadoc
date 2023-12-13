@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="伺か,更新,ネットワーク">
-<title>UKADOC Project ネットワーク</title>
+<meta name="keywords" content="伺か,update,Network">
+<title>UKADOC Project Network</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,15 +25,23 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>ネットワーク更新</h1>
+<h1>Network Update</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/manual_update.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
 	<div class="passage">
-		<p>ネットワーク更新のための設定などは「<a href="dev_update.html">ネットワーク更新への対応</a>」のページを参照。</p>
-		<p>ネットワーク更新に関係するファイルの配置は以下の通り。</p>
+		<p>See the "<a href="dev_update.html">Support for Network Updates</a>" page for information on setting up network updates.</p>
+		<p>The placement of files related to network updates is as follows.</p>
 	</div>
 	<div class="passage">
 		<dl>
-			<dt>ゴーストの場合</dt>
+			<dt>For a ghost</dt>
 			<dd>
 <pre>
 +-(myghost)
@@ -42,15 +50,15 @@
 　　<em class="filename">+-updates2.dau</em>
 　　<em class="filename">+-updates.txt</em>
 　　<em class="filename">+-delete.txt</em>
-　　<em class="filename">+-delete1.txt</em> (SSPのみ・delete[数字].txtを認識可)
-　　<em class="filename">+-developer_options.txt</em> (SSPのみ)
+　　<em class="filename">+-delete1.txt</em> (SSP only / delete[number].txt can also be recognized)
+　　<em class="filename">+-developer_options.txt</em> (SSP only)
 　　+-readme.txt
 　　+-thumbnail.png
 </pre>
 			</dd>
 
 
-			<dt>(SSPのみ)追加シェルをネットワーク更新に対応させる場合</dt>
+			<dt>(SSP only) If you want to make additional shells compatible with network updates</dt>
 			<dd>
 <pre>
 +-(myshell)
@@ -59,7 +67,7 @@
 　　<em class="filename">+-updates2.dau</em>
 　　<em class="filename">+-updates.txt</em>
 　　<em class="filename">+-delete.txt</em>
-　　<em class="filename">+-delete1.txt</em> (SSPのみ・delete[数字].txtを認識可)
+　　<em class="filename">+-delete1.txt</em> (SSP only / delete[number].txt can also be recognized)
 　　<em class="filename">+-developer_options.txt</em>
 　　+-readme.txt
 　　+-thumbnail.png
@@ -67,14 +75,14 @@
 			</dd>
 
 
-			<dt>(SSPのみ)バルーンをネットワーク更新に対応させる場合</dt>
+			<dt>(SSP only) If you want to make the balloon compatible with network updates</dt>
 			<dd>
 <pre>
 +-(myballoon)
 　　<em class="filename">+-updates2.dau</em>
 　　<em class="filename">+-updates.txt</em>
 　　<em class="filename">+-delete.txt</em>
-　　<em class="filename">+-delete1.txt</em> (SSPのみ・delete[数字].txtを認識可)
+　　<em class="filename">+-delete1.txt</em> (SSP only / delete[number].txt can also be recognized)
 　　<em class="filename">+-developer_options.txt</em>
 　　+-descript.txt
 　　+-balloons*s.txt
@@ -85,7 +93,7 @@
 　　:
 　　:
 </pre>
-				<p>他、プラグイン、ヘッドラインなども同様に、そのフォルダ内に設置すればよい。</p>
+				<p>In addition, plugins, headlines, etc., can be similarly placed in their own folders.</p>
 			</dd>
 		</dl>
 	</div>
@@ -96,19 +104,19 @@
 			<dt>updates2.dau</dt>
 			<dd>
 				<div class="passage">
-					<p>更新対象とするファイルのMD5ハッシュ値などが列挙されたファイル。</p>
-					<p>ネットワーク更新で、サーバにあるファイルと実際にダウンロードされたファイルの間で、ファイルが破損・改竄などされていないかを検出する目的で用いられる。</p>
+					<p>A file that lists the MD5 hash values, etc., of files to be updated.</p>
+					<p>It is used in network updates to detect whether a file has been corrupted or tampered with, by comparing the file on the server and the file that was actually downloaded.</p>
 				</div>
 				<div class="passage">
-					<p>普通ベースウェアの機能を用いるなどして作成するもので、人が編集する必要はない。</p>
-					<p>作成手順などは「<a href="dev_update.html">ネットワーク更新への対応</a>」のページを参照</p>
+					<p>It is usually created by using baseware functions, etc., and does not need to be edited by a person.</p>
+					<p>See the "<a href="dev_update.html">Support for Network Updates</a>" page for creation procedures, etc.</p>
 				</div>
 			</dd>
 
 			<dt>updates.txt</dt>
 			<dd>
-				<p>updates2.dauとほぼ同じ意味を果たすもの。どちらか一方があればよい（両方あっても問題ない）。</p>
-				<p>書式が多少異なるほか、拡張子制限でdauがアップロードできない等の問題を回避できる。</p>
+				<p>It fulfills almost the same purpose as updates2.dau. One or the other is all that is needed (it does not matter if you have both).</p>
+				<p>In addition to slightly different formatting, it avoids problems such as not being able to upload dau due to extension restrictions.</p>
 			</dd>
 		</dl>
 	</div>
@@ -118,19 +126,19 @@
 		<dl class="component">
 			<dt><a href="descript_install.html#delete.txt">delete.txt</a></dt>
 			<dd>
-				<p>ファイルの削除設定ファイル。</p>
-				<p>サーバ上でupdates2.dauと同じ位置に配置する。</p>
-				<p>不要になったファイルが肥大するのを防ぐなどの目的で使う。</p>
-				<p>書式など詳しくは<a href="descript_install.html#delete.txt" title="delete.txt">リンク先</a>を参照。</p>
+				<p>File deletion configuration file.</p>
+				<p>Place in the same location as updates2.dau on the server.</p>
+				<p>It is used for purposes such as preventing files that are no longer needed from adding bloat.</p>
+				<p>See <a href="descript_install.html#delete.txt" title="delete.txt">link</a> for formatting and details.</p>
 			</dd>
 
 			<dt><a href="descript_install.html#developer_options.txt">developer_options.txt</a></dt>
 			<dd>
-				<p>SSPのみ。</p>
-				<p>updates2.dauを作成したい位置（一番上のディレクトリ）に配置する。</p>
-				<p>SSPでupdates2.dau（updates.txt）を作る場合に、対象に含めないファイルなどを指定するためのファイル。</p>
-				<p>サーバ上にアップロードする必要はない（自身を除外ファイルに指定するなどで可能）が、あっても害はないので、ユーザが再度narにしなおすなどの状況を考えつつ自由に。</p>
-				<p>書式など詳しくは<a href="descript_install.html#developer_options.txt" title="developer_options.txt">リンク先</a>を参照。</p>
+				<p>SSP only.</p>
+				<p>Place updates2.dau in the location where you want to create it.</p>
+				<p>File for specifying files to be excluded when creating updates2.dau (updates.txt) in SSP.</p>
+				<p>It does not have to be uploaded on the server (this can be done by specifying itself as an excluded file, etc.), but there is no harm in having it, so feel free to consider situations such as users recreating the nar file.</p>
+				<p>See <a href="descript_install.html#developer_options.txt" title="developer_options.txt">link</a> for formatting and other details.</p>
 			</dd>
 		</dl>
 	</div>
@@ -145,7 +153,7 @@
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">

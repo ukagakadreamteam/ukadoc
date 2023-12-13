@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="ukadoc,メニュー,オーナードロー,右クリックメニュー">
-<title>UKADOC Project オーナードローメニュー</title>
+<meta name="keywords" content="ukadoc,Menu,Owner Draw,Right Click Menu">
+<title>UKADOC Project Owner Draw Menu</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,10 +25,18 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>オーナードローメニュー</h1>
+<h1>Owner Draw Menu</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/manual_owner_draw_menu.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
 	<div class="passage">
-		<p>オーナードローメニュー（右クリックメニュー）に使用する画像ファイル類。</p>
+		<p>Images for the owner draw menu (right click menu).</p>
 <pre>
 +-(myghost)
 　　+-shell
@@ -49,8 +57,8 @@
 　　　　　　<em class="filename">+-menu_foreground.png</em>
 　　　　　　<em class="filename">+-menu_sidebar.png</em>
 </pre>
-		<p>実際には必ずしも上記位置にファイルがある必要はなく、フォルダ内などにあってもよい。</p>
-		<p>SHIORI Resourceによってオーナードローメニューの設定をする場合、ghost/master側にあった方が都合がよい（ghost/master基点の相対パスで指定するので）。</p>
+		<p>In practice, the file does not necessarily have to be in the above location, but may be in a folder, etc.</p>
+		<p>When setting up the owner draw menu via SHIORI Resource, it is more convenient to have it on the ghost/master side (since it is specified by a relative path from ghost/master).</p>
 	</div>
 </section>
 <section>
@@ -58,35 +66,35 @@
 		<dl class="component">
 			<dt>menu_background.png</dt>
 			<dd>
-				<p>オーナードローメニューの背景画像。</p>
-				<p>メニューの領域は画像ではなくメニューの大きさになる。</p>
-				<p>省略可能（標準のメニュー表示になる）。</p>
+				<p>Background image for the owner draw menu.</p>
+				<p>The menu area will be the size of the menu, not the image.</p>
+				<p>Can be omitted (standard menu display will be used).</p>
 			</dd>
 
 			<dt>menu_foreground.png</dt>
 			<dd>
-				<p>オーナードローメニューツリーのカーソル選択部分の画像。</p>
-				<p>省略可能（標準のメニュー表示になる）。</p>
+				<p>Image of the portion of the owner draw menu that the cursor has selected.</p>
+				<p>Can be omitted (standard menu display will be used).</p>
 			</dd>
 
 			<dt>menu_sidebar.png</dt>
 			<dd>
-				<p>オーナードローメニューツリーの左側に追加できる画像。</p>
-				<p>横幅のみ画像の幅となる。</p>
-				<p>省略可能。</p>
+				<p>An image that can be added to the left side of the owner draw menu.</p>
+				<p>The width of the image will be the width of the display on the menu, but the same is not true of the height.</p>
+				<p>Optional.</p>
 			</dd>
 		</dl>
 	</div>
 	<div class="passage">
-		<p>いずれも画像、文字色などの指定はシェルの<a href="descript_shell.html">descript.txt</a>または<a href="list_shiori_resource.html" target="_top">SHIORI Resource</a>によって行う。</p>
-		<p>SHIORI Resourceで指定する場合は、キャラクターが入れ替わり制であったり、モード切替のような機能を持つゴーストで、その状態に応じてメニュー表示を変更するなどの仕掛けに使える。</p>
-		<p>shell側descript.txtとSHIORI Resourceの両方で指定した場合、SHIORI Resourceの方が優先される。</p>
-		<p>また、各画像のファイル名は必ずしも上例の通りにする必要は無い（任意名でよい）。</p>
-		<p>詳細は<a href="dev_ownerdraw.html">オーナードローメニューの設定</a>のページも参照。</p>
+		<p>In both cases, images, text color, etc., are specified by the shell's <a href="descript_shell.html">descript.txt</a> or <a href="list_shiori_resource.html" target="_top">SHIORI Resource</a>.</p>
+		<p>When designated via SHIORI Resource, it can be used for tricks such as a ghost with interchangeable characters, or a mode-switching function that changes the menu display according to its state.</p>
+		<p>If specified in both the shell-side descript.txt and via SHIORI Resource, SHIORI Resource takes precedence.</p>
+		<p>The file name of each images does not necessarily have to be the same as in the example above (any name is acceptable).</p>
+		<p>See also the <a href="dev_ownerdraw.html">Owner Draw Menu Settings</a> page for more information.</p>
 	</div>
 	<div class="passage">
-		<p>メニューの画像が切れた部分はその端の色を単色で塗り潰す。</p>
-		<p>指定が無かった場合は一般的なポップアップになる。</p>
+		<p>Where the menu image ends, the menu is filled in with a single color from the image edges.</p>
+		<p>If not specified, it will be a generic popup.</p>
 	</dl>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -97,7 +105,7 @@
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">

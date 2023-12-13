@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,伺か">
-<title>UKADOC Project SHIORI Eventリスト（外部）</title>
+<title>UKADOC Project SHIORI Event List (External)</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script src="ghost_status.js"></script>
 </head>
 <body>
-	<h1 id="page-title">SHIORI Eventリスト（外部）</h1>
+	<h1 id="page-title">SHIORI Event List (External)</h1>
 	<nav class="menu-header">
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -26,7 +26,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -82,7 +82,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -93,12 +93,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -114,17 +114,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -132,48 +132,48 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>SHIORI Event（外部）</h1>
+		<h1>SHIORI Event (External)</h1>
 		<section class="navigation-category" id="GhostStatus" style="display: none;">
 			<h1>Ghost Status</h1>
 			<!-- 一个列表用于显示和选择ghost -->
 			<div id="ghost_select">
-				<p>ゴーストを選択してください：</p>
+				<p>Please select a ghost:</p>
 				<select id="ghost_list_content" onchange="reload_button()"></select>
 				<!-- reloadボタン -->
-				<button id="ghost_reload_button" onclick="reload_button()">リロード</button>
+				<button id="ghost_reload_button" onclick="reload_button()">Reload</button>
 			</div>
 			<div id="supported_text_event_Has_Event_reminder" style="display: none;">
-				<p>あなたのゴーストは以下のイベントをサポートする必要があります：</p>
+				<p>Your ghost must support the following events:</p>
 				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1972L1989">Has_Event</a>
 			</div>
 			<div id="supported_graph" style="display: none;">
 				<p>support: <meter id="supported_graph_content" min="0" max="0" value="0"></meter><span id="supported_ratio">0/0</span></p>
 			</div>
 			<div id="supported_text_event_Get_Supported_Events_reminder" style="display: none;">
-				<p>イベントの統計速度が遅い場合は？</p>
-				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1990L2025">Get_Supported_Events</a>イベントをサポートして、速度を向上させることができます。
+				<p>What if the event statistics speed is slow?</p>
+				<a href="https://github.com/YAYA-shiori/yaya-dic/blob/acef2e384cd5a03eda8873cf82ca10bd720c8138/yaya_base/shiori3.dic#L1990L2025">Get_Supported_Events</a> events to support and increase speed.
 			</div>
 		</section>
 		<section class="navigation-category">
-			<h1>プラグイン「バーチャルビールかけ（BeerShower）」</h1>
+			<h1>Plugin "Virtual Beer Shower" (バーチャルビールかけ)</h1>
 			<ul>
 				<li><a href="#OnBeerShower">OnBeerShower</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>プラグイン「バーチャル道頓堀（TOMBORI）」</h1>
+			<h1>Plugin "Virtual Dotonbori (TOMBORI)" (バーチャル道頓堀)</h1>
 			<ul>
 				<li><a href="#OnDive">OnDive</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>プラグイン「実体化（HitThunder）」</h1>
+			<h1>Plugin "Materialize (HitThunder)" (実体化)</h1>
 			<ul>
 				<li><a href="#OnHitThunder">OnHitThunder</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>プラグイン「スタンプ帳」</h1>
+			<h1>Plugin "Stamp Book" (スタンプ帳)</h1>
 			<ul>
 				<li><a href="#OnStampInfo">OnStampInfo</a></li>
 				<li><a href="#OnStampAdd">OnStampAdd</a></li>
@@ -181,7 +181,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>プラグイン「芋スコープ」</h1>
+			<h1>Plugin "PotatoScope" (芋スコープ)</h1>
 			<ul>
 				<li><a href="#OnPotatoReturn">OnPotatoReturn</a></li>
 				<li><a href="#OnPotatoFileNotFound">OnPotatoFileNotFound</a></li>
@@ -189,20 +189,20 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>プラグイン「CrystalDiskInfo Event PLUGIN」</h1>
+			<h1>Plugin "CrystalDiskInfo Event PLUGIN"</h1>
 			<ul>
 				<li><a href="#OnCrystalDiskInfoEvent">OnCrystalDiskInfoEvent</a></li>
 				<li><a href="#OnCrystalDiskInfoClear">OnCrystalDiskInfoClear</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>SAORI「httpc.dll」</h1>
+			<h1>SAORI "httpc.dll"</h1>
 			<ul>
 				<li><a href="#OnHttpcNotify">OnHttpcNotify</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>外部アプリ汎用イベント</h1>
+			<h1>Generic External Application Event</h1>
 			<ul>
 				<li><a href="#OnApplicationBoot">OnApplicationBoot</a></li>
 				<li><a href="#OnApplicationClose">OnApplicationClose</a></li>
@@ -214,7 +214,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>アプリ「きのこ」</h1>
+			<h1>Application "Kinoko" (きのこ)</h1>
 			<ul>
 				<li><a href="#OnKinokoObjectCreate">OnKinokoObjectCreate</a></li>
 				<li><a href="#OnKinokoObjectDestroy">OnKinokoObjectDestroy</a></li>
@@ -228,7 +228,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>アプリ「猫どりふ」</h1>
+			<h1>Application "Nekodorif" (猫どりふ)</h1>
 			<ul>
 				<li><a href="#OnNekodorifObjectEmerge">OnNekodorifObjectEmerge</a></li>
 				<li><a href="#OnNekodorifObjectHit">OnNekodorifObjectHit</a></li>
@@ -238,19 +238,19 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>アプリ「YunaSoft SexyFont Plug-in」</h1>
+			<h1>Application "YunaSoft SexyFont Plug-in"</h1>
 			<ul>
 				<li><a href="#OnMusicPlay">OnMusicPlay</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>アプリ「艦隊時計」</h1>
+			<h1>Application "Fleet Clock" (艦隊時計)</h1>
 			<ul>
 				<li><a href="#OnFleetClockComplete">OnFleetClockComplete</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>アプリ「Elona omake_MMA」</h1>
+			<h1>Application "Elona omake_MMA"</h1>
 			<ul>
 				<li><a href="#OnElonaOmakeMMAEventNewGame">OnElonaOmakeMMAEventNewGame</a></li>
 				<li><a href="#OnElonaOmakeMMAEventGameLoad">OnElonaOmakeMMAEventGameLoad</a></li>
@@ -316,14 +316,14 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>麻雀通信イベント</h1>
+			<h1>Mahjong Communication Events</h1>
 			<ul>
 				<li><a href="#OnMahjong">OnMahjong</a></li>
 				<li><a href="#OnMahjongResponse">OnMahjongResponse</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>アプリ「さとりすと」</h1>
+			<h1>Application "Satolist" (さとりすと)</h1>
 			<ul>
 				<li><a href="#OnSatolistBoot">OnSatolistBoot</a></li>
 				<li><a href="#OnSatolistGhostOpened">OnSatolistGhostOpened</a></li>
@@ -334,7 +334,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>GoogleChrome拡張「とうらぶえくすてんしょん」</h1>
+			<h1>Google Chrome Extension "Tourabu" (とうらぶえくすてんしょん)</h1>
 			<ul>
 				<li><a href="#OnTourabuConquestStart">OnTourabuConquestStart</a></li>
 				<li><a href="#OnTourabuConquestEnd">OnTourabuConquestEnd</a></li>
@@ -343,39 +343,39 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト間汎用イベント</h1>
+			<h1>Ghost-to-Ghost General Purpose Event</h1>
 			<ul>
 				<li><a href="#OnRequestValues">OnRequestValues</a></li>
 				<li><a href="#OnGetValues">OnGetValues</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「ぬるぽ いんたーはい」</h1>
+			<h1>Ghost "ぬるぽ いんたーはい"</h1>
 			<ul>
 				<li><a href="#OnTalkRequest">OnTalkRequest</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「The Hand」</h1>
+			<h1>Ghost "The Hand"</h1>
 			<ul>
 				<li><a href="#OnHandActivate">OnHandActivate</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「ごーすとじてん」「きゅーぴっど」</h1>
+			<h1>Ghost "ごーすとじてん」「きゅーぴっど"</h1>
 			<ul>
 				<li><a href="#OnJitenBattle">OnJitenBattle</a></li>
 				<li><a href="#OnJitenTagBattle">OnJitenTagBattle</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「マギルトリエ」</h1>
+			<h1>Ghost "マギルトリエ"</h1>
 			<ul>
 				<li><a href="#OnMglBattle">OnMglBattle</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「カレー家族／沙紀と右近」</h1>
+			<h1>Ghost "カレー家族／沙紀と右近"</h1>
 			<ul>
 				<li><a href="#Send60stair_Call">Send60stair_Call</a></li>
 				<li><a href="#Send60stair_Start">Send60stair_Start</a></li>
@@ -390,7 +390,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「奏でる日常の音色」</h1>
+			<h1>Ghost "奏でる日常の音色"</h1>
 			<ul>
 				<li><a href="#OnKanadeTeaPartyInfomationRequest">OnKanadeTeaPartyInfomationRequest</a></li>
 				<li><a href="#可変名の返信イベント">可変名の返信イベント</a></li>
@@ -399,20 +399,20 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「卓上誘技」</h1>
+			<h1>Ghost "卓上誘技"</h1>
 			<ul>
 				<li><a href="#OnPoker">OnPoker</a></li>
 				<li><a href="#OnPokerNotify">OnPokerNotify</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「フォーリナー」サプリメント「march of phantasma」</h1>
+			<h1>Ghost "フォーリナー" Supplement "march of phantasma"</h1>
 			<ul>
 				<li><a href="#OnMopClear">OnMopClear</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト開発用の対話型exe「ゴースト・ターミナル」</h1>
+			<h1>Ghost Terminal, an interactive exe for ghost development</h1>
 			<ul>
 				<li><a href="#ShioriEcho.Begin">ShioriEcho.Begin</a></li>
 				<li><a href="#ShioriEcho.End">ShioriEcho.End</a></li>
@@ -430,7 +430,7 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>プラグイン「Weather Station」</h1>
+			<h1>Plugin "Weather Station"</h1>
 			<ul>
 				<li><a href="#OnWeatherStation.Weather">OnWeatherStation.Weather</a></li>
 				<li><a href="#OnWeatherStation.Astro">OnWeatherStation.Astro</a></li>
@@ -441,24 +441,41 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>ゴースト「Needle」</h1>
+			<h1>Ghost "Needle"</h1>
 			<ul>
 				<li><a href="#OnNeedlePoke">OnNeedlePoke</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="categories">
-		<section class="caption">
-			<p>以下には、ベースウェア外部のアプリケーションがSSTPによって発信するものや、ゴーストやプラグインが他のゴーストに対して発行するものなど、<em>発行者が外部にあるイベント</em>および、それらのイベントの<em>受信者が返却するイベント</em>が含まれます。</p>
-			<p>そうしたイベントの発行者に対してこのページは非公式なドキュメントに過ぎず、記載後のそれぞれの更新などで、情報が不正確になっている場合があります。詳しくはそれぞれ公式の説明をあたるようにしてください。</p>
-			<p>未記載のイベントをご存知の方は是非<a href="http://ssp.shillest.net/bts/?project=misc&action=top">ご報告ください</a>。記載させていただきます。</p>
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<ul>
+				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
+				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/list_shiori_event.html">here</a>.</li>
+				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
+			</ul>
+		</section>
+		<section class="caption" id="notes_translated_names">
+			<h1>Translator Note</h1>
+			<p>
+				The contents of this page are especially difficult to translate, and many of the translations are not accurate. If you have knowledge of the external plugins/programs/ghosts listed here and can provide a better translation, please do. <br />
+				Some of the names on this page have been translated, if they had an English/romanized name listed, or such a name is commonly known for the item in question.<br />
+				All translated entries have their original name listed in parenthesis, unless the original name was only listed in English.<br />
+				Ghost names have not been translated at all.
+			</p>
 		</section>
 		<section class="caption">
-			<p><em class="specsign">[NOTIFY]</em>の表示があるイベントは、必ずNOTIFYコマンドで通知されます。<br />NOTIFYコマンドで通知されたイベントにスクリプトを返却しても一切無視されます。</p>
-			<p>特に表示がないイベントは、状況によってNOTIFY、GETのいずれでも通知される可能性があります。</p>
+			<p>The following includes events whose <em>issuers are external</em>—such as those originating from applications outside the baseware via SSTP, or those issued by ghosts or plugins to other ghosts—as well as <em>events returned by the recipients of those events</em>.</p>
+			<p>This page is only an unofficial document for the publishers of such events, and the information may be inaccurate due to subsequent updates. Please refer to the official description of each event for details.</p>
+			<p>If you know of an event that has not been listed, <a href="http://ssp.shillest.net/bts/?project=misc&action=top">please report it to us</a>. We will be happy to list them.</p>
 		</section>
 		<section class="caption">
-			<h1>関連するさくらスクリプト</h1>
+			<p>Events marked with <em class="specsign">[NOTIFY]</em> are always notified with the NOTIFY command.<br />Any scripts returned to events notified with the NOTIFY command will be ignored.</p>
+			<p>Events not specifically indicated may be notified as either NOTIFY or GET, depending on the circumstances.</p>
+		</section>
+		<section class="caption">
+			<h1>Related SakuraScripts</h1>
 			<ul>
 				<li><a href="_!_raiseother,ghost_name,event_name,r0,r1,r2..._">\![raiseother]</a></li>
 				<li><a href="_!_notifyother,ghost_name,event_name,r0,r1,r2..._">\![notifyother]</a></li>
@@ -468,9 +485,9 @@
 			</ul>
 		</section>
 		<section class="category">
-			<h1>プラグイン「バーチャルビールかけ（BeerShower）」</h1>
+			<h1>Plugin "Virtual Beer Shower" (バーチャルビールかけ)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>Published by: <a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -478,14 +495,14 @@
 			<dl id="OnBeerShower">
 				<dt class="entry">OnBeerShower</dt>
 				<dd class="entry">
-					<p>プラグインが実行された際に発生。</p>
+					<p>Occurs when the plugin is executed.</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>プラグイン「バーチャル道頓堀（TOMBORI）」</h1>
+			<h1>Plugin "Virtual Dotonbori (TOMBORI)" (バーチャル道頓堀)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>Published by: <a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -493,18 +510,18 @@
 			<dl id="OnDive">
 				<dt class="entry">OnDive</dt>
 				<dd class="entry">
-					<p>プラグインが実行された際に発生。</p>
+					<p>Occurs when the plugin is executed.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>飛び込む先（道頓堀）</dd>
+						<dd>Where to dive in (Dotonbori)</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>プラグイン「実体化（HitThunder）」</h1>
+			<h1>Plugin "Materialize (HitThunder)" (実体化)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>Published by: <a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -512,14 +529,14 @@
 			<dl id="OnHitThunder">
 				<dt class="entry">OnHitThunder</dt>
 				<dd class="entry">
-					<p>プラグインが実行された際に発生。</p>
+					<p>Occurs when the plugin is executed.</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>プラグイン「スタンプ帳」</h1>
+			<h1>Plugin "Stamp Book" (スタンプ帳)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://navy.nm.land.to/post/">http://navy.nm.land.to/post/</a></li>
+				<li>Published by: <a href="http://navy.nm.land.to/post/">http://navy.nm.land.to/post/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -527,46 +544,46 @@
 			<dl id="OnStampInfo">
 				<dt class="entry">OnStampInfo</dt>
 				<dd class="entry">
-					<p>スタンプに関する情報を通知するイベント。<br />ゴースト起動時、プラグインのロード・アンロードおよびOnStampInfoCallを送信した任意のタイミングで発生。</p>
+					<p>An event that notifies information about the stamp.<br />Occurs at ghost startup, plugin loading/unloading, and any time OnStampInfoCall is sent.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>スタンプ総数。</dd>
+						<dd>Total number of stamps.</dd>
 						<dt>Reference1</dt>
-						<dd>当該ゴーストのスタンプが存在するか否か。あれば1、なければ0。<br />複数ゴースト起動していると信用性が薄くなるので、確実に知りたい場合はOnStampInfoCallによって当イベントを能動的に発生させる事が推奨される。</dd>
+						<dd>Whether or not the stamp of the ghost in question exists. 1 if it exists, 0 otherwise.<br />Multiple ghosts running simultaneously make the event less reliable, so it is recommended that this event be actively triggered by OnStampInfoCall if you want to know for sure.</dd>
 						<dt>Reference2</dt>
-						<dd>プラグインのパス。</dd>
+						<dd>Path of the plugin.</dd>
 						<dt>Reference3</dt>
-						<dd>全スタンプ情報。ゴースト名・スタンプ画像ファイル名・スタンプのタイトル・スタンプのコメント・スタンプを押した時刻がバイト値１区切りで、それがスタンプの数だけ各セットバイト値２区切りで入っている。</dd>
+						<dd>All stamp information. Ghost name, stamp image file name, stamp title, stamp comment, and time stamped are separated by a byte 1 value, followed by the number of stamps in each set separated by two byte 1 values.</dd>
 						<dt>Reference4</dt>
-						<dd>このプラグインが動いていれば1、さもなくば0。</dd>
+						<dd>1 if the plugin is running, 0 otherwise.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnStampAdd">
 				<dt class="entry">OnStampAdd</dt>
 				<dd class="entry">
-					<p>スタンプを押すためにraisepluginでスタンプ帳へ送信するイベント。</p>
+					<p>Event to be sent to the stamp book via raiseplugin, for stamping.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>スタンプの画像ファイルのパス。</dd>
+						<dd>Stamp image file path.</dd>
 						<dt>Reference1</dt>
-						<dd>スタンプのタイトル。<br />さくらスクリプトを含まない文字列（除去される）を指定。<br />省略可。</dd>
+						<dd>Stamp title.<br />Specify a string that does not contain SakuraScript (it will be removed).<br />Optional.</dd>
 						<dt>Reference2</dt>
-						<dd>スタンプのコメント。<br />さくらスクリプトを含まない文字列（除去される）を指定。<br />&lt;br&gt;（&lt;BR&gt;、＜br＞、＜BR＞）で改行可能。<br />省略可。</dd>
+						<dd>Stamp comments.<br />Specify a string that does not contain SakuraScript (it will be removed).<br />A line break can be made with &lt;br&gt; (&lt;BR&gt;, ＜br＞,＜BR＞)<br />Optional.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnStampInfoCall">
 				<dt class="entry">OnStampInfoCall</dt>
 				<dd class="entry">
-					<p>OnStampInfoをゴースト側から任意のタイミングで発生させたい場合に、raisepluginでスタンプ帳へ送信するイベント。</p>
+					<p>Event sent to the stamp book via raiseplugin when you want OnStampInfo to occur at an arbitrary time from the ghost side.</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>プラグイン「芋スコープ」</h1>
+			<h1>Plugin "PotatoScope" (芋スコープ)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://rakudaya.sakura.tv/htc.html">http://rakudaya.sakura.tv/htc.html</a></li>
+				<li>Published by: <a href="http://rakudaya.sakura.tv/htc.html">http://rakudaya.sakura.tv/htc.html</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -574,37 +591,37 @@
 			<dl id="OnPotatoReturn">
 				<dt class="entry">OnPotatoReturn</dt>
 				<dd class="entry">
-					<p>フォルダ指定が正常で、セーブファイルが無事に見つかった場合に発生。</p>
+					<p>Occurs when the folder designation is normal and the save file is found successfully.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>要求した変数名をカンマ区切りで繋いだもの（&lt;変数1&gt;,&lt;変数2&gt;...）</dd>
+						<dd>The requested variable names, separated by commas (&lt;variable1&gt;,&lt;variable2&gt;...)</dd>
 						<dt>Reference*</dt>
-						<dd>1以降、各変数の値</dd>
+						<dd>1 and thereafter is the value of each variable.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnPotatoFileNotFound">
 				<dt class="entry">OnPotatoFileNotFound</dt>
 				<dd class="entry">
-					<p>フォルダ指定は正常だがセーブファイルが見つからなかった場合に発生。</p>
+					<p>Occurs when the folder designation is normal but hte save file is not found.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>要求した変数名をカンマ区切りで繋いだもの（&lt;変数1&gt;,&lt;変数2&gt;...）</dd>
+						<dd>The requested variable names, separated by commas (&lt;variable1&gt;,&lt;variable2&gt;...)</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnPotatoError">
 				<dt class="entry">OnPotatoError</dt>
 				<dd class="entry">
-					<p>フォルダ指定が間違っている、又は動作対象外のSHIORIだった場合に発生。</p>
+					<p>Occurs when the folder designation is incorrect, or when SHIORI is not the target of the operation.</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>プラグイン「CrystalDiskInfo Event PLUGIN」</h1>
+			<h1>Plugin "CrystalDiskInfo Event PLUGIN"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
-				<li>関連：<a href="https://crystalmark.info/ja/software/crystaldiskinfo/">https://crystalmark.info/ja/software/crystaldiskinfo/</a></li>
+				<li>Published by: <a href="http://ssp.shillest.net/">http://ssp.shillest.net/</a></li>
+				<li>Reference: <a href="https://crystalmark.info/ja/software/crystaldiskinfo/">https://crystalmark.info/ja/software/crystaldiskinfo/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -612,26 +629,26 @@
 			<dl id="OnCrystalDiskInfoEvent">
 				<dt class="entry">OnCrystalDiskInfoEvent</dt>
 				<dd class="entry">
-					<p>ゴースト起動時に情報がある場合/情報が更新されたに発生。</p>
+					<p>Occurs when information is available at ghost startup/information has been updated.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ディスク群全体のステータス（＝最も悪いものの情報）と、更新日付。<br />カンマ区切りで、「(Good|Caution|Bad|Unknown),YYYY,NN,DD,HH,MM,SS」のように入る。</dd>
+						<dd>Status of the entire group of disks (i.e., information on the worst ones) and the date of the update.<br />It will be a comma separated list in the form "(Good|Caution|Bad|Unknown),YYYY,NN,DD,HH,MM,SS".</dd>
 						<dt>Reference*</dt>
-						<dd>ディスク個別ステータス。<br />カンマ区切りで、マシン名,存在するディスク,全体のステータス,容量,摂氏温度,温度警告</dd>
+						<dd>Individual disk status.<br />Comma separated machine name, disks present, overall status, capacity, celsius, temperature warning.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnCrystalDiskInfoClear">
 				<dt class="entry">OnCrystalDiskInfoClear</dt>
 				<dd class="entry">
-					<p>今まで情報があったのに消えてしまった場合に発生。<br />CrystalDiskInfoが終了した場合など。</p>
+					<p>Occurs when information was previously available but has disappeared.<br />When CrystalDiskInfo is terminated, etc.</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>SAORI「httpc.dll」</h1>
+			<h1>SAORI "httpc.dll"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ukgk.s34.xrea.com/poskoma/#content_1_13">http://ukgk.s34.xrea.com/poskoma/#content_1_13</a></li>
+				<li>Published by: <a href="http://ukgk.s34.xrea.com/poskoma/#content_1_13">http://ukgk.s34.xrea.com/poskoma/#content_1_13</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -641,29 +658,29 @@
 			<dl id="OnHttpcNotify">
 				<dt class="entry">OnHttpcNotify</dt>
 				<dd class="entry">
-					<p>httpc.dllが提供する機能の非同期実行オプションでの実行後、同dllからDirectSSTPで送信される戻り値通知イベント。</p>
+					<p>A return notification event sent by httpc.dll, via DirectSSTP after execution of a function provided by httpc.dll with the asynchronous execution option.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>呼び出し時に引数１で渡した識別子。</dd>
+						<dd>Identifier passed in argument 1 at the time of the call.</dd>
 						<dt>Reference1</dt>
-						<dd>空文字列</dd>
+						<dd>Null string.</dd>
 						<dt>Reference*</dt>
-						<dd>実行した機能の戻り値。</dd>
+						<dd>Return value of the executed function.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>外部アプリ汎用イベント</h1>
+			<h1>Generic External Application Event</h1>
 			<dl id="OnApplicationBoot">
 				<dt class="entry">OnApplicationBoot</dt>
 				<dd class="entry">
-					<p>外部アプリケーションが起動した際に発生。</p>
+					<p>Occurs when an external application is launched.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>Application name.</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>Application information.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -675,12 +692,12 @@
 			<dl id="OnApplicationClose">
 				<dt class="entry">OnApplicationClose</dt>
 				<dd class="entry">
-					<p>外部アプリケーションが終了した際に発生。</p>
+					<p>Occurs when an external application exits.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>Application name.</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>Application information.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -692,12 +709,12 @@
 			<dl id="OnApplicationExist">
 				<dt class="entry">OnApplicationExist</dt>
 				<dd class="entry">
-					<p>外部アプリケーションの存在を通知された際に発生。</p>
+					<p>Occurs when notified of the presence of an external application.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>Application name.</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>Application information.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -709,18 +726,18 @@
 			<dl id="OnApplicationVersion">
 				<dt class="entry">OnApplicationVersion</dt>
 				<dd class="entry">
-					<p>外部アプリケーションのバージョン情報を通知された際に発生。</p>
+					<p>Occurs when notified of external application version information.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>Application name.</dd>
 						<dt>Reference1</dt>
-						<dd>アプリケーションの情報。</dd>
+						<dd>Application information.</dd>
 						<dt>Reference2</dt>
-						<dd>バージョン番号。</dd>
+						<dd>Version number.</dd>
 						<dt>Reference3</dt>
-						<dd>著作権。</dd>
+						<dd>Copyright.</dd>
 						<dt>Reference4</dt>
-						<dd>開発元のURL。</dd>
+						<dd>Developer's URL.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -732,14 +749,14 @@
 			<dl id="OnApplicationOperationFinish">
 				<dt class="entry">OnApplicationOperationFinish</dt>
 				<dd class="entry">
-					<p>外部アプリケーションか何らかの処理が完了した際に発生。</p>
+					<p>Occurs when an external application completes some process.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>Application name.</dd>
 						<dt>Reference1</dt>
-						<dd>処理の内容。</dd>
+						<dd>Description of process.</dd>
 						<dt>Reference2</dt>
-						<dd>処理の対象。</dd>
+						<dd>Subject of processing.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -751,12 +768,12 @@
 			<dl id="OnApplicationFileOpen">
 				<dt class="entry">OnApplicationFileOpen</dt>
 				<dd class="entry">
-					<p>外部アプリケーションがドキュメントファイルを開いた際に発生。</p>
+					<p>Occurs when an external application opens a document file.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アプリケーション名。</dd>
+						<dd>Application name.</dd>
 						<dt>Reference1</dt>
-						<dd>ファイルのフルパス。</dd>
+						<dd>Full path of the file.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -768,14 +785,14 @@
 			<dl id="OnWebsiteUpdateNotify">
 				<dt class="entry">OnWebsiteUpdateNotify</dt>
 				<dd class="entry">
-					<p>ウェブサイトの更新・新着情報を通知された際に発生。</p>
+					<p>Occurs when notified of website updates/new information.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ウェブサイト名。</dd>
+						<dd>Website name.</dd>
 						<dt>Reference1</dt>
-						<dd>最終更新日時。</dd>
+						<dd>Last update.</dd>
 						<dt>Reference2</dt>
-						<dd>更新内容。</dd>
+						<dd>Update details.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -786,9 +803,9 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>アプリ「きのこ」</h1>
+			<h1>Application "Kinoko" (きのこ)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://koumei.la.coocan.jp/cbs/software/kinoko/">http://koumei.la.coocan.jp/cbs/software/kinoko/</a></li>
+				<li>Published by: <a href="http://koumei.la.coocan.jp/cbs/software/kinoko/">http://koumei.la.coocan.jp/cbs/software/kinoko/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -798,118 +815,118 @@
 			<dl id="OnKinokoObjectCreate">
 				<dt class="entry">OnKinokoObjectCreate</dt>
 				<dd class="entry">
-					<p>きのこスキンが頭に生えた際に発生。</p>
+					<p>Occurs when mushrooms grow on the head.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>そのきのこスキンの名前。</dd>
+						<dd>Name of the skin of the mushroom.</dd>
 						<dt>Reference1</dt>
-						<dd>そのきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>Ghost name(s) for which that mushroom skin is primarily intended. If there is more than one, they are separated by commas.</dd>
 						<dt>Reference2</dt>
-						<dd>そのきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>Category of the mushroom skin. If there is more than one, they are separated by commas.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectDestroy">
 				<dt class="entry">OnKinokoObjectDestroy</dt>
 				<dd class="entry">
-					<p>きのこスキンが頭から消えた際に発生。</p>
+					<p>Occurs when the mushroom disappears from the head.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>そのきのこスキンの名前。</dd>
+						<dd>Name of the skin of the mushroom.</dd>
 						<dt>Reference1</dt>
-						<dd>そのきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>Ghost name(s) for which that mushroom skin is primarily intended. If there is more than one, they are separated by commas.</dd>
 						<dt>Reference2</dt>
-						<dd>そのきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>Category of the mushroom skin. If there is more than one, they are separated by commas.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectChanging">
 				<dt class="entry">OnKinokoObjectChanging</dt>
 				<dd class="entry">
-					<p>きのこスキンを切り替えようとしている際に発生。</p>
+					<p>Occurs when trying to switch mushroom skins.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>切り替える直前のきのこスキンの名前。</dd>
+						<dd>Name of the mushroom skin before switching.</dd>
 						<dt>Reference1</dt>
-						<dd>切り替える直前のきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>The name of the ghost that is primarily targeted by the mushroom skin that is being switched from. Separated by commas if there is more than one.</dd>
 						<dt>Reference2</dt>
-						<dd>切り替える直前のきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>The category of the mushroom skin that is being switched from. Separated by commas if there is more than one.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectChanged">
 				<dt class="entry">OnKinokoObjectChanged</dt>
 				<dd class="entry">
-					<p>きのこスキンを切り替えた際に発生。</p>
+					<p>Occurs when the mushroom skin is switched.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>切り替えた後のきのこスキンの名前。</dd>
+						<dd>The name of the mushroom skin that was switched to.</dd>
 						<dt>Reference1</dt>
-						<dd>切り替えた後のきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>The name of the ghost that is primarily targeted by the mushroom skin that was switched to. Separated by commas if there is more than one.</dd>
 						<dt>Reference2</dt>
-						<dd>切り替えた後のきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>The category of the mushroom skin that was switched to. Separated by commas if there is more than one.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKinokoObjectInstalled">
 				<dt class="entry">OnKinokoObjectInstalled</dt>
 				<dd class="entry">
-					<p>きのこスキンをドロップでインストールした際に発生。</p>
+					<p>Occurs when a mushroom skin is installed by drag and drop.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>インストールされたきのこスキンの名前。</dd>
+						<dd>Name of the installed mushroom skin.</dd>
 						<dt>Reference1</dt>
-						<dd>インストールされたきのこスキンが主に対象とするゴースト名。複数ある場合カンマ区切り。</dd>
+						<dd>The name of the ghost(s) primarily targeted by the installed mushroom skin. Separated by commas if there is more than one.</dd>
 						<dt>Reference2</dt>
-						<dd>インストールされたきのこスキンのカテゴリ。複数ある場合カンマ区切り。</dd>
+						<dd>Category of the installed mushroom skin. Separated by commas if there is more than one.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnBatteryLow-kinoko">
 				<dt class="entry">OnBatteryLow</dt>
 				<dd class="entry">
-					<p>バッテリ残量が40％を切った際に発生。<br />SSPが通知するイベントに<a href="list_shiori_event.html#OnBatteryLow">同名の物</a>があるので注意。</p>
+					<p>Occurs when the remaining battery charge is less than 40%.<br />Note that there is an event <a href="list_shiori_event.html#OnBatteryLow">of the same name</a> notified by SSP.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>Percentage value.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnBatteryCritical-kinoko">
 				<dt class="entry">OnBatteryCritical</dt>
 				<dd class="entry">
-					<p>バッテリ残量が20％を切った際に発生。<br />SSPが通知するイベントに<a href="list_shiori_event.html#OnBatteryCritical">同名の物</a>があるので注意。</p>
+					<p>Occurs when the remaining battery charge is less than 20%.<br />Note that there is an event <a href="list_shiori_event.html#OnBatteryCritical">of the same name</a> notified by SSP.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>Percentage value.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSysResourceLow">
 				<dt class="entry">OnSysResourceLow</dt>
 				<dd class="entry">
-					<p>システムリソースが50％を切った際に発生。</p>
+					<p>Occurs when system resources are below 50%.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>Percentage value.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSysResourceCritical">
 				<dt class="entry">OnSysResourceCritical</dt>
 				<dd class="entry">
-					<p>システムリソースが30％を切った際に発生。</p>
+					<p>Occurs when system resources are below 30%.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>パーセンテージの数値。</dd>
+						<dd>Percentage value.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>アプリ「猫どりふ」</h1>
+			<h1>Application "Nekodorif" (猫どりふ)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://umeici.onjn.jp/">http://umeici.onjn.jp/</a></li>
+				<li>Published by: <a href="http://umeici.onjn.jp/">http://umeici.onjn.jp/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -919,98 +936,98 @@
 			<dl id="OnNekodorifObjectEmerge">
 				<dt class="entry">OnNekodorifObjectEmerge</dt>
 				<dd class="entry">
-					<p>落下物が可視領域内に出現した際に発生。</p>
+					<p>Occurs when a falling object appears within the visible area.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>Name of the falling object.</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>Name of the target ghost of the falling object.</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>Category name of the falling object.</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>Mushroom flag. 1 if a mushroom is found, 0 otherwise.</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>Name of the target of the falling object.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectHit">
 				<dt class="entry">OnNekodorifObjectHit</dt>
 				<dd class="entry">
-					<p>落下物がヒットした際に発生。</p>
+					<p>Occurs when a falling object hits.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>Name of the falling object.</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>Name of the target ghost of the falling object.</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>Category name of the falling object.</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>Mushroom flag. 1 if a mushroom is found, 0 otherwise.</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>Name of the target of the falling object.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectDrop">
 				<dt class="entry">OnNekodorifObjectDrop</dt>
 				<dd class="entry">
-					<p>落下物を再投下する際に発生。</p>
+					<p>Occurs when re-dropping dropped items.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>Name of the falling object.</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>Name of the target ghost of the falling object.</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>Category name of the falling object.</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>Mushroom flag. 1 if a mushroom is found, 0 otherwise.</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>Name of the target of the falling object.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectVanish">
 				<dt class="entry">OnNekodorifObjectVanish</dt>
 				<dd class="entry">
-					<p>ヒットした落下物が可視領域内から消滅した際に発生。</p>
+					<p>Occurs when a falling object that hit disappears from the visible area.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>Name of the falling object.</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>Name of the target ghost of the falling object.</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>Category name of the falling object.</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>Mushroom flag. 1 if a mushroom is found, 0 otherwise.</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>Name of the target of the falling object.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnNekodorifObjectDodge">
 				<dt class="entry">OnNekodorifObjectDodge</dt>
 				<dd class="entry">
-					<p>ヒットしなかった落下物が可視領域内から消滅した際に発生。</p>
+					<p>Occurs when a falling object that did not hit disappears from the visible area.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>落下物の名前。</dd>
+						<dd>Name of the falling object.</dd>
 						<dt>Reference1</dt>
-						<dd>落下物の対象ゴースト名。</dd>
+						<dd>Name of the target ghost of the falling object.</dd>
 						<dt>Reference2</dt>
-						<dd>落下物のカテゴリ名。</dd>
+						<dd>Category name of the falling object.</dd>
 						<dt>Reference3</dt>
-						<dd>きのこフラグ。きのこにあった場合は1、そうでなければ0。</dd>
+						<dd>Mushroom flag. 1 if a mushroom is found, 0 otherwise.</dd>
 						<dt>Reference4</dt>
-						<dd>落下物のターゲット名。</dd>
+						<dd>Name of the target of the falling object.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>アプリ「YunaSoft SexyFont Plug-in」</h1>
+			<h1>Application "YunaSoft SexyFont Plug-in"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://yunasoft.nerv.org/?page_id=2">https://yunasoft.nerv.org/?page_id=2</a></li>
+				<li>Published by: <a href="https://yunasoft.nerv.org/?page_id=2">https://yunasoft.nerv.org/?page_id=2</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1020,18 +1037,18 @@
 			<dl id="OnMusicPlay">
 				<dt class="entry">OnMusicPlay</dt>
 				<dd class="entry">
-					<p>音楽を再生した際に発生。</p>
+					<p>Occurs when music is played.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>曲タイトル。</dd>
+						<dd>Song title.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>アプリ「艦隊時計」</h1>
+			<h1>Application "Fleet Clock" (艦隊時計)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://shisochou.net/factory/">http://shisochou.net/factory/</a></li>
+				<li>Published by: <a href="http://shisochou.net/factory/">http://shisochou.net/factory/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1041,20 +1058,20 @@
 			<dl id="OnFleetClockComplete">
 				<dt class="entry">OnFleetClockComplete</dt>
 				<dd class="entry">
-					<p>設定した予定のタイマーが0になった際に発生。</p>
+					<p>Occurs when the scheduled timer that was set reaches 0.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>カテゴリ名。</dd>
+						<dd>Category name.</dd>
 						<dt>Reference1</dt>
-						<dd>メモの内容。</dd>
+						<dd>Memo contents.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>アプリ「Elona omake_MMA」</h1>
+			<h1>Application "Elona omake_MMA"</h1>
 			<ul class="caption link">
-				<li>参考：<a href="https://wikiwiki.jp/omakemma/">https://wikiwiki.jp/omakemma/</a></li>
+				<li>Reference: <a href="https://wikiwiki.jp/omakemma/">https://wikiwiki.jp/omakemma/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1064,951 +1081,951 @@
 			<dl id="OnElonaOmakeMMAEventNewGame">
 				<dt class="entry">OnElonaOmakeMMAEventNewGame</dt>
 				<dd class="entry">
-					<p>新規ゲーム開始時に発生。</p>
+					<p>Occurs at the start of a new game.</p>
 					<dl class="reference" id="reference_elonamma_common">
 						<dt>Reference0</dt>
-						<dd>ゲームバージョン。</dd>
+						<dd>Game version</dd>
 						<dt>Reference1</dt>
-						<dd>ゲーム内年</dd>
+						<dd>In-game year</dd>
 						<dt>Reference2</dt>
-						<dd>ゲーム内月</dd>
+						<dd>In-game month</dd>
 						<dt>Reference3</dt>
-						<dd>ゲーム内日</dd>
+						<dd>In-game day</dd>
 						<dt>Reference4</dt>
-						<dd>ゲーム内時</dd>
+						<dd>In-game hour</dd>
 						<dt>Reference5</dt>
-						<dd>ゲーム内分</dd>
+						<dd>In-game minute</dd>
 						<dt>Reference6</dt>
-						<dd>ゲーム内秒</dd>
+						<dd>In-game second</dd>
 						<dt>Reference7</dt>
-						<dd>ゲーム内天候</dd>
+						<dd>In-game weather</dd>
 						<dt>Reference8</dt>
-						<dd>マップ名</dd>
+						<dd>Map name</dd>
 						<dt>Reference9</dt>
-						<dd>エリア名</dd>
+						<dd>Area name</dd>
 						<dt>Reference10</dt>
-						<dd>ワールド名</dd>
+						<dd>World name</dd>
 						<dt>Reference11</dt>
-						<dd>階層</dd>
+						<dd>Level</dd>
 						<dt>Reference12</dt>
-						<dd>所属ギルド</dd>
+						<dd>Guild membership</dd>
 						<dt>Reference*</dt>
-						<dd>Reference13-19は未使用。予約。</dd>
+						<dd>Reference13-19 not used. Reserved.</dd>
 						<dt>Reference20</dt>
-						<dd>各イベントの対象キャラクター番号（0:PC、1～15:ペット、16～55:冒険者、56～:その他のNPC）</dd>
+						<dd>Target character number for each event (0: PC, 1–15: Pet, 16–55: Adventurer, 56+: Other NPC)</dd>
 						<dt>Reference21</dt>
-						<dd>PC:名前</dd>
+						<dd>PC: Name</dd>
 						<dt>Reference22</dt>
-						<dd>PC:通り名</dd>
+						<dd>PC: Street name</dd>
 						<dt>Reference23</dt>
-						<dd>PC:種族</dd>
+						<dd>PC: Tribe</dd>
 						<dt>Reference24</dt>
-						<dd>PC:職業</dd>
+						<dd>PC: Business</dd>
 						<dt>Reference25</dt>
-						<dd>PC:信仰</dd>
+						<dd>PC: Faith</dd>
 						<dt>Reference26</dt>
-						<dd>PC:キャラ種別名(PCの種別は無いので「バグ」が代入される)</dd>
+						<dd>PC: Character type name (there is no PC type, so "bug" is used.)</dd>
 						<dt>Reference27</dt>
-						<dd>PC:性別</dd>
+						<dd>PC: Gender</dd>
 						<dt>Reference28</dt>
-						<dd>PC:年齢</dd>
+						<dd>PC: Age</dd>
 						<dt>Reference29</dt>
-						<dd>PC:身長</dd>
+						<dd>PC: Stature</dd>
 						<dt>Reference30</dt>
-						<dd>PC:体重</dd>
+						<dd>PC: Body weight</dd>
 						<dt>Reference31</dt>
-						<dd>PC:レベル</dd>
+						<dd>PC: Level</dd>
 						<dt>Reference32</dt>
-						<dd>PC:現在HP</dd>
+						<dd>PC: Current HP</dd>
 						<dt>Reference33</dt>
-						<dd>PC:最大HP</dd>
+						<dd>PC: Maximum HP</dd>
 						<dt>Reference34</dt>
-						<dd>PC:現在MP</dd>
+						<dd>PC: Current MP</dd>
 						<dt>Reference35</dt>
-						<dd>PC:最大MP</dd>
+						<dd>PC: Maximum MP</dd>
 						<dt>Reference36</dt>
-						<dd>PC:所持金</dd>
+						<dd>PC: Money in possession</dd>
 						<dt>Reference37</dt>
-						<dd>PC:名声</dd>
+						<dd>PC: Reputation</dd>
 						<dt>Reference38</dt>
-						<dd>PC:カルマ</dd>
+						<dd>PC: Karma</dd>
 						<dt>Reference39</dt>
-						<dd>PC:DV</dd>
+						<dd>PC: DV</dd>
 						<dt>Reference40</dt>
-						<dd>PC:PV</dd>
+						<dd>PC: PV</dd>
 						<dt>Reference41</dt>
-						<dd>PC:筋力</dd>
+						<dd>PC: Physical strength</dd>
 						<dt>Reference42</dt>
-						<dd>PC:耐久</dd>
+						<dd>PC: Endurance</dd>
 						<dt>Reference43</dt>
-						<dd>PC:器用</dd>
+						<dd>PC: Cleverness</dd>
 						<dt>Reference44</dt>
-						<dd>PC:感覚</dd>
+						<dd>PC: Intuition</dd>
 						<dt>Reference45</dt>
-						<dd>PC:習得</dd>
+						<dd>PC: Learning</dd>
 						<dt>Reference46</dt>
-						<dd>PC:意思</dd>
+						<dd>PC: Will</dd>
 						<dt>Reference47</dt>
-						<dd>PC:魔力</dd>
+						<dd>PC: Charm</dd>
 						<dt>Reference48</dt>
-						<dd>PC:魅力</dd>
+						<dd>PC: Appeal</dd>
 						<dt>Reference49</dt>
-						<dd>PC:速度</dd>
+						<dd>PC: Speed</dd>
 						<dt>Reference50</dt>
-						<dd>PC:運勢</dd>
+						<dd>PC: Fortune</dd>
 						<dt>Reference*</dt>
-						<dd>Reference51-80には、PC情報+30の番号に同じ並び順でイベントの対象キャラクターのデータが入る。</dd>
+						<dd>Reference51-80 will contain data on the target character for the event in the same order as the PC information, +30 numbers.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventGameLoad">
 				<dt class="entry">OnElonaOmakeMMAEventGameLoad</dt>
 				<dd class="entry">
-					<p>ゲーム開始時に発生。</p>
+					<p>Occurs when the game is started.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventGameQuit">
 				<dt class="entry">OnElonaOmakeMMAEventGameQuit</dt>
 				<dd class="entry">
-					<p>ゲーム終了時に発生。</p>
+					<p>Occurs when the game ends.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventHourPlayed">
 				<dt class="entry">OnElonaOmakeMMAEventHourPlayed</dt>
 				<dd class="entry">
-					<p>ゲーム開始から現実の1時間毎に発生。</p>
+					<p>Occurs every real-world hour from the start of the game.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference82</dt>
-						<dd>Reference経過時間</dd>
+						<dd>Reference of elapsed time (hours).</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMapChanged">
 				<dt class="entry">OnElonaOmakeMMAEventMapChanged</dt>
 				<dd class="entry">
-					<p>別マップに移動した時に発生。</p>
+					<p>Occurs when moving to a different map.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLevelUp">
 				<dt class="entry">OnElonaOmakeMMAEventLevelUp</dt>
 				<dd class="entry">
-					<p>PCまたはペットのレベルが上がった時に発生。</p>
+					<p>Occurs when PC or pet level is raised.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSkillUp">
 				<dt class="entry">OnElonaOmakeMMAEventSkillUp</dt>
 				<dd class="entry">
-					<p>PCまたはペットのスキルレベルが上がった時に発生。</p>
+					<p>Occurs when the skill level of the PC or pet is raised.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>スキル名。</dd>
+						<dd>Skill name.</dd>
 						<dt>Reference82</dt>
-						<dd>スキルレベル。</dd>
+						<dd>Skill level.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSkillDown">
 				<dt class="entry">OnElonaOmakeMMAEventSkillDown</dt>
 				<dd class="entry">
-					<p>PCまたはペットのスキルレベルが下がった時に発生。</p>
+					<p>Occurs when the PC or pet's skill level drops.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>スキル名。</dd>
+						<dd>Skill name.</dd>
 						<dt>Reference82</dt>
-						<dd>スキルレベル。</dd>
+						<dd>Skill level.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventBelieveGod">
 				<dt class="entry">OnElonaOmakeMMAEventBelieveGod</dt>
 				<dd class="entry">
-					<p>PCが改宗した時に発生。</p>
+					<p>Occurs when a PC is converted.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventJoinParty">
 				<dt class="entry">OnElonaOmakeMMAEventJoinParty</dt>
 				<dd class="entry">
-					<p>ペットが仲間に加わった時に発生。</p>
+					<p>Occurs when a pet joins the group.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSleep">
 				<dt class="entry">OnElonaOmakeMMAEventSleep</dt>
 				<dd class="entry">
-					<p>睡眠に入った時に発生。</p>
+					<p>Occurs when going to sleep.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>寝具名。</dd>
+						<dd>Bedding name.</dd>
 						<dt>Reference82</dt>
-						<dd>遺伝子を残す場合は1。</dd>
+						<dd>1 if the gene is to be retained.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAwake">
 				<dt class="entry">OnElonaOmakeMMAEventAwake</dt>
 				<dd class="entry">
-					<p>睡眠から目覚めた時に発生。</p>
+					<p>Occurs when waking from sleep.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>寝具名。</dd>
+						<dd>Bedding name.</dd>
 						<dt>Reference82</dt>
-						<dd>遺伝子を残す場合は1。</dd>
+						<dd>1 if the gene is to be retained.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventInvestNPC">
 				<dt class="entry">OnElonaOmakeMMAEventInvestNPC</dt>
 				<dd class="entry">
-					<p>NPCの調査をした時に発生。</p>
+					<p>Occurs when NPCs are investigated.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventRandomEvent">
 				<dt class="entry">OnElonaOmakeMMAEventRandomEvent</dt>
 				<dd class="entry">
-					<p>ランダムイベント発生時に発生。</p>
+					<p>Occurs when random events occur.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>イベント名。</dd>
+						<dd>Event name.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAddNewsTopic">
 				<dt class="entry">OnElonaOmakeMMAEventAddNewsTopic</dt>
 				<dd class="entry">
-					<p>冒険者のニューストピックが追加された時に発生。</p>
+					<p>Occurs when an adventurer's news topic is added.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>ニュースタイトル。</dd>
+						<dd>News title.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventWish">
 				<dt class="entry">OnElonaOmakeMMAEventWish</dt>
 				<dd class="entry">
-					<p>願いの入力ダイアログが表示された時に発生。</p>
+					<p>Occurs when the wish input dialog is displayed.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventWished">
 				<dt class="entry">OnElonaOmakeMMAEventWished</dt>
 				<dd class="entry">
-					<p>願いが入力された時に発生。</p>
+					<p>Occurs when a wish is entered.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>願った内容。</dd>
+						<dd>What was wished for.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventDead">
 				<dt class="entry">OnElonaOmakeMMAEventDead</dt>
 				<dd class="entry">
-					<p>PC死亡時に発生。</p>
+					<p>Occurs when the PC dies.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPetDead">
 				<dt class="entry">OnElonaOmakeMMAEventPetDead</dt>
 				<dd class="entry">
-					<p>ペット死亡時に発生。</p>
+					<p>Occurs when a pet dies.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLastword">
 				<dt class="entry">OnElonaOmakeMMAEventLastword</dt>
 				<dd class="entry">
-					<p>遺言入力後に発生。</p>
+					<p>Occurs after will entry.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>遺言。</dd>
+						<dd>Will.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventTravelGuide">
 				<dt class="entry">OnElonaOmakeMMAEventTravelGuide</dt>
 				<dd class="entry">
-					<p>ノルンの冒険ガイド表示時に発生。</p>
+					<p>Occurs when Norn's Adventure Guide is displayed.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference82</dt>
-						<dd>data\exhelp.txtに書かれたヘルプ番号(%nの数字)</dd>
+						<dd>Help number (%n number) written in data\exhelp.txt.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAbandonPet">
 				<dt class="entry">OnElonaOmakeMMAEventAbandonPet</dt>
 				<dd class="entry">
-					<p>ペットと縁を切った時に発生。</p>
+					<p>Occurs when you separate from your pet.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSaleSlave">
 				<dt class="entry">OnElonaOmakeMMAEventSaleSlave</dt>
 				<dd class="entry">
-					<p>ペットを奴隷商人に売った時に発生。</p>
+					<p>Occurs when a pet is sold to a slaver.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference82</dt>
-						<dd>売値。</dd>
+						<dd>Selling price.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSaleWife">
 				<dt class="entry">OnElonaOmakeMMAEventSaleWife</dt>
 				<dd class="entry">
-					<p>ラファエロに嫁を売った時に発生。</p>
+					<p>Occurs when selling a wife to Raphael.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference82</dt>
-						<dd>嫁が人外の場合は1。</dd>
+						<dd>1 if the wife is not a human being.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMarriage">
 				<dt class="entry">OnElonaOmakeMMAEventMarriage</dt>
 				<dd class="entry">
-					<p>結婚時に発生。</p>
+					<p>Occurs at marriage.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventRefuseMarriage">
 				<dt class="entry">OnElonaOmakeMMAEventRefuseMarriage</dt>
 				<dd class="entry">
-					<p>求婚を断られた時に発生。</p>
+					<p>Occurs when a marriage proposal is rejected.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventJoinGuild">
 				<dt class="entry">OnElonaOmakeMMAEventJoinGuild</dt>
 				<dd class="entry">
-					<p>ギルド加入時に発生。</p>
+					<p>Occurs when joining a guild.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMutation">
 				<dt class="entry">OnElonaOmakeMMAEventMutation</dt>
 				<dd class="entry">
-					<p>変異発生時に発生。</p>
+					<p>Occurs when mutation happens.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>Mutation message.</dd>
 						<dt>Reference82</dt>
-						<dd>悪性変異は-1、良性変異は1。</dd>
+						<dd>-1 for malignant mutations, 1 for benign mutations.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMutationCured">
 				<dt class="entry">OnElonaOmakeMMAEventMutationCured</dt>
 				<dd class="entry">
-					<p>変異治療時に発生。</p>
+					<p>Occurs during mutation treatment.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>Mutation message.</dd>
 						<dt>Reference82</dt>
-						<dd>悪性変異は-1、良性変異は1。</dd>
+						<dd>-1 for malignant mutations, 1 for benign mutations.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventEtherDisease">
 				<dt class="entry">OnElonaOmakeMMAEventEtherDisease</dt>
 				<dd class="entry">
-					<p>エーテル病発生時に発生。</p>
+					<p>Occurs during ether disease breakouts.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>Mutation message.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventEtherDiseaseCured">
 				<dt class="entry">OnElonaOmakeMMAEventEtherDiseaseCured</dt>
 				<dd class="entry">
-					<p>エーテル病治療時に発生。</p>
+					<p>Occurs during ether disease treatment.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>変異メッセージ。</dd>
+						<dd>Mutation message.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAdventGod">
 				<dt class="entry">OnElonaOmakeMMAEventAdventGod</dt>
 				<dd class="entry">
-					<p>神の降臨時に発生。</p>
+					<p>Occurs at the time of God's descent.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>神の名前。</dd>
+						<dd>Name of God.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventMewmewmew">
 				<dt class="entry">OnElonaOmakeMMAEventMewmewmew</dt>
 				<dd class="entry">
-					<p>うみみゃぁ発動時に発生。</p>
+					<p>Occurs when Umimiah is activated.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventBuyNuke">
 				<dt class="entry">OnElonaOmakeMMAEventBuyNuke</dt>
 				<dd class="entry">
-					<p>核爆弾購入時に発生。</p>
+					<p>Occurs when nuclear bombs are purchased.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSetNuke">
 				<dt class="entry">OnElonaOmakeMMAEventSetNuke</dt>
 				<dd class="entry">
-					<p>核爆弾設置時に発生。</p>
+					<p>Occurs when a nuclear bomb is placed.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventNukeExploded">
 				<dt class="entry">OnElonaOmakeMMAEventNukeExploded</dt>
 				<dd class="entry">
-					<p>核爆弾爆発時に発生。</p>
+					<p>Occurs when a nuclear bomb explodes.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLomiasInTheParty">
 				<dt class="entry">OnElonaOmakeMMAEventLomiasInTheParty</dt>
 				<dd class="entry">
-					<p>パーティに異形の森の使者『ロミアス』が参加してる時に発生。</p>
+					<p>Occurs when "Lomias", an emissary of the deformed forest, joins the party.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventLomiasKilled">
 				<dt class="entry">OnElonaOmakeMMAEventLomiasKilled</dt>
 				<dd class="entry">
-					<p>異形の森の使者『ロミアス』殺害時に発生。</p>
+					<p>Occurs when "Lomias", an emissary of the deformed forest, is killed.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventZeomeKilled">
 				<dt class="entry">OnElonaOmakeMMAEventZeomeKilled</dt>
 				<dd class="entry">
-					<p>偽りの預言者『ゼーム』撃破時に発生。</p>
+					<p>Occurs when the false prophet "Zeome" is defeated.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventConqueredLesimas">
 				<dt class="entry">OnElonaOmakeMMAEventConqueredLesimas</dt>
 				<dd class="entry">
-					<p>レシマス征服時に発生。</p>
+					<p>Occurs when Lesimas is conquered.</p>
 					<dl class="reference">
 						<dt>Reference81</dt>
-						<dd>コメント。</dd>
+						<dd>Comment.</dd>
 						<dt>Reference82</dt>
-						<dd>スコア。</dd>
+						<dd>Score.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAtonement">
 				<dt class="entry">OnElonaOmakeMMAEventAtonement</dt>
 				<dd class="entry">
-					<p>カルマが上昇して犯罪者でなくなった時に発生。</p>
+					<p>Occurs when karma increases and you are no longer a criminal.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventBecomeCriminal">
 				<dt class="entry">OnElonaOmakeMMAEventBecomeCriminal</dt>
 				<dd class="entry">
-					<p>カルマが減少して犯罪者になった時に発生。</p>
+					<p>Occurs when karma decreases and you become a criminal.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPerformance">
 				<dt class="entry">OnElonaOmakeMMAEventPerformance</dt>
 				<dd class="entry">
-					<p>PCが演奏を開始した時に発生。</p>
+					<p>Occurs when the PC starts to perform.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>楽器アイテム名。</dd>
+						<dd>Instrument item name.</dd>
 						<dt>Reference82</dt>
-						<dd>演奏スキル。</dd>
+						<dd>Performance skill.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventClothOut">
 				<dt class="entry">OnElonaOmakeMMAEventClothOut</dt>
 				<dd class="entry">
-					<p>PCが気持ちいいことのために服を脱ぎ始めた時に発生。</p>
+					<p>Occurs when the PC begins to undress for pleasureable things.</p> <!-- Translator's note: DeepL says either the PC is changing to more comfy clothes, which I can relate to, or there's hanky panky going on here. I'm choosing to believe that this game would not have an event for switching to jeans and a hoodie. If I am wrong, please correct this so we're not giving unfair implications lol -->
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventStealItem">
 				<dt class="entry">OnElonaOmakeMMAEventStealItem</dt>
 				<dd class="entry">
-					<p>アイテムを盗み終わった時に発生。</p>
+					<p>Occurs when you finish stealing an item.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>盗んだアイテム名。</dd>
+						<dd>Name of stolen item.</dd>
 						<dt>Reference82</dt>
-						<dd>NPCの所持品は1、マップ上アイテムは0。</dd>
+						<dd>1 for NPC possessions, 0 for items on the map.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventTreasureDigging">
 				<dt class="entry">OnElonaOmakeMMAEventTreasureDigging</dt>
 				<dd class="entry">
-					<p>宝の地図の場所を掘り当てた時に発生。</p>
+					<p>Occurs when the treasure map location is dug up.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventReadTreasureMap">
 				<dt class="entry">OnElonaOmakeMMAEventReadTreasureMap</dt>
 				<dd class="entry">
-					<p>宝の地図を読んだ時に発生。</p>
+					<p>Occurs when the treasure map is read.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSkillLearned">
 				<dt class="entry">OnElonaOmakeMMAEventSkillLearned</dt>
 				<dd class="entry">
-					<p>トレーナーからスキルを習得した時に発生。</p>
+					<p>Occurs when a skill is learned from a trainer.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>スキル名。</dd>
+						<dd>Skill name.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventWeatherChanged">
 				<dt class="entry">OnElonaOmakeMMAEventWeatherChanged</dt>
 				<dd class="entry">
-					<p>天候が変わった時に発生。</p>
+					<p>Occurs when the weather changes.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>変わる前の天候。</dd>
+						<dd>Weather before the change.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventRagnarok">
 				<dt class="entry">OnElonaOmakeMMAEventRagnarok</dt>
 				<dd class="entry">
-					<p>終末の日が訪れた時に発生。</p>
+					<p>Occurs when doomsday arrives.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventSisterRagnarok">
 				<dt class="entry">OnElonaOmakeMMAEventSisterRagnarok</dt>
 				<dd class="entry">
-					<p>妹の日が訪れた時に発生。</p>
+					<p>Occurs when the sister's day arrives.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPray">
 				<dt class="entry">OnElonaOmakeMMAEventPray</dt>
 				<dd class="entry">
-					<p>神に祈った時に発生。</p>
+					<p>Occurs when you pray to God.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventOffer">
 				<dt class="entry">OnElonaOmakeMMAEventOffer</dt>
 				<dd class="entry">
-					<p>祭壇にアイテムを捧げた時に発生。</p>
+					<p>Occurs when an item is offered at the altar.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>捧げたアイテム。</dd>
+						<dd>Item offered.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPrayFailed">
 				<dt class="entry">OnElonaOmakeMMAEventPrayFailed</dt>
 				<dd class="entry">
-					<p>神に祈ったが無関心だった時に発生。</p>
+					<p>Occurs when you pray to God but he is indifferent.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPrayEyth">
 				<dt class="entry">OnElonaOmakeMMAEventPrayEyth</dt>
 				<dd class="entry">
-					<p>無信仰で神に祈ってみた時に発生。</p>
+					<p>Occurs when you try to pray to God in unbelief.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAreaChanged*">
 				<dt class="entry">OnElonaOmakeMMAEventAreaChanged*</dt>
 				<dd class="entry">
-					<p>別エリアに移動した時に発生（*はエリア番号）。</p>
+					<p>Occurs when moving to another area (* is the area number).</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>移動前にいたエリア名。</dd>
+						<dd>Name of the area you were in before moving.</dd>
 						<dt>Reference82</dt>
-						<dd>移動前にいたエリア番号。</dd>
+						<dd>Number of the area you were in before moving.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventPayTax">
 				<dt class="entry">OnElonaOmakeMMAEventPayTax</dt>
 				<dd class="entry">
-					<p>PCが請求書を納税箱に入れた時に発生。</p>
+					<p>Occurs when the PC puts the invoice in the tax box.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>支払った税金額。</dd>
+						<dd>Amount of taxes paid.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventCooking">
 				<dt class="entry">OnElonaOmakeMMAEventCooking</dt>
 				<dd class="entry">
-					<p>PCがアイテムを調理した時に発生。</p>
+					<p>Occurs when a PC cooks an item.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>料理アイテム名。</dd>
+						<dd>Cooking item name.</dd>
 						<dt>Reference82</dt>
-						<dd>料理アイテム識別子。</dd>
+						<dd>Cooking item identifier.</dd>
 						<dt>Reference83</dt>
-						<dd>食物種別(1:肉、2:野菜、3:果物、4:お菓子、5:麺、6:魚、7:パン、8:卵)。</dd>
+						<dd>Food type (1: meat, 2: vegetables, 3: fruits, 4: sweets, 5: noodles, 6: fish, 7: bread, 8: eggs).</dd>
 						<dt>Reference84</dt>
-						<dd>料理ランク(1～9)。</dd>
+						<dd>Cuisine rank (1–9).</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventAreaChanged">
 				<dt class="entry">OnElonaOmakeMMAEventAreaChanged</dt>
 				<dd class="entry">
-					<p>不特定の別エリアに移動した時に発生。</p>
+					<p>Occurs when moving to another unspecified area.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 						<dt>Reference81</dt>
-						<dd>移動前にいたエリア名。</dd>
+						<dd>Name of the area you were in before moving.</dd>
 						<dt>Reference82</dt>
-						<dd>移動前にいたエリア番号。</dd>
+						<dd>Number of the area you were in before moving.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventHour">
 				<dt class="entry">OnElonaOmakeMMAEventHour</dt>
 				<dd class="entry">
-					<p>ゲーム内時間で1時間が経過した時に発生。</p>
+					<p>Occurs when one hour has elapsed in in-game time.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElonaOmakeMMAEventGrandmapocalypse">
 				<dt class="entry">OnElonaOmakeMMAEventGrandmapocalypse</dt>
 				<dd class="entry">
-					<p>グランマ黙示録が訪れた時に発生。</p>
+					<p>Occurs when the grandmapocalypse happens.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>Reference0～80まで、<a href="#reference_elonamma_common">※共通リファレンス</a>。</dd>
+						<dd>Reference0–80, <a href="#reference_elonamma_common">※common reference</a>.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>麻雀通信イベント</h1>
+			<h1>Mahjong Communication Events</h1>
 			<ul class="caption link">
-				<li>仕様提唱元：<a href="https://nikolat.github.io/">https://nikolat.github.io/</a></li>
-				<li>サーバーの実装例：<a href="https://github.com/nikolat/jong-bari">https://github.com/nikolat/jong-bari</a></li>
-				<li>クライアントの実装例(YAYA)：<a href="https://github.com/nikolat/jong-rinrin">https://github.com/nikolat/jong-rinrin</a></li>
-				<li>クライアントの実装例(華和梨)：<a href="https://github.com/nikolat/jong-chunchun">https://github.com/nikolat/jong-chunchun</a></li>
-				<li>クライアントの実装例(里々)：<a href="https://github.com/nikolat/jong-whanwhan">https://github.com/nikolat/jong-whanwhan</a></li>
+				<li>Specification source: <a href="https://nikolat.github.io/">https://nikolat.github.io/</a></li>
+				<li>Example of server implementation: <a href="https://github.com/nikolat/jong-bari">https://github.com/nikolat/jong-bari</a></li>
+				<li>Example of client implementation (YAYA): <a href="https://github.com/nikolat/jong-rinrin">https://github.com/nikolat/jong-rinrin</a></li>
+				<li>Example of client implementation (Kawari): <a href="https://github.com/nikolat/jong-chunchun">https://github.com/nikolat/jong-chunchun</a></li>
+				<li>Example of client implementation (Satori): <a href="https://github.com/nikolat/jong-whanwhan">https://github.com/nikolat/jong-whanwhan</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 				<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
-				<li><em>※推奨　SSP2.5.05以上</em></li>
+				<li><em>※SSP 2.5.05 or higher recommended</em></li>
 			</ul>
 			<dl id="OnMahjong">
 				<dt class="entry">OnMahjong</dt>
 				<dd class="entry">
-					<p>ゲームの各タイミングで通知。後述の<a href="#reference_OnMahjong">※サーバコマンド</a>参照。</p>
+					<p>Notification at each game point. See <a href="#reference_OnMahjong">※Server Commands</a> below.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バージョン（UKAJONG/0.2）</dd>
+						<dd>Version (UKAJONG/0.2)</dd>
 						<dt>Reference1</dt>
-						<dd><a href="#reference_OnMahjong">※サーバコマンド</a></dd>
+						<dd><a href="#reference_OnMahjong">※Server Command</a></dd>
 						<dt>Reference*</dt>
-						<dd><a href="#reference_OnMahjong">※サーバコマンド</a>に応じた追加情報</dd>
+						<dd>Additional information according to <a href="#reference_OnMahjong">※Server Commands</a>.</dd>
 					</dl>
 					<section id="reference_OnMahjong">
-						<h1>UKAJONG/0.2におけるサーバコマンドとその追加情報</h1>
+						<h1>Server commands and additional information in UKAJONG/0.2.</h1>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>gamestart（ゲーム開始時）</dd>
+							<dd>gamestart (at the start of a game)</dd>
 							<dt>Reference2</dt>
-							<dd>席（東|南|西|北）</dd>
+							<dd>Seats (East|South|West|North)</dd>
 							<dt>Reference3</dt>
-							<dd>プレイヤー名1</dd>
+							<dd>Player 1 name</dd>
 							<dt>Reference4</dt>
-							<dd>プレイヤー名2</dd>
+							<dd>Player 2 name</dd>
 							<dt>Reference5</dt>
-							<dd>プレイヤー名3</dd>
+							<dd>Player 3 name</dd>
 							<dt>Reference6</dt>
-							<dd>プレイヤー名4</dd>
+							<dd>Player 4 name</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>gameend（ゲーム終了時）</dd>
+							<dd>gameend(At the end of a game)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名1（バイト値１）点数</dd>
+							<dd>Player 1 name(byte 1 value)Score</dd>
 							<dt>Reference3</dt>
-							<dd>プレイヤー名2（バイト値１）点数</dd>
+							<dd>Player 2 name(byte 1 value)Score</dd>
 							<dt>Reference4</dt>
-							<dd>プレイヤー名3（バイト値１）点数</dd>
+							<dd>Player 3 name(byte 1 value)Score</dd>
 							<dt>Reference5</dt>
-							<dd>プレイヤー名4（バイト値１）点数</dd>
+							<dd>Player 4 name(byte 1 value)Score</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>kyokustart（一局開始時）</dd>
+							<dd>kyokustart (At the start of a round)</dd>
 							<dt>Reference2</dt>
-							<dd>場風（東|南|西|北）</dd>
+							<dd>Wind (east|south|west|north)</dd>
 							<dt>Reference3</dt>
-							<dd>親プレイヤー名</dd>
+							<dd>Parent player name</dd>
 							<dt>Reference4</dt>
-							<dd>本場（例 1）</dd>
+							<dd>Home (Example: 1)</dd>
 							<dt>Reference5</dt>
-							<dd>供託（例 1000）</dd>
+							<dd>Trust (Example: 100)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>kyokuend（一局終了時）</dd>
+							<dd>kyokuend (At the end of a round)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>point（プレイヤーの点数を通知）</dd>
+							<dd>point (notifies the player's score)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>Player name</dd>
 							<dt>Reference3</dt>
-							<dd>(=|+|-) =は点数の直指定、+-は増減を意味する</dd>
+							<dd>(=|+|-) = means direct specification of scores, + or - means increase or decrease.</dd>
 							<dt>Reference4</dt>
-							<dd>点数</dd>
+							<dd>Score</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>haipai（配牌を配る時）</dd>
+							<dd>haipai (When dealing out tiles)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>Player name</dd>
 							<dt>Reference3</dt>
-							<dd>配牌（例 1m2m3m4p5p6p7s8s9s1z5z6z7z）</dd>
+							<dd>Matching cards (Example: 1m2m3m4p5p6p7s8s9s1z5z6z7z)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>dora（ドラ表示牌を送る時）</dd>
+							<dd>dora (when sending a dora display tile)</dd>
 							<dt>Reference2</dt>
-							<dd>牌（例 7z）</dd>
+							<dd>Tile (Example: 7z)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>open（手牌を公開する時 チー、ポン、カン等）</dd>
+							<dd>open (When revealing a hand, such as Chi, Pon, Kan, etc.)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>Player name</dd>
 							<dt>Reference3</dt>
-							<dd>牌（例 1p2p3p）</dd>
+							<dd>Tile (Example: 1p2p3p)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>tsumo（ツモの時）</dd>
+							<dd>tsumo (at tsumo)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名（自分）</dd>
+							<dd>Player name (self)</dd>
 							<dt>Reference3</dt>
-							<dd>残り枚数</dd>
+							<dd>Number of tickets remaining</dd>
 							<dt>Reference4</dt>
-							<dd>牌（例 7z）</dd>
+							<dd>Tile (Example: 7z)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>sutehai（捨牌時）</dd>
+							<dd>sutehai (When playing cards)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名（自分）</dd>
+							<dd>Player name (self)</dd>
 							<dt>Reference3</dt>
-							<dd>牌（例 7z）</dd>
+							<dd>Tile (Example: 7z)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>say（発声時）</dd>
+							<dd>say (Vocalizing)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>Player name</dd>
 							<dt>Reference3</dt>
-							<dd>発声内容（chi|pon|kan|ron|tsumo|richi|tenpai|noten）</dd>
+							<dd>Speech contents (chi|pon|kan|ron|tsumo|richi|tenpai|noten)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>agari（あがりの時）</dd>
+							<dd>agari (Closing time)</dd>
 							<dt>Reference2</dt>
-							<dd>プレイヤー名</dd>
+							<dd>Player name</dd>
 							<dt>Reference3</dt>
-							<dd>符</dd>
+							<dd>Mark</dd>
 							<dt>Reference4</dt>
-							<dd>役,ハン数</dd>
+							<dd>Role, Han number</dd>
 							<dt>Reference5</dt>
-							<dd>以降、Reference4同様</dd>
+							<dd>Same as Reference4</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>ryukyoku（流局時）</dd>
+							<dd>ryukyoku (When the game is over)</dd>
 						</dl>
-						<p>以下のコマンドは返信が要求されている。要求元がGHOSTである場合は\![raiseother]等で返信しても良いが、要求元が外部アプリでSSTPによる通知であった場合はX-SSTP-PassThru-*ヘッダを用いて返信する必要がある。</p>
-						<p>\![raiseother]で返信する場合はOnMahjongResponseイベントを返す。SHIORIレスポンスヘッダを用いる場合はX-SSTP-PassThru-ID: OnMahjongResponseとする。</p>
-						<p>要求された対象に空文字を設定した場合、サーバーに対応を委任したものとみなす。</p>
+						<p>The following commands require a reply. If the requester is GHOST, you can reply with \![raiseother], etc., but if the requester is an external application and the notification is by SSTP, it is necessary to reply using the X-SSTP-PassThru-* header.</p>
+						<p>When replying with \![raiseother], the OnMahjongResponse event is returned. When the SHIORI response header is used, X-SSTP-PassThru-ID: OnMahjongResponse is used.</p>
+						<p>If an empty character is set as the requested target, the server is considered to have delegated the response to the client.</p>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>hello（接続確認）</dd>
-						</dl>
-						<dl class="reference">
-							<dt>Reference1</dt>
-							<dd>sutehai?（捨牌を尋ねる）</dd>
+							<dd>hello (Connection confirmation)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>naku?（牌を鳴くか尋ねる。クライアントが可能なコマンドも送る）</dd>
+							<dd>sutehai? (Asks for discarded tiles)</dd>
+						</dl>
+						<dl class="reference">
+							<dt>Reference1</dt>
+							<dd>naku? (Asks if you want to ring a tile. The client also sends possible commands.)</dd>
 							<dt>Reference2</dt>
 							<dd>(ron|kan|pon|chi)</dd>
 							<dt>Reference3</dt>
-							<dd>以降、Reference2同様</dd>
+							<dd>Same as Reference2.</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>tenpai?（テンパイを宣言するか尋ねる）</dd>
+							<dd>tenpai? (Asks if you want to declare a tenpai)</dd>
 						</dl>
 					</section>
 				</dd>
@@ -2016,46 +2033,46 @@
 			<dl id="OnMahjongResponse">
 				<dt class="entry">OnMahjongResponse</dt>
 				<dd class="entry">
-					<p>OnMahjongイベントに対する返信。後述の<a href="#reference_OnMahjongResponse">※クライアントコマンド</a>参照。</p>
+					<p>Reply to the OnMahjong event. See <a href="#reference_OnMahjongResponse">※Client Commands</a> below.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バージョン（UKAJONG/0.2）</dd>
+						<dd>Version (UKAJONG/0.2)</dd>
 						<dt>Reference1</dt>
-						<dd><a href="#reference_OnMahjongResponse">※クライアントコマンド</a></dd>
+						<dd><a href="#reference_OnMahjongResponse">※Client Commands</a></dd>
 						<dt>Reference*</dt>
-						<dd><a href="#reference_OnMahjongResponse">※クライアントコマンド</a>に応じた追加情報</dd>
+						<dd>Additional information according to <a href="#reference_OnMahjongResponse">※Client Commands</a></dd>
 					</dl>
 					<section id="reference_OnMahjongResponse">
-						<h1>UKAJONG/0.2におけるクライアントコマンドとその追加情報</h1>
+						<h1>Client commands and additional information in UKAJONG/0.2</h1>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>hello（接続確認の返信）</dd>
+							<dd>hello (Connection confirmation reply)</dd>
 							<dt>Reference2</dt>
-							<dd>ump=(UMPバージョン)※厳密にUMPに準拠しているわけではないので特に見てないです。ump=?でOK</dd>
+							<dd>emp=(UMP version) ※Not strictly UMP compliant, so it is not looked at specifically. UMP=? is ok.</dd>
 							<dt>Reference3</dt>
-							<dd>name=(プレイヤー名)※sakura.nameを指定してください。</dd>
+							<dd>name=(Player name) ※Specify sakura.name.</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>sutehai?（捨牌の返信）</dd>
+							<dd>sutehai? (Reply to discarded tiles)</dd>
 							<dt>Reference2</dt>
 							<dd>(sutehai|ankan|kakan|richi|tsumo)</dd>
 							<dt>Reference3</dt>
-							<dd>選択された牌(tsumoの時は空でよい)</dd>
+							<dd>Selected tile (may be empty when tsumo)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>naku?（牌を鳴くかの返信）</dd>
+							<dd>naku? (Reply to whether to play the tiles)</dd>
 							<dt>Reference2</dt>
 							<dd>(no|ron|kan|pon|chi)</dd>
 							<dt>Reference3</dt>
-							<dd>選択された牌1(chiの時に必要。2mに対し1mと3mまたは3mと4mのように指定する。そのうちの1枚目)</dd>
+							<dd>Selected tile 1 (Required for chi, designated as 1m and 3m or 3m and 4m against 2m. The first of them.)</dd>
 							<dt>Reference4</dt>
-							<dd>選択された牌2(上記の2枚目)</dd>
+							<dd>Selected tile 2 (The second one above.)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>tenpai?（テンパイを宣言するかの返信）</dd>
+							<dd>tenpai? (Reply to whether to declare tenpai)</dd>
 							<dt>Reference2</dt>
 							<dd>(yes|no)</dd>
 						</dl>
@@ -2064,9 +2081,9 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>アプリ「さとりすと」</h1>
+			<h1>Application "Satolist" (さとりすと)</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://nanachi.sakura.ne.jp/">http://nanachi.sakura.ne.jp/</a></li>
+				<li>Published by: <a href="http://nanachi.sakura.ne.jp/">http://nanachi.sakura.ne.jp/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2074,66 +2091,66 @@
 			<dl id="OnSatolistBoot">
 				<dt class="entry">OnSatolistBoot</dt>
 				<dd class="entry">
-					<p>さとりすとが起動した時に発生。</p>
+					<p>Occurs when Satolist is started.</p>
 				</dd>
 			</dl>
 			<dl id="OnSatolistGhostOpened">
 				<dt class="entry">OnSatolistGhostOpened</dt>
 				<dd class="entry">
-					<p>さとりすとがゴーストを読み込んだ時に発生。</p>
+					<p>Occurs when a ghost is read by Satolist.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>本体側キャラクタ名。</dd>
+						<dd>Main character name.</dd>
 						<dt>Reference1</dt>
-						<dd>ゴースト名。</dd>
+						<dd>Ghost name.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSatolistSaved">
 				<dt class="entry">OnSatolistSaved</dt>
 				<dd class="entry">
-					<p>さとりすとでゴーストを保存した時に発生。</p>
+					<p>Occurs when a ghost is saved in Satolist.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>さとりすと終了時に保存をした場合はclosing、それ以外はedit</dd>
+						<dd>closing if saving because Satolist is closing, otherwise edit.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSatolistClosed">
 				<dt class="entry">OnSatolistClosed</dt>
 				<dd class="entry">
-					<p>さとりすとが終了しようとした時に発生。</p>
+					<p>Occurs when Satolist is about to exit.</p>
 				</dd>
 			</dl>
 			<dl id="OnSatolistEventAdded">
 				<dt class="entry">OnSatolistEventAdded</dt>
 				<dd class="entry">
-					<p>さとりすとでイベントを作成した時に発生。</p>
+					<p>Occurs when an event is created in Satolist.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>追加した項目名。</dd>
+						<dd>Name of the added item.</dd>
 						<dt>Reference1</dt>
-						<dd>追加先のファイル名。</dd>
+						<dd>Name of the file to which the item is added.</dd>
 						<dt>Reference2</dt>
-						<dd>項目の種別。</dd>
+						<dd>Item type.</dd>
 						<dt>Reference3</dt>
-						<dd>項目の発生条件。</dd>
+						<dd>Item occurence conditions.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnSatolistDictionaryFolderChanged">
 				<dt class="entry">OnSatolistDictionaryFolderChanged</dt>
 				<dd class="entry">
-					<p>「辞書」で使用する辞書フォルダを変更した時に発生。</p>
+					<p>Occurs when the dictionary folder in "Dictionary" is changed.</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>GoogleChrome拡張「とうらぶえくすてんしょん」</h1>
+			<h1>Google Chrome Extension "Tourabu" (とうらぶえくすてんしょん)</h1>
 			<ul class="caption link">
-				<li>公開元：<del>とうらぶえくすてんしょん - Chrome ウェブストア</del><ins>消失</ins></li>
-				<li>関連：<a href="https://ayachi.hatenablog.com/entry/2015/03/14/183856">https://ayachi.hatenablog.com/entry/2015/03/14/183856</a></li>
-				<li>関連：<a href="https://ayachi.hatenablog.com/entry/2015/03/14/210107">https://ayachi.hatenablog.com/entry/2015/03/14/210107</a></li>
+				<li>Published by: <del>とうらぶえくすてんしょん - Chrome ウェブストア</del> <ins>vanished</ins></li>
+				<li>Reference: <a href="https://ayachi.hatenablog.com/entry/2015/03/14/183856">https://ayachi.hatenablog.com/entry/2015/03/14/183856</a></li>
+				<li>Reference: <a href="https://ayachi.hatenablog.com/entry/2015/03/14/210107">https://ayachi.hatenablog.com/entry/2015/03/14/210107</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2141,49 +2158,49 @@
 			<dl id="OnTourabuConquestStart">
 				<dt class="entry">OnTourabuConquestStart</dt>
 				<dd class="entry">
-					<p>遠征が開始されたときに発生。</p>
+					<p>Occurs when an expedition is started.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>部隊の番号（1～4の整数）。</dd>
+						<dd>Unit number (integer from 1-4).</dd>
 						<dt>Reference1</dt>
-						<dd>遠征が終わるまでのおよその時間。単位は分。</dd>
+						<dd>Approximate time until the end of the expedition. Unit is minutes.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnTourabuConquestEnd">
 				<dt class="entry">OnTourabuConquestEnd</dt>
 				<dd class="entry">
-					<p>遠征が終了したとき発生。<br />仕様上実際の遠征終了より通知が数秒早いことがある。</p>
+					<p>Occurs when the expedition is completed.<br />Notification may be a few seconds earlier than the actual end of the expedition due to specifications.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>部隊の番号（1～4の整数）。</dd>
+						<dd>Unit number (integer from 1-4).</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnTourabuDutyStart">
 				<dt class="entry">OnTourabuDutyStart</dt>
 				<dd class="entry">
-					<p>内番が開始されたとき発生。</p>
+					<p>Occurs when the inner guard is started.</p>
 				</dd>
 			</dl>
 			<dl id="OnTourabuDutyEnd">
 				<dt class="entry">OnTourabuDutyEnd</dt>
 				<dd class="entry">
-					<p>内番が終了したとき発生。</p>
+					<p>Occurs when the inner guard is finished.</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト間汎用イベント</h1>
+			<h1>Ghost-to-Ghost General Purpose Event</h1>
 			<dl id="OnRequestValues">
 				<dt class="entry">OnRequestValues</dt>
 				<dd class="entry">
-					<p>他ゴーストが任意に送信した際に発生。<br />このイベントが送られた時、\[raiseother]でOnGetValuesイベントを送信する必要がある。</p>
+					<p>Occurs when other ghosts transmit arbitrarily.<br />When this event is sent, the OnGetValues event should be sent via \![raiseother].</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信したゴースト名。</dd>
+						<dd>Name of the ghost that sent it.</dd>
 						<dt>Reference1</dt>
-						<dd>要求する変数名(key)。Reference2以降も同様に要求する変数がある限り続く。</dd>
+						<dd>Name of the variable to request (key), followed by Reference2 and so on, as long as long as the variable is requested in the same way.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2193,12 +2210,12 @@
 			<dl id="OnGetValues">
 				<dt class="entry">OnGetValues</dt>
 				<dd class="entry">
-					<p>OnRequestValuesを受けた際に返すべきイベント。</p>
+					<p>Event to be returned when OnRequestValues is recieved.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信するゴースト名。</dd>
+						<dd>Name of the ghost that sent it.</dd>
 						<dt>Reference1</dt>
-						<dd>key=value(keyはOnRequestValuesで受け取った変数名、valueはその値)。Reference2以降も同様に要求された変数がある限り続く。存在しない変数は返さない。OnRequestValuesで送られた順序に依存しない。</dd>
+						<dd>key=value (where key is the name of the variable received in OnRequestValues, and value is its value). Variables that do not exist are not returned, regardless of the order in which they were sent in OnRequestValues.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2206,17 +2223,17 @@
 				</dd>
 			</dl>
 			<div class="caption">
-				<h1>要求されるプロパティ名一覧</h1>
+				<h1>List of requested property names</h1>
 				<ul>
-					<li>キャラクター名</li>
-					<li>世代</li>
-					<li>年齢層</li>
-					<li>性別</li>
-					<li>種族</li>
-					<li>種族タイプ</li>
-					<li>行動タイプ</li>
-					<li>プロフィール</li>
-					<li>カード画像パス</li>
+					<li>Character name</li>
+					<li>Generation</li>
+					<li>Age group</li>
+					<li>Gender</li>
+					<li>Species</li>
+					<li>Species type</li>
+					<li>Behavior type</li>
+					<li>Profile</li>
+					<li>Card image path</li>
 					<li>LIFE</li>
 					<li>STR</li>
 					<li>DEX</li>
@@ -2229,9 +2246,9 @@
 			</div>
 		</section>
 		<section class="category">
-			<h1>ゴースト「ぬるぽ いんたーはい」</h1>
+			<h1>Ghost "ぬるぽ いんたーはい"</h1>
 			<ul class="caption link">
-				<li>公開元：閉鎖</li>
+				<li>Published by: Closure</li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2239,14 +2256,14 @@
 			<dl id="OnTalkRequest">
 				<dt class="entry">OnTalkRequest</dt>
 				<dd class="entry">
-					<p>ぬるぽ　いんたーはいからトークを求められた際に発生。</p>
+					<p>Occurs when asked to talk by NullPointerHi. (Translator note: NullPointerHi is the romanized name of the ghost.)</p>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト「The Hand」</h1>
+			<h1>Ghost "The Hand"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ukiya.sakura.ne.jp/">http://ukiya.sakura.ne.jp/</a></li>
+				<li>Published by: <a href="http://ukiya.sakura.ne.jp/">http://ukiya.sakura.ne.jp/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2254,27 +2271,27 @@
 			<dl id="OnHandActivate">
 				<dt class="entry">OnHandActivate</dt>
 				<dd class="entry">
-					<p>The Handが他ゴーストを触りに行くまたは触り終わった際に発生。<br />触っている間、Sender:The Handでゴーストに(OnMouseMove|OnMouseDoubleClick|OnMouseWheel)イベントを送る。</p>
+					<p>Occurs when the hand goes to touch or finishes touching another ghost.<br />While touching, sends (OnMouseMove|OnMouseDoubleClick|OnMouseWheel) events to the ghost with Sender:The Hand.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>通常触り開始：NormalStart<br />通常触り終了：NormalEnd<br />必殺技開始：SuperStart<br />必殺技途中：SuperContinue<br />必殺技終了：SuperEnd<br />必殺技途中でホーミング発動：SuperHoming</dd>
+						<dd>Normal touch start: NormalStart<br />Normal touch end: NormalEnd<br />Special move start: SuperStart<br />Special move in progress: SuperContinue<br />Special move ends: SuperEnd<br />Homing activation in the middle of a special move: SuperHoming</dd>
 						<dt>Reference1</dt>
-						<dd>当たり判定名。<br />停止された場合はescaped。<br />必殺技の場合は1～4。</dd>
+						<dd>Name of the collision area.<br />If stopped, "escaped".<br />1-4 for special moves.</dd>
 						<dt>Reference2</dt>
-						<dd>相手に起きるイベント。<br />通常時：(OnMouseMove|OnMouseDoubleClick|OnMouseWheel)<br />必殺技中：触った回数<br />必殺技終了時：(MAX触り回数|escaped|nocollision|attacked|deleted)</dd>
+						<dd>An event that happens to a partner.<br />Normal: (OnMouseMove|OnMouseDoubleClick|OnMouseWheel)<br />During special moves: number of times touched.<br />When a special move is completed: (Max number of touches|escaped|nocollision|attacked|deleted)</dd>
 						<dt>Reference3</dt>
-						<dd>触りに行く際のスクリプト。<br />必殺技中は当たり判定名。</dd>
+						<dd>Scripts for touching.<br />During special moves, the name of the collision area.</dd>
 						<dt>Reference4</dt>
-						<dd>シェル番号。</dd>
+						<dd>Shell number.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト「ごーすとじてん」「きゅーぴっど」</h1>
+			<h1>Ghost "ごーすとじてん」「きゅーぴっど"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://home.384.jp/evidence/">http://home.384.jp/evidence/</a></li>
-				<li>関連：<a href="http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3">http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3</a></li>
+				<li>Published by: <a href="http://home.384.jp/evidence/">http://home.384.jp/evidence/</a></li>
+				<li>Reference: <a href="http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3">http://spoon.if.land.to/wiki/index.php?%A4%B4%A1%BC%A4%B9%A4%C8%A4%B8%A4%C6%A4%F3</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2282,22 +2299,22 @@
 			<dl id="OnJitenBattle">
 				<dt class="entry">OnJitenBattle</dt>
 				<dd class="entry">
-					<p>ゴーストが行う模擬戦の毎ターン発生。</p>
+					<p>Occurs every turn of a mock battle conducted by the ghost.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信したゴーストの\0名。</dd>
+						<dd>Sent ghost's \0 name.</dd>
 						<dt>Reference1</dt>
-						<dd>攻撃側キャラクタ名。</dd>
+						<dd>Attacker character name.</dd>
 						<dt>Reference2</dt>
-						<dd>防御側キャラクタ名。</dd>
+						<dd>Defender character name.</dd>
 						<dt>Reference3</dt>
-						<dd>戦闘結果。<br />開始時：模擬戦闘開始<br />行動時：(物理攻撃成功|物理攻撃失敗|物理攻撃回避|物理攻撃ミス|精神攻撃成功|精神攻撃失敗|精神攻撃回避|精神攻撃ミス)</dd>
+						<dd>Combat results.<br />Start: simulated battle begins<br />When acting: (physical attack success|physical attack failure|physical attack evasion|physical attack miss|mental attack success|mental attack failure|mental attack evasion|mental attack miss).</dd>
 						<dt>Reference4</dt>
-						<dd>ダメージ。</dd>
+						<dd>Damage.</dd>
 						<dt>Reference5</dt>
-						<dd>攻撃側キャラクタLIFE。</dd>
+						<dd>Attacker character LIFE.</dd>
 						<dt>Reference6</dt>
-						<dd>防御側キャラクタLIFE。</dd>
+						<dd>Defender character LIFE.</dd>
 						<dt>Reference7</dt>
 						<dd>Normal</dd>
 					</dl>
@@ -2306,22 +2323,22 @@
 			<dl id="OnJitenTagBattle">
 				<dt class="entry">OnJitenTagBattle</dt>
 				<dd class="entry">
-					<p>ゴーストが行う模擬戦の毎ターン発生。</p>
+					<p>Occurs every turn of a mock battle conducted by the ghost.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信したゴーストの\0名。</dd>
+						<dd>Sent ghost's \0 name.</dd>
 						<dt>Reference1</dt>
-						<dd>攻撃側キャラクタ名。</dd>
+						<dd>Attacker character name.</dd>
 						<dt>Reference2</dt>
-						<dd>防御側キャラクタ名。</dd>
+						<dd>Defender character name.</dd>
 						<dt>Reference3</dt>
-						<dd>戦闘結果。<br />開始時：模擬戦闘開始<br />行動時：(物理攻撃成功|物理攻撃失敗|物理攻撃回避|物理攻撃ミス|精神攻撃成功|精神攻撃失敗|精神攻撃回避|精神攻撃ミス)</dd>
+						<dd>Combat results.<br />Start: simulated battle begins<br />When acting: (physical attack success|physical attack failure|physical attack evasion|physical attack miss|mental attack success|mental attack failure|mental attack evasion|mental attack miss).</dd>
 						<dt>Reference4</dt>
-						<dd>ダメージ。</dd>
+						<dd>Damage.</dd>
 						<dt>Reference5</dt>
-						<dd>攻撃側キャラクタLIFE。</dd>
+						<dd>Attacker character LIFE.</dd>
 						<dt>Reference6</dt>
-						<dd>防御側キャラクタLIFE。</dd>
+						<dd>Defender character LIFE.</dd>
 						<dt>Reference7</dt>
 						<dd>Tag</dd>
 					</dl>
@@ -2329,9 +2346,9 @@
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト「マギルトリエ」</h1>
+			<h1>Ghost "マギルトリエ"</h1>
 			<ul class="caption link">
-				<li>公開元：閉鎖</li>
+				<li>Published by: Closure</li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2339,24 +2356,24 @@
 			<dl id="OnMglBattle">
 				<dt class="entry">OnMglBattle</dt>
 				<dd class="entry">
-					<p>マギルトリエが行うバーチャルバトルの結果ごとに発生。</p>
+					<p>Occurs for each result of a cirtual battle conducted by the magistrier.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>バージョン情報。</dd>
+						<dd>Version information.</dd>
 						<dt>Reference2</dt>
-						<dd>送信元ゴースト。</dd>
+						<dd>Sender ghost.</dd>
 						<dt>Reference3</dt>
-						<dd>Mglイベント名。</dd>
+						<dd>Mgl Event Name.</dd>
 						<dt>Reference*</dt>
-						<dd>Mglイベントに対する内容。</dd>
+						<dd>Content for Mgl events.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト「カレー家族／沙紀と右近」</h1>
+			<h1>Ghost "カレー家族／沙紀と右近"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://curryfamily.me.land.to/ghost_saki.html">http://curryfamily.me.land.to/ghost_saki.html</a></li>
+				<li>Published by: <a href="http://curryfamily.me.land.to/ghost_saki.html">http://curryfamily.me.land.to/ghost_saki.html</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2364,13 +2381,13 @@
 			<dl id="Send60stair_Call">
 				<dt class="entry">Send60stair_Call</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が同時起動しているゴーストをゲームに誘う際に発生。</p>
+					<p>Curry family / Occurs when Saki and Ukon invite other ghosts that are running to the game.</p>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Start">
 				<dt class="entry">Send60stair_Start</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近がゲームを開始する際に発生。</p>
+					<p>Curry family / Occurs when Saki and Ukon start the game.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -2379,100 +2396,100 @@
 			<dl id="Send60stair_YourTurnStart">
 				<dt class="entry">Send60stair_YourTurnStart</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中に自ゴーストの順番が来た際に発生。</p>
+					<p>Curry family / Occurs when it is the turn of one's own ghost during a game played by Saki and Ukon.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>現在位置。</dd>
+						<dd>Current position.</dd>
 						<dt>Reference1</dt>
-						<dd>マーキング位置。</dd>
+						<dd>Marking position.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Marking">
 				<dt class="entry">Send60stair_Marking</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中にマーキングした際に発生。</p>
+					<p>Curry family / Occurs when marking during a game played by Saki and Ukon.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>マーキング位置。</dd>
+						<dd>Marking position.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_DiceRoll">
 				<dt class="entry">Send60stair_DiceRoll</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中にゴーストがサイコロを振り、ドボンでない際に発生。</p>
+					<p>Curry family / Occurs when the ghost rolls the dice during a game played by Saki and Ukon, and it is not Dobon.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>第一サイコロの出目。</dd>
+						<dd>First dice roll.</dd>
 						<dt>Reference1</dt>
-						<dd>第二サイコロの出目。</dd>
+						<dd>Second dice roll.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Dobon">
 				<dt class="entry">Send60stair_Dobon</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中に参加ゴーストのいずれかがドボンした際に発生。</p>
+					<p>Curry family / Occurs when one of the participating ghosts gets Dobon during a game played by Saki and Ukon.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ドボンしたゴースト名。</dd>
+						<dd>Dobon ghost name.</dd>
 						<dt>Reference1</dt>
-						<dd>ドボンしたゴーストの現在位置。</dd>
+						<dd>Current location of the Dobon ghost.</dd>
 						<dt>Reference2</dt>
-						<dd>ドボンしたゴーストのマーキング位置。</dd>
+						<dd>Marking position of Dobon ghost.</dd>
 						<dt>Reference3</dt>
-						<dd>サイコロの出目。</dd>
+						<dd>Roll of the dice.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_YourTurnEnd">
 				<dt class="entry">Send60stair_YourTurnEnd</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中に自ゴーストのターンが終了した際に発生。</p>
+					<p>Curry family / Occurs when your ghost's turn ends during a game played by Saki and Ukon.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>現在位置。</dd>
+						<dd>Current position.</dd>
 						<dt>Reference1</dt>
-						<dd>マーキング位置。</dd>
+						<dd>Marking position.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_Goal">
 				<dt class="entry">Send60stair_Goal</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム中にいずれかのゴーストがゴールした際に発生。</p>
+					<p>Curry family / Occurs when one of the ghosts scores a goal during a game played by Saki and Ukon.。</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>優勝したゴースト名。</dd>
+						<dd>Name of the winning ghost.</dd>
 						<dt>Reference1</dt>
-						<dd>順位。</dd>
+						<dd>Order.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="Send60stair_GameEnd">
 				<dt class="entry">Send60stair_GameEnd</dt>
 				<dd class="entry">
-					<p>カレー家族／沙紀と右近が行うゲーム終了時、順位を表示した後に発生。</p>
+					<p>Curry family / Occurs at the end of the game played by Saki and Ukon, after the ranking is displayed.</p>
 				</dd>
 			</dl>
 			<dl id="Send60stair_GetStatus">
 				<dt class="entry">Send60stair_GetStatus</dt>
 				<dd class="entry">
-					<p>\[raiseother]で沙紀に送信するべきイベント。</p>
+					<p>Event that should be sent to Saki via \[raiseother].</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>送信するゴーストの\0名。</dd>
+						<dd>Name of the \0 character of the ghost to send.</dd>
 						<dt>Reference1</dt>
-						<dd>大胆さ。(0～60)</dd>
+						<dd>Boldness. (0-60)</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト「奏でる日常の音色」</h1>
+			<h1>Ghost "奏でる日常の音色"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://ukananachi.blog98.fc2.com/">http://ukananachi.blog98.fc2.com/</a></li>
+				<li>Published by: <a href="http://ukananachi.blog98.fc2.com/">http://ukananachi.blog98.fc2.com/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2480,83 +2497,83 @@
 			<dl id="OnKanadeTeaPartyInfomationRequest">
 				<dt class="entry">OnKanadeTeaPartyInfomationRequest</dt>
 				<dd class="entry">
-					<p>お茶会開始前に、奏でる日常の音色から各ゴーストに通知されるイベント。<br />お茶会に参加するゴーストはこのイベントで直ちに、<br /><code>\![raiseother,かなで,<a href="#可変名の返信イベント">返信イベント名</a>,ゴーストの対応するお茶会バージョン番号,ゴーストの本体側名,<a href="#caption_kanade">※お茶会バージョンへの対応情報</a>]</code><br />のさくらスクリプトを実行する必要がある。<br />イベント内での、このスクリプトの実行以外のトークは非推奨。</p>
+					<p>An event notified to each ghost before the tea party begins, based on "奏でる日常の音色" (this ghost).<br />Ghost attending the tea party will immediately join this event,<br /><code>\![raiseother,かなで,(<a href="#variable_name_reply_event">Variable name reply event</a>),(Ghost's corresponding tea party version number),(Ghost's sakura name),<a href="#caption_kanade">(※Information corresponding to the Tea Party version)</a>]</code><br />You will need to execute the SakuraScript for the event.<br />Dialogue in the event other than execution of this script is deprecated.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>お茶会バージョン番号。</dd>
+						<dd>Tea party version number.</dd>
 						<dt>Reference1</dt>
-						<dd>返信イベントの送信先ゴースト本体側名（「かなで」に固定）。</dd>
+						<dd>Name of the main character of the ghost to which the event is sent (fixed to "かなで" (Kanade)).</dd>
 						<dt>Reference2</dt>
-						<dd>返信イベント名。</dd>
+						<dd>Reply event name.</dd>
 					</dl>
 				</dd>
 			</dl>
-			<dl id="可変名の返信イベント">
-				<dt class="entry">可変名の返信イベント</dt>
+			<dl id="variable_name_reply_event">
+				<dt class="entry">Variable name reply event</dt>
 				<dd class="entry">
-					<p>OnKanadeTeaPartyInfomationRequestを受信したゴーストが、<em>奏でる日常の音色に対して</em>raiseotherで<em>通知する</em>イベント。<br />イベント名はOnKanadeTeaPartyInfomationRequestのreference2で通知されている。</p>
+					<p>An event in which a ghost that receives an OnKanadeTeaPartyInfomationRequest <em>is notified via </em>raiseother<em>to "奏でる日常の音色" (this ghost)</em>.<br />The event name is notified in Reference2 of OnKanadeTeaPartyInfomationRequest.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ゴーストの対応するお茶会バージョン番号</dd>
+						<dd>Ghost's corresponding tea party version number.</dd>
 						<dt>Reference1</dt>
-						<dd>ゴーストの本体側名</dd>
+						<dd>Ghost main character name.</dd>
 						<dt>Reference2</dt>
-						<dd><a href="#caption_kanade">※お茶会バージョンへの対応情報</a></dd>
+						<dd><a href="#caption_kanade">※Information corresponding to the Tea Party version</a></dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKanadeTeaParty">
 				<dt class="entry">OnKanadeTeaParty</dt>
 				<dd class="entry">
-					<p>お茶会本体イベント。お茶会開始時に通知される。</p>
+					<p>Tea Party body event. Notified at the start of the tea party.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>Reference1以降の組み合わせが実装されたお茶会のバージョン。</dd>
+						<dd>The version of the Tea Party, in which the combinations after Reference1 are implemented.</dd>
 						<dt>Reference1</dt>
-						<dd>お飲み物。</dd>
+						<dd>Beverages.</dd>
 						<dt>Reference2</dt>
-						<dd>お菓子</dd>
+						<dd>Sweets.</dd>
 						<dt>Reference*</dt>
-						<dd>Reference3以降は拡張情報。</dd>
+						<dd>Extended information after Reference3.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnKanadeTeaPartyEnd">
 				<dt class="entry">OnKanadeTeaPartyEnd</dt>
 				<dd class="entry">
-					<p>お茶会終了イベント。奏でる日常の音色が、お茶会終了トークをした後に通知される。</p>
+					<p>Tea Party end event. "奏でる日常の音色" (this ghost) will be notified after the tea party end dialogue.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>実行されたお茶会のバージョン。</dd>
+						<dd>Version of Tea Party performed.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<div class="caption" id="caption_kanade">
-				<p>※お茶会バージョンへの対応情報</p>
+				<p>※Information corresponding to the Tea Party version</p>
 				<dl>
-					<dt>対応</dt>
+					<dt>Supported</dt>
 					<dd>
-						「奏でる日常の音色」のバージョンよりもゴーストのバージョンが高いまたは同じなため、この「奏でる日常の音色」が提供するお茶会イベントに完全に対応しています。
+						If the version of the ghost is higher or the same as the version of "奏でる日常の音色" (this ghost), it is fully compatible with the tea party event offered by "奏でる日常の音色" (this ghost).
 					</dd>
-					<dt>非対応</dt>
+					<dt>Incompatible</dt>
 					<dd>
-						「奏でる日常の音色」のバージョンよりもゴーストのバージョンが低いため、ゴーストのバージョンよりも高いバージョンのお茶会イベントは処理することができません。
+						If the version of the ghost is lower than the version of "奏でる日常の音色" (this ghost), the tea party event cannot be processed with a version higher than the ghost's version.
 					</dd>
-					<dt>自動対応</dt>
+					<dt>Automatic response</dt>
 					<dd>
-						「奏でる日常の音色」のバージョンよりもゴーストのバージョンが低いですが、ゴーストのバージョンよりも高いバージョンのお茶会イベントについて、単語を当てはめたりなどトークの内容を変化させて自動的に対応することができます。
+						You can automatically respond to a tea party event with a ghost that has a lower version than "奏でる日常の音色" (this ghost) by changing the content of the dialogue, such as by applying different words.
 					</dd>
-					<dt>固定対応</dt>
+					<dt>Fixed support</dt>
 					<dd>
-						「奏でる日常の音色」が提供するお茶会の内容によって対応は変化しません。返答イベントのReference0はゴーストの制作者が確認しているお茶会バージョンです。この対応情報を返送したゴーストについては、お茶会の内容選択を考慮しません。
+						The response does not change depending on the tea party offered by "奏でる日常の音色" (this ghost). Reference0 of the returned event is the tea party version confirmed by the ghost's creator. For ghosts that return this response information, the tea party content selection is not considered.
 					</dd>
 				</dl>
 			</div>
 		</section>
 		<section class="category">
-			<h1>ゴースト「卓上誘技」</h1>
+			<h1>Ghost "卓上誘技"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://tatakinov.github.io/">https://tatakinov.github.io/</a></li>
+				<li>Published by: <a href="https://tatakinov.github.io/">https://tatakinov.github.io/</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2564,28 +2581,28 @@
 			<dl id="OnPoker">
 				<dt class="entry">OnPoker</dt>
 				<dd class="entry">
-					<p>応答が必要なイベント。応答方法はraiseotherかnotifyotherを使う。</p>
+					<p>An event that requires a response. Use raiseother or notifyother as the response method.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>プロトコルバージョン(POKER/1.0)</dd>
+						<dd>Protocol Version (POKER/1.0)</dd>
 						<dt>Reference1</dt>
-						<dd>サーバーゴースト名</dd>
+						<dd>Server Ghost Name</dd>
 						<dt>Reference2</dt>
-						<dd>サーバーのイベント名</dd>
+						<dd>Server Event Name</dd>
 					</dl>
 					<section id="reference_OnPoker">
-						<h1>POKER/1.0におけるReference3以降の追加情報</h1>
+						<h1>Additional information in Reference3 and later in POKER/1.0</h1>
 						<dl class="reference">
 							<dt>Reference3</dt>
-							<dd>hello（参加申請をする。断られることもある。）</dd>
+							<dd>hello (Apply for participation. You may be turned down.)</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference3</dt>
-							<dd>action（Reference4以降に使用可能なアクションが入っている。）</dd>
+							<dd>action (It contains actions that can be used from Reference4 onwards.)</dd>
 							<dt>Reference*</dt>
-							<dd>使用可能なアクションはbet,raise,allin,check,call,foldの6つの内のいくつか。<br />
-								返答しない場合は自動的にfoldになるので注意。<br />
-								bet/raiseする場合はレイズ額も送る必要がある。</dd>
+							<dd>Some of the six available actions are bet, raise, allin, check, call, and fold.<br />
+								Note that if you do not reply, it will automatically be "fold".<br />
+								If you use bet/raise, you must also send the amount of the raise.</dd>
 						</dl>
 					</section>
 				</dd>
@@ -2593,99 +2610,99 @@
 			<dl id="OnPokerNotify">
 				<dt class="entry">OnPokerNotify</dt>
 				<dd class="entry">
-					<p>応答する必要の無いイベント。</p>
+					<p>Events that do not require a response.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>プロトコルバージョン(POKER/1.0)</dd>
+						<dd>Protocol Version (POKER/1.0)</dd>
 					</dl>
 					<section id="reference_OnPokerNotify">
-						<h1>POKER/1.0におけるReference1以降の追加情報</h1>
+						<h1>Additional information after Reference0 in POKER/1.0</h1>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>game_start</dd>
 							<dt>Reference*</dt>
-							<dd>参加できたゴースト名</dd>
+							<dd>Name of ghost that could participate.</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>round_start</dd>
 							<dt>Reference2</dt>
-							<dd>ブラインドの金額</dd>
+							<dd>Amount of blinds.</dd>
 							<dt>Reference*</dt>
-							<dd>ゴースト名(バイト値1)スタック</dd>
+							<dd>Ghost name(byte value 1)Stack</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>hand</dd>
 							<dt>Reference2</dt>
-							<dd>配られたカードの情報</dd>
+							<dd>Information on the cards dealt.</dd>
 							<dt>Reference3</dt>
-							<dd>配られたカードの情報<br />
-								スートは頭文字(S,H,C,D)の4つのいずれか、その後に数字が続く。<br />
-								例:<br />
+							<dd>Information on the cards dealt.<br />
+								Suit is one of four initials (S,H,C,D) followed by a number.<br />
+								Example:<br />
 								Reference2: S1<br />
 								Reference3: H12<br />
-								この形式はFLIPでも一緒。
+								This format is the same for FLIP.
 							</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>flip</dd>
 							<dt>Reference2</dt>
-							<dd>現在のポット</dd>
+							<dd>Current Pot</dd>
 							<dt>Reference*</dt>
-							<dd>コミュニティカードの情報<br />
-								プリフロップならReference3以降は存在しない</dd>
+							<dd>Community Card Information<br />
+								If pre-flop, it doesn't exist after Reference3.</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>blind_bet</dd>
 							<dt>Reference2</dt>
-							<dd>強制ベットの金額<br />
-								SBやBBでの強制ベットをしたことが通知される。</dd>
+							<dd>Amount of forced bet<br />
+								You will be notified that you have made a forced bet on SB or BB.</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>bet（アクションを行ったプレイヤーとベット周りの情報。）</dd>
+							<dd>bet (Information about the player who performed the action and the betting surroundings.)</dd>
 							<dt>Reference2</dt>
-							<dd>現在のベット総額</dd>
+							<dd>Total current bets</dd>
 							<dt>Reference3</dt>
-							<dd>現在のベット額</dd>
+							<dd>Current bet amount</dd>
 							<dt>Reference4</dt>
-							<dd>アクションを行ったプレイヤーのゴースト名</dd>
+							<dd>Ghost name of the player who performed the action</dd>
 							<dt>Reference5</dt>
-							<dd>行ったアクション</dd>
+							<dd>Actions taken</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>show_down（ショーダウン時のカード情報が送られてくる。）</dd>
+							<dd>show_down (Card information will be sent to you at showdown.)</dd>
 							<dt>Reference*</dt>
-							<dd>ゴースト名(バイト値1)1枚目のカード(バイト値1)2枚目のカード</dd>
+							<dd>Ghost name(Byte value 1)1st card(Byte value 1)2nd card</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
-							<dd>round_result（そのラウンドの勝者、および参加者の残りスタックの情報。）</dd>
+							<dd>round_result (Information on the winner of the round and the stacks remaining for the participants.)</dd>
 							<dt>Reference2</dt>
-							<dd>現在のラウンドの勝者がバイト値1区切りで入っている。</dd>
+							<dd>The winner of the current round is separated by a byte 1 value.</dd>
 							<dt>Reference*</dt>
-							<dd>ゴースト名(バイト値1)スタック<br />
-								基本的に勝者は1人だが2人以上になるケースもある。<br />
-								また、スタックが0になったのはここでしか通知しないため注意。</dd>
+							<dd>Ghost name(Byte value 1)Stack<br />
+								Usually, there's one winner, but in some cases there can be two or more.<br />
+								Also note that the stack is only notified here when it reaches 0.</dd>
 						</dl>
 						<dl class="reference">
 							<dt>Reference1</dt>
 							<dd>game_result</dd>
 							<dt>Reference2</dt>
-							<dd>ゲームの勝者のゴースト名</dd>
+							<dd>Ghost name of the game winner.</dd>
 						</dl>
 					</section>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト「フォーリナー」サプリメント「march of phantasma」</h1>
+			<h1>Ghost "フォーリナー" Supplement "march of phantasma"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="http://rakudaya.sakura.tv/mop/beta.html">http://rakudaya.sakura.tv/mop/beta.html</a></li>
+				<li>Published by: <a href="http://rakudaya.sakura.tv/mop/beta.html">http://rakudaya.sakura.tv/mop/beta.html</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2693,235 +2710,235 @@
 			<dl id="OnMopClear">
 				<dt class="entry">OnMopClear</dt>
 				<dd class="entry">
-					<p>マップクリア時に通知。</p>
+					<p>Notification when the map is cleared.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>クリア時のメンバーをバイト値1区切り（固有ユニットのみ）。</dd>
+						<dd>Membets at the time of clearing, separated by a byte value 1 (unique units only).</dd>
 						<dt>Reference1</dt>
-						<dd>クリアしたマップ名。</dd>
+						<dd>Name of the map that was cleared.</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>ゴースト開発用の対話型exe「ゴースト・ターミナル」</h1>
+			<h1>Ghost Terminal, an interactive exe for ghost development</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://github.com/Taromati2/ghost_terminal">https://github.com/Taromati2/ghost_terminal</a></li>
+				<li>Published by: <a href="https://github.com/Taromati2/ghost_terminal">https://github.com/Taromati2/ghost_terminal</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 			</ul>
 			<br><hr>
-			<h2>開始、終了</h2>
+			<h2>Start, end.</h2>
 			<dl id="ShioriEcho.Begin">
 				<dt class="entry">ShioriEcho.Begin</dt>
 				<dd class="entry">
-					<p>このゴーストが起動したときのghost_terminalイベント</p>
+					<p>The ghost_terminal event when this ghost is started.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ターミナルバージョン</dd>
+						<dd>Terminal version</dd>
 						<dt>Reference1</dt>
-						<dd>端末のセッションタイプ<br />
-							端末が `-s` で始まる場合は `SakuraScript` となる。<br />
-							端末が `-c` で始まる場合は `Command` となる。<br />
-							端末が共通で起動する場合は `Common` となる。</dd>
-						<dt>戻り値：X-SSTP-PassThru-Tittle（オプション）</dt>
-						<dd>端末のタイトルを設定する</dd>
-						<dt>戻り値：X-SSTP-PassThru-Icon（オプション）</dt>
-						<dd>端末のアイコンを設定する</dd>
-						<dt>戻り値：X-SSTP-PassThru-SmallIcon（オプション）</dt>
-						<dd>端末の小さいアイコンを設定する<br />
-							設定されていない場合、`X-SSTP-PassThru-Icon`と一致する</dd>
-						<dt>戻り値：X-SSTP-PassThru-CustomLoginInfo（オプション）</dt>
-						<dd>設定された場合、端末はデフォルトのログイン情報を表示せず、この<br />
-							この戻り値は、単純にエスケープされます：<br />
-							- `\n` は改行に変換されます。<br />
-							- `\t` はタブに変換されます。<br />
-							- `\\` は `\` に変換される。</dd>
+						<dd>Terminal session type<br />
+							If the terminal starts with `-s`, it is `SakuraScript`.<br />
+							If the terminal starts with `-c` it is `Command`.<br />
+							`Common` if the terminal is activated by common means.</dd>
+						<dt>Return value: X-SSTP-PassThru-Tittle(Option)</dt>
+						<dd>Set the title of the terminal</dd>
+						<dt>Return value: X-SSTP-PassThru-Icon(Option)</dt>
+						<dd>Set the terminal icon</dd>
+						<dt>Return value: X-SSTP-PassThru-SmallIcon(Option)</dt>
+						<dd>Set a small icon on the terminal<br />
+							If not set, matches `X-SSTP-PassThru-Icon`</dd>
+						<dt>Return value: X-SSTP-PassThru-CustomLoginInfo(Option)</dt>
+						<dd>If set, the terminal will not display the default login information,<br />
+							and this return value is simply escaped<br />
+							- `\n` converted to newline.<br />
+							- `\t` converted to tab。<br />
+							- `\\` is converted to `\`.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.End">
 				<dt class="entry">ShioriEcho.End</dt>
 				<dd class="entry">
-					<p>通常のプログラム終了時に発生するghost_terminalイベント</p>
+					<p>The ghost_terminal event generated when a normal program ends.</p>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.GetName">
 				<dt class="entry">ShioriEcho.GetName</dt>
 				<dd class="entry">
-					<p>ghost_terminalが名前を取得したときのイベント</p>
+					<p>Event when ghost_terminal gets the name.</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-GhostName（オプション）</dt>
-						<dd>ゴーストの名前を表示する</dd>
-						<dt>戻り値：X-SSTP-PassThru-UserName（オプション）</dt>
-						<dd>ユーザー名を表示する</dd>
+						<dt>Return value: X-SSTP-PassThru-GhostName(Option)</dt>
+						<dd>Show ghost names</dd>
+						<dt>Return value: X-SSTP-PassThru-UserName(Option)</dt>
+						<dd>Display user name</dd>
 					</dl>
 				</dd>
 			</dl>
 			<br><hr>
-			<h2>コマンドを実行する</h2>
+			<h2>Execute command</h2>
 			<dl id="ShioriEcho">
 				<dt class="entry">ShioriEcho</dt>
 				<dd class="entry">
-					<p>コマンドが入力された後のイベント</p>
+					<p>Event after command is entered</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末で収集したコマンド</dd>
-						<dt>戻り値</dt>
-						<dd>もし`ShioriEcho.GetResult`を定義していない場合、ここで`ShioriEcho.GetResult`でサポートされている任意の返値を返すことができます。これらの返値は、ターミナルによって正しく処理されます（ただし、戻り値3は、`ShioriEcho.GetResult`を定義せずに何も返さない場合、次のコマンド取得に入ります）。<br />
-							`ShioriEcho.GetResult`を定義している場合、ここでの返値は無視されます（**ただし、sakura scriptは正常に実行される**）。</dd>
+						<dd>Commands collected by the terminal</dd>
+						<dt>Return value</dt>
+						<dd>If you have not defined `ShioriEcho.GetResult`, you can return any return value supported by `ShioriEcho.GetResult` here. These return values will be correctly processed by the terminal (however, return value 3 will go into the next command acquisition if you do not define `ShioriEcho.GetResult` and return nothing).<br />
+							If you have defined `ShioriEcho.GetResult`, the return value here is ignored （**but the sakura script is executed normally**）.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.GetResult">
 				<dt class="entry">ShioriEcho.GetResult</dt>
 				<dd class="entry">
-					<p>バリューリザルトイベントのクエリ</p>
-					<p>返信可能ヘッダ 1：</p>
+					<p>Value result event query</p>
+					<p>Replyable header 1:</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-Result</dt>
-						<dd>コンテンツを表示し、次のコマンド取得に進む。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Type</dt>
-						<dd>付加情報：値型</dd>
+						<dt>Return value: X-SSTP-PassThru-Result</dt>
+						<dd>Display contents and proceed to the next command acquisition</dd>
+						<dt>Return value(Option):X-SSTP-PassThru-Type</dt>
+						<dd>Additional information: value type</dd>
 					</dl>
-					<p>返信可能ヘッダ 2：</p>
+					<p>Replyable header 2:</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-Special</dt>
-						<dd>コンテンツを表示し、次のコマンド取得に進む。<br />
-							この戻り値は、単純にエスケープされます：<br />
-							- `\n` は改行に変換されます。<br />
-							- `\t` はタブに変換されます。<br />
-							- `\\` は `\` に変換される。</dd>
+						<dt>Return value: X-SSTP-PassThru-Special</dt>
+						<dd>Display the contents and proceed to the next command acquisition<br />
+							This return value is escaped simply:<br />
+							- `\n` is converted to a newline.<br />
+							- `\t` is converted to a tab<br />
+							- `\\` is converted to `\`.</dd>
 
 					</dl>
-					<p>返信可能ヘッダ 3：エンプティ</p>
-					<p>1秒待ってShioriEcho.GetResultを再実行する。</p>
-					<p>その他</p>
+					<p>Replyable header 3: Empty</p>
+					<p>Wait 1 second and rerun ShioriEcho.GetResult</p>
+					<p>Other</p>
 					<dl class="reference">
-						<dt>戻り値：X-SSTP-PassThru-State</dt>
-						<dd>この返り値は、上記の返り値に重ね合わせることができます<br />
-							もし`End`であれば、端末は終了する。<br />
-							`Continue`であれば、端末は何も表示せず、次のコマンドの取得に進みます。</dd>
+						<dt>Return value: X-SSTP-PassThru-State</dt>
+						<dd>This return value can be superimposed on the above return value<br />
+							If `End`, the terminal is terminated.<br />
+							If `Continue`, the terminal does not display anything and proceeds to get the next command.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<br><hr>
-			<h2>その他</h2>
+			<h2>Other</h2>
 			<dl id="ShioriEcho.TabPress">
 				<dt class="entry">ShioriEcho.TabPress</dt>
 				<dd class="entry">
-					<p>コマンドは、タブでイベントを完了させます。</p>
+					<p>The command completes the event with a tab.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末で収集したコマンド。</dd>
+						<dd>Commands collected at the terminal.</dd>
 						<dt>Reference1</dt>
-						<dd>タブを押したときにカーソルがあったコマンドの最初の文字（開始値0）。</dd>
+						<dd>The first character of the command where the cursor was when tab was pressed (start value 0).</dd>
 						<dt>Reference2</dt>
-						<dd>ユーザーが最初に連続してタブを押した回数（開始値0）。</dd>
+						<dd>Number of times the user pressed tab in succession (start value 0).</dd>
 						<dt>Reference3</dt>
-						<dd>この一連のタブ補完の中で、最初にタブを押したときにカーソルがあったコマンドの最初の文字（開始値0）。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Command</dt>
-						<dd>コマンドをこの内容で置き換える。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-InsertIndex</dt>
-						<dd>カーソルをこの位置に移動させる（提供されない場合は変更しない）。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-OldInsertIndex</dt>
-						<dd>後続の `Reference3` をこの内容に更新し、この一連のタブコンプリートが終了するまで有効とする（提供されない場合は変更しない）。</dd>
+						<dd>The first character of the command where the cursor was when the tab was pressed in this series of tab presses (start value 0).</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-Command</dt>
+						<dd>Replace the command with this content.</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-InsertIndex</dt>
+						<dd>Move the cursor to this position (if not provided, do not change).</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-OldInsertIndex</dt>
+						<dd>Subsequent `Reference3` will be updated to this content, effective until the end of this series of tab completions (if not provided, do not change).</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandUpdate">
 				<dt class="entry">ShioriEcho.CommandUpdate</dt>
 				<dd class="entry">
-					<p>コマンド更新時のイベント</p>
+					<p>Event when command is updated.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末で収集したコマンド</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-CommandForDisplay</dt>
-						<dd>表示されているコマンドをこの内容に置き換えます。<br />
-							ゴーストはこのイベントを利用して、パスワード入力時のマスク、通常読み上げ時のシンタックスハイライトなどの機能を実装することができます。</dd>
+						<dd>Commands collected at the terminal.</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-CommandForDisplay</dt>
+						<dd>Replace the displayed command with this content.<br />
+							Ghost can use this event to implement features such as masking when entering passwords, syntax highlighting during normal reading, etc.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandPrompt">
 				<dt class="entry">ShioriEcho.CommandPrompt</dt>
 				<dd class="entry">
-					<p>コマンドプロンプトが更新されたときのイベント</p>
+					<p>Event when the command prompt is updated.</p>
 					<dl class="reference">
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Prompt</dt>
-						<dd>表示されているコマンドプロンプトをこの内容で置き換える<br />
-							ゴーストはこのイベントでコマンドプロンプトを動的に変更することができます。</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-Prompt</dt>
+						<dd>Replace the displayed command prompt with this content.<br />
+							Ghost can dynamically change the command prompt with this event.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandComplete">
 				<dt class="entry">ShioriEcho.CommandComplete</dt>
 				<dd class="entry">
-					<p>ユーザーがコマンドラインの右端にある `→` を押したときのイベント</p>
+					<p>Event when the user presses `→` on the right end of the command line.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>端末が収集したコマンド</dd>
+						<dd>Commands collected by the terminal.</dd>
 						<dt>Reference1</dt>
-						<dd>カーソルがある位置で `→` を押したときのコマンドの最初の文字（開始値は0）。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Command</dt>
-						<dd>コマンドをこの内容で置き換える。<br />
-							ゴーストは、このイベントでコマンドをオートコンプリートすることができます。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-InsertIndex</dt>
-						<dd>カーソルをこの位置に移動させる（提供されない場合はそのままにする）。</dd>
+						<dd>The first character of the command when `→` is pressed at the cursor position (starting value is 0).</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-Command</dt>
+						<dd>Replace the command with this content.<br />
+							Ghost can autocomplete commands with this event.</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-InsertIndex</dt>
+						<dd>Move the cursor to this position (or leave it there if not provided).</dd>
 					</dl>
 				</dd>
 			</dl>
 			<br><hr>
-			<h2>コマンド履歴</h2>
+			<h2>Command history</h2>
 			<dl id="ShioriEcho.CommandHistory.New">
 				<dt class="entry">ShioriEcho.CommandHistory.New</dt>
 				<dd class="entry">
-					<p>コマンドヒストリーの末尾に空のコマンドが追加されたときのイベント</p>
+					<p>Event when an empty command is added to the end of the command history.</p>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandHistory.Update">
 				<dt class="entry">ShioriEcho.CommandHistory.Update</dt>
 				<dd class="entry">
-					<p>コマンドヒストリーが更新されたときのイベント</p>
+					<p>Event when the command history is updated.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>historyコマンドの内容</dd>
+						<dd>Contents of history command</dd>
 						<dt>Reference1</dt>
-						<dd>履歴コマンドのインデックス（逆順、開始値0）</dd>
+						<dd>Index of history command (reverse order, start value 0)</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandHistory.Get">
 				<dt class="entry">ShioriEcho.CommandHistory.Get</dt>
 				<dd class="entry">
-					<p>コマンドヒストリーを取得したときのイベント</p>
+					<p>Event when command history is retrieved.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>履歴コマンドのインデックス（逆順、開始値0）</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Command</dt>
-						<dd>コマンドをこの内容で置き換える</dd>
+						<dd>Index of history command (reverse order, start value 0)</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-Command</dt>
+						<dd>Replace the command with this content</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="ShioriEcho.CommandHistory.ForwardIndex">
 				<dt class="entry">ShioriEcho.CommandHistory.ForwardIndex</dt>
 				<dd class="entry">
-					<p>ユーザが `↑` を押したときにインデックスが更新されるときのイベント</p>
+					<p>Event when the user presses `↑` and the index is updated.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>履歴コマンドのインデックス（逆順、開始値0）</dd>
+						<dd>Index of history command (reverse order, start value 0)</dd>
 						<dt>Reference1</dt>
-						<dd>`index`の値上がりが予想される量。</dd>
-						<dt>戻り値（オプション）：X-SSTP-PassThru-Index</dt>
-						<dd>インデックスをこの値に更新する</dd>
+						<dd>Amount of `index` value increase expected.</dd>
+						<dt>Return value(Option): X-SSTP-PassThru-Index</dt>
+						<dd>Update the index to this value</dd>
 					</dl>
 				</dd>
 			</dl>
 		</section>
 		<section class="category">
-			<h1>プラグイン「Weather Station」</h1>
+			<h1>Plugin "Weather Station"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://ukagaka.zichqec.com/plugin/weather_station">https://ukagaka.zichqec.com/plugin/weather_station</a></li>
+				<li>Published by: <a href="https://ukagaka.zichqec.com/plugin/weather_station">https://ukagaka.zichqec.com/plugin/weather_station</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -3067,7 +3084,7 @@
 					<p>Sends information about weather alerts to all open ghosts. Must be called with \![raiseplugin]. Will return nothing if there are no alerts.</p>
 					<dl class="reference">
 						<dt>Reference*</dt>
-						<dd>An array containing information for a weather alert. Some elements may not be filled. Elements are separated by a 1 byte value.
+						<dd>An array containing information for a weather alert. Some elements may not be filled. Elements are separated by a byte 1 value.
 						<ul>
 							<!--I have no idea what a lot of these mean! If anyone else knows please feel free to detail it.-->
 							<li>[0] - Headline</li>
@@ -3475,9 +3492,9 @@
 			</div>
 		</section>
 		<section class="category">
-			<h1>ゴースト「Needle」</h1>
+			<h1>Ghost "Needle"</h1>
 			<ul class="caption link">
-				<li>公開元：<a href="https://ukagaka.zichqec.com/ghost/needle">https://ukagaka.zichqec.com/ghost/needle</a></li>
+				<li>Published by: <a href="https://ukagaka.zichqec.com/ghost/needle">https://ukagaka.zichqec.com/ghost/needle</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>

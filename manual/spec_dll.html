@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
@@ -15,7 +15,7 @@
 		<table>
 			<tbody>
 				<tr>
-					<th>トップページへ戻る</th>
+					<th>Return to top page</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="https://ukagakadreamteam.github.io/ukadoc/manual/index.html">INDEX</a></li>
@@ -25,7 +25,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="6">設定ファイル</th>
+					<th rowspan="6">Settings files</th>
 					<th>Ghost</th>
 					<td>
 						<ul>
@@ -81,7 +81,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>さくらスクリプト</th>
+					<th>SakuraScript</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./list_sakura_script.html">Sakura Script</a></li>
@@ -92,12 +92,12 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th rowspan="2">イベント</th>
+					<th rowspan="2">Events</th>
 					<th>SHIORI</th>
 					<td>
 						<ul>
 							<li><a href="./list_shiori_event.html">SHIORI Event</a></li>
-							<li><a href="./list_shiori_event_ex.html">SHIORI Event（外部）</a></li>
+							<li><a href="./list_shiori_event_ex.html">SHIORI Event (External)</a></li>
 							<li><a href="./list_shiori_resource.html">SHIORI Resource</a></li>
 						</ul>
 					</td>
@@ -113,17 +113,17 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<th>規格</th>
+					<th>Standards</th>
 					<td colspan="2">
 						<ul>
 							<li><a href="./spec_shiori3.html">SHIORI/3.0</a></li>
 							<li><a href="./spec_sstp.html">SSTP/1.x</a></li>
-							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a>（外部サイト）</li>
+							<li><a href="http://www.boreas.dti.ne.jp/~sdn/saori.html">SAORI/1.0</a> (External site)</li>
 							<li><a href="./spec_plugin.html">PLUGIN/2.0</a></li>
 							<li><a href="./spec_headline.html">HEADLINE/2.0</a></li>
 							<li><a href="./spec_dll.html">DLL</a></li>
 							<li><a href="./spec_fmo_mutex.html">FMO/MUTEX</a></li>
-							<li><a href="./spec_web.html">Web関連</a></li>
+							<li><a href="./spec_web.html">Web-related</a></li>
 						</ul>
 					</td>
 				</tr>
@@ -135,42 +135,50 @@
 		<section class="navigation-category">
 			<h1>DLL</h1>
 			<ul>
-				<li><a href="#chapter0">前書</a></li>
-				<li><a href="#chapter1">エクスポート関数群</a></li>
+				<li><a href="#chapter0">Preface</a></li>
+				<li><a href="#chapter1">Export Functions</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
+		<section class="caption" id="notes_translation">
+			<h1>Translated Document</h1>
+			<div class="passage">
+				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
+				<li>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/spec_dll.html">here</a>.</li>
+				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
+			</div>
+		</section>
 		<div class="caption">
-			<p>最終変更：<time>2013-08-27</time></p>
+			<p>Last updated: <time>2013-08-27</time></p>
 		</div>
 		<section id="chapter0">
-			<h1>前書</h1>
-			<p>ここでは、SHIORI、SAORI、MAKOTO、PLUGIN、HEADLINE等各サブシステムのコアとなる、DLLファイルに要求される仕様をまとめています。</p>
+			<h1>Preface</h1>
+			<p>This section summarizes the specifications required for DLL files, which are the core of each subsystem, including SHIORI, SAORI, MAKOTO, PLUGIN, and HEADLINE.</p>
 		</section>
 		<section id="chapter1">
-			<h1>エクスポート関数群</h1>
-			<p>以下C言語での例</p>
+			<h1>Export Functions</h1>
+			<p>Here is an example in C.</p>
 			<ul>
 				<li>extern "C" __declspec(dllexport) BOOL __cdecl load(HGLOBAL h, long len);</li>
 				<li>extern "C" __declspec(dllexport) BOOL __cdecl unload(void);</li>
 				<li>extern "C" __declspec(dllexport) HGLOBAL __cdecl request(HGLOBAL h, long *len);</li>
 			</ul>
-			<p>☆Borland系C/C++コンパイラでは_loadのように頭にアンダースコアがつくようですがそちらにも対応した方が良いでしょう。</p>
+			<p>☆Borland C/C++ compilers seem to add an underscore at the beginning like _load, so it would be better to support that as well.</p>
 			<section>
 				<h1>load</h1>
-				<p>読み込み時にコールされます。HGLOBALにDLLの入るディレクトリのパスが入ります。<br />GlobalAlloc(GMEM_FIXED,xxx) されたものなのでそのままポインタ(char *)にキャストして利用してください。<br />また、必ずDLL側でGlobalFreeしてください。</p>
-				<p>返り値は常にtrueです。<br />規定ではロード失敗時にfalseですが、falseを返しても何も処理されません。</p>
+				<p>HGLOBAL contains the path to the directory containing the DLL.<br />Since it is GlobalAlloc(GMEM_FIXED,xxx), please cast it to a pointer (char *) and use it as is.<br />Also, be sure to perform GlobalFree on the DLL side.</p>
+				<p>The return value is always true.<br />The default is false on load failure, but if false is returned, nothing is processed.</p>
 			</section>
 			<section>
 				<h1>unload</h1>
-				<p>DLL開放直前（＝SSP/CROW終了時＋上書きインストール時、DLL_PROCESS_DETACH前）にコールされます。</p>
-				<p>返り値は常にtrueです。<br />規定では開放失敗時にfalseですが、falseを返しても無視されます。</p>
+				<p>Called just before opening the DLL (i.e., when SSP/CROW is closed & when overwriting installs, before DLL_PROCESS_DETACH).</p> <!-- Translator note: not a clue here. -->
+				<p>The return value is always true.<br />The default is false on release failure, but if false is returned, it is ignored.</p>
 			</section>
 			<section>
 				<h1>request</h1>
-				<p>ロード・アンロード以外の処理はすべてここで行われます。<br />注意事項はloadと同じです。</p>
-				<p>返り値はこのDLLが実装するサブシステム（SHIORI,SAORI,PLUGIN,...）の種類によります。<br />レスポンス用の返り値HGLOBALも、GlobalAlloc(GMEM_FIXED,xxx)で確保されたものにしてください。</p>
+				<p>All processing other than loading and unloading is performed here.<br />The precautions are the same as for load.</p>
+				<p>The return value depends on the type of subsystem (SHIORI, SAORI, PLUGIN...) implemented by this DLL.<br />The return value HGLOBAL should also be the one allocated by GlobalAlloc(GMEM_FIXED,xxx).</p>
 			</section>
 		</section>
 	</div>

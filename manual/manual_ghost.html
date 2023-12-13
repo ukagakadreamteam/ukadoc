@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="ukadoc,伺か,ゴースト">
-<title>UKADOC Project ゴースト</title>
+<meta name="keywords" content="ukadoc,伺か,ghost">
+<title>UKADOC Project Ghost</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,10 +25,18 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>ゴースト</h1>
+<h1>Ghost</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
+	<div class="passage">
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/manual_ghost.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
 <section>
 	<div class="passage">
-		<p>masterゴーストフォルダのファイルは以下の通り。</p>
+		<p>The files in the master ghost folder are as follows.</p>
 	</div>
 	<div class="passage">
 <pre>
@@ -39,8 +47,8 @@
 　　　　　　<em class="filename">+-shiori.dll</em>
 　　　　　　<em class="filename">+-(saori).dll</em>
 　　　　　　<em class="filename">+-makoto.dll</em>
-　　　　　　<em class="filename">+-updates2.dau</em> （旧仕様）
-　　　　　　<em class="filename">+-updates.txt</em> （旧仕様）
+　　　　　　<em class="filename">+-updates2.dau</em> (Old specification)
+　　　　　　<em class="filename">+-updates.txt</em> (Old specification)
 　　　　　　<em class="filename">+-*.ico</em>
 　　　　　　<em class="filename">+-*.csr</em>
 　　　　　　<em class="filename">+-thumbnail.png</em>
@@ -52,9 +60,9 @@
 		<dl class="component">
 			<dt><a href="descript_ghost.html">descript.txt</a></dt>
 			<dd>
-				<p>ゴーストを識別するためのファイル。</p>
-				<p>これがないと本体に認識されない。</p>
-				<p>テキスト内の記載事項など詳細は<a href="descript_ghost.html">リンク先</a>を参照。</p>
+				<p>File to identify the ghost.</p>
+				<p>Without it, the system will not recognize it.</p>
+				<p>See <a href="descript_ghost.html">link</a> for details, including descriptions of the items in this document.</p>
 			</dd>
 		</dl>
 	</div>
@@ -65,9 +73,9 @@
 			<dt><a href="manual_update.html">updates2.dau</a></dt>
 			<dt><a href="manual_update.html">updates.txt</a></dt>
 			<dd>
-				<p>更新情報が記載されたファイル。</p>
-				<p>この位置にあるのは旧仕様で、基本的にルート（(myghost)直下）にのみあればよい。</p>
-				<p>詳しくは<a href="manual_update.html">リンク先</a>参照</p>
+				<p>File with update information.</p>
+				<p>This location is the old specification - it only needs to be directly under the root (directly under (myghost)).</p>
+				<p>See <a href="manual_update.html">link</a> for details.</p>
 			</dd>
 		</dl>
 	</div>
@@ -78,29 +86,29 @@
 			<dt>shiori.dll</dt>
 			<dd>
 				<div class="passage">
-					<p>ゴーストのコア。ほぼ必須。</p>
-					<p>汎用SHIORIが多く出ているので通常はそれを使用する。</p>
-					<p>ベースウェア（SSPなど）から送信されてくる<a href="list_shiori_event.html">SHIORI Event</a>（<a href="memo_shiorievent.html">補足説明</a>）を受けて、ゴーストの動作指示である<a href="list_sakura_script.html">さくらスクリプト</a>を構築してベースウェアに返却する役割を果たす。</p>
+					<p>Ghost core. Basically essential.</p>
+					<p>Many general-purpose SHIORI are available, so they are usually used.</p>
+					<p>It is responsible for receiving <a href="list_shiori_event.html">SHIORI Events</a> sent from the baseware (e.g., SSP), constructing a <a href="list_sakura_script.html">Sakura Script</a>—which is the ghost's operating instructions—and returning it to the baseware. (<a href="memo_shiorievent.html">Supplementary explanation</a>.)</p>
 				</div>
 				<div class="passage">
-					<p>実際のトークの書き方など、ゴーストの中核部分の作り方は、SHIORIによって全く異なるので、各SHIORI側のドキュメントを参照。</p>
+					<p>The actual dialogue writing process and other core aspects of the ghost-creation process vary completely from SHIORI to SHIORI, so please refer to the documentation for the respective SHIORI.</p>
 				</div>
 			</dd>
 
 			<dt><a href="manual_shiori_saori.html">(saori).dll</a></dt>
 			<dd>
-				<p>SHIORIの機能拡張モジュール。</p>
-				<p>基本的にはshiori.dllと同じ階層に置く。</p>
-				<p>ただしSHIORIから呼び出す際に相対パスを指定することもできる。</p>
-				<p>使用手順はSHIORI次第なので、SHIORI側のドキュメントを参照。</p>
-				<p>このファイルは省略可能。</p>
+				<p>SHIORI extension modules.</p>
+				<p>Generally, it should be placed in the same directory as shiori.dll.</p>
+				<p>However, relative paths can also be specified when calling it from SHIORI.</p>
+				<p>The procedure for use is up to SHIORI, so refer to the documentation on the SHIORI side.</p>
+				<p>This file is optional.</p>
 			</dd>
 
 			<dt><a href="manual_translator.html">makoto.dll</a></dt>
 			<dd>
-				<p>トランスレート用のDLL。</p>
-				<p>詳しくは<a href="manual_translator.html">リンク先</a>参照。<a href="manual_shell.html">シェル側</a>にも設置可能。</p>
-				<p>このファイルは省略可能。</p>
+				<p>DLL for performing text operations.</p> <!-- Translator note: unsure if I want to keep it like this or say "translating" with a note? Will see when I get to that page. -->
+				<p>See <a href="manual_translator.html">link</a> for details. Can also be installed on the <a href="manual_shell.html">shell side</a>.</p>
+				<p>This file is optional.</p>
 			</dd>
 		</dl>
 	</div>
@@ -110,33 +118,33 @@
 		<dl class="component">
 			<dt>*.ico</dt>
 			<dd>
-				<p>アイコンファイル。</p>
-				<p>32×32と16×16を使用することができる。</p>
-				<p>アイコン化した時やゴーストエクスプローラなどで表示される。</p>
-				<p>このファイルは省略可能。省略時はデフォルトアイコンが使用される。</p>
+				<p>Icon file.</p>
+				<p>32×32 and 16×16 can be used.</p>
+				<p>Displayed when iconified, in the ghost explorer, etc.</p>
+				<p>This file is optional. If omitted, the default icon is used.</p>
 			</dd>
 
 			<dt>*.cur</dt>
 			<dd>
-				<p>カーソルファイル。</p>
-				<p>ゴーストに乗ったカーソルが指定されたカーソルになる。</p>
-				<p>このファイルは省略可能。省略時は普段のカーソルのまま。</p>
+				<p>Cursor file.</p>
+				<p>The cursor changes to the designated cursor when over the ghost.</p>
+				<p>This file is optional. If omitted, the cursor remains as it normally is.</p>
 			</dd>
 
 			<dt>thumbnail.png</dt>
 			<dd>
-				<p>メニューツリーでゴーストの選択時に表示されるサムネイル。</p>
-				<p>使用可能な画像形式はpngもしくはjpg。</p>
-				<p>pngをpnrにリネームすると画像左上の1ドット(座標0,0)と同色が透過される。</p>
-				<p>このファイルは省略可能。</p>
+				<p>Thumbnail displayed when the ghost is selected in the menu tree.</p>
+				<p>Accepted image formats are png or jpg.</p>
+				<p>A png renamed to pnr treats the color in the upper left corner of the image (coordinates 0,0) as transparency.</p>
+				<p>This file is optional.</p>
 			</dd>
 		</dl>
 	</div>
 </section>
 <section>
 	<div class="passage">
-		この他、「辞書」と呼ばれる文字列のリソースファイルなど、SHIORI（など）がdll外部にいくつかのファイルを備えることが一般的である（むしろゴースト製作者はそういったファイルを中心的に編集する場合も多い）。
-		<br>そうしたものの詳細については、利用する各SHIORIのドキュメントを参照すること。
+		In addition, it is common for SHIORI (and others) to have several other files outside the dll, such as a string resource file called a "dictionary" (more often than not, ghost producers mainly edit such files).
+		<br>For details on such items, please refer to the documentation of each SHIORI you use.
 	</div>
 </section>
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -147,7 +155,7 @@
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">
