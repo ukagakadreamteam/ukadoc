@@ -143,12 +143,12 @@
 				<li><a href="#type,type">type,(type)</a></li>
 				<li><a href="#accept,main_side_name">accept,(main side name)</a></li>
 				<li><a href="#directory,directory_name">directory,(directory name)</a></li>
-				<li><a href="#refresh,numeric_value">refresh,(numeric value)</a></li>
+				<li><a href="#refresh,number">refresh,(number)</a></li>
 				<li><a href="#refreshundeletemask,file_name_1:file_name_2...">refreshundeletemask,(file name 1):(file name 2)...</a></li>
 				<li><a href="#balloon.directory,directory_name">balloon.directory,(directory name)</a></li>
 				<li><a href="#*.directory,directory_name">*.directory,(directory name)</a></li>
 				<li><a href="#*.source.directory,directory_name">*.source.directory,(directory name)</a></li>
-				<li><a href="#*.refresh,numeric_value">*.refresh,(numeric value)</a></li>
+				<li><a href="#*.refresh,number">*.refresh,(number)</a></li>
 				<li><a href="#*.refreshundeletemask,file_name_1:file_name_2...">*.refreshundeletemask,(file name 1):(file name 2)...</a></li>
 			</ul>
 		</section>
@@ -323,8 +323,8 @@ type,package
 					</ul>
 				</dd>
 			</dl>
-			<dl id="refresh,numeric_value">
-				<dt class="entry">refresh,(numeric value)</dt>
+			<dl id="refresh,number">
+				<dt class="entry">refresh,(number)</dt>
 				<dd class="entry">
 					<p>If the number is set to 1, all files in the same directory are erased before installation.</p>
 					<p class="default">Any value other than 1 (refresh disabled)</p>
@@ -379,10 +379,10 @@ type,package
 					</ul>
 				</dd>
 			</dl>
-			<dl id="*.refresh,numeric_value">
-				<dt class="entry">*.refresh,(numeric value)</dt>
+			<dl id="*.refresh,number">
+				<dt class="entry">*.refresh,(number)</dt>
 				<dd class="entry">
-					<p><a href="#refresh,numeric_value">refresh</a> settings for content to be installed at the same time.<br />The * portion contains the type (balloon, headline, plugin, calendar.skin, or calendar.plugin) of the content to be installed at the same time.</p>
+					<p><a href="#refresh,number">refresh</a> settings for content to be installed at the same time.<br />The * portion contains the type (balloon, headline, plugin, calendar.skin, or calendar.plugin) of the content to be installed at the same time.</p>
 					<p class="default">Any value other than 1 (refresh disabled)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
