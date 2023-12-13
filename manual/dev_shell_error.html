@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
-<meta name="keywords" content="伺か,アニメーション,着せ替え,ukadoc,ゴースト">
-<title>UKADOC Project エラーメッセージの解消</title>
+<meta name="keywords" content="ukagaka,Animation,Dressup,ukadoc,ghost">
+<title>UKADOC Project Resolving Error Messages</title>
 <link rel="stylesheet" href="base.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -25,49 +25,57 @@
 
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<h1>エラーメッセージの解消</h1>
-<section>
-	<h1 id="manual_shell_error">エラーメッセージの解消</h1>
+<h1>Resolving Error Messages</h1>
+<section class="caption" id="notes_translation">
+	<h1>Translated Document</h1>
 	<div class="passage">
-		<p>開発をしていると、時々SSPがこんなエラーを吐いた、というバグ報告に出くわすことがあります。<br />
-		ここでは、エラーメッセージの解消方法について、いくつか参考になる情報を列挙しています。<br />
-		完全に解決するためのマニュアルではありませんが、ちょっとしたヒントになるとは思います。</p>
+		<p>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</p>
+		<p>To see the original document, click <a href="http://ssp.shillest.net/ukadoc/manual/dev_shell_error.html">here</a>.</p>
+		<p>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</p>
+	</div>
+</section>
+<section>
+	<h1 id="manual_shell_error">Resolving Error Messages</h1>
+	<div class="passage">
+		<p>During development, we sometimes come across bug reports that SSP throws errors such as the following.<br />
+		This section lists some helpful information on how to resolve error messages.<br />
+		This is not a complete solution manual, but perhaps it will give you some hints.</p>
 	</div>
 </section>
 <nav>
-	<h1>目次</h1>
+	<h1>Table of Contents</h1>
 	<ol>
-		<li><a href="#chapter1">～ 存在していません。</a></li>
-		<li><a href="#chapter2">旧定義/新定義がどうこう言われた</a></li>
+		<li><a href="#chapter1">[X] does not exist</a></li>
+		<li><a href="#chapter2">What is it saying about the old/new definition?</a></li>
 	</ol>
 </nav>
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <section id="chapter1" class="ordered">
-	<h1>～ 存在していません。</h1>
+	<h1>[X] does not exist</h1>
 	
 	<div class="passage">
-		<p>最もよく表示されがちなエラーです。だいたいの場合はアニメーションIDの誤記とか、定義を書き損ねたとか、簡単に修正できる場合が多いのですが、一部対処に悩むものもあります。</p>
+		<p>This is the most commonly displayed error. In most cases, it is something like a typo in the animation ID or a failure to write a definition, and these are easily corrected. But, there are some that are difficult to deal with.</p>
 	</div>
 
 	<section id="chapter1-1">
-		<h1>[GHOST]default(master) shell 存在していません。</h1>
+		<h1>[GHOST]default(master) shell does not exist.</h1>
 		<div class="passage">
-			<p>伺かの仕様上、shell/masterフォルダは必ず必要で、無いと互換性の問題が発生します。<br />
-			ただし、どうしてもmasterシェルを作りたくない場合は、以下の定義で回避できます。</p>
-			<p><a href="descript_ghost.html#seriko.defaultsurfacedirectoryname,%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E5%90%8D">seriko.defaultsurfacedirectoryname</a></p>
+			<p>The shell/master folder is always required due to the specifications of ukagaka and without it, compatibility problems will occur.<br />
+			However, if you really do not want to create a master shell, you can work around this by defining the following.</p>
+			<p><a href="descript_ghost.html#seriko.defaultsurfacedirectoryname,directory_name">seriko.defaultsurfacedirectoryname</a></p>
 		</div>
 	</section>
 	
 	<section id="chapter1-2">
-		<h1>[SERIKO]Surface=0(または10) 存在していません。</h1>
+		<h1>[SERIKO]Surface=0(or 10) not present.</h1>
 		<div class="passage">
-			<p>伺かの仕様では、0番と10番サーフェスは特殊な扱いで、存在しない番号を\sタグで指定した時などに代わりに表示する「デフォルトサーフェス」となります。<br />
-			0番はともかくとしても、10番を作りたくない場合はそれなりにあると思うので、以下の定義を追加してみてください。</p>
-			<p><a href="descript_ghost.html#sakura.seriko.defaultsurface,%E6%95%B0%E5%80%A4">sakura.seriko.defaultsurface</a></p>
-			<p><a href="descript_ghost.html#kero.seriko.defaultsurface,%E6%95%B0%E5%80%A4">kero.seriko.defaultsurface</a></p>
-			<p><a href="descript_ghost.html#char*.seriko.defaultsurface,%E6%95%B0%E5%80%A4">char*.seriko.defaultsurface</a></p>
+			<p>According to the ukagaka specifications, surfaces 0 and 10 are treated specially, and are the "default surfaces" that are displayed in cases such as when a non-existent number is specified with the \s tag.<br />
+			Aside from the number 0, there are a reasonable number of cases where you may not want to create a number 10. In those cases please add the following definitions.</p>
+			<p><a href="descript_ghost.html#sakura.seriko.defaultsurface,number">sakura.seriko.defaultsurface</a></p>
+			<p><a href="descript_ghost.html#kero.seriko.defaultsurface,number">kero.seriko.defaultsurface</a></p>
+			<p><a href="descript_ghost.html#char*.seriko.defaultsurface,number">char*.seriko.defaultsurface</a></p>
 		</div>
 	</section>
 </section>
@@ -75,17 +83,17 @@
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <section id="chapter2" class="ordered">
-	<h1>旧定義/新定義がどうこう言われた</h1>
+	<h1>What is it saying about the old/new definition?</h1>
 	
 	<div class="passage">
-		<p>「旧定義を使用しているのに、新しい定義方法が使われている」<br />
-		「新定義を使用しているのに、旧い定義方法が使われている」<br />
-		などのようなエラーメッセージに出くわした場合、以下を見てみてください。</p>
+		<p>"New definition, old version."<br />
+		"Old definition, new version."<br />
+		If you come across error messages such as these, take a look at the following.</p>
 		
 		<p><a href="descript_shell_surfaces.html#version,*">descript - version</a></p>
-		<p><a href="descript_shell_surfaces.html#caption_seriko-redefine">SERIKOの旧定義と新定義について</a></p>
+		<p><a href="descript_shell_surfaces.html#caption_seriko-redefine">The old and new definitions of SERIKO</a></p>
 		
-		<p>場合によっては、以下をsurfaces.txtの一番上に追加するだけでエラーが出なくなる時もあります。</p>
+		<p>In some cases, simply adding the following to the top of surfaces.txt will eliminate the error.</p>
 		<pre class="exmp-descript2">
 descript
 {
@@ -103,7 +111,7 @@ version,1
 	</section>
 	<footer>
 		<p class="author">
-			管理者 : <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
+			Manager: <a href="https://github.com/ponapalt/ukadoc/wiki" target="_blank">UKADOC Project</a>
 		</p>
 		<p class="banner">
 			<img src="image/ukadoc_banner1.png" width="200" height="40" alt="ukadoc banner">
