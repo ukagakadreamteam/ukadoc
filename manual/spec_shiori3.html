@@ -199,7 +199,7 @@ Reference0: 1
 				<dt class="entry">Sender</dt>
 				<dd class="entry"><p>Event source.</p></dd>
 				
-				<dt class="entry">SenderType [SSP 2.5.05～ Extended]</dt>
+				<dt class="entry">SenderType [Extended in SSP 2.5.05]</dt>
 				<dd class="entry">
 				<p>Attributes of the event source. The following attributes are used. If there is more than one, they are connected by commas.<br>
 				For ID: OnTranslate, the attributes of the translate-source event are inherited.</p>
@@ -283,7 +283,7 @@ Reference0: 1
 				<dt class="entry">Reference*</dt>
 				<dd class="entry"><p>Additional information accompanying the event. A number is included after Reference. The number of lines is unlimited (as long as memory allows).</p></dd>
 				
-				<dt class="entry">X-SSTP-PassThru-(Arbitrary string) [SSP 2.5.05～ Extended]</dt>
+				<dt class="entry">X-SSTP-PassThru-(Arbitrary string) [Extended in SSP 2.5.05]</dt>
 				<dd class="entry"><p>If and only if an event notification is received from SSTP, the SSTP request header beginning with "X-SSTP-PassThru-" will be notified as is. <br>
 				Not added when it is not SSTP.</p></dd>
 			</dl>
@@ -404,7 +404,7 @@ Value: \1\s[10]\0\s[0]\e
 				<dt class="entry">Reference0</dt>
 				<dd class="entry"><p>Name of the \0 side of the ghost if you want to send a communication.</p></dd>
 				
-				<dt class="entry">Reference1～</dt>
+				<dt class="entry">Reference1+</dt>
 				<dd class="entry"><p>Additional information for communication.<br>
 				Reference1 in response = Reference0 in SSTP communicate = Reference2 in the receiver's OnCommunicate.<br>
 				Note that the above is out of alignment due to compatibility issues.</p></dd>
@@ -417,7 +417,7 @@ Value: \1\s[10]\0\s[0]\e
 				<dd class="entry"><p>A balloon marker string that you want to display "to the other side" while communicating.<br>
 				Sent as a Marker header of SSTP.</p></dd>
 				
-				<dt class="entry">X-SSTP-PassThru-(Arbitrary string) [SSP 2.5.03～ Extension]</dt>
+				<dt class="entry">X-SSTP-PassThru-(Arbitrary string) [Extended in SSP 2.5.03]</dt>
 				<dd class="entry"><p>If and only if an event notification is received from SSTP, this header is added to the SSTP response as it is.<br>
 				Not added when it is not SSTP.<br>
 				Multiple headers can be specified, but if you want to return more than one, change the header name.<br>
