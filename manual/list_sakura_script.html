@@ -738,7 +738,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[300]A long animation is being played.\![anim,offset,300,40,50]Here, the animation is moved 40 pixels to the right and 50 pixels down.</code></p>
+							<p><code>\s[0]\i[300]A long animation is being played.\![anim,offset,300,40,50] Here, the animation is moved 40 pixels to the right and 50 pixels down.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -796,7 +796,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1\s[10]This displays surface 10 for the side character.\i[400]Animation 400 is started at the same time as this sentence is displayed.\__w[animation,400]This sentence is displayed after animation 400 ends.</code></p>
+							<p><code>\1\s[10]This displays surface 10 for the side character.\i[400] Animation 400 is started at the same time as this sentence is displayed.\__w[animation,400] This sentence is displayed after animation 400 ends.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -811,7 +811,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![bind,head,ribbon,1]The main character is now wearing its defined head category's ribbon. \1\![bind,arm,,0]All parts in the arm category defined for the side character are removed.</code></p>
+							<p><code>\![bind,head,ribbon,1]The main character is now wearing its defined head category's ribbon.\1\![bind,arm,,0]All parts in the arm category defined for the side character are removed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -829,7 +829,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[500]Start playing animation 500 on surface 0. \![lock,repaint]Stop drawing the animation here.</code></p>
+							<p><code>\s[0]\i[500]Start playing animation 500 on surface 0.\![lock,repaint] Stop drawing the animation here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -845,7 +845,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[500]Start playing animation 500 on surface 0. \![lock,repaint]Stop drawing the animation here. \![unlock,repaint]Resume drawing the animation here. Since the animation was still running, the parts of the animation that were played while hidden will be skipped.</code></p>
+							<p><code>\s[0]\i[500]Start playing animation 500 on surface 0.\![lock,repaint] Stop drawing the animation here.\![unlock,repaint] Resume drawing the animation here. Since the animation was still running, the parts of the animation that were played while hidden will be skipped.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -916,7 +916,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1\![set,alignmenttodesktop,top]The side character is attached to the top of the desktop.\![set,alignmenttodesktop,default]The side character's position is returned to the default.</code></p>
+							<p><code>\1\![set,alignmenttodesktop,top]The side character is attached to the top of the desktop.\![set,alignmenttodesktop,default] The side character's position is returned to the default.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1027,7 +1027,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The moving function will be executed.\4This sentence will be displayed after the main character has moved a set distance away from the other character.</code></p>
+							<p><code>The moving function will be executed.\4 This sentence will be displayed after the main character has moved a set distance away from the other character.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1044,7 +1044,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1The focus is now on the side character.\5This sentence will be displayed after the side character has moved to a position right next to the other character.</code></p>
+							<p><code>\1The focus is now on the side character.\5 This sentence will be displayed after the side character has moved to a position right next to the other character.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1077,7 +1077,7 @@
 						<section class="code">
 							<h1>Usage example</h1>
 							<p><code>\1\![moveasync,--X=-175,--Y=200,--time=5000,--base=screen,--base-offset=right.top,--move-offset=right.bottom]The side character will move 175 pixels to the left and 400 pixels downwards, counting from the top right corner of the screen (screen,right.top). The movement will use the bottom right pixel of the surface as a base point (right.bottom), and will occur over the course of 5 seconds.</code></p>
-							<p><code>\1\![moveasync,--X=-175,--Y=200,--time=5000,--base=screen,--base-offset=right.top,--move-offset=right.bottom]The side character's movement has started.\![moveasync,cancel]The movement is stopped here. Movement can also be stopped in the case a separate event that includes a cancellation script occurs. This can be used to stop movement upon double clicking, for example.</code></p>
+							<p><code>\1\![moveasync,--X=-175,--Y=200,--time=5000,--base=screen,--base-offset=right.top,--move-offset=right.bottom]The side character's movement has started.\![moveasync,cancel] The movement is stopped here. Movement can also be stopped in the case a separate event that includes a cancellation script occurs. This can be used to stop movement upon double clicking, for example.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1164,7 +1164,7 @@
 							<h1>Usage example</h1>
 							<p><code>\![set,sticky-window,1,0]The side character will move as a set with the main character.</code></p>
 							<p><code>\![set,sticky-window,0,1,2]The main character, side character, and third character will move as a set.</code></p>
-							<p><code>\1\![move,40,100,0,0,left.top,left.top]The side character's top left is matched to the main character's top left, and then it is moved 40 pixels to the right and 100 pixels downwards.\![set,sticky-window,1,0]\![set,sticky-window,1,0]While in that position, the side character and main character are set to move together.</code></p>
+							<p><code>\1\![move,40,100,0,0,left.top,left.top]The side character's top left is matched to the main character's top left, and then it is moved 40 pixels to the right and 100 pixels downwards.\![set,sticky-window,1,0]\![set,sticky-window,1,0] While in that position, the side character and main character are set to move together.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1388,7 +1388,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>This sentence\nis displayed with a line break halfway through.</code></p>
+							<p><code>This sentence\nis displayed with a line break partway through.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1405,7 +1405,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>This sentence is\n[half]displayed with a half height line break halfway through.\n\n[half]Using one and a half height line breaks, a paragraph-like format can be achieved.</code></p>
+							<p><code>This sentence is\n[half]displayed with a half height line break partway through.\n\n[half]Using one and a half height line breaks, a paragraph-like format can be achieved.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1421,7 +1421,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>This sentence is\n[150]displayed with a one and a half height line break halfway through.</code></p>
+							<p><code>This sentence is\n[150]displayed with a one and a half height line break partway through.</code></p>
 							<p><code>This sentence\n[-250]goes back up by two and a half lines.</code></p>
 						</section>
 					</div>
@@ -1470,7 +1470,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Three characters of this dialogue will be deleted.\c[char,3]Deletion has been completed.</code></p>
+							<p><code>Three characters of this dialogue will be deleted.\c[char,3] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1485,7 +1485,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Three characters of this dialogue will be deleted, starting from the 5th character.\c[char,3,4]Deletion has been completed.</code></p>
+							<p><code>Three characters of this dialogue will be deleted, starting from the 5th character.\c[char,3,4] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1500,7 +1500,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>One line of dialogue will be deleted.\nThis line will be deleted.\c[line,1]Deletion has been completed.\nThis line will be deleted.\n\n\n\n\n\c[line,1]Deletion has been completed.\nThis line will not be deleted.\_l[0,0]\c[line,1]Deletion has been completed.</code></p>
+							<p><code>One line of dialogue will be deleted.\nThis line will be deleted.\c[line,1] Deletion has been completed.\nThis line will be deleted.\n\n\n\n\n\c[line,1] Deletion has been completed.\nThis line will not be deleted.\_l[0,0]\c[line,1] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1515,7 +1515,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Starting from the third line,\none line of dialogue will be deleted.\nThis part will\_l[,]be deleted.\c[line,1,2]Deletion has been completed.</code></p>
+							<p><code>Starting from the third line,\none line of dialogue will be deleted.\nThis part will\_l[,] be deleted.\c[line,1,2] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1544,7 +1544,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_l[30,5em] \_l[30,5em]Displayed at 「X coordinate=30 pixels,Y coordinate=5 times the letter height」.\_l[@-1650%,100]Displayed at 「X coordinate=1650% of the letter height leftwards from the last letter, Y coordinate=100 pixels」.\_l[,@-100]Displayed at 「X coordinate=no change,Y coordinate=100 pixels above the last letter」.</code></p>
+							<p><code>\_l[30,5em] \_l[30,5em]Displayed at "X coordinate=30 pixels, Y coordinate=5 times the letter height".\_l[@-1650%,100]Displayed at "X coordinate=1650% of the letter height leftwards from the last letter, Y coordinate=100 pixels".\_l[,@-100]Displayed at "X coordinate=no change,Y coordinate=100 pixels above the last letter".</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1591,7 +1591,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,autoscroll,disable]Scrolling is locked.\n[5000]This text is not visible while scrolling is locked.\![set,autoscroll,enable]Scrolling is unlocked.</code></p>
+							<p><code>\![set,autoscroll,disable]Scrolling is locked.\n[5000]This text is not visible while scrolling is locked.\![set,autoscroll,enable] Scrolling is unlocked.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1655,7 +1655,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,balloonnum,Test Display,1,5]Testing the file downloading display.\![set,balloonnum,,,]The display contents have been deleted.</code></p>
+							<p><code>\![set,balloonnum,Test Display,1,5]Testing the file downloading display.\![set,balloonnum,,,] The display contents have been deleted.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1740,7 +1740,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\0\![enter,onlinemode]While this sentence is being displayed, the online marker is shown in the main character's balloon.\![leave,onlinemode]Here, the online marker disappears.</code></p>
+							<p><code>\0\![enter,onlinemode]While this sentence is being displayed, the online marker is shown in the main character's balloon.\![leave,onlinemode] Here, the online marker disappears.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1770,7 +1770,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,nouserbreakmode]In this sentence, scripts cannot be broken.\![leave,nouserbreakmode]Script breaking is possible from here.</code></p>
+							<p><code>\![enter,nouserbreakmode]In this sentence, scripts cannot be broken.\![leave,nouserbreakmode] Script breaking is possible from here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1802,7 +1802,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![lock,balloonrepaint]This sentence won't be drawn.\![unlock,balloonrepaint]Here, drawing is started again, and the previous sentence is also drawn.</code></p>
+							<p><code>\![lock,balloonrepaint]This sentence won't be drawn.\![unlock,balloonrepaint] Here, drawing is started again, and the previous sentence is also drawn.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1941,7 +1941,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[height,15]This text is displayed at 15 pixels.\f[height,+3]It has been made 3 pixels larger.\f[height,200%]This text is displayed at 200% of the default size.\f[height,default]It has been returned to the original size.</code></p>
+							<p><code>\f[height,15]This text is displayed at 15 pixels.\f[height,+3] It has been made 3 pixels larger.\f[height,200%] This text is displayed at 200% of the default size.\f[height,default] It has been returned to the original size.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1956,7 +1956,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[color,red]This text is displayed in red.\f[color,100,150,200]This text is displayed in the specified color.\f[color,default]It has been returned to the balloon's default color.</code></p>
+							<p><code>\f[color,red]This text is displayed in red.\f[color,100,150,200] This text is displayed in the specified color.\f[color,default] It has been returned to the balloon's default color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1971,7 +1971,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,#ffff00]The drop shadow is displayed in yellow.\f[shadowcolor,default]It has been returned to the balloon's default drop shadow color.</code></p>
+							<p><code>\f[shadowcolor,#ffff00]The drop shadow is displayed in yellow.\f[shadowcolor,default] It has been returned to the balloon's default drop shadow color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1986,7 +1986,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,none]This text is displayed without a drop shadow.\f[shadowcolor,default]It has been returned to the balloon's default drop shadow color.</code></p>
+							<p><code>\f[shadowcolor,none]This text is displayed without a drop shadow.\f[shadowcolor,default] It has been returned to the balloon's default drop shadow color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2001,7 +2001,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,#ff0000]\f[shadowstyle,outline]This text is displayed with a yellow border.\f[shadowstyle,default]\f[shadowcolor,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>\f[shadowcolor,#ff0000]\f[shadowstyle,outline]This text is displayed with a yellow border.\f[shadowstyle,default]\f[shadowcolor,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2016,7 +2016,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[height,30]\f[outline,1]This is outline text.\f[outline,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>\f[height,30]\f[outline,1]This is outline text.\f[outline,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2047,7 +2047,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[bold,1]This text is bold.\f[bold,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>\f[bold,1]This text is bold.\f[bold,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2063,7 +2063,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[italic,1]This is italic.\f[italic,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>\f[italic,1]This is italic.\f[italic,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2078,7 +2078,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[strike,1]This is strikethrough text.\f[strike,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>\f[strike,1]This is strikethrough text.\f[strike,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2093,7 +2093,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[underline,1]This text has been underlined.\f[underline,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>\f[underline,1]This text has been underlined.\f[underline,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2108,7 +2108,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Turns the text into\f[sub,1]subscript text.\f[sub,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>Turns the text into\f[sub,1] subscript text.\f[sub,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2123,7 +2123,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Turns the text into\f[sup,1]superscript text.\f[sup,default]It has been returned to the balloon's default settings.</code></p>
+							<p><code>Turns the text into\f[sup,1] superscript text.\f[sup,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2138,7 +2138,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,#6699cc]Text that\f[bold,1]has been\f[underline,1]decorated in\f[height,20]many ways\f[default]has now been returned to the balloon's default settings.</code></p>
+							<p><code>\f[shadowcolor,#6699cc]Text that\f[bold,1] has been \f[underline,1]decorated in\f[height,20] many ways\f[default] has now been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2167,7 +2167,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Waits for 0.45 seconds.\w9\nAfter that, waits for 1 second.\w9\w9\w2Waiting has finished.</code></p>
+							<p><code>Waits for 0.45 seconds.\w9\nAfter that, waits for 1 second.\w9\w9\w2 Waiting has finished.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2183,7 +2183,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Waits for 1.234 seconds.\_w[1234]Waiting has finished.</code></p>
+							<p><code>Waits for 1.234 seconds.\_w[1234] Waiting has finished.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2198,7 +2198,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>1\_w[1000]2\__w[2500]3. After first waiting for 1000ms, it will wait for a total of 2500ms (in this case, [2500-1000-the time it takes to display 2 letters], equalling roughly 1500ms). As the length of time it takes to display characters (adjustable with SSP user settings) is factored in, exact control over wait time since the script started is possible. The wait timer starts counting from 0 again when a clear or click-wait is run.\__w[clear]\__w[500]A 0.5 second wait is added here.</code></p>
+							<p><code>1\_w[1000]2\__w[2500]3. After first waiting for 1000ms, it will wait for a total of 2500ms (in this case, [2500-1000-the time it takes to display 2 letters], equalling roughly 1500ms). As the length of time it takes to display characters (adjustable with SSP user settings) is factored in, exact control over wait time since the script started is possible. The wait timer starts counting from 0 again when a clear or click-wait is run.\__w[clear]\__w[500] A 0.5 second wait is added here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2215,7 +2215,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1Here, the side character will \f[bold,1]speak.\xAfter being clicked, the focus returns to the main character and the SakuraScript that made modifications to the font is cleared.</code></p>
+							<p><code>\1Here, the side character will\f[bold,1] speak.\xAfter being clicked, the focus returns to the main character and the SakuraScript that made modifications to the font is cleared.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2230,7 +2230,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1Here, the side character will \f[bold,1]speak. \x[noclear]After being clicked, the SakuraScript for both the character with the focus and the text modification remains in effect.</code></p>
+							<p><code>\1Here, the side character will\f[bold,1] speak. \x[noclear]After being clicked, the SakuraScript for both the character with the focus and the text modification remains in effect.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2247,7 +2247,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>While this sentence is being displayed, mouse interactions are possible.\tFrom here, mouse interactions will be ignored until the script stops playing.</code></p>
+							<p><code>While this sentence is being displayed, mouse interactions are possible.\t From here, mouse interactions will be ignored until the script stops playing.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2294,7 +2294,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![quicksection,1]This text will be displayed instantly. Any wait tags will be run here as well.\![quicksection,0]Furthermore, the SakuraScript tags for quick sections\![quicksection,1]are still valid when mixed.\_q</code></p>
+							<p><code>\![quicksection,1]This text will be displayed instantly. Any wait tags will be run here as well.\![quicksection,0] Furthermore, the SakuraScript tags for quick sections\![quicksection,1] are still valid when mixed.\_q</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2698,7 +2698,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorstyle,square]\_a[OnTest]Anchor\_aChanges anchor text to be displayed in a rectangle when hovered over.</code></p>
+							<p><code>\f[anchorstyle,square]\_a[OnTest]Anchor\_a Changes anchor text to be displayed in a rectangle when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2713,7 +2713,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_aWhen the style of the anchor text is set to square, the background color will become red if hovered over.</code></p>
+							<p><code>\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_a When the style of the anchor text is set to square, the background color will become red if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2728,7 +2728,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorpencolor,0,255,0]\_a[OnTest]Anchor\_aWhen the style of the anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
+							<p><code>\f[anchorpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of the anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2743,7 +2743,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorfontcolor,default.cursor]\_a[OnTest]Anchor\_aChanges the color of anchor text to the same as the selected choice text color when hovered over.</code></p>
+							<p><code>\f[anchorfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of anchor text to the same as the selected choice text color when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2758,7 +2758,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchormethod,copypen]\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_aChanges the drawing method inside the lines of the choice when hovered over. When copypen is specified, the color of anchorbrushcolor will be used as is.<br></code></p>
+							<p><code>\f[anchormethod,copypen]\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of the choice when hovered over. When copypen is specified, the color of anchorbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -2773,7 +2773,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectstyle,square]\_a[OnTest]Anchor\_aChanges anchor text to be displayed in a square while not hovered over.</code></p>
+							<p><code>\f[anchornotselectstyle,square]\_a[OnTest]Anchor\_a Changes anchor text to be displayed in a square while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2788,7 +2788,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_aWhen the style of the anchor text is set to square, the background color will become red while not hovered over.</code></p>
+							<p><code>\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_a When the style of the anchor text is set to square, the background color will become red while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2803,7 +2803,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectpencolor,0,255,0]\_a[OnTest]Anchor\_aWhen the style of the choice text is set to underline or square, the lines will become green while not hovered over.</code></p>
+							<p><code>\f[anchornotselectpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of the choice text is set to underline or square, the lines will become green while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2818,7 +2818,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectfontcolor,default.cursor]\_a[OnTest]Anchor\_aChanges the color of choice text to the same as the selected choice text color while not hovered over.</code></p>
+							<p><code>\f[anchornotselectfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of choice text to the same as the selected choice text color while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2833,7 +2833,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectmethod,copypen]\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_aChanges the drawing method inside the lines of the anchor while not hovered over. When copypen is specified, the color of anchornotselectbrushcolor will be used as is.<br></code></p>
+							<p><code>\f[anchornotselectmethod,copypen]\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of the anchor while not hovered over. When copypen is specified, the color of anchornotselectbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -2848,7 +2848,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedstyle,square]\_a[OnTest]Anchor\_aChanges already-visited anchor text to be displayed in a square.</code></p>
+							<p><code>\f[anchorvisitedstyle,square]\_a[OnTest]Anchor\_a Changes already-visited anchor text to be displayed in a square.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2863,7 +2863,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_aWhen the style of already-visited anchor text is set to square, the background color will become red.</code></p>
+							<p><code>\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_a When the style of already-visited anchor text is set to square, the background color will become red.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2878,7 +2878,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedpencolor,0,255,0]\_a[OnTest]Anchor\_aWhen the style of already-visited anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
+							<p><code>\f[anchorvisitedpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of already-visited anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2893,7 +2893,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedfontcolor,default.cursor]\_a[OnTest]Anchor\_aChanges the color of already-visited anchor text to the same as the selected choice text color when hovered over.</code></p>
+							<p><code>\f[anchorvisitedfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of already-visited anchor text to the same as the selected choice text color when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2908,7 +2908,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedmethod,copypen]\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_aChanges the drawing method inside the lines of already-visited anchor text. When copypen is specified, the color of anchorvisitedbrushcolor will be used as is.<br></code></p>
+							<p><code>\f[anchorvisitedmethod,copypen]\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of already-visited anchor text. When copypen is specified, the color of anchorvisitedbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -3018,7 +3018,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The network update will be started.\![updatebymyself]</code></p>
+							<p><code>A network update will be started.\![updatebymyself]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3576,7 +3576,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![timerraise,5000,1,OnTimerraiseTest,test]In 5 seconds (5000 milliseconds), OnTimerraiseTest will be run. The time is counted starting from the moment the SakuraScript is run. \![timerraise,0,1,OnTimerraiseTest]The timer that was set earlier has been canceled.</code></p>
+							<p><code>\![timerraise,5000,1,OnTimerraiseTest,test]In 5 seconds (5000 milliseconds), OnTimerraiseTest will be run. The time is counted starting from the moment the SakuraScript is run.\![timerraise,0,1,OnTimerraiseTest] The timer that was set earlier has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3606,7 +3606,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![timerraiseother,30000,0,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification every 30 seconds (30000 milliseconds). Reference0 stores the value sweet potato.\![timerraiseother,0,1,Emily/Phase4.5,OnRoastedPotato]The repeat notification has been canceled.</code></p>
+							<p><code>\![timerraiseother,30000,0,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification every 30 seconds (30000 milliseconds). Reference0 stores the value sweet potato.\![timerraiseother,0,1,Emily/Phase4.5,OnRoastedPotato] The repeat notification has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3636,7 +3636,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![timerraiseplugin,60000,0,Jittaika,OnMenuExec]Runs the plugin Jittaika every 60 seconds (60000 milliseconds).\![timerraiseplugin,0,0,Jittaika,OnMenuExec]The repeat notification has been canceled.</code></p>
+							<p><code>\![timerraiseplugin,60000,0,Jittaika,OnMenuExec]Runs the plugin Jittaika every 60 seconds (60000 milliseconds).\![timerraiseplugin,0,0,Jittaika,OnMenuExec] The repeat notification has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3724,7 +3724,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_v[se/test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master/se is being played.\_VThis sentence will be displayed only once the playback ends.</code></p>
+							<p><code>\_v[se/test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master/se is being played.\_V This sentence will be displayed only once the playback ends.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3778,7 +3778,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played. \![sound,stop]The playback has stopped looping.</code></p>
+							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,stop] The playback has stopped looping.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3793,7 +3793,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,play,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played. \![sound,wait]This sentence will be displayed only once the playback ends.</code></p>
+							<p><code>\![sound,play,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,wait] This sentence will be displayed only once the playback ends.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3808,7 +3808,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played. \![sound,pause]The playback is paused as this sentence is displayed.</code></p>
+							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,pause] The playback is paused as this sentence is displayed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3823,7 +3823,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played. \![sound,pause]The playback is paused as this sentence is displayed. \![sound,resume]The playback is resumed from where it was stopped.</code></p>
+							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,pause] The playback is paused as this sentence is displayed.\![sound,resume] The playback is resumed from where it was stopped.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3838,7 +3838,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played. \![sound,stop]The playback is stopped entirely.</code></p>
+							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,stop] The playback is stopped entirely.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4153,7 +4153,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![close,inputbox,timeinputtest]The InputBox with the ID timeinputtest has been closed.\![close,inputbox,__SYSTEM_ALL_INPUT__]All InputBoxes have been closed.</code></p>
+							<p><code>\![close,inputbox,timeinputtest]The InputBox with the ID timeinputtest has been closed.\![close,inputbox,__SYSTEM_ALL_INPUT__] All InputBoxes have been closed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4629,7 +4629,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,property,currentghost.shelllist(master).menu,hidden]Hides the master shell in the Shell (S) section of the user menu, preventing the user from changing to it manually.\![set,property,currentghost.shelllist(master).menu,]Makes the master shell visible in the user menu again.</code></p>
+							<p><code>\![set,property,currentghost.shelllist(master).menu,hidden]Hides the master shell in the Shell (S) section of the user menu, preventing the user from changing to it manually.\![set,property,currentghost.shelllist(master).menu,] Makes the master shell visible in the user menu again.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4664,7 +4664,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,http-get,http://ssp.shillest.net/ukadoc/manual/list_sakura_script.html]Gets the UKADOC SakuraScript page (this page), and saves list_sakura_script.html in the var folder.</code></p>
+							<p><code>\![execute,http-get,https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Gets the UKADOC SakuraScript page (this page), and saves list_sakura_script.html in the var folder.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4947,7 +4947,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>After the SakuraScript is played, passive mode will start.\![enter,passivemode]From here, minimizing and closing the ghost are no longer possible.</code></p>
+							<p><code>After the SakuraScript is played, passive mode will start.\![enter,passivemode] From here, minimizing and closing the ghost are no longer possible.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5060,7 +5060,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,collisionmode]Collision mode has started.\![leave,collisionmode]Collision mode has been canceled.</code></p>
+							<p><code>\![enter,collisionmode]Collision mode has started.\![leave,collisionmode] Collision mode has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5239,7 +5239,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_u[0x22EE]Displays a vertical ellipsis.\_u[8942]The base 10 version of the first SakuraScript command. When expressed in base 10, the 0x should not be added.</code></p>
+							<p><code>\_u[0x22EE]Displays a vertical ellipsis. \_u[8942]The base 10 version of the first SakuraScript command. When expressed in base 10, the 0x should not be added.</code></p>
 						</section>
 					</div>
 				</dd>
