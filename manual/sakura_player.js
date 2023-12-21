@@ -30,9 +30,9 @@ async function init_content() {
 
 function createExecutionButton(script) {
 	const button = document.createElement("button");
-	button.textContent = "実行";
+	button.textContent = "Run";
 	// 为按钮添加悬浮提示
-	button.title = "SakuraScriptを実行";
+	button.title = "Run SakuraScript";
 	button.addEventListener("click", () => {
 		jsstp.SEND({
 			Event: "OnUkadocScriptExample",
