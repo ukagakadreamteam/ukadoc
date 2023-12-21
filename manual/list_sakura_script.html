@@ -8,6 +8,7 @@
 <title>UKADOC Project SakuraScript List</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<script src="sakura_player.js"></script>
 </head>
 <body>
 	<h1 id="page-title">SakuraScript List</h1>
@@ -607,7 +608,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\0The main character will talk.\1The side character will talk.\p[2]A third character will talk.\p[3]A fourth character will talk. The default character is the main character.</code></p>
+							<p><code type="SakuraScript">\0The main character will talk.\1The side character will talk.\p[2]A third character will talk.\p[3]A fourth character will talk. The default character is the main character.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -627,7 +628,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s1This displays surface number 1 for the main character.</code></p>
+							<p><code type="SakuraScript">\s1This displays surface number 1 for the main character.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -644,7 +645,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[100]This displays surface number 100 for the main character.</code></p>
+							<p><code type="SakuraScript">\s[100]This displays surface number 100 for the main character.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -661,7 +662,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]This displays surface 0 for the main character.\i[1] Displays animation 1 defined for surface 0.</code></p>
+							<p><code type="SakuraScript">\s[0]This displays surface 0 for the main character.\i[1] Displays animation 1 defined for surface 0.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -676,7 +677,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1\s[10]This displays surface 10 for the side character.\i[2,wait] This sentence is displayed after surface 10's animation 2 has finished.</code></p>
+							<p><code type="SakuraScript">\1\s[10]This displays surface 10 for the side character.\i[2,wait] This sentence is displayed after surface 10's animation 2 has finished.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -691,7 +692,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[100]A long animation is being played.\![anim,clear,100] Even if the animation has not finished playing yet, it is ended by force.</code></p>
+							<p><code type="SakuraScript">\s[0]\i[100]A long animation is being played.\![anim,clear,100] Even if the animation has not finished playing yet, it is ended by force.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -707,7 +708,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[200]A long animation is being played.\![anim,pause,200] The animation will pause here.</code></p>
+							<p><code type="SakuraScript">\s[0]\i[200]A long animation is being played.\![anim,pause,200] The animation will pause here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -722,7 +723,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[200]A long animation is being played.\![anim,pause,200] The animation will pause here.\![anim,resume,200] The animation will resume here.</code></p>
+							<p><code type="SakuraScript">\s[0]\i[200]A long animation is being played.\![anim,pause,200] The animation will pause here.\![anim,resume,200] The animation will resume here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -738,7 +739,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[300]A long animation is being played.\![anim,offset,300,40,50] Here, the animation is moved 40 pixels to the right and 50 pixels down.</code></p>
+							<p><code type="SakuraScript">\s[0]\i[300]A long animation is being played.\![anim,offset,300,40,50] Here, the animation is moved 40 pixels to the right and 50 pixels down.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -796,7 +797,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1\s[10]This displays surface 10 for the side character.\i[400] Animation 400 is started at the same time as this sentence is displayed.\__w[animation,400] This sentence is displayed after animation 400 ends.</code></p>
+							<p><code type="SakuraScript">\1\s[10]This displays surface 10 for the side character.\i[400] Animation 400 is started at the same time as this sentence is displayed.\__w[animation,400] This sentence is displayed after animation 400 ends.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -811,7 +812,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![bind,head,ribbon,1]The main character is now wearing its defined head category's ribbon.\1\![bind,arm,,0]All parts in the arm category defined for the side character are removed.</code></p>
+							<p><code type="SakuraScript">\![bind,head,ribbon,1]The main character is now wearing its defined head category's ribbon.\1\![bind,arm,,0]All parts in the arm category defined for the side character are removed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -829,7 +830,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[500]Start playing animation 500 on surface 0.\![lock,repaint] Stop drawing the animation here.</code></p>
+							<p><code type="SakuraScript">\s[0]\i[500]Start playing animation 500 on surface 0.\![lock,repaint] Stop drawing the animation here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -845,7 +846,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\s[0]\i[500]Start playing animation 500 on surface 0.\![lock,repaint] Stop drawing the animation here.\![unlock,repaint] Resume drawing the animation here. Since the animation was still running, the parts of the animation that were played while hidden will be skipped.</code></p>
+							<p><code type="SakuraScript">\s[0]\i[500]Start playing animation 500 on surface 0.\![lock,repaint] Stop drawing the animation here.\![unlock,repaint] Resume drawing the animation here. Since the animation was still running, the parts of the animation that were played while hidden will be skipped.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -864,7 +865,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,alignmentondesktop,bottom]The main character is now stuck to the bottom of the desktop (right above the taskbar).</code></p>
+							<p><code type="SakuraScript">\![set,alignmentondesktop,bottom]The main character is now stuck to the bottom of the desktop (right above the taskbar).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -881,7 +882,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,alignmenttodesktop,free]The main character can now be moved freely around the desktop by dragging with the mouse.</code></p>
+							<p><code type="SakuraScript">\![set,alignmenttodesktop,free]The main character can now be moved freely around the desktop by dragging with the mouse.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -916,7 +917,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1\![set,alignmenttodesktop,top]The side character is attached to the top of the desktop.\![set,alignmenttodesktop,default] The side character's position is returned to the default.</code></p>
+							<p><code type="SakuraScript">\1\![set,alignmenttodesktop,top]The side character is attached to the top of the desktop.\![set,alignmenttodesktop,default] The side character's position is returned to the default.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -933,7 +934,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,scaling,50]The size of the main character's surface is reduced to 50%.</code></p>
+							<p><code type="SakuraScript">\![set,scaling,50]The size of the main character's surface is reduced to 50%.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -949,7 +950,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,scaling,50,100]The size of the main character's surface is set to 50% width, 100% length.</code></p>
+							<p><code type="SakuraScript">\![set,scaling,50,100]The size of the main character's surface is set to 50% width, 100% length.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -974,7 +975,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\0\![set,alpha,0]The main character is now completely transparent and invisible.\1\![set,alpha,50]The side character is now about halfway transparent.</code></p>
+							<p><code type="SakuraScript">\0\![set,alpha,0]The main character is now completely transparent and invisible.\1\![set,alpha,50]The side character is now about halfway transparent.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1027,7 +1028,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The moving function will be executed.\4 This sentence will be displayed after the main character has moved a set distance away from the other character.</code></p>
+							<p><code type="SakuraScript">The moving function will be executed.\4 This sentence will be displayed after the main character has moved a set distance away from the other character.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1044,7 +1045,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1The focus is now on the side character.\5 This sentence will be displayed after the side character has moved to a position right next to the other character.</code></p>
+							<p><code type="SakuraScript">\1The focus is now on the side character.\5 This sentence will be displayed after the side character has moved to a position right next to the other character.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1060,7 +1061,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![move,--X=80,--Y=-400,--time=2500,--base=screen,--base-offset=left.bottom,--move-offset=left.top]The main character will move 80 pixels to the right and 400 pixels upwards, counting from the bottom left of the screen (screen,left.bottom). The movement will use the top left pixel of the surface as a base point (left.top), and will occur over the course of 2.5 seconds.</code></p>
+							<p><code type="SakuraScript">\![move,--X=80,--Y=-400,--time=2500,--base=screen,--base-offset=left.bottom,--move-offset=left.top]The main character will move 80 pixels to the right and 400 pixels upwards, counting from the bottom left of the screen (screen,left.bottom). The movement will use the top left pixel of the surface as a base point (left.top), and will occur over the course of 2.5 seconds.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1076,8 +1077,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1\![moveasync,--X=-175,--Y=200,--time=5000,--base=screen,--base-offset=right.top,--move-offset=right.bottom]The side character will move 175 pixels to the left and 400 pixels downwards, counting from the top right corner of the screen (screen,right.top). The movement will use the bottom right pixel of the surface as a base point (right.bottom), and will occur over the course of 5 seconds.</code></p>
-							<p><code>\1\![moveasync,--X=-175,--Y=200,--time=5000,--base=screen,--base-offset=right.top,--move-offset=right.bottom]The side character's movement has started.\![moveasync,cancel] The movement is stopped here. Movement can also be stopped in the case a separate event that includes a cancellation script occurs. This can be used to stop movement upon double clicking, for example.</code></p>
+							<p><code type="SakuraScript">\1\![moveasync,--X=-175,--Y=200,--time=5000,--base=screen,--base-offset=right.top,--move-offset=right.bottom]The side character will move 175 pixels to the left and 400 pixels downwards, counting from the top right corner of the screen (screen,right.top). The movement will use the bottom right pixel of the surface as a base point (right.bottom), and will occur over the course of 5 seconds.</code></p>
+							<p><code type="SakuraScript">\1\![moveasync,--X=-175,--Y=200,--time=5000,--base=screen,--base-offset=right.top,--move-offset=right.bottom]The side character's movement has started.\![moveasync,cancel] The movement is stopped here. Movement can also be stopped in the case a separate event that includes a cancellation script occurs. This can be used to stop movement upon double clicking, for example.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1119,7 +1120,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,zorder,1,0]The side character will be displayed on top of the main character without fail.</code></p>
+							<p><code type="SakuraScript">\![set,zorder,1,0]The side character will be displayed on top of the main character without fail.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1134,7 +1135,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reset,zorder]Cancels the window layering display. The surface that the user last interacted with will be displayed on top.</code></p>
+							<p><code type="SakuraScript">\![reset,zorder]Cancels the window layering display. The surface that the user last interacted with will be displayed on top.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1162,9 +1163,9 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,sticky-window,1,0]The side character will move as a set with the main character.</code></p>
-							<p><code>\![set,sticky-window,0,1,2]The main character, side character, and third character will move as a set.</code></p>
-							<p><code>\1\![move,40,100,0,0,left.top,left.top]The side character's top left is matched to the main character's top left, and then it is moved 40 pixels to the right and 100 pixels downwards.\![set,sticky-window,1,0]\![set,sticky-window,1,0] While in that position, the side character and main character are set to move together.</code></p>
+							<p><code type="SakuraScript">\![set,sticky-window,1,0]The side character will move as a set with the main character.</code></p>
+							<p><code type="SakuraScript">\![set,sticky-window,0,1,2]The main character, side character, and third character will move as a set.</code></p>
+							<p><code type="SakuraScript">\1\![move,40,100,0,0,left.top,left.top]The side character's top left is matched to the main character's top left, and then it is moved 40 pixels to the right and 100 pixels downwards.\![set,sticky-window,1,0]\![set,sticky-window,1,0] While in that position, the side character and main character are set to move together.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1179,7 +1180,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reset,stic
+							<p><code type="SakuraScript">\![reset,stic
 							ky-window]The setting to move characters together is removed. After this point, dragging and other methods of moving them will result in separate movements.</code></p>
 						</section>
 					</div>
@@ -1248,7 +1249,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\b[2]The main character's dialogue will be displayed on balloon number 2. Some balloons may be implemented differently, so there may also be cases where a balloon with the ID number 2 does not exist. In "SSP Default+", the balloon bundled with SSP, the main character's balloon number 2 is a bigger balloon that displays a large number of characters. However, since different balloons can vary in which ID is what size, it is necessary to specify a recommended balloon or bundle a dedicated balloon when using this command.</code></p>
+							<p><code type="SakuraScript">\b[2]The main character's dialogue will be displayed on balloon number 2. Some balloons may be implemented differently, so there may also be cases where a balloon with the ID number 2 does not exist. In "SSP Default+", the balloon bundled with SSP, the main character's balloon number 2 is a bigger balloon that displays a large number of characters. However, since different balloons can vary in which ID is what size, it is necessary to specify a recommended balloon or bundle a dedicated balloon when using this command.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1271,7 +1272,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_b[image\test.png,50,100]In the main character's balloon, test.png in the folder [(folder of the ghost executing the command)]/ghost/master/image is displayed using its top left pixel as the transparent color, at the balloon coordinates X:50,Y:100.</code></p>
+							<p><code type="SakuraScript">\_b[image\test.png,50,100]In the main character's balloon, test.png in the folder [(folder of the ghost executing the command)]/ghost/master/image is displayed using its top left pixel as the transparent color, at the balloon coordinates X:50,Y:100.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1286,7 +1287,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_b[..\..\shell\master\surface0.png,0,15,opaque]In the main character's balloon, surface0.png in the folder [(folder of the ghost executing the command)]/shell/master is displayed at the balloon coordinates X:50,Y:15, without any parts becoming transparent.</code></p>
+							<p><code type="SakuraScript">\_b[..\..\shell\master\surface0.png,0,15,opaque]In the main character's balloon, surface0.png in the folder [(folder of the ghost executing the command)]/shell/master is displayed at the balloon coordinates X:50,Y:15, without any parts becoming transparent.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1316,7 +1317,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_b[test.png,10,20,--option=use_self_alpha,--clipping=100 30 150 90,--option=foreground]In the main character's balloon, test.png in the folder [(folder of the ghost executing the command)]/ghost/master is displayed at the balloon coordinates X:10,Y:20, using the transparency information of the file. It will be clipped from the range of 100-150 pixels horizontally and 30-90 pixels vertically, laid over the text.</code></p>
+							<p><code type="SakuraScript">\_b[test.png,10,20,--option=use_self_alpha,--clipping=100 30 150 90,--option=foreground]In the main character's balloon, test.png in the folder [(folder of the ghost executing the command)]/ghost/master is displayed at the balloon coordinates X:10,Y:20, using the transparency information of the file. It will be clipped from the range of 100-150 pixels horizontally and 30-90 pixels vertically, laid over the text.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1331,7 +1332,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>In the main character's balloon, \_b[test.png,inline] test.png in the folder [(folder of the ghost executing the command)]/ghost/master is displayed as a letter in the current balloon's text, using its top left pixel as the transparent color.</code></p>
+							<p><code type="SakuraScript">In the main character's balloon, \_b[test.png,inline] test.png in the folder [(folder of the ghost executing the command)]/ghost/master is displayed as a letter in the current balloon's text, using its top left pixel as the transparent color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1346,7 +1347,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>In the main character's balloon, \_b["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAIAAACpTQvdAAAAl0lEQVR42oVSCQ7AIAiDl6MvZyCMQ122JQSh5agiM0P/JmL4dGQxCIEjruSd6QRBE7D86nRCibMTTvScQPTazsEBfgaECUoQHAyfzXytLbMtTutQOdZhQ2uHc4dNlssOTrBWr40q2tNsXTq186myikUCsJYuU1bV81g2TJUs7bm8WC8fmKtKXC4O/1XaCVeVYmL6eIsRfwDNfLdu1l4zPAAAAABJRU5ErkJggg==",inline,opaque] base64 encoded image data is displayed in the same way as a letter, without becoming transparent.</code></p>
+							<p><code type="SakuraScript">In the main character's balloon, \_b["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAIAAACpTQvdAAAAl0lEQVR42oVSCQ7AIAiDl6MvZyCMQ122JQSh5agiM0P/JmL4dGQxCIEjruSd6QRBE7D86nRCibMTTvScQPTazsEBfgaECUoQHAyfzXytLbMtTutQOdZhQ2uHc4dNlssOTrBWr40q2tNsXTq186myikUCsJYuU1bV81g2TJUs7bm8WC8fmKtKXC4O/1XaCVeVYmL6eIsRfwDNfLdu1l4zPAAAAABJRU5ErkJggg==",inline,opaque] base64 encoded image data is displayed in the same way as a letter, without becoming transparent.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1367,7 +1368,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>In the main character's balloon, \_b[test.png,inline,--option=use_self_alpha,--clipping=100 30 150 90] test.png in the folder [(folder of the ghost executing the command)]/ghost/master is clipped from the range of 100-150 pixels horizontally and 30-90 pixels vertically, and displayed as a letter using the alpha channel for transparency.</code></p>
+							<p><code type="SakuraScript">In the main character's balloon, \_b[test.png,inline,--option=use_self_alpha,--clipping=100 30 150 90] test.png in the folder [(folder of the ghost executing the command)]/ghost/master is clipped from the range of 100-150 pixels horizontally and 30-90 pixels vertically, and displayed as a letter using the alpha channel for transparency.</code></p>
 						</section>
 					</div>
 					<ul class="supported-baseware">
@@ -1388,7 +1389,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>This sentence\nis displayed with a line break partway through.</code></p>
+							<p><code type="SakuraScript">This sentence\nis displayed with a line break partway through.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1405,7 +1406,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>This sentence is\n[half]displayed with a half height line break partway through.\n\n[half]Using one and a half height line breaks, a paragraph-like format can be achieved.</code></p>
+							<p><code type="SakuraScript">This sentence is\n[half]displayed with a half height line break partway through.\n\n[half]Using one and a half height line breaks, a paragraph-like format can be achieved.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1421,8 +1422,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>This sentence is\n[150]displayed with a one and a half height line break partway through.</code></p>
-							<p><code>This sentence\n[-250]goes back up by two and a half lines.</code></p>
+							<p><code type="SakuraScript">This sentence is\n[150]displayed with a one and a half height line break partway through.</code></p>
+							<p><code type="SakuraScript">This sentence\n[-250]goes back up by two and a half lines.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1438,7 +1439,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_nThe sentence written here will not have any line breaks. If it goes out of the balloon's text area, it will not be displayed.\_n</code></p>
+							<p><code type="SakuraScript">\_nThe sentence written here will not have any line breaks. If it goes out of the balloon's text area, it will not be displayed.\_n</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1455,7 +1456,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1This sentence is displayed by the side character.\0This sentence is displayed by the main character. The text in the balloon of the character that is currently the focus will all be cleared.\cAny text that comes afterwards will start from the top left (the initial setting).</code></p>
+							<p><code type="SakuraScript">\1This sentence is displayed by the side character.\0This sentence is displayed by the main character. The text in the balloon of the character that is currently the focus will all be cleared.\cAny text that comes afterwards will start from the top left (the initial setting).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1470,7 +1471,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Three characters of this dialogue will be deleted.\c[char,3] Deletion has been completed.</code></p>
+							<p><code type="SakuraScript">Three characters of this dialogue will be deleted.\c[char,3] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1485,7 +1486,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Three characters of this dialogue will be deleted, starting from the 5th character.\c[char,3,4] Deletion has been completed.</code></p>
+							<p><code type="SakuraScript">Three characters of this dialogue will be deleted, starting from the 5th character.\c[char,3,4] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1500,7 +1501,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>One line of dialogue will be deleted.\nThis line will be deleted.\c[line,1] Deletion has been completed.\nThis line will be deleted.\n\n\n\n\n\c[line,1] Deletion has been completed.\nThis line will not be deleted.\_l[0,0]\c[line,1] Deletion has been completed.</code></p>
+							<p><code type="SakuraScript">One line of dialogue will be deleted.\nThis line will be deleted.\c[line,1] Deletion has been completed.\nThis line will be deleted.\n\n\n\n\n\c[line,1] Deletion has been completed.\nThis line will not be deleted.\_l[0,0]\c[line,1] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1515,7 +1516,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Starting from the third line,\none line of dialogue will be deleted.\nThis part will\_l[,] be deleted.\c[line,1,2] Deletion has been completed.</code></p>
+							<p><code type="SakuraScript">Starting from the third line,\none line of dialogue will be deleted.\nThis part will\_l[,] be deleted.\c[line,1,2] Deletion has been completed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1544,7 +1545,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_l[30,5em] \_l[30,5em]Displayed at "X coordinate=30 pixels, Y coordinate=5 times the letter height".\_l[@-1650%,100]Displayed at "X coordinate=1650% of the letter height leftwards from the last letter, Y coordinate=100 pixels".\_l[,@-100]Displayed at "X coordinate=no change,Y coordinate=100 pixels above the last letter".</code></p>
+							<p><code type="SakuraScript">\_l[30,5em] \_l[30,5em]Displayed at "X coordinate=30 pixels, Y coordinate=5 times the letter height".\_l[@-1650%,100]Displayed at "X coordinate=1650% of the letter height leftwards from the last letter, Y coordinate=100 pixels".\_l[,@-100]Displayed at "X coordinate=no change,Y coordinate=100 pixels above the last letter".</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1559,7 +1560,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\CThis sentence will be added to the previous dialogue. It is important to note that the last state of the character will also be reflected.</code></p>
+							<p><code type="SakuraScript">\CThis sentence will be added to the previous dialogue. It is important to note that the last state of the character will also be reflected.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1575,7 +1576,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,autoscroll,disable]Scrolling is locked.\n[5000]This text is not visible while scrolling is locked.</code></p>
+							<p><code type="SakuraScript">\![set,autoscroll,disable]Scrolling is locked.\n[5000]This text is not visible while scrolling is locked.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1591,7 +1592,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,autoscroll,disable]Scrolling is locked.\n[5000]This text is not visible while scrolling is locked.\![set,autoscroll,enable] Scrolling is unlocked.</code></p>
+							<p><code type="SakuraScript">\![set,autoscroll,disable]Scrolling is locked.\n[5000]This text is not visible while scrolling is locked.\![set,autoscroll,enable] Scrolling is unlocked.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1606,8 +1607,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,balloonoffset,100,-50]Moves the base point of the balloon position to X:100,Y:-50.</code></p>
-							<p><code>\![set,balloonoffset,@100,@-50]Moves the base point of the balloon position to the specifications in descript.txt or surfaces.txt, plus X:100,Y:-50 (relative coordinates).</code></p>
+							<p><code type="SakuraScript">\![set,balloonoffset,100,-50]Moves the base point of the balloon position to X:100,Y:-50.</code></p>
+							<p><code type="SakuraScript">\![set,balloonoffset,@100,@-50]Moves the base point of the balloon position to the specifications in descript.txt or surfaces.txt, plus X:100,Y:-50 (relative coordinates).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1639,7 +1640,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\0\![set,balloonalign,top]The main character's balloon will be displayed above the shell.\1\![set,balloonalign,right]The side character's balloon will be displayed on the right side of the shell.</code></p>
+							<p><code type="SakuraScript">\0\![set,balloonalign,top]The main character's balloon will be displayed above the shell.\1\![set,balloonalign,right]The side character's balloon will be displayed on the right side of the shell.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1655,7 +1656,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,balloonnum,Test Display,1,5]Testing the file downloading display.\![set,balloonnum,,,] The display contents have been deleted.</code></p>
+							<p><code type="SakuraScript">\![set,balloonnum,Test Display,1,5]Testing the file downloading display.\![set,balloonnum,,,] The display contents have been deleted.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1675,7 +1676,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,balloontimeout,3000]The balloon of this dialogue will close 3 seconds after the ghost has stopped talking.</code></p>
+							<p><code type="SakuraScript">\![set,balloontimeout,3000]The balloon of this dialogue will close 3 seconds after the ghost has stopped talking.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1709,7 +1710,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![*]Add a marker.</code></p>
+							<p><code type="SakuraScript">\![*]Add a marker.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1725,7 +1726,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\0\![enter,onlinemode]The online marker is displayed in the main character's balloon.</code></p>
+							<p><code type="SakuraScript">\0\![enter,onlinemode]The online marker is displayed in the main character's balloon.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1740,7 +1741,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\0\![enter,onlinemode]While this sentence is being displayed, the online marker is shown in the main character's balloon.\![leave,onlinemode] Here, the online marker disappears.</code></p>
+							<p><code type="SakuraScript">\0\![enter,onlinemode]While this sentence is being displayed, the online marker is shown in the main character's balloon.\![leave,onlinemode] Here, the online marker disappears.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1755,7 +1756,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,nouserbreakmode]In this sentence, scripts cannot be broken.</code></p>
+							<p><code type="SakuraScript">\![enter,nouserbreakmode]In this sentence, scripts cannot be broken.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1770,7 +1771,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,nouserbreakmode]In this sentence, scripts cannot be broken.\![leave,nouserbreakmode] Script breaking is possible from here.</code></p>
+							<p><code type="SakuraScript">\![enter,nouserbreakmode]In this sentence, scripts cannot be broken.\![leave,nouserbreakmode] Script breaking is possible from here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1787,7 +1788,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![lock,balloonrepaint]This sentence won't be displayed until the script ends.</code></p>
+							<p><code type="SakuraScript">\![lock,balloonrepaint]This sentence won't be displayed until the script ends.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1802,7 +1803,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![lock,balloonrepaint]This sentence won't be drawn.\![unlock,balloonrepaint] Here, drawing is started again, and the previous sentence is also drawn.</code></p>
+							<p><code type="SakuraScript">\![lock,balloonrepaint]This sentence won't be drawn.\![unlock,balloonrepaint] Here, drawing is started again, and the previous sentence is also drawn.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1843,7 +1844,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_?\1This sentence is displayed as is\nwithout SakuraScript being run.\_?</code></p>
+							<p><code type="SakuraScript">\_?\1This sentence is displayed as is\nwithout SakuraScript being run.\_?</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1860,7 +1861,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1\__v[disable]This sentence won't be spoken using the speech synthesis function.\__v</code></p>
+							<p><code type="SakuraScript">\1\__v[disable]This sentence won't be spoken using the speech synthesis function.\__v</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1895,7 +1896,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[align,center]This text is centered.\n\f[align,right]This text is aligned to the right.\n\f[align,left]This left-aligned text \w9\w9\f[align,right]is moved to the right.</code></p>
+							<p><code type="SakuraScript">\f[align,center]This text is centered.\n\f[align,right]This text is aligned to the right.\n\f[align,left]This left-aligned text \w9\w9\f[align,right]is moved to the right.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1926,7 +1927,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[name,Meiryo,meiryo.ttf]This text will be displayed with Meiryo if installed, meiryo.ttf if not installed, and the default font if neither exist.</code></p>
+							<p><code type="SakuraScript">\f[name,Meiryo,meiryo.ttf]This text will be displayed with Meiryo if installed, meiryo.ttf if not installed, and the default font if neither exist.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1941,7 +1942,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[height,15]This text is displayed at 15 pixels.\f[height,+3] It has been made 3 pixels larger.\f[height,200%] This text is displayed at 200% of the default size.\f[height,default] It has been returned to the original size.</code></p>
+							<p><code type="SakuraScript">\f[height,15]This text is displayed at 15 pixels.\f[height,+3] It has been made 3 pixels larger.\f[height,200%] This text is displayed at 200% of the default size.\f[height,default] It has been returned to the original size.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1956,7 +1957,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[color,red]This text is displayed in red.\f[color,100,150,200] This text is displayed in the specified color.\f[color,default] It has been returned to the balloon's default color.</code></p>
+							<p><code type="SakuraScript">\f[color,red]This text is displayed in red.\f[color,100,150,200] This text is displayed in the specified color.\f[color,default] It has been returned to the balloon's default color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1971,7 +1972,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,#ffff00]The drop shadow is displayed in yellow.\f[shadowcolor,default] It has been returned to the balloon's default drop shadow color.</code></p>
+							<p><code type="SakuraScript">\f[shadowcolor,#ffff00]The drop shadow is displayed in yellow.\f[shadowcolor,default] It has been returned to the balloon's default drop shadow color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -1986,7 +1987,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,none]This text is displayed without a drop shadow.\f[shadowcolor,default] It has been returned to the balloon's default drop shadow color.</code></p>
+							<p><code type="SakuraScript">\f[shadowcolor,none]This text is displayed without a drop shadow.\f[shadowcolor,default] It has been returned to the balloon's default drop shadow color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2001,7 +2002,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,#ffff00]\f[shadowstyle,outline]This text is displayed with a yellow border.\f[shadowstyle,default]\f[shadowcolor,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">\f[shadowcolor,#ffff00]\f[shadowstyle,outline]This text is displayed with a yellow border.\f[shadowstyle,default]\f[shadowcolor,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2016,7 +2017,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[height,30]\f[outline,1]This is outline text.\f[outline,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">\f[height,30]\f[outline,1]This is outline text.\f[outline,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2031,7 +2032,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_a[OnTest]This is an anchor before the color has been changed.\_a\n\f[anchor.font.color,50%,90%,20%]\_a[OnTest2]This is an anchor after the color has been changed.\_a</code></p>
+							<p><code type="SakuraScript">\_a[OnTest]This is an anchor before the color has been changed.\_a\n\f[anchor.font.color,50%,90%,20%]\_a[OnTest2]This is an anchor after the color has been changed.\_a</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2047,7 +2048,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[bold,1]This text is bold.\f[bold,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">\f[bold,1]This text is bold.\f[bold,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2063,7 +2064,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[italic,1]This is italic.\f[italic,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">\f[italic,1]This is italic.\f[italic,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2078,7 +2079,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[strike,1]This is strikethrough text.\f[strike,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">\f[strike,1]This is strikethrough text.\f[strike,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2093,7 +2094,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[underline,1]This text has been underlined.\f[underline,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">\f[underline,1]This text has been underlined.\f[underline,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2108,7 +2109,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Turns the text into\f[sub,1] subscript text.\f[sub,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">Turns the text into\f[sub,1] subscript text.\f[sub,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2123,7 +2124,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Turns the text into\f[sup,1] superscript text.\f[sup,default] It has been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">Turns the text into\f[sup,1] superscript text.\f[sup,default] It has been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2138,7 +2139,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[shadowcolor,#6699cc]Text that\f[bold,1] has been \f[underline,1]decorated in\f[height,20] many ways\f[default] has now been returned to the balloon's default settings.</code></p>
+							<p><code type="SakuraScript">\f[shadowcolor,#6699cc]Text that\f[bold,1] has been \f[underline,1]decorated in\f[height,20] many ways\f[default] has now been returned to the balloon's default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2167,7 +2168,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Waits for 0.45 seconds.\w9\nAfter that, waits for 1 second.\w9\w9\w2 Waiting has finished.</code></p>
+							<p><code type="SakuraScript">Waits for 0.45 seconds.\w9\nAfter that, waits for 1 second.\w9\w9\w2 Waiting has finished.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2183,7 +2184,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Waits for 1.234 seconds.\_w[1234] Waiting has finished.</code></p>
+							<p><code type="SakuraScript">Waits for 1.234 seconds.\_w[1234] Waiting has finished.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2198,7 +2199,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>1\_w[1000]2\__w[2500]3. After first waiting for 1000ms, it will wait for a total of 2500ms (in this case, [2500-1000-the time it takes to display 2 letters], equalling roughly 1500ms). As the length of time it takes to display characters (adjustable with SSP user settings) is factored in, exact control over wait time since the script started is possible. The wait timer starts counting from 0 again when a clear or click-wait is run.\__w[clear]\__w[500] A 0.5 second wait is added here.</code></p>
+							<p><code type="SakuraScript">1\_w[1000]2\__w[2500]3. After first waiting for 1000ms, it will wait for a total of 2500ms (in this case, [2500-1000-the time it takes to display 2 letters], equalling roughly 1500ms). As the length of time it takes to display characters (adjustable with SSP user settings) is factored in, exact control over wait time since the script started is possible. The wait timer starts counting from 0 again when a clear or click-wait is run.\__w[clear]\__w[500] A 0.5 second wait is added here.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2215,7 +2216,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1Here, the side character will\f[bold,1] speak.\xAfter being clicked, the focus returns to the main character and the SakuraScript that made modifications to the font is cleared.</code></p>
+							<p><code type="SakuraScript">\1Here, the side character will\f[bold,1] speak.\xAfter being clicked, the focus returns to the main character and the SakuraScript that made modifications to the font is cleared.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2230,7 +2231,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\1Here, the side character will\f[bold,1] speak. \x[noclear]After being clicked, the SakuraScript for both the character with the focus and the text modification remains in effect.</code></p>
+							<p><code type="SakuraScript">\1Here, the side character will\f[bold,1] speak. \x[noclear]After being clicked, the SakuraScript for both the character with the focus and the text modification remains in effect.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2247,7 +2248,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>While this sentence is being displayed, mouse interactions are possible.\t From here, mouse interactions will be ignored until the script stops playing.</code></p>
+							<p><code type="SakuraScript">While this sentence is being displayed, mouse interactions are possible.\t From here, mouse interactions will be ignored until the script stops playing.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2264,7 +2265,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_qThis text will be displayed instantly. It is important to note that there are some situations, such as with Satori, when wait times will be inserted automatically.\_q</code></p>
+							<p><code type="SakuraScript">\_qThis text will be displayed instantly. It is important to note that there are some situations, such as with Satori, when wait times will be inserted automatically.\_q</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2279,7 +2280,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![quicksection,1]This text will be displayed instantly. Any wait tags will be run here as well.</code></p>
+							<p><code type="SakuraScript">\![quicksection,1]This text will be displayed instantly. Any wait tags will be run here as well.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2294,7 +2295,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![quicksection,1]This text will be displayed instantly. Any wait tags will be run here as well.\![quicksection,0] Furthermore, the SakuraScript tags for quick sections\![quicksection,1] are still valid when mixed.\_q</code></p>
+							<p><code type="SakuraScript">\![quicksection,1]This text will be displayed instantly. Any wait tags will be run here as well.\![quicksection,0] Furthermore, the SakuraScript tags for quick sections\![quicksection,1] are still valid when mixed.\_q</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2311,7 +2312,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_sThe main character and side character will speak at the same time.\_s</code></p>
+							<p><code type="SakuraScript">\_sThe main character and side character will speak at the same time.\_s</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2326,7 +2327,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_s[0,2,3]The main character, a third character, and a fourth character will speak at the same time.\_s</code></p>
+							<p><code type="SakuraScript">\_s[0,2,3]The main character, a third character, and a fourth character will speak at the same time.\_s</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2359,7 +2360,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Do you like SakuraScript? \q[Yes,Like] \q[No,Hate]. 'Like' or 'Hate' is stored in reference0 depending on what you choose, then sent to the event OnChoiceSelect.</code></p>
+							<p><code type="SakuraScript">Do you like SakuraScript? \q[Yes,Like] \q[No,Hate]. 'Like' or 'Hate' is stored in reference0 depending on what you choose, then sent to the event OnChoiceSelect.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2376,7 +2377,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>What is your favorite season? \q[Spring,OnLikeSeason,Rain,Budding trees] \q[Summer,OnLikeSeason,Heat,Lush green] \q[Autumn,OnLikeSeason,Breezy,Falling leaves] \q[Winter,OnLikeSeason,Cold,Snowing]. When a choice is selected, the OnLikeSeason event is triggered. reference0 and reference1 in OnLikeSeason will vary depending on which choice was selected. For example, if Spring is selected, reference0 would be 'Rain' and reference1 would be 'Budding trees'.</code></p>
+							<p><code type="SakuraScript">What is your favorite season? \q[Spring,OnLikeSeason,Rain,Budding trees] \q[Summer,OnLikeSeason,Heat,Lush green] \q[Autumn,OnLikeSeason,Breezy,Falling leaves] \q[Winter,OnLikeSeason,Cold,Snowing]. When a choice is selected, the OnLikeSeason event is triggered. reference0 and reference1 in OnLikeSeason will vary depending on which choice was selected. For example, if Spring is selected, reference0 would be 'Rain' and reference1 would be 'Budding trees'.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2400,7 +2401,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>What is your favorite season? \q[Spring,OnLikeSeason,Rain,Budding trees] \q[Summer,OnLikeSeason,Heat,Lush green] \q[Autumn,OnLikeSeason,Breezy,Falling leaves] \q[Winter,OnLikeSeason,Cold,Snowing]. When a choice is selected, the OnChoiceSelectEx event is triggered. The references in OnChoiceSelectEx will vary depending on which choice was selected. For example, if 'Autumn' was selected, reference0 would be 'Autumn', reference1 would be 'OnLikeSeason', reference2 would be 'Breezy', and reference3 would be 'Falling leaves'.</code></p>
+							<p><code type="SakuraScript">What is your favorite season? \q[Spring,OnLikeSeason,Rain,Budding trees] \q[Summer,OnLikeSeason,Heat,Lush green] \q[Autumn,OnLikeSeason,Breezy,Falling leaves] \q[Winter,OnLikeSeason,Cold,Snowing]. When a choice is selected, the OnChoiceSelectEx event is triggered. The references in OnChoiceSelectEx will vary depending on which choice was selected. For example, if 'Autumn' was selected, reference0 would be 'Autumn', reference1 would be 'OnLikeSeason', reference2 would be 'Breezy', and reference3 would be 'Falling leaves'.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2415,7 +2416,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\q[Close balloon,script:\e]\nNesting is also possible.\n\q[No. 1,"script:\q[No. 2,script:There is no 3.]"]</code></p>
+							<p><code type="SakuraScript">\q[Close balloon,script:\e]\nNesting is also possible.\n\q[No. 1,"script:\q[No. 2,script:There is no 3.]"]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2442,7 +2443,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\__q[OnTest,testreference]SakuraScript can be used in this menu choice. \nNewline, \_l[50,50]Cursor movement is also possible, and if you use an image tag, the image will be a clickable choice.\__q In this example, the ID starts with 'On', so the event 'OnTest' is triggered when the selection is made, and 'testreference' is stored in reference0.</code></p>
+							<p><code type="SakuraScript">\__q[OnTest,testreference]SakuraScript can be used in this menu choice. \nNewline, \_l[50,50]Cursor movement is also possible, and if you use an image tag, the image will be a clickable choice.\__q In this example, the ID starts with 'On', so the event 'OnTest' is triggered when the selection is made, and 'testreference' is stored in reference0.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2459,7 +2460,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\q[Choice that will not timeout,NoTimeOut]\*. When selected, the OnChoiceSelectEx event (or OnChoiceSelect if there is no response from OnChoiceSelectEx) will be run as normal.</code></p>
+							<p><code type="SakuraScript">\q[Choice that will not timeout,NoTimeOut]\*. When selected, the OnChoiceSelectEx event (or OnChoiceSelect if there is no response from OnChoiceSelectEx) will be run as normal.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2483,7 +2484,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\q[Quick press,FastPush]\![set,choicetimeout,500]</code></p>
+							<p><code type="SakuraScript">\q[Quick press,FastPush]\![set,choicetimeout,500]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2500,7 +2501,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Clicking on an \_a[Hint]anchor\_a will trigger the OnAnchorSelectEx event (Or the OnAnchorSelect if there is no response). reference0 will contain 'Hint'.</code></p>
+							<p><code type="SakuraScript">Clicking on an \_a[Hint]anchor\_a will trigger the OnAnchorSelectEx event (Or the OnAnchorSelect if there is no response). reference0 will contain 'Hint'.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2515,7 +2516,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Click here if you want a \_a[OnHint,0]hint\_a. \_a[OnHint,1]Come on, come on, come on\_a. These two anchors will start the SHIORI event OnHint when clicked, but the value of reference0 will be either '0' or '1' depending on which one was clicked.</code></p>
+							<p><code type="SakuraScript">Click here if you want a \_a[OnHint,0]hint\_a. \_a[OnHint,1]Come on, come on, come on\_a. These two anchors will start the SHIORI event OnHint when clicked, but the value of reference0 will be either '0' or '1' depending on which one was clicked.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2530,7 +2531,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_a[CharacterName,Target Teddy,Age Unknown]Teddy\_a was such a good guy. But, he ate \_a[CharacterName,Target Emily,0x10 years old]Emily's\_a special treat that she'd been saving, so... When an anchor is clicked, OnAnchorSelectEx is run. If 'Teddy' is clicked, 'Teddy' is stored in reference0, 'CharacterName' in reference1, 'Target Teddy' in reference2, and 'Age Unknown' in reference3.</code></p>
+							<p><code type="SakuraScript">\_a[CharacterName,Target Teddy,Age Unknown]Teddy\_a was such a good guy. But, he ate \_a[CharacterName,Target Emily,0x10 years old]Emily's\_a special treat that she'd been saving, so... When an anchor is clicked, OnAnchorSelectEx is run. If 'Teddy' is clicked, 'Teddy' is stored in reference0, 'CharacterName' in reference1, 'Target Teddy' in reference2, and 'Age Unknown' in reference3.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2548,7 +2549,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursorstyle,underline]\q[Choice,OnTest] Changes choice text to be displayed with an underline when hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursorstyle,underline]\q[Choice,OnTest] Changes choice text to be displayed with an underline when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2563,7 +2564,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursorbrushcolor,red]\q[Choice,OnTest] When the style of the choice text is set to square, the background color will become red if hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursorbrushcolor,red]\q[Choice,OnTest] When the style of the choice text is set to square, the background color will become red if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2578,7 +2579,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursorpencolor,0,255,0]\q[Choice,OnTest] When the style of the choice text is set to underline or square, the lines will become green if hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursorpencolor,0,255,0]\q[Choice,OnTest] When the style of the choice text is set to underline or square, the lines will become green if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2593,7 +2594,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursorfontcolor,default.anchor]\q[Choice,OnTest] Changes the color of choice text to the same as the anchor color when hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursorfontcolor,default.anchor]\q[Choice,OnTest] Changes the color of choice text to the same as the anchor color when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2608,7 +2609,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursormethod,copypen]\f[cursorbrushcolor,red]\q[Choice,OnTest] Changes the drawing method inside the lines of the choice when hovered over. When copypen is specified, the color of cursorbrushcolor will be used as is.<br></code></p>
+							<p><code type="SakuraScript">\f[cursormethod,copypen]\f[cursorbrushcolor,red]\q[Choice,OnTest] Changes the drawing method inside the lines of the choice when hovered over. When copypen is specified, the color of cursorbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -2623,7 +2624,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursornotselectstyle,underline]\q[Choice,OnTest] Changes choice text to be displayed with an underline while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursornotselectstyle,underline]\q[Choice,OnTest] Changes choice text to be displayed with an underline while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2638,7 +2639,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursornotselectbrushcolor,red]\q[Choice,OnTest] When the style of the choice text is set to square, the background color will become red while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursornotselectbrushcolor,red]\q[Choice,OnTest] When the style of the choice text is set to square, the background color will become red while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2653,7 +2654,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursornotselectpencolor,0,255,0]\q[Choice,OnTest] When the style of the choice text is set to underline or square, the lines will become green while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursornotselectpencolor,0,255,0]\q[Choice,OnTest] When the style of the choice text is set to underline or square, the lines will become green while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2668,7 +2669,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursornotselectfontcolor,default.anchor]\q[Choice,OnTest] Changes the color of choice text to the same as the anchor color while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[cursornotselectfontcolor,default.anchor]\q[Choice,OnTest] Changes the color of choice text to the same as the anchor color while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2683,7 +2684,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[cursornotselectmethod,copypen]\f[cursornotselectbrushcolor,red]\q[Choice,OnTest] Changes the drawing method inside the lines of the choice while not hovered over. When copypen is specified, the color of cursornotselectbrushcolor will be used as is.<br></code></p>
+							<p><code type="SakuraScript">\f[cursornotselectmethod,copypen]\f[cursornotselectbrushcolor,red]\q[Choice,OnTest] Changes the drawing method inside the lines of the choice while not hovered over. When copypen is specified, the color of cursornotselectbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -2698,7 +2699,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorstyle,square]\_a[OnTest]Anchor\_a Changes anchor text to be displayed in a rectangle when hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchorstyle,square]\_a[OnTest]Anchor\_a Changes anchor text to be displayed in a rectangle when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2713,7 +2714,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_a When the style of the anchor text is set to square, the background color will become red if hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_a When the style of the anchor text is set to square, the background color will become red if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2728,7 +2729,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of the anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchorpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of the anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2743,7 +2744,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of anchor text to the same as the selected choice text color when hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchorfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of anchor text to the same as the selected choice text color when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2758,7 +2759,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchormethod,copypen]\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of the choice when hovered over. When copypen is specified, the color of anchorbrushcolor will be used as is.<br></code></p>
+							<p><code type="SakuraScript">\f[anchormethod,copypen]\f[anchorbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of the choice when hovered over. When copypen is specified, the color of anchorbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -2773,7 +2774,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectstyle,square]\_a[OnTest]Anchor\_a Changes anchor text to be displayed in a square while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchornotselectstyle,square]\_a[OnTest]Anchor\_a Changes anchor text to be displayed in a square while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2788,7 +2789,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_a When the style of the anchor text is set to square, the background color will become red while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_a When the style of the anchor text is set to square, the background color will become red while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2803,7 +2804,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of the choice text is set to underline or square, the lines will become green while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchornotselectpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of the choice text is set to underline or square, the lines will become green while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2818,7 +2819,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of choice text to the same as the selected choice text color while not hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchornotselectfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of choice text to the same as the selected choice text color while not hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2833,7 +2834,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchornotselectmethod,copypen]\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of the anchor while not hovered over. When copypen is specified, the color of anchornotselectbrushcolor will be used as is.<br></code></p>
+							<p><code type="SakuraScript">\f[anchornotselectmethod,copypen]\f[anchornotselectbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of the anchor while not hovered over. When copypen is specified, the color of anchornotselectbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -2848,7 +2849,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedstyle,square]\_a[OnTest]Anchor\_a Changes already-visited anchor text to be displayed in a square.</code></p>
+							<p><code type="SakuraScript">\f[anchorvisitedstyle,square]\_a[OnTest]Anchor\_a Changes already-visited anchor text to be displayed in a square.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2863,7 +2864,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_a When the style of already-visited anchor text is set to square, the background color will become red.</code></p>
+							<p><code type="SakuraScript">\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_a When the style of already-visited anchor text is set to square, the background color will become red.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2878,7 +2879,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of already-visited anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchorvisitedpencolor,0,255,0]\_a[OnTest]Anchor\_a When the style of already-visited anchor text is set to underline or square, the lines will become green if hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2893,7 +2894,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of already-visited anchor text to the same as the selected choice text color when hovered over.</code></p>
+							<p><code type="SakuraScript">\f[anchorvisitedfontcolor,default.cursor]\_a[OnTest]Anchor\_a Changes the color of already-visited anchor text to the same as the selected choice text color when hovered over.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2908,7 +2909,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\f[anchorvisitedmethod,copypen]\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of already-visited anchor text. When copypen is specified, the color of anchorvisitedbrushcolor will be used as is.<br></code></p>
+							<p><code type="SakuraScript">\f[anchorvisitedmethod,copypen]\f[anchorvisitedbrushcolor,red]\_a[OnTest]Anchor\_a Changes the drawing method inside the lines of already-visited anchor text. When copypen is specified, the color of anchorvisitedbrushcolor will be used as is.<br></code></p>
 						</section>
 					</div>
 				</dd>
@@ -2973,7 +2974,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>This sentence will be displayed.\eFrom here, it will not be displayed.</code></p>
+							<p><code type="SakuraScript">This sentence will be displayed.\eFrom here, it will not be displayed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -2990,7 +2991,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>After this script is played, the ghost will close.\-</code></p>
+							<p><code type="SakuraScript">After this script is played, the ghost will close.\-</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3018,7 +3019,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>A network update will be started.\![updatebymyself]</code></p>
+							<p><code type="SakuraScript">A network update will be started.\![updatebymyself]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3034,7 +3035,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The baseware will be updated.\![update,platform]</code></p>
+							<p><code type="SakuraScript">The baseware will be updated.\![update,platform]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3053,7 +3054,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The shell will be updated.\![update,shell]</code></p>
+							<p><code type="SakuraScript">The shell will be updated.\![update,shell]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3076,7 +3077,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The plugins 'shared value' and 'ukaten' will be updated.\![updateother,--plugin=共有変数プラグイン,--plugin=うかてん]</code></p>
+							<p><code type="SakuraScript">The plugins 'shared value' and 'ukaten' will be updated.\![updateother,--plugin=共有変数プラグイン,--plugin=うかてん]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3109,7 +3110,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The clock will be matched with the server time.\6</code></p>
+							<p><code type="SakuraScript">The clock will be matched with the server time.\6</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3132,7 +3133,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Sends a query to the time server.\![executesntp]</code></p>
+							<p><code type="SakuraScript">Sends a query to the time server.\![executesntp]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3147,7 +3148,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>A randomly chosen headline will be executed.\![execute,headline,random]</code></p>
+							<p><code type="SakuraScript">A randomly chosen headline will be executed.\![execute,headline,random]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3167,7 +3168,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The mail check event will be started.\![biff]</code></p>
+							<p><code type="SakuraScript">The mail check event will be started.\![biff]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3186,7 +3187,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The ghost will delete itself. Use caution when testing the command using the Send Box.\![vanishbymyself]</code></p>
+							<p><code type="SakuraScript">The ghost will delete itself. Use caution when testing the command using the Send Box.\![vanishbymyself]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3201,7 +3202,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Emily/Phase4.5 will be called after the ghost deletes itself. Use caution when testing the command using the Send Box.\![vanishbymyself,Emily/Phase4.5]</code></p>
+							<p><code type="SakuraScript">Emily/Phase4.5 will be called after the ghost deletes itself. Use caution when testing the command using the Send Box.\![vanishbymyself,Emily/Phase4.5]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3217,7 +3218,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Random change.\+</code></p>
+							<p><code type="SakuraScript">Random change.\+</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3233,7 +3234,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Change to the next ghost in the list.\_+</code></p>
+							<p><code type="SakuraScript">Change to the next ghost in the list.\_+</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3262,7 +3263,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Changing to Emily/Phase4.5.\![change,ghost,Emily/Phase4.5]</code></p>
+							<p><code type="SakuraScript">Changing to Emily/Phase4.5.\![change,ghost,Emily/Phase4.5]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3289,7 +3290,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Change to the master shell.\![change,shell,master]</code></p>
+							<p><code type="SakuraScript">Change to the master shell.\![change,shell,master]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3311,7 +3312,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The balloon will be changed to SSP Default+.\![change,balloon,SSPデフォルト+]</code></p>
+							<p><code type="SakuraScript">The balloon will be changed to SSP Default+.\![change,balloon,SSPデフォルト+]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3333,7 +3334,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The ghost Emily/Phase4.5 will be called.\![call,ghost,Emily/Phase4.5]</code></p>
+							<p><code type="SakuraScript">The ghost Emily/Phase4.5 will be called.\![call,ghost,Emily/Phase4.5]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3350,7 +3351,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\vAfter running this script, the window of the ghost will be displayed in the frontmost layer.</code></p>
+							<p><code type="SakuraScript">\vAfter running this script, the window of the ghost will be displayed in the frontmost layer.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3368,7 +3369,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,windowstate,stayontop]After running this script, the window of the ghost will be displayed in the frontmost layer.</code></p>
+							<p><code type="SakuraScript">\![set,windowstate,stayontop]After running this script, the window of the ghost will be displayed in the frontmost layer.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3386,7 +3387,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,windowstate,!stayontop]After running this script, active windows will be displayed over the ghost's window.</code></p>
+							<p><code type="SakuraScript">\![set,windowstate,!stayontop]After running this script, active windows will be displayed over the ghost's window.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3402,7 +3403,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>The window will be minimized.\![set,windowstate,minimize]</code></p>
+							<p><code type="SakuraScript">The window will be minimized.\![set,windowstate,minimize]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3434,7 +3435,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>Sets Emily/Phase4.5's thumbnail as the wallpaper.\![set,wallpaper,ghost/emily4/thumbnail.png]</code></p>
+							<p><code type="SakuraScript">Sets Emily/Phase4.5's thumbnail as the wallpaper.\![set,wallpaper,ghost/emily4/thumbnail.png]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3453,7 +3454,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,tasktrayicon,normal.ico,ghost/normal mode] Sets the icon to normal.ico in [(folder of the ghost executing the command)]/ghost/master, and changes the message displayed when the mouse cursor is over it to "ghost/normal mode."</code></p>
+							<p><code type="SakuraScript">\![set,tasktrayicon,normal.ico,ghost/normal mode] Sets the icon to normal.ico in [(folder of the ghost executing the command)]/ghost/master, and changes the message displayed when the mouse cursor is over it to "ghost/normal mode."</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3486,7 +3487,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,trayballoon,--text=Due to an error, a process has failed.,--title=Error occurred,--icon=error]</code></p>
+							<p><code type="SakuraScript">\![set,trayballoon,--text=Due to an error, a process has failed.,--title=Error occurred,--icon=error]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3504,7 +3505,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>
+							<p><code type="SakuraScript">
 							\![set,otherghosttalk,true]After this, OnOtherGhostTalk will be notified every time other currently open ghosts finish talking.</code></p>
 						</section>
 					</div>
@@ -3520,7 +3521,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>
+							<p><code type="SakuraScript">
 							\![set,othersurfacechange,true]After this, OnOtherSurfaceChange will be notified every time other currently open ghosts change surfaces.</code></p>
 						</section>
 					</div>
@@ -3538,7 +3539,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>When the raise command at the end of this dialog is run, the SHIORI event OnRaiseTest will be notified by SSP. "test" will be stored in Reference0.\![raise,OnRaiseTest,test]</code></p>
+							<p><code type="SakuraScript">When the raise command at the end of this dialog is run, the SHIORI event OnRaiseTest will be notified by SSP. "test" will be stored in Reference0.\![raise,OnRaiseTest,test]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3559,8 +3560,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>At the end of this dialog, the results of the execution of the SHIORI event OnEmbedTest will be displayed. Contrary to raise, the results are contained within the same script, so SakuraScript effects that would become ineffective with the end of a script (such as font changes) will continue to be effective.\![embed,OnEmbedTest]</code></p>
-							<p><code>When this script is run on a Satori template, a line of randomtalk will be appended to this dialog.\![embed,OnTalk]</code></p>
+							<p><code type="SakuraScript">At the end of this dialog, the results of the execution of the SHIORI event OnEmbedTest will be displayed. Contrary to raise, the results are contained within the same script, so SakuraScript effects that would become ineffective with the end of a script (such as font changes) will continue to be effective.\![embed,OnEmbedTest]</code></p>
+							<p><code type="SakuraScript">When this script is run on a Satori template, a line of randomtalk will be appended to this dialog.\![embed,OnTalk]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3576,7 +3577,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![timerraise,5000,1,OnTimerraiseTest,test]In 5 seconds (5000 milliseconds), OnTimerraiseTest will be run. The time is counted starting from the moment the SakuraScript is run.\![timerraise,0,1,OnTimerraiseTest] The timer that was set earlier has been canceled.</code></p>
+							<p><code type="SakuraScript">\![timerraise,5000,1,OnTimerraiseTest,test]In 5 seconds (5000 milliseconds), OnTimerraiseTest will be run. The time is counted starting from the moment the SakuraScript is run.\![timerraise,0,1,OnTimerraiseTest] The timer that was set earlier has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3591,7 +3592,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![raiseother,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification. Reference0 stores the value sweet potato.</code></p>
+							<p><code type="SakuraScript">\![raiseother,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification. Reference0 stores the value sweet potato.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3606,7 +3607,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![timerraiseother,30000,0,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification every 30 seconds (30000 milliseconds). Reference0 stores the value sweet potato.\![timerraiseother,0,1,Emily/Phase4.5,OnRoastedPotato] The repeat notification has been canceled.</code></p>
+							<p><code type="SakuraScript">\![timerraiseother,30000,0,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification every 30 seconds (30000 milliseconds). Reference0 stores the value sweet potato.\![timerraiseother,0,1,Emily/Phase4.5,OnRoastedPotato] The repeat notification has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3621,7 +3622,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![raiseplugin,StampCollection,OnStampAdd,[(folder of the ghost executing the command)]/ghost/master/stamp.png,MyStamp,I gave you my stamp.]Registers the image from (folder of the ghost executing the command) and message to the plugin StampCollection.</code></p>
+							<p><code type="SakuraScript">\![raiseplugin,StampCollection,OnStampAdd,[(folder of the ghost executing the command)]/ghost/master/stamp.png,MyStamp,I gave you my stamp.]Registers the image from (folder of the ghost executing the command) and message to the plugin StampCollection.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3636,7 +3637,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![timerraiseplugin,60000,0,Jittaika,OnMenuExec]Runs the plugin Jittaika every 60 seconds (60000 milliseconds).\![timerraiseplugin,0,0,Jittaika,OnMenuExec] The repeat notification has been canceled.</code></p>
+							<p><code type="SakuraScript">\![timerraiseplugin,60000,0,Jittaika,OnMenuExec]Runs the plugin Jittaika every 60 seconds (60000 milliseconds).\![timerraiseplugin,0,0,Jittaika,OnMenuExec] The repeat notification has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3651,7 +3652,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![notify,OnNotifyTest,test]OnNotifyTest is notified, and test is stored in Reference0. Even if there is dialog in OnNotifyTest, it will not be output by SSP.</code></p>
+							<p><code type="SakuraScript">\![notify,OnNotifyTest,test]OnNotifyTest is notified, and test is stored in Reference0. Even if there is dialog in OnNotifyTest, it will not be output by SSP.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3666,7 +3667,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![notifyother,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification. Reference0 stores the value sweet potato. Even if Emily/Phase4.5 says something in response to this notification event, nothing will be displayed in the balloon.</code></p>
+							<p><code type="SakuraScript">\![notifyother,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification. Reference0 stores the value sweet potato. Even if Emily/Phase4.5 says something in response to this notification event, nothing will be displayed in the balloon.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3681,7 +3682,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![notifyplugin,StampCollection,OnStampAdd,[(folder of the ghost executing the command)]/ghost/master/stamp.png,MyStamp,I gave you my stamp.]Calls the registration event of the plugin StampCollection with notify. The plugin and subsequent processes will run, but responses to the ghost will be ignored.</code></p>
+							<p><code type="SakuraScript">\![notifyplugin,StampCollection,OnStampAdd,[(folder of the ghost executing the command)]/ghost/master/stamp.png,MyStamp,I gave you my stamp.]Calls the registration event of the plugin StampCollection with notify. The plugin and subsequent processes will run, but responses to the ghost will be ignored.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3707,7 +3708,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_v[se/test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master/se is being played.</code></p>
+							<p><code type="SakuraScript">\_v[se/test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master/se is being played.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3724,7 +3725,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_v[se/test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master/se is being played.\_V This sentence will be displayed only once the playback ends.</code></p>
+							<p><code type="SakuraScript">\_v[se/test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master/se is being played.\_V This sentence will be displayed only once the playback ends.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3739,7 +3740,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,play,test.mp4,--sound-only=true,--window=true]The video file test.mp4 in the folder [(folder of the ghost executing the command)]/ghost/master is being played. However, the seek bar will be continuously displayed, and only sound will be played.</code></p>
+							<p><code type="SakuraScript">\![sound,play,test.mp4,--sound-only=true,--window=true]The video file test.mp4 in the folder [(folder of the ghost executing the command)]/ghost/master is being played. However, the seek bar will be continuously displayed, and only sound will be played.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3763,7 +3764,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,cdplay,6]The sixth track on a music CD is being played.</code></p>
+							<p><code type="SakuraScript">\![sound,cdplay,6]The sixth track on a music CD is being played.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3778,7 +3779,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,stop] The playback has stopped looping.</code></p>
+							<p><code type="SakuraScript">\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,stop] The playback has stopped looping.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3793,7 +3794,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,play,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,wait] This sentence will be displayed only once the playback ends.</code></p>
+							<p><code type="SakuraScript">\![sound,play,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,wait] This sentence will be displayed only once the playback ends.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3808,7 +3809,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,pause] The playback is paused as this sentence is displayed.</code></p>
+							<p><code type="SakuraScript">\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,pause] The playback is paused as this sentence is displayed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3823,7 +3824,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,pause] The playback is paused as this sentence is displayed.\![sound,resume] The playback is resumed from where it was stopped.</code></p>
+							<p><code type="SakuraScript">\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,pause] The playback is paused as this sentence is displayed.\![sound,resume] The playback is resumed from where it was stopped.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3838,7 +3839,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,stop] The playback is stopped entirely.</code></p>
+							<p><code type="SakuraScript">\![sound,loop,test.wav]The file test.wav in the folder [(folder of the ghost executing the command)]/ghost/master is being played.\![sound,stop] The playback is stopped entirely.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3882,8 +3883,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\j[http://ssp.shillest.net/]Opens the browser and displays the SSP BUGTRAQ Lab.</code></p>
-							<p><code>\j[file:///descript.txt]Opens the descript.txt file in the folder [(folder of the ghost executing the command)]/ghost/master.</code></p>
+							<p><code type="SakuraScript">\j[http://ssp.shillest.net/]Opens the browser and displays the SSP BUGTRAQ Lab.</code></p>
+							<p><code type="SakuraScript">\j[file:///descript.txt]Opens the descript.txt file in the folder [(folder of the ghost executing the command)]/ghost/master.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3900,7 +3901,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,browser,http://ssp.shillest.net/]Displays the SSP BUGTRAQ Lab in the browser specified in SSP's Preference settings.</code></p>
+							<p><code type="SakuraScript">\![open,browser,http://ssp.shillest.net/]Displays the SSP BUGTRAQ Lab in the browser specified in SSP's Preference settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3916,7 +3917,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,mailer,test@example.com]Opens a mailer with the address test@example.com in the To: field.</code></p>
+							<p><code type="SakuraScript">\![open,mailer,test@example.com]Opens a mailer with the address test@example.com in the To: field.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3962,7 +3963,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,teachbox]The TeachBox is opened.</code></p>
+							<p><code type="SakuraScript">\![open,teachbox]The TeachBox is opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -3977,7 +3978,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![close,teachbox]The TeachBox is closed. If not open, this command will be ignored.</code></p>
+							<p><code type="SakuraScript">\![close,teachbox]The TeachBox is closed. If not open, this command will be ignored.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4003,8 +4004,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,communicatebox,test]The CommunicateBox is opened. The word "test" is in the text box from the start.</code></p>
-							<p><code>\![open,communicatebox,--text=test]The same happens as above (an example of writing the command with an option specification).</code></p>
+							<p><code type="SakuraScript">\![open,communicatebox,test]The CommunicateBox is opened. The word "test" is in the text box from the start.</code></p>
+							<p><code type="SakuraScript">\![open,communicatebox,--text=test]The same happens as above (an example of writing the command with an option specification).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4019,7 +4020,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![close,communicatebox]The CommunicateBox is closed. If not open, this command will be ignored.</code></p>
+							<p><code type="SakuraScript">\![close,communicatebox]The CommunicateBox is closed. If not open, this command will be ignored.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4047,8 +4048,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,inputbox,inputtest,10000,Test Input]Opens the InputBox with the text "Test Input" already in it. It will be closed either manually when the OK button is pressed or automatically 10 seconds pass.</code></p>
-							<p><code>\![open,inputbox,inputtest,--timeout=10000,--text=Test Input]The same happens as above (an example of writing the command with the new option specifications).</code></p>
+							<p><code type="SakuraScript">\![open,inputbox,inputtest,10000,Test Input]Opens the InputBox with the text "Test Input" already in it. It will be closed either manually when the OK button is pressed or automatically 10 seconds pass.</code></p>
+							<p><code type="SakuraScript">\![open,inputbox,inputtest,--timeout=10000,--text=Test Input]The same happens as above (an example of writing the command with the new option specifications).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4063,8 +4064,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,passwordinput,passwordtest,-1,--option==noclose]An InputBox with the characters hidden by ● has been opened. Neither time passing nor pressing the OK button will close it. It can be closed if the close button is pressed.</code></p>
-							<p><code>\![open,passwordinput,passwordtest,--timeout=-1,--option==noclose]The same happens as above (an example of writing the command with the new option specifications).</code></p>
+							<p><code type="SakuraScript">\![open,passwordinput,passwordtest,-1,--option==noclose]An InputBox with the characters hidden by ● has been opened. Neither time passing nor pressing the OK button will close it. It can be closed if the close button is pressed.</code></p>
+							<p><code type="SakuraScript">\![open,passwordinput,passwordtest,--timeout=-1,--option==noclose]The same happens as above (an example of writing the command with the new option specifications).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4086,8 +4087,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,dateinput,dateinputtest,30000,2012,12,23]An InputBox with the initial values of the date 2012,12,23 has been opened. It will timeout after 30 seconds.</code></p>
-							<p><code>\![open,dateinput,dateinputtest,--timeout=30000,--text="2012,12,23"]The same happens as above (an example of writing the command with the new option specifications).</code></p>
+							<p><code type="SakuraScript">\![open,dateinput,dateinputtest,30000,2012,12,23]An InputBox with the initial values of the date 2012,12,23 has been opened. It will timeout after 30 seconds.</code></p>
+							<p><code type="SakuraScript">\![open,dateinput,dateinputtest,--timeout=30000,--text="2012,12,23"]The same happens as above (an example of writing the command with the new option specifications).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4102,8 +4103,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,sliderinput,slidertest,30000,50,0,100]A slider-type InputBox with an initial value of 50, a minimum value of 0, and a maximum value of 100 has been opened. It will timeout after 30 seconds.</code></p>
-							<p><code>\![open,sliderinput,slidertest,--timeout=30000,--text="50,0,100"]The same happens as above (an example of writing the command with the new option specifications).</code></p>
+							<p><code type="SakuraScript">\![open,sliderinput,slidertest,30000,50,0,100]A slider-type InputBox with an initial value of 50, a minimum value of 0, and a maximum value of 100 has been opened. It will timeout after 30 seconds.</code></p>
+							<p><code type="SakuraScript">\![open,sliderinput,slidertest,--timeout=30000,--text="50,0,100"]The same happens as above (an example of writing the command with the new option specifications).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4118,8 +4119,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,timeinput,timeinputtest,30000,23,45,12]An InputBox with the initial values of 23,45,12 has been opened. It will timeout after 30 seconds.</code></p>
-							<p><code>\![open,timeinput,timeinputtest,--timeout=30000,--text="23,45,12"]The same happens as above (an example of writing the command with the new option specifications).</code></p>
+							<p><code type="SakuraScript">\![open,timeinput,timeinputtest,30000,23,45,12]An InputBox with the initial values of 23,45,12 has been opened. It will timeout after 30 seconds.</code></p>
+							<p><code type="SakuraScript">\![open,timeinput,timeinputtest,--timeout=30000,--text="23,45,12"]The same happens as above (an example of writing the command with the new option specifications).</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4137,8 +4138,8 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,ipinput,ipinputtest,30000,192,168,0,1]</code></p>
-							<p><code>\![open,ipinput,ipinputtest,--timeout=30000,--text="192,168,0,1"]</code></p>
+							<p><code type="SakuraScript">\![open,ipinput,ipinputtest,30000,192,168,0,1]</code></p>
+							<p><code type="SakuraScript">\![open,ipinput,ipinputtest,--timeout=30000,--text="192,168,0,1"]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4153,7 +4154,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![close,inputbox,timeinputtest]The InputBox with the ID timeinputtest has been closed.\![close,inputbox,__SYSTEM_ALL_INPUT__] All InputBoxes have been closed.</code></p>
+							<p><code type="SakuraScript">\![close,inputbox,timeinputtest]The InputBox with the ID timeinputtest has been closed.\![close,inputbox,__SYSTEM_ALL_INPUT__] All InputBoxes have been closed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4170,7 +4171,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,configurationdialog,talk]The Talk/Balloon tab of the SSP baseware settings has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,configurationdialog,talk]The Talk/Balloon tab of the SSP baseware settings has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4187,7 +4188,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,ghostexplorer]The Ghost Explorer has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,ghostexplorer]The Ghost Explorer has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4204,7 +4205,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,shellexplorer]The Shell Explorer has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,shellexplorer]The Shell Explorer has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4221,7 +4222,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,balloonexplorer]The Balloon Explorer has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,balloonexplorer]The Balloon Explorer has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4238,7 +4239,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,headlinesensorexplorer]The Headline Explorer has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,headlinesensorexplorer]The Headline Explorer has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4253,7 +4254,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,pluginexplorer]The Plugin Explorer has been opened</code></p>
+							<p><code type="SakuraScript">\![open,pluginexplorer]The Plugin Explorer has been opened</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4270,7 +4271,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,rateofusegraph]The ghost usage rate graph is being displayed.</code></p>
+							<p><code type="SakuraScript">\![open,rateofusegraph]The ghost usage rate graph is being displayed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4286,7 +4287,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,rateofusegraphballoon]The balloon usage rate graph is being displayed.</code></p>
+							<p><code type="SakuraScript">\![open,rateofusegraphballoon]The balloon usage rate graph is being displayed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4310,7 +4311,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,calendar]The calendar has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,calendar]The calendar has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4325,7 +4326,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,help,talk]Opens the Talk/Balloon section of the http://ssp.shillest.net/ukadoc/ssphelp/ page.</code></p>
+							<p><code type="SakuraScript">\![open,help,talk]Opens the Talk/Balloon section of the http://ssp.shillest.net/ukadoc/ssphelp/ page.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4340,7 +4341,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,calendar]The instant messenger has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,calendar]The instant messenger has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4356,7 +4357,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,readme]readme.txt has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,readme]readme.txt has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4373,7 +4374,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,terms]terms.txt has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,terms]terms.txt has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4388,9 +4389,9 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,file,shell/master/surface0.png]surface0.png in the shell/master has been opened.</code></p>
-							<p><code>\![open,file,%ComSpec%]The command prompt has been opened.</code></p>
-							<p><code>\![open,file,TortoiseProc.exe]Automatically searches for the path and executes TortoiseSVN if it is installed.</code></p>
+							<p><code type="SakuraScript">\![open,file,shell/master/surface0.png]surface0.png in the shell/master has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,file,%ComSpec%]The command prompt has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,file,TortoiseProc.exe]Automatically searches for the path and executes TortoiseSVN if it is installed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4405,7 +4406,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,dialog,open,--title=Open dialog display test,--dir=C:/SSP/ghost/emily4/ghost/master,--filter=DictionaryFiles|dic*.txt;*.dic;*.aym;*.kis|AllFiles|*.*,--id=testdialog]Using the [(folder of the ghost executing the command)]/ghost/master folder of Emily/Phase4.5 as the initial position, displays only dic~.txt, ~.dic, ~.aym, ~.kis files if SSP exists in a folder named SSP in the C drive.</code></p>
+							<p><code type="SakuraScript">\![open,dialog,open,--title=Open dialog display test,--dir=C:/SSP/ghost/emily4/ghost/master,--filter=DictionaryFiles|dic*.txt;*.dic;*.aym;*.kis|AllFiles|*.*,--id=testdialog]Using the [(folder of the ghost executing the command)]/ghost/master folder of Emily/Phase4.5 as the initial position, displays only dic~.txt, ~.dic, ~.aym, ~.kis files if SSP exists in a folder named SSP in the C drive.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4420,7 +4421,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,dialog,save,--title=Save dialog display test,--dir=__system_mydocument__,--filter=Text files|*.txt;*.dic,--ext=txt,--name=test,--id=Test saving dialog]Using the My Documents folder as the initial position, displays only .txt and .dic files, opening the saving dialog for the initial file name test.txt.</code></p>
+							<p><code type="SakuraScript">\![open,dialog,save,--title=Save dialog display test,--dir=__system_mydocument__,--filter=Text files|*.txt;*.dic,--ext=txt,--name=test,--id=Test saving dialog]Using the My Documents folder as the initial position, displays only .txt and .dic files, opening the saving dialog for the initial file name test.txt.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4435,7 +4436,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,dialog,folder,--title=Folder selection dialog display test,--id=OnTestFolderDialog]Opens the folder selection dialog using the previously opened location as the initial position. The specified ID name OnTestFolderDialog starts with On, so when Save is pressed, the SHIORI event OnTestFolderDialog is notified.</code></p>
+							<p><code type="SakuraScript">\![open,dialog,folder,--title=Folder selection dialog display test,--id=OnTestFolderDialog]Opens the folder selection dialog using the previously opened location as the initial position. The specified ID name OnTestFolderDialog starts with On, so when Save is pressed, the SHIORI event OnTestFolderDialog is notified.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4460,7 +4461,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,dialog,color,--color=255 0 0,--id=Test color dialog]Opens the color palette dialog with red as the initial display color.</code></p>
+							<p><code type="SakuraScript">\![open,dialog,color,--color=255 0 0,--id=Test color dialog]Opens the color palette dialog with red as the initial display color.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4475,7 +4476,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![close,dialog,Test color dialog]Out of all currently displayed dialog boxes, closes those with the ID "Test color dialog" only." When a dialog is closed, OnSystemDialogCancel is notified.</code></p>
+							<p><code type="SakuraScript">\![close,dialog,Test color dialog]Out of all currently displayed dialog boxes, closes those with the ID "Test color dialog" only." When a dialog is closed, OnSystemDialogCancel is notified.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4490,7 +4491,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,surfacetest]The surface test dialog has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,surfacetest]The surface test dialog has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4505,7 +4506,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![open,aigraph]The AI graph has been opened.</code></p>
+							<p><code type="SakuraScript">\![open,aigraph]The AI graph has been opened.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4629,7 +4630,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![set,property,currentghost.shelllist(master).menu,hidden]Hides the master shell in the Shell (S) section of the user menu, preventing the user from changing to it manually.\![set,property,currentghost.shelllist(master).menu,] Makes the master shell visible in the user menu again.</code></p>
+							<p><code type="SakuraScript">\![set,property,currentghost.shelllist(master).menu,hidden]Hides the master shell in the Shell (S) section of the user menu, preventing the user from changing to it manually.\![set,property,currentghost.shelllist(master).menu,] Makes the master shell visible in the user menu again.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4645,7 +4646,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>After executing this script, the SHIORI event SSPGetBalloonInformation is notified. Reference0 stores the width of the current balloon that can be used by the main character (in pixels), and Reference1 stores the height. \![get,property,SSPGetBalloonInformation,currentghost.balloon.scope(0).validwidth.initial,currentghost.balloon.scope(0).validheight.initial]</code></p>
+							<p><code type="SakuraScript">After executing this script, the SHIORI event SSPGetBalloonInformation is notified. Reference0 stores the width of the current balloon that can be used by the main character (in pixels), and Reference1 stores the height. \![get,property,SSPGetBalloonInformation,currentghost.balloon.scope(0).validwidth.initial,currentghost.balloon.scope(0).validheight.initial]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4664,7 +4665,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,http-get,https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Gets the UKADOC SakuraScript page (this page), and saves list_sakura_script.html in the var folder.</code></p>
+							<p><code type="SakuraScript">\![execute,http-get,https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Gets the UKADOC SakuraScript page (this page), and saves list_sakura_script.html in the var folder.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4679,7 +4680,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,http-get,http://search.yahoo.co.jp/search,p=SSP Ukagaka]Saves the Yahoo search result pages for "SSP Ukagaka" as is.</code></p>
+							<p><code type="SakuraScript">\![execute,http-get,http://search.yahoo.co.jp/search,p=SSP Ukagaka]Saves the Yahoo search result pages for "SSP Ukagaka" as is.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4694,7 +4695,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,http-post,http://jbbs.shitaraba.net/bbs/read.cgi/computer/44300/1432574039/,BBS=44300&amp;KEY=1432574039&amp;DIR=computer&amp;MESSAGE=Test message]Sends "Test message" to the test thread in the ghost messaging board ゴースト回覧板３ｒｄ. ※Currently not possible due to the messaging board host strengthening anti-spam measures.</code></p>
+							<p><code type="SakuraScript">\![execute,http-post,http://jbbs.shitaraba.net/bbs/read.cgi/computer/44300/1432574039/,BBS=44300&amp;KEY=1432574039&amp;DIR=computer&amp;MESSAGE=Test message]Sends "Test message" to the test thread in the ghost messaging board ゴースト回覧板３ｒｄ. ※Currently not possible due to the messaging board host strengthening anti-spam measures.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4709,7 +4710,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,http-get,http://search.yahoo.co.jp/search,--async=SSP Ukagaka,--file=searchresultsfile.txt,--nodescript,--param=p=SSP Ukagaka,--timeout=5]Saves the Yahoo search result pages for "SSP Ukagaka" to [(folder of the ghost executing the command)]/ghost/master/var/searchresultsfile.txt When executing the request, the online marker and download status number will not be shown. If there is no response after 5 seconds, it will timeout.</code></p>
+							<p><code type="SakuraScript">\![execute,http-get,http://search.yahoo.co.jp/search,--async=SSP Ukagaka,--file=searchresultsfile.txt,--nodescript,--param=p=SSP Ukagaka,--timeout=5]Saves the Yahoo search result pages for "SSP Ukagaka" to [(folder of the ghost executing the command)]/ghost/master/var/searchresultsfile.txt When executing the request, the online marker and download status number will not be shown. If there is no response after 5 seconds, it will timeout.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4724,7 +4725,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,http-post,http://jbbs.shitaraba.net/bbs/read.cgi/computer/44300/1432574039/,--async=書き込みテスト,--param=BBS=44300&amp;KEY=1432574039&amp;DIR=computer&amp;MESSAGE=Test message]Sends "Test message" to the test thread in the ghost messaging board ゴースト回覧板３ｒｄ. ※Currently not possible due to the messaging board host strengthening anti-spam measures. If there is no response after 5 seconds, it will timeout.</code></p>
+							<p><code type="SakuraScript">\![execute,http-post,http://jbbs.shitaraba.net/bbs/read.cgi/computer/44300/1432574039/,--async=書き込みテスト,--param=BBS=44300&amp;KEY=1432574039&amp;DIR=computer&amp;MESSAGE=Test message]Sends "Test message" to the test thread in the ghost messaging board ゴースト回覧板３ｒｄ. ※Currently not possible due to the messaging board host strengthening anti-spam measures. If there is no response after 5 seconds, it will timeout.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4787,7 +4788,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,extractarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/testfolder]If SSP is installed in the C drive, an extracted copy of test.zip called testfolder will be created.</code></p>
+							<p><code type="SakuraScript">\![execute,extractarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/testfolder]If SSP is installed in the C drive, an extracted copy of test.zip called testfolder will be created.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4805,7 +4806,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,compressarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/emily4]If SSP is installed in the C drive, a compressed copy of the Emily/Phase4.5 folder named test.zip will be created in the ghost folder.</code></p>
+							<p><code type="SakuraScript">\![execute,compressarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/emily4]If SSP is installed in the C drive, a compressed copy of the Emily/Phase4.5 folder named test.zip will be created in the ghost folder.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4840,7 +4841,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,install,path,C:/SSP/emily4.nar]Installs the emily4.nar file in C:/SSP.</code></p>
+							<p><code type="SakuraScript">\![execute,install,path,C:/SSP/emily4.nar]Installs the emily4.nar file in C:/SSP.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4856,7 +4857,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,install,url,http://ssp.shillest.net/ghost/emily4.nar,nar]The nar file for Emily/Phase4.5 will be downloaded and installed.</code></p>
+							<p><code type="SakuraScript">\![execute,install,url,http://ssp.shillest.net/ghost/emily4.nar,nar]The nar file for Emily/Phase4.5 will be downloaded and installed.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4882,7 +4883,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,ping,--host=ssp.shillest.net,--event=pingtest]Pings the BUGTRAQ Lab with default settings.</code></p>
+							<p><code type="SakuraScript">\![execute,ping,--host=ssp.shillest.net,--event=pingtest]Pings the BUGTRAQ Lab with default settings.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4902,7 +4903,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![execute,nslookup,--host=ssp.shillest.net,--event=nslookuptest]Searches for the IP of the BUGTRAQ Lab by using the host name. If the lookup succeeds, OnNSLookupComplete will be notified and the IP will be stored in Reference3.</code></p>
+							<p><code type="SakuraScript">\![execute,nslookup,--host=ssp.shillest.net,--event=nslookuptest]Searches for the IP of the BUGTRAQ Lab by using the host name. If the lookup succeeds, OnNSLookupComplete will be notified and the IP will be stored in Reference3.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4947,7 +4948,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>After the SakuraScript is played, passive mode will start.\![enter,passivemode] From here, minimizing and closing the ghost are no longer possible.</code></p>
+							<p><code type="SakuraScript">After the SakuraScript is played, passive mode will start.\![enter,passivemode] From here, minimizing and closing the ghost are no longer possible.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4964,7 +4965,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![leave,passivemode]Passive mode has been canceled.</code></p>
+							<p><code type="SakuraScript">\![leave,passivemode]Passive mode has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4981,7 +4982,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,inductionmode]Induction mode has started.</code></p>
+							<p><code type="SakuraScript">\![enter,inductionmode]Induction mode has started.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -4997,7 +4998,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![leave,inductionmode]Induction mode has been canceled.</code></p>
+							<p><code type="SakuraScript">\![leave,inductionmode]Induction mode has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5014,7 +5015,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,selectmode,rect,head]Select mode has started. The range of the collision "head" has been preselected.</code></p>
+							<p><code type="SakuraScript">\![enter,selectmode,rect,head]Select mode has started. The range of the collision "head" has been preselected.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5029,7 +5030,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![leave,selectmode]Select mode has been canceled.</code></p>
+							<p><code type="SakuraScript">\![leave,selectmode]Select mode has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5045,7 +5046,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,collisionmode]Collision mode has started.</code></p>
+							<p><code type="SakuraScript">\![enter,collisionmode]Collision mode has started.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5060,7 +5061,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![enter,collisionmode]Collision mode has started.\![leave,collisionmode] Collision mode has been canceled.</code></p>
+							<p><code type="SakuraScript">\![enter,collisionmode]Collision mode has started.\![leave,collisionmode] Collision mode has been canceled.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5076,7 +5077,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reloadsurface]The surface has been reloaded.</code></p>
+							<p><code type="SakuraScript">\![reloadsurface]The surface has been reloaded.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5091,7 +5092,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reload,descript]All descript.txts have been reloaded.</code></p>
+							<p><code type="SakuraScript">\![reload,descript]All descript.txts have been reloaded.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5106,7 +5107,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reload,descript,shell balloon]The descript.txt of the shell and balloon have been reloaded.</code></p>
+							<p><code type="SakuraScript">\![reload,descript,shell balloon]The descript.txt of the shell and balloon have been reloaded.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5121,7 +5122,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reload,shiori]shiori.dll has been reloaded. As a result, all dictionary files will be read again. Used to apply changes such as rewriting contents of dictionary files while the ghost is still running.</code></p>
+							<p><code type="SakuraScript">\![reload,shiori]shiori.dll has been reloaded. As a result, all dictionary files will be read again. Used to apply changes such as rewriting contents of dictionary files while the ghost is still running.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5136,7 +5137,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reload,makoto]makoto.dll has been reloaded.</code></p>
+							<p><code type="SakuraScript">\![reload,makoto]makoto.dll has been reloaded.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5151,7 +5152,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reload,shell]The shell has been reloaded.</code></p>
+							<p><code type="SakuraScript">\![reload,shell]The shell has been reloaded.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5166,7 +5167,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\![reload,ghost]The ghost has been reloaded. Almost the same as changing to the same ghost, except in that a SHIORI event is not called.</code></p>
+							<p><code type="SakuraScript">\![reload,ghost]The ghost has been reloaded. Almost the same as changing to the same ghost, except in that a SHIORI event is not called.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5239,7 +5240,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_u[0x22EE]Displays a vertical ellipsis. \_u[8942]The base 10 version of the first SakuraScript command. When expressed in base 10, the 0x should not be added.</code></p>
+							<p><code type="SakuraScript">\_u[0x22EE]Displays a vertical ellipsis. \_u[8942]The base 10 version of the first SakuraScript command. When expressed in base 10, the 0x should not be added.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5256,7 +5257,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\_m[0x41]Displays a capital half-width letter A.</code></p>
+							<p><code type="SakuraScript">\_m[0x41]Displays a capital half-width letter A.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5273,7 +5274,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>\&amp;[amp]Displays a half-width ampersand. The entity reference is the ID part of &amp;ID;.</code></p>
+							<p><code type="SakuraScript">\&amp;[amp]Displays a half-width ampersand. The entity reference is the ID part of &amp;ID;.</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5289,7 +5290,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>When this script is run through SSTP, the ghost that ran it will be closed.\m[WM_CLOSE,0,0]</code></p>
+							<p><code type="SakuraScript">When this script is run through SSTP, the ghost that ran it will be closed.\m[WM_CLOSE,0,0]</code></p>
 						</section>
 					</div>
 				</dd>
@@ -5414,7 +5415,7 @@
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code>%username, listen to this. %ms said they came up with %mt while eating %me at the %mh in %mp.</code></p>
+							<p><code type="SakuraScript">%username, listen to this. %ms said they came up with %mt while eating %me at the %mh in %mp.</code></p>
 						</section>
 					</div>
 				</dd>
