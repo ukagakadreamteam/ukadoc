@@ -15,7 +15,7 @@ String.prototype.hashCode = function () {
 	return hash;
 }
 
-//页面加载完成后，检查ghost可用性
+//After the page has loaded, check ghost availability
 document.addEventListener('DOMContentLoaded', () =>
 	import("https://cdn.jsdelivr.net/gh/ukatech/jsstp-lib@v3.0.0.1/dist/jsstp.mjs")
 	.then(m => (jsstp = m.jsstp).if_available(init_content).then(reload_button)).catch(e => e)
@@ -26,16 +26,16 @@ function get_ghost_status_class_name(method_name) {
 async function init_content() {
 	document.getElementById("GhostStatus").style.display = "block";
 	support_graph = new support_graph_t();
-	//追加相关元素
+	//Addition of relevant elements
 	for (const el of document.querySelectorAll("body > section.navigation-bar > section.navigation-category > ul > li:not(.caption)")) {
 		const span = document.createElement("span");
 		span.classList.add(get_ghost_status_class_name(el.querySelector("a").textContent));
 		el.appendChild(span);
 	}
 	for (const el of document.querySelectorAll("body > section.navigation-bar > section.navigation-category > h1")) {
-		//获取其父元素，查看其下ul的子li的数量
+		//Get its parent element to see the number of child li's under its ul
 		const list = el.parentElement.querySelectorAll("ul > li:not(.caption)");
-		if (list.length > 4) {//若数量大于4，有必要追加一个进度条
+		if (list.length > 4) {//If the number is greater than 4, it is necessary to add an additional progress bar
 			let meter_div = document.createElement("div");
 			meter_div.innerHTML = `<p>support: <meter min="0" max="${list.length}" value="0"></meter><span>?/${list.length}</span></p>`;
 			meter_div.classList.add("sub_support_graph");
@@ -50,19 +50,19 @@ async function init_content() {
 }
 class sub_support_graph {
 	static hide_all() {
-		//获取所有class是sub_support_graph的元素
+		//Get all elements whose class is sub_support_graph
 		for (const meter_div of document.querySelectorAll(".sub_support_graph"))
 			meter_div.style.display = "none";
 	}
 	static show_all() {
-		//获取所有class是sub_support_graph的元素
+		//Get all elements whose class is sub_support_graph
 		for (const meter_div of document.querySelectorAll(".sub_support_graph"))
 			meter_div.style.display = "block";
 	}
 	static update_all() {
-		//获取所有class是sub_support_graph的元素
+		//Get all elements whose class is sub_support_graph
 		for (const meter_div of document.querySelectorAll(".sub_support_graph")) {
-			//获取其父元素，遍历其下ul的子span，class中包含_GhostStatus的
+			//Get its parent element, iterate through the child spans of its lower ul with _GhostStatus in class
 			const list = meter_div.parentElement.querySelectorAll("ul > li:not(.caption) > span[class*='_GhostStatus']");
 			let count_support = 0, count_all_event = list.length;
 			for (const span of list)
@@ -123,26 +123,26 @@ function showElementById(...ids) {
 
 function reload_button() {
 	const list = document.getElementById("ghost_list_content");
-	//隐藏所有的元素
+	//Hide all elements
 	hideElementById("supported_text_event_Get_Supported_Events_reminder",
 		"supported_text_event_Has_Event_reminder");
-	//重新加载列表
+	//Reload list
 	jsstp.get_fmo_infos().then(async fmo => {
-		//备份当前选项（如果有的话）
+		//Backup current options (if any)
 		let selected = list.value;
-		//清空列表
+		//Empty the list
 		list.options.length = 0;
 		if (!fmo.available)
 			throw new Error("get_fmo_infos failed");
 		fmo.forEach((info, uuid) => list.options.add(new Option(info.name, uuid)));
-		//根据备份的选项重新选中（如果还在列表中的话）
+		//Recheck the options based on the backup (if still in the list)
 		if (fmo[selected])
 			list.value = selected;
 		else
 			selected = list.value = list.options[0].value;
-		//根据选中的选项生成事件查询器
+		//Generate an event query based on the selected options
 		ghost_events_queryer = await jsstp.by_fmo_info(fmo[selected]).new_event_queryer();
-		//清空事件统计图
+		//Clear event statistics chart
 		support_graph.clear();
 		if (ghost_events_queryer.available) {
 			if (!ghost_events_queryer.fast_query_available)
@@ -165,7 +165,7 @@ async function check_event(event_id, security_level = "local") {
 	let ex_var = false;
 	let common_var = false;
 	let is_reg_event = false;
-	//进行额外判断
+	//Make additional judgments
 	if (!result) {
 		if (!event_id.includes("*") && !event_id.includes("(")) {
 			if (event_id.endsWith("Ex")) {

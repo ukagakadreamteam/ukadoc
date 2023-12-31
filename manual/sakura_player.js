@@ -4,25 +4,25 @@
 /** @type {typeof import("jsstp").jsstp} */
 var jsstp;
 
-//页面加载完成后，检查ghost可用性
+//After the page has loaded, check ghost availability
 document.addEventListener('DOMContentLoaded', () =>
 	import("https://cdn.jsdelivr.net/gh/ukatech/jsstp-lib@v3.0.0.1/dist/jsstp.mjs")
 		.then(m => (jsstp = m.jsstp).if_available(init_content).then(reload_button)).catch(e => e)
 );
 async function init_content() {
-	// 获取所有的SakuraScript代码
+	// Get all SakuraScript codes
 	const sakuraScriptCodes = document.querySelectorAll("code[type='SakuraScript']");
-	// 为其增加一个按钮，点击后执行SakuraScript
+	// Add a button to it that executes a SakuraScript when clicked
 	sakuraScriptCodes.forEach(code => {
 		const button = createExecutionButton(code.textContent);
 		const parent = code.parentElement.parentElement;
-		// 若父元素的子元素除了h1外只有一个元素，那么将按钮插入到h1后面
+		// If the parent has only one child element other than h1, then insert the button after h1
 		if (parent.children.length == 2) {
 			parent.insertBefore(button, parent.children[1]);
-			//取消h1的换行
+			//Eliminate line breaks in h1
 			parent.children[0].style.display = "inline";
 		}
-		// 否则插入到代码块前面
+		// Otherwise insert it before the code block
 		else
 			code.parentElement.insertBefore(button, code);
 	});
@@ -31,7 +31,7 @@ async function init_content() {
 function createExecutionButton(script) {
 	const button = document.createElement("button");
 	button.textContent = "Run";
-	// 为按钮添加悬浮提示
+	// Adding hover hints to buttons
 	button.title = "Run SakuraScript";
 	button.addEventListener("click", () => {
 		jsstp.SEND({
@@ -46,16 +46,16 @@ function createExecutionButton(script) {
 
 function reload_button() {
 	const list = document.getElementById("ghost_list_content");
-	//重新加载列表
+	//Reload list
 	jsstp.get_fmo_infos().then(async fmo => {
-		//备份当前选项（如果有的话）
+		//Backup current options (if any)
 		let selected = list.value;
-		//清空列表
+		//Empty the list
 		list.options.length = 0;
 		if (!fmo.available)
 			throw new Error("get_fmo_infos failed");
 		fmo.forEach((info, uuid) => list.options.add(new Option(info.name, uuid)));
-		//根据备份的选项重新选中（如果还在列表中的话）
+		//Recheck the options based on the backup (if still in the list)
 		if (fmo[selected])
 			list.value = selected;
 		else
