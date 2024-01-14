@@ -133,7 +133,7 @@
 	</nav>
 	<section class="navigation-bar">
 		<h1>SakuraScript</h1>
-		<section class="navigation-category" id="TargetGhost" style="display: block;">
+		<section class="navigation-category" id="TargetGhost" style="display: none;">
 			<h1>Target Ghost</h1>
 			<!-- 一个列表用于?示和??ghost -->
 			<div id="ghost_select">
@@ -1254,7 +1254,9 @@
 			<dl id="_b_ID_number_">
 				<dt class="entry">\b[(ID number)]</dt>
 				<dd class="entry">
-					<p>Changes the balloon of the character that currently has the focus to the balloon of the specified ID number.<br>\b[-1] will hide the balloon.</p>
+					<p>Changes the balloon of the character that currently has the focus to the balloon of the specified ID number.
+					<br>Odd numbers are reserved for balloons that are displayed on the right side of the character, so the only usable IDs are 0 or even numbers.
+					<br>\b[-1] hides the balloon.</p>
 					<p>Since SSP version 2.6.34, if written \b[ID1,--fallback=ID2,--fallback=ID3], ID2 will be used if ID1 does not exist, and ID3 will be used if neither ID1 nor ID2 exist.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -1322,9 +1324,11 @@
 						<dt>--option=fixed</dt>
 						<dd>Stops the image from moving when scrolled.</dd>
 						<dt>--option=background</dt>
-						<dd>Displays the image below the text. Using this option, the image can be used as a background for the text.</dd>
+						<dd>Displays the image below the text. Using this option, the image can be used as a background for the text.
+						<br />Priority is given to the transparency of the balloon rather than the image in the composite display.</dd>
 						<dt>--option=foreground</dt>
-						<dd>Displays the image in the foreground.</dd>
+						<dd>Displays the image in the foreground.
+						<br />Priority is given to the transparency of the image rather than the balloon in the composite display. [SSP 2.6.54～]</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1378,7 +1382,11 @@
 						<dt>--option=use_self_alpha</dt>
 						<dd>Displays a PNG using the alpha channel for transparency.</dd>
 						<dt>--clipping=(left) (up) (right) (down)</dt>
-						<dd>Takes part of the picture and clips it as a rectangle shape.<br>The area to be clipped is determined with the values specified for left, up, right, and down.</dd>
+						<dd>Takes part of the picture and crops it as a rectangle shape.<br>The area to be cropped is determined with the values specified for left, up, right, and down.</dd>
+						<dt>--option=background</dt>
+						<dd>Priority is given to the transparency of the balloon rather than the image in the composite display. [Standard specification when not specified.]</dd>
+						<dt>--option=foreground</dt>
+						<dd>Priority is given to the transparency of the image rather than the balloon in the composite display. [SSP 2.6.54～]</dd>
 					</dl>
 					<div class="legend">
 						<section class="code">

@@ -8,6 +8,7 @@
 <title>UKADOC Project SSTP/1.x</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<script src="https://cdn.jsdelivr.net/gh/ukatech/jsstp-lib@v3.1.0.0/dist/jsstp.min.js"></script>
 </head>
 <body>
 	<h1 id="page-title">SSTP/1.x</h1>
@@ -230,6 +231,22 @@
 
 			<section class="caption">
 				<h1>request sample</h1>
+				<button id="runButton" style="display: none;">Run</button>
+
+				<script>
+				document.getElementById("runButton").addEventListener("click", function() {
+					jsstp.SEND({
+						Charset: "UTF-8",
+						Sender: "SSTP Client",
+						Script: "\\h\\s0Testing!\\u\\s[10]It's a test.",
+						Option: "notranslate"
+					})
+				});
+				document.addEventListener("DOMContentLoaded", async () => {
+					if(await jsstp.available())
+						document.getElementById("runButton").style.display = "inline";
+				});
+				</script>
 <pre><!--
 -->SEND SSTP/1.0
 Charset: UTF-8
@@ -503,9 +520,33 @@ Command: GetName
 				<dl>
 					<dt>GetName</dt>
 					<dd>(\0 name),(\1 name) of running ghosts, separated by commas</dd>
+					<textarea type="text" id="GetNameResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetNameResultTextBox").style.display = "block";
+								document.getElementById("GetNameResultTextBox").value = (await jsstp.GetName()).text_content;
+							} else {
+								document.getElementById("GetNameResultTextBox").style.display = "none";
+							}
+						});
+					</script>
 					
-					<dt>GetNames [SSP] [Not supported in Remote]</dt>
+					<dt>GetNames [SSP]</dt>
 					<dd>List of the \0 names of currently installed ghosts. Newline delimited. Terminated by a blank line.</dd>
+					<textarea type="text" id="GetNamesResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetNamesResultTextBox").style.display = "block";
+								document.getElementById("GetNamesResultTextBox").value = (await jsstp.GetNames()).text_content;
+							} else {
+								document.getElementById("GetNamesResultTextBox").style.display = "none";
+							}
+						});
+					</script>
 					
 					<dt>GetFMO [SSP 2.5.57] [Restricted in Remote]</dt>
 					<dd>Obtain information equivalent to the contents of the <a href="spec_fmo_mutex.html">FMO</a>.
@@ -513,18 +554,174 @@ Command: GetName
 					<br />It is mainly used in console applications that do not have a window and cannot send Direct SSTP, and is used to implement functions equivalent to Direct SSTP by utilizing the ReceiverGhostHWnd header with Socket SSTP only.
 					<br />Newline delimited, terminated by a blank line.
 					<br />In the case of a remote request, each path information is omitted, and the header and hwnd are replaced with a dummy.</dd>
+					<textarea type="text" id="GetFMOResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetFMOResultTextBox").style.display = "block";
+								document.getElementById("GetFMOResultTextBox").value = (await jsstp.GetFMO()).text_content;
+							} else {
+								document.getElementById("GetFMOResultTextBox").style.display = "none";
+							}
+						});
+					</script>
 					
 					<dt>GetGhostName [SSP]</dt>
 					<dd>Name of the running ghost (name in descript.txt)</dd>
+					<textarea type="text" id="GetGhostNameResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetGhostNameResultTextBox").style.display = "block";
+								document.getElementById("GetGhostNameResultTextBox").value = (await jsstp.GetGhostName()).text_content;
+							} else {
+								document.getElementById("GetGhostNameResultTextBox").style.display = "none";
+							}
+						});
+					</script>
 					
 					<dt>GetShellName [SSP]</dt>
 					<dd>Name of the shell currently in use by the running ghost</dd>
+					<textarea type="text" id="GetShellNameResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetShellNameResultTextBox").style.display = "block";
+								document.getElementById("GetShellNameResultTextBox").value = (await jsstp.GetShellName()).text_content;
+							} else {
+								document.getElementById("GetShellNameResultTextBox").style.display = "none";
+							}
+						});
+					</script>
 					
 					<dt>GetBalloonName [SSP]</dt>
 					<dd>Name of the balloon currently in use by the running ghost</dd>
+					<textarea type="text" id="GetBalloonNameResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetBalloonNameResultTextBox").style.display = "block";
+								document.getElementById("GetBalloonNameResultTextBox").value = (await jsstp.GetBalloonName()).text_content;
+							} else {
+								document.getElementById("GetBalloonNameResultTextBox").style.display = "none";
+							}
+						});
+					</script>
 					
 					<dt>GetVersion</dt>
 					<dd>Baseware (running software) version</dd>
+					<textarea type="text" id="GetVersionResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetVersionResultTextBox").style.display = "block";
+								document.getElementById("GetVersionResultTextBox").value = (await jsstp.GetVersion()).text_content;
+							} else {
+								document.getElementById("GetVersionResultTextBox").style.display = "none";
+							}
+						});
+					</script>
+					
+					<dt>GetGhostNameList [SSP 2.6.53]</dt>
+					<dd>Newline-separated list of all ghost names (names in descript.txt) recognized by SSP.</dd>
+					<textarea type="text" id="GetGhostNameListResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetGhostNameListResultTextBox").style.display = "block";
+								document.getElementById("GetGhostNameListResultTextBox").value = (await jsstp.GetGhostNameList()).text_content;
+							} else {
+								document.getElementById("GetGhostNameListResultTextBox").style.display = "none";
+							}
+						});
+					</script>
+					
+					<dt>GetShellNameList [SSP 2.6.53]</dt>
+					<dd>Newline-separated list of all shell names (names in descript.txt) recognized by the running ghost.</dd>
+					<textarea type="text" id="GetShellNameListResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetShellNameListResultTextBox").style.display = "block";
+								document.getElementById("GetShellNameListResultTextBox").value = (await jsstp.GetShellNameList()).text_content;
+							} else {
+								document.getElementById("GetShellNameListResultTextBox").style.display = "none";
+							}
+						});
+					</script>
+					
+					<dt>GetBalloonNameList [SSP 2.6.53]</dt>
+					<dd>Newline-separated list of all balloon names (names in descript.txt) recognized by SSP.</dd>
+					<textarea type="text" id="GetBalloonNameListResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetBalloonNameListResultTextBox").style.display = "block";
+								document.getElementById("GetBalloonNameListResultTextBox").value = (await jsstp.GetBalloonNameList()).text_content;
+							} else {
+								document.getElementById("GetBalloonNameListResultTextBox").style.display = "none";
+							}
+						});
+					</script>
+					
+					<dt>GetHeadlineNameList [SSP 2.6.53]</dt>
+					<dd>Newline-separated list of all headline names (names in descript.txt) recognized by SSP.</dd>
+					<textarea type="text" id="GetHeadlineNameListResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetHeadlineNameListResultTextBox").style.display = "block";
+								document.getElementById("GetHeadlineNameListResultTextBox").value = (await jsstp.GetHeadlineNameList()).text_content;
+							} else {
+								document.getElementById("GetHeadlineNameListResultTextBox").style.display = "none";
+							}
+						});
+					</script>
+					
+					<dt>GetPluginNameList [SSP 2.6.53]</dt>
+					<dd>Newline-separated list of all plugin names (names in descript.txt) recognized by SSP.</dd>
+					<textarea type="text" id="GetPluginNameListResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								document.getElementById("GetPluginNameListResultTextBox").style.display = "block";
+								document.getElementById("GetPluginNameListResultTextBox").value = (await jsstp.GetPluginNameList()).text_content;
+							} else {
+								document.getElementById("GetPluginNameListResultTextBox").style.display = "none";
+							}
+						});
+					</script>
+					
+					<dt>GetShortVersion [SSP 2.6.53]</dt>
+					<dd>Baseware (running software) version (period-separated version number only).<br />
+					You can check if it is the latest version by a simple comparison with ssp.full.version in <a href="https://ssp.shillest.net/archive/version.json">version.json</a>.</dd>
+					<textarea type="text" id="GetShortVersionResultTextBox" style="display: none; width: 358px; height: 106px;">
+					</textarea>
+					<script>
+						document.addEventListener("DOMContentLoaded", async () => {
+							if (await jsstp.available()) {
+								const version = await jsstp.GetShortVersion();
+								document.getElementById("GetShortVersionResultTextBox").style.display = "block";
+								document.getElementById("GetShortVersionResultTextBox").value = version.text_content;
+								let response = await fetch("https://ssp.shillest.net/archive/version.json");
+								const json = await response.json();
+								const latestVersion = json.ssp.full.version;
+								document.getElementById("GetShortVersionResultTextBox").style.color = (version == latestVersion) ? "green" : "red";
+							} else {
+								document.getElementById("GetShortVersionResultTextBox").style.display = "none";
+							}
+						});
+					</script>
 					
 					<dt>Quiet [Not supported in Remote]</dt>
 					<dd>Perform a Restore or remain silent until 16 seconds have elapsed. No additional data (status code 200 successful)</dd>

@@ -6,10 +6,11 @@ var jsstp;
 
 //After the page has loaded, check ghost availability
 document.addEventListener('DOMContentLoaded', () =>
-	import("https://cdn.jsdelivr.net/gh/ukatech/jsstp-lib@v3.0.0.1/dist/jsstp.mjs")
+	import("https://cdn.jsdelivr.net/gh/ukatech/jsstp-lib@v3.1.0.0/dist/jsstp.mjs")
 		.then(m => (jsstp = m.jsstp).if_available(init_content).then(reload_button)).catch(e => e)
 );
 async function init_content() {
+	document.getElementById("TargetGhost").style.display = "block";
 	// Get all SakuraScript codes
 	const sakuraScriptCodes = document.querySelectorAll("code[type='SakuraScript']");
 	// Add a button to it that executes a SakuraScript when clicked
