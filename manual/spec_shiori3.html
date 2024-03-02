@@ -239,8 +239,20 @@ Reference0: 1
 				<p>In the case of external, it is a notification from outside the running system, so it should be handled with caution for security reasons.<br>
 				The concept is different from internal/external of SenderType. Even if the event is generated from outside the application, it will be judged as local if it can be regarded as safe, so the SecurityLevel may be local even if the SenderType is external.</p>
 				</dd>
-				
-				<dt class="entry">Status [SSP Extension]</dt>
+
+				<dt class="entry">SecurityOrigin [SSP extension]</dt>
+				<dd class="entry">
+				<p>A URL-like string indicating the source server. The format is as follows. The concept is the same as that of <a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Origin">Origin in HTTP headers</a>.
+				<br />SecurityOrigin: null
+				<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;
+				<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;:&lt;port&gt;
+				<br />scheme is usually http, https, or sstp. hostname is the name or IP of the source server. port is the port on which replies can be accepted.
+				<br />It will be null if there is no information, such as when a header is not specified in SSTP, etc.
+				<br />See also SecurityOrigin in the SSTP specification.
+				</p>
+				</dd>				
+
+				<dt class="entry">Status [SSP extension]</dt>
 				<dd class="entry">
 				<p>Ghost running state. As follows. If there is more than one, they are connected by commas.</p>
 				<dl class="property">

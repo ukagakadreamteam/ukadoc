@@ -346,22 +346,13 @@ type,package
 					</ul>
 				</dd>
 			</dl>
-			<dl id="balloon.directory,directory_name">
-				<dt class="entry">balloon.directory,(directory name)</dt>
-				<dd class="entry">
-					<p>Post-installation directory name of the balloon to be installed at the same time. Half-width alphanumeric characters are recommended.<br />Can only be set if <a href="#type,type">type</a> is <em>ghost</em>.</p>
-					<p class="default">No behavior</p>
-					<ul class="supported-baseware">
-						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
-						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
-					</ul>
-				</dd>
-			</dl>
 			<dl id="*.directory,directory_name">
 				<dt class="entry">*.directory,(directory name)</dt>
 				<dd class="entry">
-					<p>Post-installation directory name of the content to be installed at the same time. Half-width alphanumeric characters are recommended.<br />The * portion contains the type (balloon, headline, plugin, calendar.skin, or calendar.plugin) of the content to be installed at the same time.<br />Can only be set if <a href="#type,type">type</a> is <em>ghost</em> or <em>shell</em>.</p>
+					<p>Post-installation directory name of the content to be installed at the same time. Half-width alphanumeric characters are recommended.
+					<br />The * portion contains the type (balloon, headline, plugin, calendar.skin, or calendar.plugin) of the content to be installed at the same time.
+					<br />If you want to install multiple items of the same type, you can write the * part with a number after the type, such as balloon0, balloon1...
+					<br />Can only be set if <a href="#type,type">type</a> is <em>ghost</em> or <em>shell</em>.</p>
 					<p class="default">No behavior</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -371,7 +362,9 @@ type,package
 			<dl id="*.source.directory,directory_name">
 				<dt class="entry">*.source.directory,(directory name)</dt>
 				<dd class="entry">
-					<p>Directory name in the archive of the contents to be installed at the same time. Half-width alphanumeric characters are recommended.<br />The * portion contains the type (balloon, headline, plugin, calendar.skin, or calendar.plugin) of the content to be installed at the same time.<br />Set if the directory name after installation and the directory name in the archive do not match for the content to be installed at the same time.</p>
+
+					<p>Directory name in the archive of the contents to be installed at the same time. Half-width alphanumeric characters are recommended.
+					<br />Set this if the directory name after installation and the directory name in the archive do not match for the content to be installed at the same time.</p>
 					<p class="default">Directory name set in *.directory</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -381,7 +374,7 @@ type,package
 			<dl id="*.refresh,number">
 				<dt class="entry">*.refresh,(number)</dt>
 				<dd class="entry">
-					<p><a href="#refresh,number">refresh</a> settings for content to be installed at the same time.<br />The * portion contains the type (balloon, headline, plugin, calendar.skin, or calendar.plugin) of the content to be installed at the same time.</p>
+					<p><a href="#refresh,number">refresh</a> settings for content to be installed at the same time.</p>
 					<p class="default">Any value other than 1 (refresh disabled)</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -391,7 +384,7 @@ type,package
 			<dl id="*.refreshundeletemask,file_name_1:file_name_2...">
 				<dt class="entry">*.refreshundeletemask,(file name 1):(file name 2)...</dt>
 				<dd class="entry">
-					<p><a href="#refreshundeletemask,file_name_1:file_name_2...">refreshundeletemask</a> settings of the content to be installed at the same time.<br />The * portion contains the type (balloon, headline, plugin, calendar.skin, or calendar.plugin) of the content to be installed at the same time.</p>
+					<p><a href="#refreshundeletemask,file_name_1:file_name_2...">refreshundeletemask</a> settings of the content to be installed at the same time.</p>
 					<p class="default">No behavior</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -412,7 +405,11 @@ type,package
 						<br>Therefore, if a file needs to be deleted once it has been published, it must be listed in delete.txt.
 						<br>Note that delete.txt is not automatically deleted even after the deletion is executed, and once the content is added, it will remain permanently excluded unless it is changed.
 					</p>
-					<p>Only SSP can additionally recognize delete[number].txt, such as delete1.txt.</p>
+					<p>The following specifications are for SSP only.</p>
+					<dl>
+						<dt>charset,(character code)</dt>
+						<dd>Specify the character encoding of the file</dd>
+					</dl>
 				</section>
 				<section>
 					<h1>Sample description</h1>

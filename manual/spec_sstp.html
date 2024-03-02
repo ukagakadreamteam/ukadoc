@@ -8,7 +8,7 @@
 <title>UKADOC Project SSTP/1.x</title>
 <link rel="stylesheet" href="list.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<script src="https://cdn.jsdelivr.net/gh/ukatech/jsstp-lib@v3.1.0.0/dist/jsstp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ukatech/jsstp-lib@v3.1.1.2/dist/jsstp.min.js"></script>
 </head>
 <body>
 	<h1 id="page-title">SSTP/1.x</h1>
@@ -268,7 +268,18 @@ Option: notranslate
 					<dt>SecurityLevel</dt>
 					<dd>Specify the security level when processing with SHIORI or SakuraScript, either local or external.
 					<br />Only valid for DirectSSTP or requests that are clearly local, such as 127.0.0.1.</dd>
+					<br />SSTP over HTTP is always considered external, except when sent from html, etc., delivered from localhost.</dd>
 					
+					<dt>SecurityOrigin [SSP 2.6.59]</dt>
+					<dd>送信元サーバを示すURL風の文字列。以下の形式となる。<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Origin">HTTPヘッダのOrigin</a>と考え方は同じ。
+					<br />SecurityOrigin: null
+					<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;
+					<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;:&lt;port&gt;
+					<br />scheme は通常、http,https,sstpのいずれか。hostnameは送信元サーバ名かIP。portは返信受付可能なポート。
+					<br />特に指定がない場合は、nullが指定されたものとみなされる。
+					<br />SSTP over HTTPは、HTTPのOriginヘッダの中身が常に設定され、SSTPの中のSecurityOriginは無視される。
+					</dd>
+
 					<dt>Option</dt>
 					<dd>Specify options for how SakuraScript executed by SSTP is handled.
 					<br />Multiple options can be specified by separating them with commas. The strings that can be specified are as follows.
