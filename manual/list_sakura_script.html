@@ -574,10 +574,11 @@
 		<section class="caption" id="notes_escape">
 			<h1>Escaping SakuraScript</h1>
 			<ul>
-				<li>If you want to display "\" as plain text instead of starting a SakuraScript tag, write "\\".</li>
-				<li>Similarly, the environment variable embed tag "%"  is written as "\%".</li>
-				<li>In tags with arguments in square brackets (such as \q[label name,ID]), "]" can be written as "\]".</li>
-				<li>If you want to include "," as part of an argument in a tag with square brackets, you can treat the entire argument as a single argument by enclosing it in "".<br>Example：\![raise,OnTest,"100,2"]</li>
+				<li>If you want to display &quot;\&quot; as plain text instead of starting a SakuraScript tag, write &quot;\\&quot;.</li>
+				<li>Similarly, the environment variable embed tag &quot;%&quot;  is written as &quot;\%&quot;.</li>
+				<li>In tags with arguments in square brackets (such as \q[label name,ID]), &quot;]&quot; can be written as &quot;\]&quot;.</li>
+				<li>If you want to include &quot;,&quot; as part of an argument in a tag with square brackets, you can treat the entire argument as a single argument by enclosing it in &quot;&quot;.<br>Example: \![raise,OnTest,&quot;100,2&quot;]</li>
+				<li>Similarly, to include quotation marks (&quot;) themselves as the content of an argument, enclose the entire argument in  quotation marks and double the quotation marks that are to be displayed. <br>Example: \![call,ghost,&quot;the &quot;&quot;MobileMaster&quot;&quot;&quot;]</li>
 			</ul>
 		</section>
 		<section class="caption" id="notes_lifespan">
