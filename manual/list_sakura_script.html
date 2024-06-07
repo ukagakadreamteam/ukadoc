@@ -233,6 +233,7 @@
 				<li><a href="#_!_set,autoscroll,enable_">\![set,autoscroll,enable]</a></li>
 				<li><a href="#_!_set,balloonoffset,x,y_">\![set,balloonoffset,(x),(y)]</a></li>
 				<li><a href="#_!_set,balloonalign,ID_">\![set,balloonalign,(ID)]</a></li>
+				<li><a href="#_!_set,balloonmarker,marker_display_string">\![set,balloonmarker,(marker display string)]</a></li>
 				<li><a href="#_!_set,balloonnum,file_name,current_number,total_number_">\![set,balloonnum,(file name),(current number),(total number)]</a></li>
 				<li><a href="#_!_set,balloontimeout,time_">\![set,balloontimeout,(time)]</a></li>
 				<li><a href="#_!_set,balloonwait,scaling_factor_">\![set,balloonwait,(scaling factor)]</a></li>
@@ -1547,7 +1548,8 @@
 			<dl id="__l_x,y_">
 				<dt class="entry">\_l[(x),(y)]</dt>
 				<dd class="entry">
-					<p>Moves the caret position on the side that is currently the focus to the XY coordinates. Regarding X and Y, the definition methods below can be used.</p>
+					<p>Moves the caret position on the side that is currently the focus to the XY coordinates. Regarding X and Y, the definition methods below can be used.
+					<br>Note that the line alignment is reset to left alignment immediately after execution of \_l to prevent propblems. Specify again if necessary.</p>
 					<dl>
 						<dt>Value</dt>
 						<dd>The entered values are coordinates in pixels, using the upper left corner of the balloon's text area as the origin point.</dd>
@@ -1555,6 +1557,8 @@
 						<dd>The caret will not be moved. If both X and Y are omitted, there will be no effect.</dd>
 						<dt>XXem</dt>
 						<dd>When "em" is appended, coordinates will be based on letter height. 1em is equivalent to the letter height at the time the tag is written. Decimals can also be specified.</dd>
+						<dt>XXlh</dt>
+						<dd>If "lh" is appended to the end, coordinates are specified based on line height. 1lh = 1em + the space between lines. Decimals can also be specified.</dd>
 						<dt>XX%</dt>
 						<dd>When "%" is appended, coordinates will be based on letter height. 100% is equivalent to the letter height at the time the tag is written. Decimals can also be specified.</dd>
 						<dt>@XX</dt>
@@ -1668,11 +1672,21 @@
 					</div>
 				</dd>
 			</dl>
+			<dl id="_!_set,balloonmarker,marker_display_string">
+				<dt class="entry">\![set,balloonmarker,(marker display string)]</dt>
+				<dd class="entry">
+					<p>Displays the marker string used for SSTP reception.<br>The display destination is the balloon of the current scope.<br>The display string can be omitted.  To remove it, omit the argument or leave it blank.</p>
+					<p>Effective until the ghost is closed, or a function which normally uses this display, such as SSTP reception, is triggered.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.67</li>
+					</ul>
+				</dd>
+			</dl>
 			<dl id="_!_set,balloonnum,file_name,current_number,total_number_">
 				<dt class="entry">\![set,balloonnum,(file name),(current number),(total number)]</dt>
 				<dd class="entry">
-					<p>Displays the data format shown when downloading a file. The current number and total number must be written with half-width numbers. Regardless of which character the script is run from, it will only be displayed on the \0 balloon.<br>Each argument can be omitted. To remove it, all arguments should be omitted.</p>
-					<p>Effective until the ghost is closed.</p>
+					<p>Displays the data format shown when downloading a file.<br>The display destination is the balloon of the current scope.<br>Each argument can be omitted. To remove it, omit all arguments or leave it blank.<br>Since 2.6.67, it can be used with the \1 balloon and beyond.</p>
+					<p>Effective until the ghost is closed, or a function which normally uses this display, such as a network update, is triggered.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
