@@ -271,13 +271,13 @@ Option: notranslate
 					<br />SSTP over HTTP is always considered external, except when sent from html, etc., delivered from localhost.</dd>
 					
 					<dt>SecurityOrigin [SSP 2.6.59]</dt>
-					<dd>送信元サーバを示すURL風の文字列。以下の形式となる。<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Origin">HTTPヘッダのOrigin</a>と考え方は同じ。
+					<dd>A URL-like string that indicates the source server. The format is the same as the <a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Origin">HTTP header "Origin"</a>.
 					<br />SecurityOrigin: null
 					<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;
 					<br />SecurityOrigin: &lt;scheme&gt;://&lt;hostname&gt;:&lt;port&gt;
-					<br />scheme は通常、http,https,sstpのいずれか。hostnameは送信元サーバ名かIP。portは返信受付可能なポート。
-					<br />特に指定がない場合は、nullが指定されたものとみなされる。
-					<br />SSTP over HTTPは、HTTPのOriginヘッダの中身が常に設定され、SSTPの中のSecurityOriginは無視される。
+					<br />scheme is usually one of http, https, or sstp. hostname is the name of or IP of the source server. port is the port on which replies can be accepted.
+					<br />If not otherwise specified, it is assumed to be null.
+					<br />For SSTP over HTTP, the contents of the HTTP Origin header are always set, and the SecurityOrigin in SSTP is ignored.
 					</dd>
 
 					<dt>Option</dt>
