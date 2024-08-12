@@ -431,7 +431,10 @@ Script: \0\s[3]Even though he's a giant, he's only a few train cars tall.\1\s[14
 					<dd>If you specify a ghost name in the format "\0 side name, \1 side name", the Script header that comes immediately after is treated as dedicated to that specific ghost.
 					<br />If there is a Script header that is not immediately after IfGhost, it will be the Script for default processing when IfGhost is not applicable.
 					<br />If omitted, the same Script header is played for all ghosts.
-					<br />If the SSTP ghost startup option is enabled, the ghost specified here will be temporarily launched.</dd>
+					<dt>Option</dt>
+					<dd>Specify options for how SakuraScript executed by SSTP and specified events are handled.
+					<br />Multiple strings can be specified by separating them with commas. The NOTIFY-specific parts of the specified strings are as follows.
+					<br />notify: Force the event to be sent as NOTIFY. Also, the insurance script is forced to treat the event the same as if it were <a href="spec_shiori3.html#request">returned with a ValueNotify header</a>. [SSP 2.6.76]</dd>
 				</dl>
 				<h1>response specific header</h1>
 				<dl>
@@ -445,6 +448,15 @@ Script: \0\s[3]Even though he's a giant, he's only a few train cars tall.\1\s[14
 		<section class="category" id="method_send">
 			<h1>Method: SEND</h1>
 			<p>(To be written)</p>
+			<section class="caption">
+				<h1>request-specific header</h1>
+				<dl>
+					<dt>Option</dt>
+					<dd>Specify options for how SakuraScript executed by SSTP and specified events are handled.
+					<br />Multiple strings can be specified by separating them with commas. The SEND-specific parts of the specified strings are as follows.
+					<br />notify: Scripts are forced to be treated the same as if they were <a href="spec_shiori3.html#request">returned with a ValueNotify header</a>. [SSP 2.6.76]</dd>
+				</dl>
+			</section>
 		</section>
 
 

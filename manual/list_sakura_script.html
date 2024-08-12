@@ -160,6 +160,7 @@
 			<ul>
 				<li><a href="#_0_or__h">\0 or \h</a></li>
 				<li><a href="#_1_or__u">\1 or \u</a></li>
+				<li><a href="#_pID_number">\p(ID number)</a></li>
 				<li><a href="#_p_ID_number_">\p[(ID number)]</a></li>
 			</ul>
 		</section>
@@ -211,6 +212,7 @@
 		<section class="navigation-category">
 			<h1>Balloon and Text Commands</h1>
 			<ul>
+				<li><a href="#_bID_number">\b(ID number)</a></li>
 				<li><a href="#_b_ID_number_">\b[(ID number)]</a></li>
 				<li><a href="#__b_filepath,x,y_">\_b[(filepath),(x),(y)]</a></li>
 				<li><a href="#__b_filepath,x,y,opaque_">\_b[(filepath),(x),(y),opaque]</a></li>
@@ -387,7 +389,9 @@
 				<li><a href="#_!_timerraiseplugin,time,repetition,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![timerraiseplugin,(time),(repetition),(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_notify,event_name,r0,r1,r2..._">\![notify,(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_notifyother,ghost_name,event_name,r0,r1,r2..._">\![notifyother,(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_timernotifyother,time,repetition,ghost_name,event_name,r0,r1,r2..._">\![timernotifyother,(time),(repetition),(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_notifyplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![notifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_timernotifyplugin,time,repetition,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![timernotifyplugin,(time),(repetition),(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
@@ -601,6 +605,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -612,7 +617,26 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
+				</dd>
+			</dl>
+			<dl id="_pID_number">
+				<dt class="entry">\p(ID number)</dt>
+				<dd class="entry">
+					<p>Displays an extra character of the specified ID number.
+					<br>This tag can only be used with characters 0–9.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
+					</ul>
+					<div class="legend">
+						<section class="code">
+							<h1>Usage example</h1>
+							<p><code type="SakuraScript">\0The main character will talk.\1The side character will talk.\p2A third character will talk.\p3A fourth character will talk. The default character is the main character.</code></p>
+						</section>
+					</div>
 				</dd>
 			</dl>
 			<dl id="_p_ID_number_">
@@ -622,6 +646,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -659,6 +684,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -676,6 +702,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -826,6 +853,7 @@
 					<p>Puts on and takes off dressup parts.<br>Parts are put on when the value is 1, and taken off when 0.<br>Whole categories can be added or removed by leaving the part name argument blank.<br>If the value argument is blank or is omitted, the dressup will alternate between ON and OFF, similarly to dressup options in the menu.<br>When the script is run, the SHIORI event OnDressupChanged will be notified, and the SHIORI event OnNotifyDressupInfo will be notified afterwards.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -844,6 +872,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -860,6 +889,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -896,6 +926,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -931,6 +962,7 @@
 					<p>※The above also applies to alignment<em>on</em>desktop.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1042,6 +1074,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1059,6 +1092,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1253,6 +1287,26 @@
 		</section>
 		<section class="category">
 			<h1>Balloon and Text Commands</h1>
+			<dl id="_bID_number">
+				<dt class="entry">\b(ID number)</dt>
+				<dd class="entry">
+					<p>Changes the balloon of the character that currently has the focus to the balloon of the specified ID number.
+					<br>This tag can only be used with balloons 0–9.
+					<br>Odd numbers are reserved for balloons that are displayed on the right side of the character, so the only usable IDs are 0 or even numbers.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
+					</ul>
+					<div class="legend">
+						<section class="code">
+							<h1>記述例</h1>
+							<p><code type="SakuraScript">\b2本体側のトークをバルーン2番に表示する。バルーンによって実装状況は異なり、バルーン2番が存在しない場合もある。SSP同梱バルーン「SSPデフォルト+」では、本体側バルーン2番は表示文字数の多い大きなバルーンとなるが、サイズの決まりはないため、これを使う際は推奨バルーンを指定する・専用バルーンを同梱するなどが必要。</code></p>
+						</section>
+					</div>
+				</dd>
+			</dl>
 			<dl id="_b_ID_number_">
 				<dt class="entry">\b[(ID number)]</dt>
 				<dd class="entry">
@@ -1264,6 +1318,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1287,6 +1342,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1349,6 +1405,7 @@
 					<p>Attaches an image in the balloon, treating it as a letter in a line of text.<br>[(folder of the ghost executing the command)]/ghost/master is the default folder.<br>※Instead of a file name, base64 encoding or exe/dll resources can be specified as images. <a href="#notes_imageresource">※Refer to the section below</a></p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1410,6 +1467,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1427,6 +1485,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1477,6 +1536,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1569,6 +1629,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1584,6 +1645,7 @@
 					<p>When written at the start of a line, it will be added to the previously displayed text in the balloon. The last state of the character will also be reflected.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1600,6 +1662,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1616,6 +1679,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1631,6 +1695,7 @@
 					<p>Changes the balloon's offset value to XY coordinates. The coordinates set by the user dragging the balloon are added to this value to decide the final balloon display coordinates.<br>If the value is specified normally, descript.txt's default offset will be ignored, but if @ is added at the start, X and Y will become relative coordinates using the offset values in descript.txt and surfaces.txt as the origin.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1744,6 +1809,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1976,6 +2042,7 @@
 					<p>Changes text to the specified font size.<br>Relative value adjustments using + and - may be used.<br>Size specifications as in style sheets are also possible.<br>When default is specified, the font size will return to the balloon's default setting.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -1991,6 +2058,7 @@
 					<p>Changes the font color.<br><a href="#notes_color">※Refer to the section below</a> for specification methods.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2082,6 +2150,7 @@
 					<p>When parameter is specified as true or 1, the text will become bold.<br>Specifying false or 0 will disable it.<br>Specifying default will return to the balloon's default setting.<br>Specifying disable will have the same result as false and 0.<br>The text wil not become bold if the font is incompatible.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2098,6 +2167,7 @@
 					<p>When parameter is specified as true or 1, the text will become italicized. <span style="font-style: italic;">Sample</span>.<br>Specifying false or 0 will disable it.<br>Specifying default will return to the balloon's default setting.<br>Specifying disable will have the same result as false and 0.<br>The text wil not become italicized if the font is incompatible.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2113,6 +2183,7 @@
 					<p>When parameter is specified as true or 1, the text will become strikethrough text. <span style="text-decoration: line-through;">Sample</span>.<br>Specifying false or 0 will disable it.<br>Specifying default will return to the balloon's default setting.<br>Specifying disable will have the same result as false and 0.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2128,6 +2199,7 @@
 					<p>When parameter is specified as true or 1, <span style="text-decoration: underline;">the text will be underlined</span>.<br>Specifying false or 0 will disable it.<br>Specifying default will return to the balloon's default setting.<br>Specifying disable will have the same result as false and 0.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2143,6 +2215,7 @@
 					<p>When parameter is specified as true or 1, the text will become a subscript. <sub>Sample.</sub><br>Specifying false or 0 will disable it.<br>Specifying default will return to the balloon's default setting.<br>Specifying disable will have the same result as false and 0.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2158,6 +2231,7 @@
 					<p>When parameter is specified as true or 1, the text will become a superscript. <sup>Sample.</sup><br>Specifying false or 0 will disable it.<br>Specifying default will return to the balloon's default setting.<br>Specifying disable will have the same result as false and 0.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2173,6 +2247,7 @@
 					<p>Returns all balloon attributes to the default settings.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2188,6 +2263,7 @@
 					<p>Disables all balloon attributes for displaying text.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.51</li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -2202,6 +2278,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2218,6 +2295,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2250,6 +2328,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2282,6 +2361,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2299,6 +2379,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2314,6 +2395,7 @@
 					<p>Starts a quick section. \![quicksection,1] can also be used.<br>It is almost interchangeable with \_q, the difference being that it can be specified as starting, as opposed to using a switching style.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2329,6 +2411,7 @@
 					<p>Ends a quick section. \![quicksection,0] can also be used.<br>It is almost interchangeable with \_q, the difference being that it can be specified as ending, as opposed to using a switching style.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2346,6 +2429,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2394,6 +2478,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2411,6 +2496,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2477,6 +2563,7 @@
 					<p>All of the text will be used as a menu choice, up to the next \__q.<br>The ID specification is the same as \q, including the special treatment of IDs that start with "On" or "script:", as well as additional arguments.<br>The specification for which SHIORI event should be run after selection is also the same as \q.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2535,6 +2622,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2550,6 +2638,7 @@
 					<p>All of the text will be used as an anchor, up to the next \_a. This will not timeout like a menu choice, but will timeout like normal dialogue.<br>If the ID starts with "On" as shown above, clicking it will start the SHIORI event On(ID) (with the name as written in the ID).<br>The arguments following the ID are stored in reference0, reference1, etc, in the order they are written.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3008,6 +3097,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3025,6 +3115,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3040,6 +3131,7 @@
 					<p>[Old specification] Runs a line of dialogue from randomtalk.<br>This command is a remnant from the time when all scripts were handled by the baseware, and currently only calls the <a href="./list_shiori_event.html#OnAITalk">OnAITalk event</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -3053,6 +3145,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3221,6 +3314,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3237,6 +3331,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3253,6 +3348,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3282,6 +3378,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3309,6 +3406,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3331,6 +3429,7 @@
 					
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3353,6 +3452,7 @@
 					
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3370,6 +3470,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3388,6 +3489,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3406,6 +3508,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3454,6 +3557,7 @@
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3524,6 +3628,7 @@
 					<p>Effective until the ghost is closed.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3540,6 +3645,7 @@
 					<p>Sets whether <a href="list_shiori_event.html#OnOtherSurfaceChange">OnOtherSurfaceChange</a> will be notified or not. The default value is false.<br>When set to true, OnOtherSurfaceChange will be notified when other ghosts that are open at the same time change surfaces.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3558,6 +3664,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3579,6 +3686,7 @@
 					<p>At first, this tag was implemented as a function to run entirely within a single execution of a script, by usage alongside the property system, with the property system call itself returning no results, and then dynamically changing the process depending on the result from an \![embed] tag placed directly afterwards. However, there are no such restrictions, and it is possible to synchronize with the script execution and process multiple things simultaneously.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3611,6 +3719,7 @@
 					<p>Sends an event notification to another currently running ghost.<br>Values from the fourth argument onwards are references.<br>If the ghost name is specified as __SYSTEM_ALL_GHOST__, a notification will be sent to all other running ghosts.<br>The ghost name can only be specified directly. Multiple can be specified by separating them using the byte value 1.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3668,7 +3777,22 @@
 			<dl id="_!_notify,event_name,r0,r1,r2..._">
 				<dt class="entry">\![notify,(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
-					<p>Runs a Notify event.<br>Values from the third argument onwards are references.<br>Functionally almost the same as \![raise,(event name),(r0),(r1),(r2),...], differing only in that any values from this notification event will not be output by SSP.</p>
+					<p>Same as "raise", the only difference is that any value returned by this notification event will not be output by SSP.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+					</ul>
+					<div class="legend">
+						<section class="code">
+							<h1>Usage example</h1>
+							<p><code type="SakuraScript">\![notify,OnNotifyTest,test]OnNotifyTest is notified, and test is stored in Reference0. Even if there is dialog in OnNotifyTest, it will not be output by SSP.</code></p>
+						</section>
+					</div>
+				</dd>
+			</dl>
+			<dl id="_!_timernotify,event_name,r0,r1,r2..._">
+				<dt class="entry">\![timernotify,(event name),(r0),(r1),(r2),...]</dt>
+				<dd class="entry">
+					<p>Same as "timerraise", the only difference is that any value returned by this notification event will not be output by SSP.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -3683,7 +3807,22 @@
 			<dl id="_!_notifyother,ghost_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![notifyother,(ghost name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
-					<p>Sends a Notify event notification to another currently running ghost.<br>Values from the fourth argument onwards are references.<br>If the ghost name is specified as __SYSTEM_ALL_GHOST__, a notification will be sent to all other running ghosts.<br>Multiple ghost names can be specified by separating them using the byte value 1.<br>Functionally almost the same as \![raiseother,(ghost name),(event name),(r0),(r1),(r2),...], differing only in that any values from this notification event will not be output by SSP.</p>
+					<p>Same as "raiseother", the only difference is that any value returned by this notification event will not be output by SSP.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+					</ul>
+					<div class="legend">
+						<section class="code">
+							<h1>Usage example</h1>
+							<p><code type="SakuraScript">\![notifyother,Emily/Phase4.5,OnRoastedPotato,sweet potato]If currently open, Emily/Phase4.5 will receive OnRoastedPotato as a notification. Reference0 stores the value sweet potato. Even if Emily/Phase4.5 says something in response to this notification event, nothing will be displayed in the balloon.</code></p>
+						</section>
+					</div>
+				</dd>
+			</dl>
+			<dl id="_!_timernotifyother,ghost_name,event_name,r0,r1,r2..._">
+				<dt class="entry">\![timernotifyother,(ghost name),(event name),(r0),(r1),(r2),...]</dt>
+				<dd class="entry">
+					<p>Same as "timerraiseother", the only difference is that any value returned by this notification event will not be output by SSP.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -3698,7 +3837,22 @@
 			<dl id="_!_notifyplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">
 				<dt class="entry">\![notifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
-					<p>Sends the specified Notify event to the plugin.<br>If the plugin name is specified as random, a random plugin will be chosen.<br>If specified as lastinstalled, the last installed plugin will be started.<br>Functionally almost the same as  \![raiseplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...], differing only in that any values from this notification event will not be output by SSP.</p>
+					<p>Same as "raiseplugin", the only difference is that any value returned by this notification event will not be output by SSP.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+					</ul>
+					<div class="legend">
+						<section class="code">
+							<h1>Usage example</h1>
+							<p><code type="SakuraScript">\![notifyplugin,StampCollection,OnStampAdd,[(folder of the ghost executing the command)]/ghost/master/stamp.png,MyStamp,I gave you my stamp.]Calls the registration event of the plugin StampCollection with notify. The plugin and subsequent processes will run, but responses to the ghost will be ignored.</code></p>
+						</section>
+					</div>
+				</dd>
+			</dl>
+			<dl id="_!_timernotifyplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">
+				<dt class="entry">\![timernotifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</dt>
+				<dd class="entry">
+					<p>Same as "timerraiseplugin", the only difference is that any value returned by this notification event will not be output by SSP.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -3727,6 +3881,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3744,6 +3899,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3759,6 +3915,7 @@
 					<p>Functionally the same as \_v. However, <a href="#notes_sound">options</a> may be specified.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> (Options are from 2.4 onwards)</li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3783,6 +3940,7 @@
 					<p>SSP plays a music CD. The command is ignored if there is no music CD.<br>\_V is ignored, even while playing a track. Specifying another track with \![sound,cdplay,(track no.)] during playback will also be ignored. Instead, \![sound,stop] should be used to stop the playback once before specifying the next track.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3798,6 +3956,7 @@
 					<p>Loops a track. \_V does not apply to this command.<br>Playback can be stopped with \![sound,stop].</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3813,6 +3972,7 @@
 					<p>Functionally the same as \_V.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3828,6 +3988,7 @@
 					<p>Pauses the playback. When the file name is omitted, all sounds currently being played will be paused.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3843,6 +4004,7 @@
 					<p>Unpauses playback. When the file name is omitted, all paused sounds will be unpaused.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3902,6 +4064,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3920,6 +4083,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -3982,6 +4146,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4023,6 +4188,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4067,6 +4233,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4083,6 +4250,7 @@
 					<p>Opens an InputBox that hides the characters. Other than that, functions the same as <a href="#_!_open,inputbox,ID,display_time,text,option,..._">inputbox</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4173,6 +4341,7 @@
 					<p>Closes the type of InputBox specified in the ID argument (date, time, slider, password are included). Specifying __SYSTEM_ALL_INPUT__ will close all boxes.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4190,6 +4359,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4376,6 +4546,7 @@
 					<br>When \![open,readme,(type=ghost/shell/balloon/headline/plugin),(name)], the specified readme file will be opened. Ex: \![open,readme,ghost,Emily/Phase4]</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4684,6 +4855,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4699,6 +4871,7 @@
 					<p>Executes an http get request with a parameter and stores the response in a file.<br>The file is stored in the  [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4714,6 +4887,7 @@
 					<p>Executes an http post request with a parameter and stores the response in a file.<br>The file is stored in the [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4729,6 +4903,7 @@
 					<p>Executes an http get request with <a href="#notes_executehttp">※options</a> and stores the response in a file.<br>The file is stored in the [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4744,6 +4919,7 @@
 					<p>Executes an http post request with <a href="#notes_executehttp">※options</a> and stores the response in a file.<br>The file is stored in the [(folder of the ghost executing the command)]/ghost/master/var folder.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4759,6 +4935,7 @@
 					<p>Executes an http head request with <a href="#notes_executehttp">※options</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.40</li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -4768,6 +4945,7 @@
 					<p>Executes an http put request with <a href="#notes_executehttp">※options</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.40</li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -4777,6 +4955,7 @@
 					<p>Executes an http delete request with <a href="#notes_executehttp">※options</a>.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.6.40</li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -4967,6 +5146,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -4984,6 +5164,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -5065,6 +5246,7 @@
 					<p>Effective until the ghost is closed.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -5080,6 +5262,7 @@
 					<p>Cancels the above command.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -5268,6 +5451,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -5285,6 +5469,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -5302,6 +5487,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -5318,6 +5504,7 @@
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -5460,6 +5647,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5471,6 +5659,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5482,6 +5671,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5493,6 +5683,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5504,6 +5695,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5526,6 +5718,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5535,6 +5728,7 @@
 					<p>The main character's alternate name.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5546,6 +5740,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5557,6 +5752,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5568,6 +5764,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5579,6 +5776,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5590,6 +5788,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5601,6 +5800,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5612,6 +5812,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5623,6 +5824,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5634,6 +5836,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5645,6 +5848,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5656,6 +5860,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5667,6 +5872,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5678,6 +5884,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5689,6 +5896,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5700,6 +5908,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -5711,6 +5920,7 @@
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>

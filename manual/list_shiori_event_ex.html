@@ -2095,12 +2095,12 @@
 		<section class="category">
 			<h1>Nostr Notification Event</h1>
 			<ul class="caption link">
-				<li>[Sending](Nostr/0.1)(old specification)：<a href="https://github.com/nikolat/angolmois">angolmois</a></li>
-				<li>[Sending](Nostr/0.3)：<a href="https://github.com/nikolat/nostryu">Nostr</a></li>
-				<li>[Sending](Nostr/0.3)：<a href="https://github.com/betonetojp/nokakoi">nokakoi</a></li>
-				<li>[Sending](Nostr/0.3)：<a href="https://github.com/betonetojp/noka">noka</a></li>
-				<li>[Sending](Nostr/0.3)：<a href="https://let.hatelabo.jp/Nikola/let/karR3IrkgOAA">Bookmarklet to make nostter speak by SSTP over HTTP</a></li>
-				<li>[Receiving](Nostr/0.1,Nostr/0.3 compatible)：<a href="https://github.com/nikolat/nostalk">nostalk</a></li>
+				<li>[Sending](Nostr/0.4):<a href="https://github.com/nikolat/angolmois">angolmois</a></li>
+				<li>[Sending](Nostr/0.4):<a href="https://github.com/nikolat/nostryu">Nostr</a></li>
+				<li>[Sending](Nostr/0.4):<a href="https://github.com/betonetojp/nokakoi">nokakoi</a></li>
+				<li>[Sending](Nostr/0.3):<a href="https://github.com/betonetojp/noka">noka</a></li>
+				<li>[Sending](Nostr/0.3):<a href="https://let.hatelabo.jp/Nikola/let/karR3IrkgOAA">Bookmarklet to make nostter speak by SSTP over HTTP</a></li>
+				<li>[Receiving](Nostr/0.3, Nostr/0.4 compatible)：<a href="https://github.com/nikolat/nostalk">nostalk</a></li>
 			</ul>
 			<ul class="supported-baseware">
 				<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
@@ -2112,12 +2112,12 @@
 				<dt class="entry">OnNostr</dt>
 				<dd class="entry">
 					<section id="reference_OnMahjong">
-						<h1>Notification information in Nostr/0.3</h1>
+						<h1>Notification information in Nostr/0.4</h1>
 						<dl class="reference">
 							<dt>Reference0</dt>
-							<dd>Version (Nostr/0.3)</dd>
+							<dd>Version (Nostr/0.4)</dd>
 							<dt>Reference1</dt>
-							<dd>Nostr event's kind (note, reaction, repost, ...)</dd>
+							<dd>Nostr event's kind (number) (1: note, 7: reaction, ...)</dd>
 							<dt>Reference2</dt>
 							<dd>Nostr event's content</dd>
 							<dt>Reference3</dt>
@@ -2126,6 +2126,10 @@
 							<dd>display_name of Nostr event signer's kind0</dd>
 							<dt>Reference5</dt>
 							<dd>picture of Nostr event signer's kind0</dd>
+							<dt>Reference6</dt>
+							<dd>NIP-19 encoding of the ID of the Nostr event (note1... or nevent1...)</dd>
+							<dt>Reference7</dt>
+							<dd>NIP-19 encoding of the Nostr event signer's public key (npub1...)</dd>
 						</dl>
 					</section>
 				</dd>
