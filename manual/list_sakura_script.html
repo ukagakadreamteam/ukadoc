@@ -388,6 +388,7 @@
 				<li><a href="#_!_raiseplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![raiseplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_timerraiseplugin,time,repetition,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![timerraiseplugin,(time),(repetition),(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_notify,event_name,r0,r1,r2..._">\![notify,(event name),(r0),(r1),(r2),...]</a></li>
+				<li><a href="#_!_timernotify,time,repetition,event_name,r0,r1,r2..._">\![timernotify,(time),(repetition),(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_notifyother,ghost_name,event_name,r0,r1,r2..._">\![notifyother,(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_timernotifyother,time,repetition,ghost_name,event_name,r0,r1,r2..._">\![timernotifyother,(time),(repetition),(ghost name),(event name),(r0),(r1),(r2),...]</a></li>
 				<li><a href="#_!_notifyplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">\![notifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</a></li>
@@ -3789,8 +3790,8 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_timernotify,event_name,r0,r1,r2..._">
-				<dt class="entry">\![timernotify,(event name),(r0),(r1),(r2),...]</dt>
+			<dl id="_!_timernotify,time,repetition,event_name,r0,r1,r2..._">
+				<dt class="entry">\![timernotify,(time),(repetition),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Same as "timerraise", the only difference is that any value returned by this notification event will not be output by SSP.</p>
 					<ul class="supported-baseware">
@@ -3819,8 +3820,8 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_timernotifyother,ghost_name,event_name,r0,r1,r2..._">
-				<dt class="entry">\![timernotifyother,(ghost name),(event name),(r0),(r1),(r2),...]</dt>
+			<dl id="_!_timernotifyother,time,repetition,ghost_name,event_name,r0,r1,r2..._">
+				<dt class="entry">\![timernotifyother,(time),(repetition)<(ghost name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Same as "timerraiseother", the only difference is that any value returned by this notification event will not be output by SSP.</p>
 					<ul class="supported-baseware">
@@ -3849,8 +3850,8 @@
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_timernotifyplugin,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">
-				<dt class="entry">\![timernotifyplugin,(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</dt>
+			<dl id="_!_timernotifyplugin,time,repetition,plugin_ID_or_plugin_name,event_name,r0,r1,r2..._">
+				<dt class="entry">\![timernotifyplugin,(time),(repetition),(plugin ID or plugin name),(event name),(r0),(r1),(r2),...]</dt>
 				<dd class="entry">
 					<p>Same as "timerraiseplugin", the only difference is that any value returned by this notification event will not be output by SSP.</p>
 					<ul class="supported-baseware">
