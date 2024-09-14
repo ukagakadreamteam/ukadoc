@@ -354,7 +354,7 @@ Value: \1\s[10]\0\s[0]\e
 				<dt class="entry">ValueNotify [SSP Extension 2.5.35]</dt>
 				<dd class="entry"><p><em>[Experimental feature]</em>
 				<br />Extension for executing SakuraScript even when the request method is NOTIFY.
-				<br />If SakuraScript is returned with this header, it is executed immediately.
+				<br />If SakuraScript is returned with this header, it is executed immediately. In the case of GET, it is executed before the script in the Value header is executed.
 				<br />The number of tags that can be executed is extremely limied; all other tags and strings are ignored.
 				<br /><del>It is ignored when the method is not NOTIFY or if the Value header is already present.</del> Restriction removed in 2.6.76.
 				<br />Currently, the following tags can be executed:</p>
@@ -362,14 +362,16 @@ Value: \1\s[10]\0\s[0]\e
 				<li>\![sound]</li>
 				<li>\![set,trayicon]</li>
 				<li>\![set,trayballoon]</li>
-				<li>\![raise] (It works the same as NOTIFY)</li>
-				<li>\![raiseother] (It works the same as NOTIFY)</li>
-				<li>\![raiseplugin] (It works the same as NOTIFY)</li>
-				<li>\![timerraiseother] (The event will be treated as a NOTIFY event)</li>
-				<li>\![timerraiseplugin] (The event will be treated as a NOTIFY event)</li>
+				<li>\![raise]</li>
+				<li>\![raiseother]</li>
+				<li>\![raiseplugin]</li>
+				<li>\![timerraiseother]</li>
+				<li>\![timerraiseplugin]</li>
 				<li>\![notify]</li>
 				<li>\![notifyother]</li>
 				<li>\![notifyplugin]</li>
+				<li>\![get,property] +2.6.82</li>
+				<li>\![set,property] +2.6.82</li>
 				</ul>
 				</dd>
 
