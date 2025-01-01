@@ -2427,14 +2427,14 @@
 			<dl id="OnInstallCompleteAll">
 				<dt class="entry">OnInstallCompleteAll</dt>
 				<dd class="entry">
-					<p>複数のnarをD&Dした時などに、インストールが<b>すべて</b>正常終了した際に、OnInstallComplete/同Exの後に、最後に発生。</p>
+					<p>Occurs last, after OnInstallComplete/Ex, when <b>all</b> installations have been completed successfully, such as when multiple NARs have been dragged and dropped.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>インストールした物の<a href="#caption_install-identifier">※識別子</a>。複数の場合はバイト値1区切り。</dd>
+						<dd>The <a href="#caption_install-identifier">※identifier</a> of the installed file. When there are multiple, they are delimited by a 1-byte value.</dd>
 						<dt>Reference1</dt>
-						<dd>インストールした物の名前。複数の場合はバイト値1区切り。</dd>
+						<dd>The name of the installed file. When there are multiple, they are delimited by a 1-byte value.</dd>
 						<dt>Reference2</dt>
-						<dd>インストールした場所。複数の場合はバイト値1区切り。</dd>
+						<dd>The location of installation. When there are multiple, they are delimited by a 1-byte value.</dd>
 					</dl>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
