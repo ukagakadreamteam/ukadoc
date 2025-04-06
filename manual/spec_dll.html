@@ -5,12 +5,13 @@
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,ukagaka">
-<title>UKADOC Project DLL</title>
+<title>UKADOC Project DLL General Specifications</title>
 <link rel="stylesheet" href="spec.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">DLL</h1>
+	<h1 id="page-title">DLL General Specifications</h1>
+
 	<nav class="menu-header">
 		<table>
 			<tbody>
@@ -131,54 +132,119 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>DLL</h1>
+		<h1>DLL共通仕様</h1>
 		<section class="navigation-category">
-			<h1>DLL</h1>
+			<h1>DLL共通仕様</h1>
 			<ul>
-				<li><a href="#chapter0">Preface</a></li>
-				<li><a href="#chapter1">Export Functions</a></li>
+				<li><a href="#memory">メモリ管理</a></li>
+				<li><a href="#request">request</a></li>
+				<li><a href="#load">ライフサイクル関数</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
-		<section class="caption" id="notes_translation">
-			<h1>Translated Document</h1>
-			<div class="passage">
-				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
-				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/spec_dll.html">here</a>.</li>
-				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
-			</div>
-		</section>
-		<div class="caption">
-			<p>Last updated: <time>2013-08-27</time></p>
-		</div>
 		<section id="chapter0">
-			<h1>Preface</h1>
-			<p>This section summarizes the specifications required for DLL files, which are the core of each subsystem, including SHIORI, SAORI, MAKOTO, PLUGIN, and HEADLINE.</p>
+			<h1>DLL共通仕様</h1>
+			<p>本仕様は、SHIORI、SAORI、その他の伺かシステムで使用されるDLLモジュールの共通インターフェースを定義するものである。</p>
 		</section>
-		<section id="chapter1">
-			<h1>Export Functions</h1>
-			<p>Here is an example in C.</p>
+
+		<section id="memory">
+			<h1>メモリ管理</h1>
+			<p>引数／戻り値の受け渡しは全て Windows の Global Memory を使用して行う。具体的には以下の手順で処理を行う：</p>
 			<ul>
-				<li>extern "C" __declspec(dllexport) BOOL __cdecl load(HGLOBAL h, long len);</li>
-				<li>extern "C" __declspec(dllexport) BOOL __cdecl unload(void);</li>
-				<li>extern "C" __declspec(dllexport) HGLOBAL __cdecl request(HGLOBAL h, long *len);</li>
+				<li>ベースウェアは GlobalAlloc() に GMEM_FIXED フラグを指定してメモリを確保し、データを書き込む</li>
+				<li>モジュールは受け取った HGLOBAL を (char*) にキャストして直接データにアクセスする</li>
+				<li>モジュールは len パラメータを参照してデータ長を取得し、必要なデータを読み込む</li>
+				<li>モジュールは GlobalFree() でメモリを解放する</li>
+				<li>処理結果を返す場合、モジュールは新たに GlobalAlloc() で GMEM_FIXED 指定のメモリを確保する</li>
+				<li>モジュールは確保したメモリに結果を書き込み、len に新しいデータ長を設定する</li>
+				<li>ベースウェアは返却されたメモリハンドルを使用後に GlobalFree() で解放する</li>
 			</ul>
-			<p>☆Borland C/C++ compilers seem to add an underscore at the beginning like _load, so it would be better to support that as well.</p>
+			<p>注意点：</p>
+			<ul>
+				<li>GMEM_FIXED フラグ使用時は GlobalLock()/GlobalUnlock() が不要である</li>
+				<li>HGLOBAL を (char*) にキャストすることで直接メモリアクセスが可能である</li>
+				<li>渡されたメモリはNULL終端が保証されていないため、必ずlenパラメータを参照してアクセス範囲を制限する</li>
+				<li>戻り値用のメモリは、ベースウェアの実装に依存せず堅牢な動作を保証するため、lenより1バイト多く確保してゼロ終端することが望ましい</li>
+			</ul>
+		</section>
+
+		<section class="category" id="request">
+			<h1>request関数</h1>
+
+			<pre><code>extern "C" __declspec(dllexport) HGLOBAL __cdecl request(HGLOBAL h, long *len);</code></pre>
+			<p>全てのリクエストは request という唯一の関数で行われる。request関数は伺かモジュールの主要なインターフェースであり、ベースウェアからの全ての要求を処理する。</p>
+			<p>リクエストデータの形式はHTTPやSSTPのヘッダ形式を参考に設計されており、以下の規則に従う：
+
+			<ul>
+			<li>全ての行はCR+LF（0x0D, 0x0A）で区切られる</li>
+			<li>1行目にはコマンド名とプロトコルバージョンを記載する</li>
+			<li>2行目以降は「ヘッダ名: 値」の形式で任意の数のヘッダが続く</li>
+			<li>ヘッダ部の終端はCR+LFを2つ連続して配置（空行の追加）することで示す</li>
+			<li>文字エンコーディングはヘッダで指定された方式（一般的にはUTF-8かデフォルトのOEM codepage）に従う</li>
+			</ul></p>
+		</section>
+
+		<section class="category" id="load">
+			<h1>ライフサイクル関数</h1>
+
+			<p>DLLロード時およびアンロード時に以下の関数がコールされる。</p>
+
 			<section>
-				<h1>load</h1>
-				<p>HGLOBAL contains the path to the directory containing the DLL.<br />Since it is GlobalAlloc(GMEM_FIXED,xxx), please cast it to a pointer (char *) and use it as is.<br />Also, be sure to perform GlobalFree on the DLL side.</p>
-				<p>The return value is always true.<br />The default is false on load failure, but if false is returned, nothing is processed.</p>
+				<h1>loadu関数</h1>
+
+				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl loadu(HGLOBAL h, long len);</code></pre>
+
+				<p>モジュールの初期化を行う関数。<br>
+				第1引数のグローバルメモリにはモジュールのディレクトリパスが<em>UTF-8エンコーディング</em>で格納される。</p>
+
+				<p>SSP 2.6.92 (2025/1/16) より実装された。それより前はloadのみの実装である。</p>
+				
+				<p>処理内容の例：</p>
+				<ul>
+					<li>渡されたパスをカレントディレクトリとして、必要なデータファイルを読み込む</li>
+					<li>モジュールの動作に必要なリソースを初期化する</li>
+					<li>必要に応じてログファイルやデータベースの初期化を行う</li>
+				</ul>
+
+				<p>注意点：</p>
+				<ul>
+					<li>文字列データが不要な場合でも、渡されたグローバルメモリは必ず解放する</li>
+					<li>初期化に成功した場合は TRUE を、失敗した場合は FALSE を返却する</li>
+					<li>本関数はベースウェアによって優先的に使用される</li>
+				</ul>
+			</dd>
+			
+			<section>
+				<h1>load関数</h1>
+
+				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl load(HGLOBAL h, long len);</code></pre>
+
+				<p>loadu関数の従来版。<br>
+				第1引数のモジュールディレクトリパスがデフォルトのOEM codepage（日本語環境ではCP932）でエンコードされている以外は、loadu関数と同じ仕様。</p>
+				
+				<p>注意点：</p>
+				<ul>
+					<li>loadu関数が実装されていない場合のフォールバック先として使用される</li>
+					<li>互換性確保のため、loadとloaduの両方を実装し、loaduで初期化済の時にloadも呼ばれた場合は無視するのが望ましい</li>
+					<li>Unicode対応のためには、受け取ったパスを適切にワイド文字列に変換する必要がある</li>
+				</ul>
 			</section>
+
 			<section>
-				<h1>unload</h1>
-				<p>Called just before opening the DLL (i.e., when SSP/CROW is closed & when overwriting installs, before DLL_PROCESS_DETACH).</p> <!-- Translator note: not a clue here. -->
-				<p>The return value is always true.<br />The default is false on release failure, but if false is returned, it is ignored.</p>
-			</section>
-			<section>
-				<h1>request</h1>
-				<p>All processing other than loading and unloading is performed here.<br />The precautions are the same as for load.</p>
-				<p>The return value depends on the type of subsystem (SHIORI, SAORI, PLUGIN...) implemented by this DLL.<br />The return value HGLOBAL should also be the one allocated by GlobalAlloc(GMEM_FIXED,xxx).</p>
+				<h1>unload関数</h1>
+				
+				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl unload();</code></pre>
+
+				<p>モジュールの終了処理を行う関数。モジュールのアンロード時にベースウェアから呼び出される。</p>
+				<p>実装すべき処理：</p>
+				<ul>
+					<li>CreateFile 等で開いたファイルハンドルを解放する</li>
+					<li>CreateMutex 等で作成した同期オブジェクトを解放する</li>
+					<li>CreateThread 等で作成したスレッドの終了を待機し、後処理を行う</li>
+					<li>その他、モジュールが確保した全てのシステムリソースを解放する</li>
+				</ul>
+				<p>戻り値は現在は使用されていないが、将来の拡張性を考慮して TRUE を返却することが望ましい。</p>
 			</section>
 		</section>
 	</div>
