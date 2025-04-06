@@ -5,12 +5,12 @@
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,ukagaka">
-<title>UKADOC Project DLL General Specifications</title>
+<title>UKADOC Project DLL Common Specifications</title>
 <link rel="stylesheet" href="spec.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">DLL General Specifications</h1>
+	<h1 id="page-title">DLL Common Specifications</h1>
 
 	<nav class="menu-header">
 		<table>
@@ -132,119 +132,119 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>DLL共通仕様</h1>
+		<h1>DLL Common Specifications</h1>
 		<section class="navigation-category">
-			<h1>DLL共通仕様</h1>
+			<h1>DLL Common Specifications</h1>
 			<ul>
-				<li><a href="#memory">メモリ管理</a></li>
+				<li><a href="#memory">Memory management</a></li>
 				<li><a href="#request">request</a></li>
-				<li><a href="#load">ライフサイクル関数</a></li>
+				<li><a href="#load">Life cycle functions</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
 		<section id="chapter0">
-			<h1>DLL共通仕様</h1>
-			<p>本仕様は、SHIORI、SAORI、その他の伺かシステムで使用されるDLLモジュールの共通インターフェースを定義するものである。</p>
+			<h1>DLL Common Specifications</h1>
+			<p>This specification defines a common interface for DLL modules used in SHIORI, SAORI, and other systems.</p>
 		</section>
 
 		<section id="memory">
-			<h1>メモリ管理</h1>
-			<p>引数／戻り値の受け渡しは全て Windows の Global Memory を使用して行う。具体的には以下の手順で処理を行う：</p>
+			<h1>Memory management</h1>
+			<p>All argument/return value processing is performed using Windows Global Memory. Specifically, the following procedure is used:</p>
 			<ul>
-				<li>ベースウェアは GlobalAlloc() に GMEM_FIXED フラグを指定してメモリを確保し、データを書き込む</li>
-				<li>モジュールは受け取った HGLOBAL を (char*) にキャストして直接データにアクセスする</li>
-				<li>モジュールは len パラメータを参照してデータ長を取得し、必要なデータを読み込む</li>
-				<li>モジュールは GlobalFree() でメモリを解放する</li>
-				<li>処理結果を返す場合、モジュールは新たに GlobalAlloc() で GMEM_FIXED 指定のメモリを確保する</li>
-				<li>モジュールは確保したメモリに結果を書き込み、len に新しいデータ長を設定する</li>
-				<li>ベースウェアは返却されたメモリハンドルを使用後に GlobalFree() で解放する</li>
+				<li>The baseware allocates memory and writes data by specifying the GMEM_FIXED flag to GlobalAlloc()</li>
+				<li>The module casts the received HGLOBAL to (char*) to access the data directly</li>
+				<li>The module refers to the len parameter to get the data length and reads the required data</li>
+				<li>Module frees memory with GlobalFree()</li>
+				<li>When returning the result of processing, the module allocates memory for the new GMEM_FIXED designation with GlobalAlloc()</li>
+				<li>The module writes the result to the allocated memory and sets len to the new data length</li>
+				<li>The baseware releases the returned memory handle with GlobalFree() after use</li>
 			</ul>
-			<p>注意点：</p>
+			<p>Important notes:</p>
 			<ul>
-				<li>GMEM_FIXED フラグ使用時は GlobalLock()/GlobalUnlock() が不要である</li>
-				<li>HGLOBAL を (char*) にキャストすることで直接メモリアクセスが可能である</li>
-				<li>渡されたメモリはNULL終端が保証されていないため、必ずlenパラメータを参照してアクセス範囲を制限する</li>
-				<li>戻り値用のメモリは、ベースウェアの実装に依存せず堅牢な動作を保証するため、lenより1バイト多く確保してゼロ終端することが望ましい</li>
+				<li>GlobalLock()/GlobalUnlock() is not necessary when using GMEM_FIXED flag</li>
+				<li>Direct memory access is possible by casting HGLOBAL to (char*)</li>
+				<li>Since the memory passed is not guaranteed to be null-terminated, always refer to the len parameter to limit the access range</li>
+				<li>Memory for return values should be zero-terminated by allocating one byte more than len to ensure robust operation independent of the baseware implementation</li>
 			</ul>
 		</section>
 
 		<section class="category" id="request">
-			<h1>request関数</h1>
+			<h1>request function</h1>
 
 			<pre><code>extern "C" __declspec(dllexport) HGLOBAL __cdecl request(HGLOBAL h, long *len);</code></pre>
-			<p>全てのリクエストは request という唯一の関数で行われる。request関数は伺かモジュールの主要なインターフェースであり、ベースウェアからの全ての要求を処理する。</p>
-			<p>リクエストデータの形式はHTTPやSSTPのヘッダ形式を参考に設計されており、以下の規則に従う：
+			<p>All requests are made through a single function, request, which is the primary interface to the module and handles all requests from the baseware.</p>
+			<p>The request data format is designed with reference to the HTTP and SSTP header formats, and follows the rules below:
 
 			<ul>
-			<li>全ての行はCR+LF（0x0D, 0x0A）で区切られる</li>
-			<li>1行目にはコマンド名とプロトコルバージョンを記載する</li>
-			<li>2行目以降は「ヘッダ名: 値」の形式で任意の数のヘッダが続く</li>
-			<li>ヘッダ部の終端はCR+LFを2つ連続して配置（空行の追加）することで示す</li>
-			<li>文字エンコーディングはヘッダで指定された方式（一般的にはUTF-8かデフォルトのOEM codepage）に従う</li>
+			<li>All lines are separated by CR+LF (0x0D, 0x0A)</li>
+			<li>The first line should contain the command name and protocol version</li>
+			<li>The secone and subsequent lines are followed by an arbitrary number of headers in the format "header name: value"</li>
+			<li>The end of the header section is indicated by placing two consecutive CR+LF (adding a blank line)</li>
+			<li>Character encoding follows the scheme specified in the header (typically UTF-8 or default OEM codepage)</li>
 			</ul></p>
 		</section>
 
 		<section class="category" id="load">
-			<h1>ライフサイクル関数</h1>
+			<h1>Life cycle functions</h1>
 
-			<p>DLLロード時およびアンロード時に以下の関数がコールされる。</p>
+			<p>The following functions are called when loading and unloading DLLs.</p>
 
 			<section>
-				<h1>loadu関数</h1>
+				<h1>loadu function</h1>
 
 				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl loadu(HGLOBAL h, long len);</code></pre>
 
-				<p>モジュールの初期化を行う関数。<br>
-				第1引数のグローバルメモリにはモジュールのディレクトリパスが<em>UTF-8エンコーディング</em>で格納される。</p>
+				<p>Function to initialize the module.<br>
+				The first argument, global memory, contains the module's directory path in <em>UTF-8 encoding</em>.</p>
 
-				<p>SSP 2.6.92 (2025/1/16) より実装された。それより前はloadのみの実装である。</p>
+				<p>Implemented since SSP 2.6.92 (2025/1/16). Prior to that, only "load" was implemented.</p>
 				
-				<p>処理内容の例：</p>
+				<p>Example of processing content:</p>
 				<ul>
-					<li>渡されたパスをカレントディレクトリとして、必要なデータファイルを読み込む</li>
-					<li>モジュールの動作に必要なリソースを初期化する</li>
-					<li>必要に応じてログファイルやデータベースの初期化を行う</li>
+					<li>Load the necessary data files using the passed path as the current directory</li>
+					<li>Initialize resources required for module operation</li>
+					<li>Initialize log files and databases as needed</li>
 				</ul>
 
-				<p>注意点：</p>
+				<p>Important notes:</p>
 				<ul>
-					<li>文字列データが不要な場合でも、渡されたグローバルメモリは必ず解放する</li>
-					<li>初期化に成功した場合は TRUE を、失敗した場合は FALSE を返却する</li>
-					<li>本関数はベースウェアによって優先的に使用される</li>
+					<li>Always release passed global memory even when string data is not needed</li>
+					<li>Returns TRUE if initialization succeeds, FALSE if it fails</li>
+					<li>This function is preferentially used by baseware</li>
 				</ul>
 			</dd>
 			
 			<section>
-				<h1>load関数</h1>
+				<h1>load function</h1>
 
 				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl load(HGLOBAL h, long len);</code></pre>
 
-				<p>loadu関数の従来版。<br>
-				第1引数のモジュールディレクトリパスがデフォルトのOEM codepage（日本語環境ではCP932）でエンコードされている以外は、loadu関数と同じ仕様。</p>
+				<p>Previous version of the loadu function.<br>
+				Same specification as the loadu function, except that the module directory path of the first argument is encoded in the default OEM codepage (CP932 in a Japanese environment).</p>
 				
-				<p>注意点：</p>
+				<p>Important notes:</p>
 				<ul>
-					<li>loadu関数が実装されていない場合のフォールバック先として使用される</li>
-					<li>互換性確保のため、loadとloaduの両方を実装し、loaduで初期化済の時にloadも呼ばれた場合は無視するのが望ましい</li>
-					<li>Unicode対応のためには、受け取ったパスを適切にワイド文字列に変換する必要がある</li>
+					<li>Used as a fallback designation when the loadu function is not implemented</li>
+					<li>For compatibility, it is desirable to implement both "load" and "loadu", and ignore "load" if it is called when "loadu" is already initialized</li>
+					<li>For Unicode support, the received path must be converted to a full-width string where appropriate</li>
 				</ul>
 			</section>
 
 			<section>
-				<h1>unload関数</h1>
+				<h1>unload function</h1>
 				
 				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl unload();</code></pre>
 
-				<p>モジュールの終了処理を行う関数。モジュールのアンロード時にベースウェアから呼び出される。</p>
-				<p>実装すべき処理：</p>
+				<p>Function to handle module termination. This function is called by the baseware when a module is unloaded.</p>
+				<p>Processes that should be implemented:</p>
 				<ul>
-					<li>CreateFile 等で開いたファイルハンドルを解放する</li>
-					<li>CreateMutex 等で作成した同期オブジェクトを解放する</li>
-					<li>CreateThread 等で作成したスレッドの終了を待機し、後処理を行う</li>
-					<li>その他、モジュールが確保した全てのシステムリソースを解放する</li>
+					<li>Release a file handle opened by CreateFile, etc.</li>
+					<li>Release synchronization objects created by CreateMutex, etc.</li>
+					<li>Wait for threads created by CreateThread, etc., to finish and perform post-processing</li>
+					<li>Release all other system resources reserved by the module</li>
 				</ul>
-				<p>戻り値は現在は使用されていないが、将来の拡張性を考慮して TRUE を返却することが望ましい。</p>
+				<p>The return value is not currently used, but should return TRUE for future expandability.</p>
 			</section>
 		</section>
 	</div>
