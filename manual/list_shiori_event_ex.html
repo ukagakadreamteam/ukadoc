@@ -3547,135 +3547,136 @@
 			<dl id="OnElinAllyCondition">
 				<dt class="entry">OnElinAllyCondition</dt>
 				<dd class="entry">
-					<p>ペットが何らかの状態異常にかかると発生。</p>
+					<p>Occurs when a pet suffers from some kind of abnormal condition.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ペットの名前</dd>
+						<dd>Pet's name</dd>
 						<dt>Reference1</dt>
-						<dd>状態異常の名前</dd>
+						<dd>Condition name</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinAllyDead">
 				<dt class="entry">OnElinAllyDead</dt>
 				<dd class="entry">
-					<p>ペットが死ぬと発生。</p>
+					<p>Occurs when a pet dies.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ペットの名前</dd>
+						<dd>Pet's name</dd>
 						<dt>Reference1</dt>
-						<dd>死因</dd>
+						<dd>Cause of death</dd>
 						<dt>Reference2</dt>
-						<dd>(存在すれば)ペットを殺したNPCの名前</dd>
+						<dd>Name of the NPC who killed the pet (if any)</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinCatchFish">
 				<dt class="entry">OnElinCatchFish</dt>
 				<dd class="entry">
-					<p>何かを釣り上げると発生。</p>
+					<p>Occurs when something is fished up.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>釣り上げたアイテムの名前</dd>
+						<dd>Name of item fished</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinMapCharaGenerate">
 				<dt class="entry">OnElinMapCharaGenerate</dt>
 				<dd class="entry">
-					<p>NPCが生成されると発生。Reference0-4のいずれかが値を持つ。</p>
+					<p>Occurs when an NPC is created, one of the references from 0-3 has the value.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>敵NPCの情報</dd>
+						<dd>Enemy NPC information</dd>
 						<dt>Reference1</dt>
-						<dd>中立NPCの情報</dd>
+						<dd>Neutral NPC information</dd>
 						<dt>Reference2</dt>
-						<dd>友好NPCの情報</dd>
+						<dd>Friendly NPC information</dd>
 						<dt>Reference3</dt>
-						<dd>味方NPCの情報</dd>
+						<dd>Allied NPC information</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinMapEnter">
 				<dt class="entry">OnElinMapEnter</dt>
 				<dd class="entry">
-					<p>マップに入ると発生。</p>
+					<p>Occurs upon entering the map.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>マップの名前</dd>
+						<dd>Map name</dd>
 						<dt>Reference1</dt>
-						<dd>敵NPCの情報</dd>
+						<dd>Enemy NPC information</dd>
 						<dt>Reference2</dt>
-						<dd>中立NPCの情報</dd>
+						<dd>Neutral NPC information</dd>
 						<dt>Reference3</dt>
-						<dd>友好NPCの情報</dd>
+						<dd>Friendly NPC information</dd>
 						<dt>Reference4</dt>
-						<dd>味方NPCの情報</dd>
-						<dt>Reference4</dt>
-						<dd>床に落ちている/設置されているアイテムの情報</dd>
+						<dd>Allied NPC information</dd>
 						<dt>Reference5</dt>
-						<dd>街かどうか</dd>
+						<dd>Information on items that have fallen/been placed on the floor</dd>
 						<dt>Reference6</dt>
-						<dd>ネフィアかどうか</dd>
+						<dd>Whether it's a city</dd>
 						<dt>Reference7</dt>
-						<dd>PCの所有物件(?)かどうか</dd>
+						<dd>Whether or not it's Nephia</dd>
 						<dt>Reference8</dt>
-						<dd>固定ネフィアかどうか</dd>
+						<dd>Whether or not it's a PC owned property(?)</dd> <!-- Translator note: I'm not sure why there was a question mark here, I don't have this game in order to have context for it. So I've decided to leave it. -->
 						<dt>Reference9</dt>
-						<dd>何も無いフィールドマップかどうか</dd>
+						<dd>Whether Nephia is fixed or not</dd>
+						<dt>Reference10</dt>
+						<dd>Whether it's an empty field map or not</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinMapItemGenerate">
 				<dt class="entry">OnElinMapItemGenerate</dt>
 				<dd class="entry">
-					<p>宝箱が生成されたとき等に発生</p>
+					<p>Occurs when a treasure chest is generated, etc.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>アイテムの情報</dd>
+						<dd>Item information</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinPCCondition">
 				<dt class="entry">OnElinPCCondition</dt>
 				<dd class="entry">
-					<p>PCが状態異常にかかると発生</p>
+					<p>Occurs when the PC is affected by an abnormal condition.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>状態異常の名前</dd>
+						<dd>Condition name.</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinPCDead">
 				<dt class="entry">OnElinPCDead</dt>
 				<dd class="entry">
-					<p>PCが死ぬと発生</p>
+					<p>Occurs when the PC dies</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>PCの名前</dd>
+						<dd>PC's name</dd>
 						<dt>Reference1</dt>
-						<dd>死因</dd>
+						<dd>Cause of death</dd>
 						<dt>Reference2</dt>
-						<dd>(存在すれば)PCを殺したNPCの名前</dd>
+						<dd>Name of the NPC who killed the PC (if any)</dd>
 					</dl>
 				</dd>
 			</dl>
 			<dl id="OnElinTarget">
 				<dt class="entry">OnElinTarget</dt>
 				<dd class="entry">
-					<p>NPCにShift+Fでターゲッティングすると発生</p>
+					<p>Occurs when targeting NPCs with Shift+F.</p>
 					<dl class="reference">
 						<dt>Reference0</dt>
-						<dd>ターゲッティングしたNPCの名前</dd>
+						<dd>Targeted NPC name</dd>
 					</dl>
 				</dd>
 			</dl>
 			<div class="caption">
-				<h1>キャラクターとアイテムの情報</h1>
-                <h2>アイテムの情報</h2>
-                <p>アイテムはバイト値1で区切られている。例：土0x01金塊0x01鉄のつるはし0x01…</p>
-                <h2>キャラクターの情報</h2>
-                <p>1キャラクターはキャラクターの名前と持っているアイテムがバイト値1で区切られており、さらにキャラクター毎にバイト値2で区切られている。例：イーク0x02銅の短剣0x01ゴブリン0x02紙の大剣0x02珊瑚の軽外套0x01侍…</p>
+				<h1>Character item and information</h1>
+                <h2>Item information</h2>
+                <p>Items are separated by a 1-byte value. Example: Earth[0x01]Gold nugget[0x01]Iron pickaxe[0x01]...</p>
+                <h2>Character information</h2>
+                <p>Each character is separated by a 1-byte value, and the character's name and the items they have are further separated by a 2-byte value. Example: Īku[0x02]Copper dagger[0x01]Goblin[0x02]Paper greatsword[0x02]Coral light cloak[0x01]Samurai...</p>
+				<p>Translation note: the examples given here are translated to make the concepts easier to understand. The actual responses sent from these events may be in Japanese.</p>
 			</div>
         </section>
 		<section class="category other">

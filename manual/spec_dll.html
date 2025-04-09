@@ -5,12 +5,13 @@
 <meta name="robots" content="INDEX,FOLLOW">
 <meta name="author" content="UKADOC Project">
 <meta name="keywords" content="ukadoc,ukagaka">
-<title>UKADOC Project DLL</title>
+<title>UKADOC Project DLL Common Specifications</title>
 <link rel="stylesheet" href="spec.css" />
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-	<h1 id="page-title">DLL</h1>
+	<h1 id="page-title">DLL Common Specifications</h1>
+
 	<nav class="menu-header">
 		<table>
 			<tbody>
@@ -131,54 +132,119 @@
 		</table>
 	</nav>
 	<section class="navigation-bar">
-		<h1>DLL</h1>
+		<h1>DLL Common Specifications</h1>
 		<section class="navigation-category">
-			<h1>DLL</h1>
+			<h1>DLL Common Specifications</h1>
 			<ul>
-				<li><a href="#chapter0">Preface</a></li>
-				<li><a href="#chapter1">Export Functions</a></li>
+				<li><a href="#memory">Memory management</a></li>
+				<li><a href="#request">request</a></li>
+				<li><a href="#load">Life cycle functions</a></li>
 			</ul>
 		</section>
 	</section>
 	<div class="text">
-		<section class="caption" id="notes_translation">
-			<h1>Translated Document</h1>
-			<div class="passage">
-				<li>This document has been translated from the original Japanese by members of the Ukagaka Dream Team community.</li>
-				<li>To see the original document, click <a href="https://ssp.shillest.net/ukadoc/manual/spec_dll.html">here</a>.</li>
-				<li>To submit corrections/updates, see <a href="https://github.com/Ukagaka-Dream-Team/ukadoc">our repository</a> to open an issue or find where to contact us.</li>
-			</div>
-		</section>
-		<div class="caption">
-			<p>Last updated: <time>2013-08-27</time></p>
-		</div>
 		<section id="chapter0">
-			<h1>Preface</h1>
-			<p>This section summarizes the specifications required for DLL files, which are the core of each subsystem, including SHIORI, SAORI, MAKOTO, PLUGIN, and HEADLINE.</p>
+			<h1>DLL Common Specifications</h1>
+			<p>This specification defines a common interface for DLL modules used in SHIORI, SAORI, and other systems.</p>
 		</section>
-		<section id="chapter1">
-			<h1>Export Functions</h1>
-			<p>Here is an example in C.</p>
+
+		<section id="memory">
+			<h1>Memory management</h1>
+			<p>All argument/return value processing is performed using Windows Global Memory. Specifically, the following procedure is used:</p>
 			<ul>
-				<li>extern "C" __declspec(dllexport) BOOL __cdecl load(HGLOBAL h, long len);</li>
-				<li>extern "C" __declspec(dllexport) BOOL __cdecl unload(void);</li>
-				<li>extern "C" __declspec(dllexport) HGLOBAL __cdecl request(HGLOBAL h, long *len);</li>
+				<li>The baseware allocates memory and writes data by specifying the GMEM_FIXED flag to GlobalAlloc()</li>
+				<li>The module casts the received HGLOBAL to (char*) to access the data directly</li>
+				<li>The module refers to the len parameter to get the data length and reads the required data</li>
+				<li>Module frees memory with GlobalFree()</li>
+				<li>When returning the result of processing, the module allocates memory for the new GMEM_FIXED designation with GlobalAlloc()</li>
+				<li>The module writes the result to the allocated memory and sets len to the new data length</li>
+				<li>The baseware releases the returned memory handle with GlobalFree() after use</li>
 			</ul>
-			<p>☆Borland C/C++ compilers seem to add an underscore at the beginning like _load, so it would be better to support that as well.</p>
+			<p>Important notes:</p>
+			<ul>
+				<li>GlobalLock()/GlobalUnlock() is not necessary when using GMEM_FIXED flag</li>
+				<li>Direct memory access is possible by casting HGLOBAL to (char*)</li>
+				<li>Since the memory passed is not guaranteed to be null-terminated, always refer to the len parameter to limit the access range</li>
+				<li>Memory for return values should be zero-terminated by allocating one byte more than len to ensure robust operation independent of the baseware implementation</li>
+			</ul>
+		</section>
+
+		<section class="category" id="request">
+			<h1>request function</h1>
+
+			<pre><code>extern "C" __declspec(dllexport) HGLOBAL __cdecl request(HGLOBAL h, long *len);</code></pre>
+			<p>All requests are made through a single function, request, which is the primary interface to the module and handles all requests from the baseware.</p>
+			<p>The request data format is designed with reference to the HTTP and SSTP header formats, and follows the rules below:
+
+			<ul>
+			<li>All lines are separated by CR+LF (0x0D, 0x0A)</li>
+			<li>The first line should contain the command name and protocol version</li>
+			<li>The secone and subsequent lines are followed by an arbitrary number of headers in the format "header name: value"</li>
+			<li>The end of the header section is indicated by placing two consecutive CR+LF (adding a blank line)</li>
+			<li>Character encoding follows the scheme specified in the header (typically UTF-8 or default OEM codepage)</li>
+			</ul></p>
+		</section>
+
+		<section class="category" id="load">
+			<h1>Life cycle functions</h1>
+
+			<p>The following functions are called when loading and unloading DLLs.</p>
+
 			<section>
-				<h1>load</h1>
-				<p>HGLOBAL contains the path to the directory containing the DLL.<br />Since it is GlobalAlloc(GMEM_FIXED,xxx), please cast it to a pointer (char *) and use it as is.<br />Also, be sure to perform GlobalFree on the DLL side.</p>
-				<p>The return value is always true.<br />The default is false on load failure, but if false is returned, nothing is processed.</p>
+				<h1>loadu function</h1>
+
+				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl loadu(HGLOBAL h, long len);</code></pre>
+
+				<p>Function to initialize the module.<br>
+				The first argument, global memory, contains the module's directory path in <em>UTF-8 encoding</em>.</p>
+
+				<p>Implemented since SSP 2.6.92 (2025/1/16). Prior to that, only "load" was implemented.</p>
+				
+				<p>Example of processing content:</p>
+				<ul>
+					<li>Load the necessary data files using the passed path as the current directory</li>
+					<li>Initialize resources required for module operation</li>
+					<li>Initialize log files and databases as needed</li>
+				</ul>
+
+				<p>Important notes:</p>
+				<ul>
+					<li>Always release passed global memory even when string data is not needed</li>
+					<li>Returns TRUE if initialization succeeds, FALSE if it fails</li>
+					<li>This function is preferentially used by baseware</li>
+				</ul>
+			</dd>
+			
+			<section>
+				<h1>load function</h1>
+
+				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl load(HGLOBAL h, long len);</code></pre>
+
+				<p>Previous version of the loadu function.<br>
+				Same specification as the loadu function, except that the module directory path of the first argument is encoded in the default OEM codepage (CP932 in a Japanese environment).</p>
+				
+				<p>Important notes:</p>
+				<ul>
+					<li>Used as a fallback designation when the loadu function is not implemented</li>
+					<li>For compatibility, it is desirable to implement both "load" and "loadu", and ignore "load" if it is called when "loadu" is already initialized</li>
+					<li>For Unicode support, the received path must be converted to a full-width string where appropriate</li>
+				</ul>
 			</section>
+
 			<section>
-				<h1>unload</h1>
-				<p>Called just before opening the DLL (i.e., when SSP/CROW is closed & when overwriting installs, before DLL_PROCESS_DETACH).</p> <!-- Translator note: not a clue here. -->
-				<p>The return value is always true.<br />The default is false on release failure, but if false is returned, it is ignored.</p>
-			</section>
-			<section>
-				<h1>request</h1>
-				<p>All processing other than loading and unloading is performed here.<br />The precautions are the same as for load.</p>
-				<p>The return value depends on the type of subsystem (SHIORI, SAORI, PLUGIN...) implemented by this DLL.<br />The return value HGLOBAL should also be the one allocated by GlobalAlloc(GMEM_FIXED,xxx).</p>
+				<h1>unload function</h1>
+				
+				<pre><code>extern "C" __declspec(dllexport) BOOL __cdecl unload();</code></pre>
+
+				<p>Function to handle module termination. This function is called by the baseware when a module is unloaded.</p>
+				<p>Processes that should be implemented:</p>
+				<ul>
+					<li>Release a file handle opened by CreateFile, etc.</li>
+					<li>Release synchronization objects created by CreateMutex, etc.</li>
+					<li>Wait for threads created by CreateThread, etc., to finish and perform post-processing</li>
+					<li>Release all other system resources reserved by the module</li>
+				</ul>
+				<p>The return value is not currently used, but should return TRUE for future expandability.</p>
 			</section>
 		</section>
 	</div>
