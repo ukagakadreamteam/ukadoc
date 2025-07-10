@@ -460,6 +460,7 @@
 				<li><a href="#_!_open,aigraph_">\![open,aigraph]</a></li>
 				<li><a href="#_!_open,developer_">\![open,developer]</a></li>
 				<li><a href="#_!_open,shiorirequest_">\![open,shiorirequest]</a></li>
+				<li><a href="#_!_open,dressupexplorer_">\![open,dressupexplorer]</a></li>
 			</ul>
 			<ul>
 				<li class="caption"><a href="#notes_inputbox-option">InputBox Options</a></li>
@@ -2498,7 +2499,7 @@
 			<dl id="_q_title,ID_">
 				<dt class="entry">\q[(title),(ID)]</dt>
 				<dd class="entry">
-					<p>Show a menu choice.<br>After selecting, the SHIORI event <a href="list_shiori_event.html#OnChoiceSelect">OnChoiceSelect</a> will be run. (In SSP only, <a href="list_shiori_event.html#OnChoiceSelectEx">OnChoiceSelectEx</a> will run prior to OnChoiceSelect.)<br>The ID is stored in reference0.</p>
+					<p>Show a menu choice.<br>After selecting, the SHIORI event <a href="list_shiori_event.html#OnChoiceSelect">OnChoiceSelect</a> will be run. (In SSP only, <a href="list_shiori_event.html#OnChoiceSelectEx">OnChoiceSelectEx</a> will run prior to OnChoiceSelect.)<br>The ID is stored in reference0.<br>Use the tag \__q[] if you want automatic line breaks in the text.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -2585,7 +2586,7 @@
 			<dl id="___q_ID,..._">
 				<dt class="entry">\__q[(ID),...]</dt>
 				<dd class="entry">
-					<p>All of the text will be used as a menu choice, up to the next \__q.<br>The ID specification is the same as \q, including the special treatment of IDs that start with "On" or "script:", as well as additional arguments.<br>The specification for which SHIORI event should be run after selection is also the same as \q.</p>
+					<p>All of the text will be used as a menu choice, up to the next \__q.<br>The ID specification is the same as \q, including the special treatment of IDs that start with "On" or "script:", as well as additional arguments.<br>The specification for which SHIORI event should be run after selection is also the same as \q.<br>Unlike the \q tag, automatic line breaking is also performed.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 						<li><img src="image/icon_n.png" alt="Ninix" width="34" height="16" /></li>
@@ -4745,6 +4746,15 @@
 					<p>Opens the SHIORI Request send palette. If Developer Mode is not turned on in the baseware settings, the command will be ignored.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.5.78</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl id="_!_open,dressupexplorer_">
+				<dt class="entry">\![open,dressupexplorer]</dt>
+				<dd class="entry">
+					<p>着せ替えエクスプローラを開く。</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.7.00 RC3</li>
 					</ul>
 				</dd>
 			</dl>
