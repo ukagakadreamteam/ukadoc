@@ -1,35 +1,13 @@
 <h1>設定：音声認識/合成</h1>
-<p>
-	画像左側のリストをクリックすると、それぞれの解説ページへ移動します。
-	<br /><img src="image/config-dictation/0.png" usemap="#configdialog" width="602" height="591" alt="本体設定ダイアログ音声認識/合成" />
-	<map name="configdialog" id="configdialog">
-		<area shape="rect" coords="14,31,137,46" href="config-ippan.html" alt="一般" />
-		<area shape="rect" coords="14,47,137,66" href="config-ghost.html" alt="ゴースト(1)" />
-		<area shape="rect" coords="14,66,137,82" href="config-ghost2.html" alt="ゴースト(2)" />
-		<area shape="rect" coords="14,82,137,98" href="config-folder.html" alt="フォルダ" />
-		<area shape="rect" coords="14,98,137,114" href="config-disp.html" alt="表示" />
 
-		<area shape="rect" coords="14,115,137,133" href="config-talk.html" alt="喋り/バルーン" />
-		<area shape="rect" coords="14,134,137,152" href="config-dictation.html" alt="音声合成" />
-		<area shape="rect" coords="14,150,137,168" href="config-conn1.html" alt="接続(1)" />
-		<area shape="rect" coords="14,167,137,185" href="config-conn2.html" alt="接続(2)" />
-		<area shape="rect" coords="14,184,137,202" href="config-pop.html" alt="POP" />
-		<area shape="rect" coords="14,201,137,219" href="config-extprog.html" alt="外部アプリ" />
-
-		<area shape="rect" coords="14,218,137,236" href="config-im.html" alt="IM" />
-		<area shape="rect" coords="14,235,137,253" href="config-ipmes.html" alt="IPMessenger" />
-		<area shape="rect" coords="14,252,137,270" href="config-i18n.html" alt="国際化" />
-		<area shape="rect" coords="14,269,137,287" href="config-dev.html" alt="開発/その他" />
-		
-	</map>
-</p>
 <p>このページでは右クリックメニューの「設定」サブメニューにある項目「本体設定」で開くダイアログの、「音声認識/合成」ページについて解説しています。</p>
-
-<p>通常はほぼ変更の必要はありません。</p>
+<p>このページではSSPの音声認識・合成機能の設定を行います。</p>
 
 <h2>各項目の解説</h2>
 
 <h3>音声認識</h3>
+
+<p>機能→音声認識 メニューをONにして使用してください。</p>
 
 <dl>
 	<dt>認識エンジン</dt>
@@ -48,21 +26,59 @@
 
 <h3>音声合成</h3>
 
+<p>機能→音声合成 メニューをONにして使用してください。</p>
+
 <dl>
-	<dt>合成音声</dt>
-	<dd>発声する声の種類を変更します。(System Default)で音声認識コントロールパネルで選択したものが使用されます。<br />
-	「合成音声の設定...」から追加の設定ができる発声エンジンもあります。設定できない場合は無効ボタンのままになります。</dd>
+	<dt>\0（メインキャラクター）</dt>
+	<dd>メインキャラクター（\0）の音声を設定します。音声の選択、ピッチの調整、設定ボタンから詳細設定が行えます。</dd>
+	
+	<dt>\1（サブキャラクター）</dt>
+	<dd>サブキャラクター（\1）の音声を設定します。音声の選択(\0や\2と同じでも可)、ピッチの調整、設定ボタンから詳細設定が行えます。</dd>
+	
+	<dt>\2～（その他のキャラクター）</dt>
+	<dd>\2以降の追加キャラクターの音声を設定します。音声の選択(\0や\1と同じでも可)、ピッチの調整、設定ボタンから詳細設定が行えます。</dd>
 	
 	<dt>音声出力先</dt>
-	<dd>出力するスピーカー/イヤホン端子等出力先を切り替えます。(System Default)で音声認識コントロールパネルで選択したものが使用されます。</dd>
+	<dd>音声を出力するスピーカーやイヤホン端子等の出力先を切り替えます。設定ボタンから詳細設定が行えます。</dd>
 	
 	<dt>喋る速度</dt>
-	<dd>読み上げるスピードを設定します。通常バルーンよりは遅いので、少し早めにしておくと良いかもしれませんが、あまり早くすると聞き取りづらくなります。</dd>
+	<dd>音声合成の読み上げスピードを調整します。スライダーで「遅い」から「速い」まで設定できます。標準位置から調整してください。</dd>
 	
 	<dt>音量</dt>
-	<dd>発声する音量を設定します。</dd>
+	<dd>音声合成の音量レベルを調整します。スライダーで0%から100%まで設定できます。</dd>
+	
+	<dt>音声合成の進行速度に合わせてスクリプトの再生待ちを行う</dt>
+	<dd>音声合成の読み上げ速度に合わせて、スクリプトの表示タイミングを同期させます。</dd>
 </dl>
 
+<h2>音声合成の詳細設定ダイアログ (右側の設定ボタン)</h2>
+
+<h3>LocalAPI</h3>
+
+<dl>
+	<dt>VOICEVOX,VOICEVOX Nemo,SHAREVOX,AivisSpeech</dt>
+
+	<dd>ボイスIDは参照ボタンでキャラクター名を見ながら選択できます。IDが分かっている方はそのまま入力しても構いません。
+	<br />ホスト名・ポート番号は同じPC内で動かすなら空欄で問題ありません。</dd>
+
+	<dt>COEIROINK v2</dt>
+
+	<dd>ボイスIDは参照ボタンでキャラクター名を見ながら選択できます。IDが分かっている方はそのまま入力しても構いません。
+	<br />スタイルIDにはスタイル名（「れいせい」など）を入力してください。IDが分かっている方はIDも通ります。
+	<br />ホスト名・ポート番号は同じPC内で動かすなら空欄で問題ありません。</dd>
+</dl>
+
+<h3>CloudAPI</h3>
+
+<dl>
+	<dt>Aivis Cloud API</dt>
+
+	<dd>ボイスIDには「モデル UUID」をコピーして入力してください。注意！話者UUIDではありません。
+	<br />スタイルIDはボイスの詳細ページに書いてあります。
+	<br />ピッチは0が推奨です。それ以外だと合成スピードが落ちるそうです。
+	<br />APIキーは<a href="https://hub.aivis-project.com/cloud-api/dashboard">こちらのダッシュボード</a>から取得できますので、キー欄に貼りつけてください。</dd>
+
+</dl>
 
 <h2>下部のボタン</h2>
 <dl>
