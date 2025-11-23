@@ -5628,6 +5628,7 @@
 					<dt>--nofile=(parameter)[character encoding] [2.5.77]</dt>
 					<dd>Opens the acquired data on memory and stores it in Reference3 of the event without creating a temporary file.
 					<br />Specifies the character encoding to use when interpreting the acquired data. Defaults to UTF-8 when not specified.
+					<br />Since a Reference cannot contain line breaks, the line break code is converted to the byte value 1.
 					<br />The upper size limit for acquisition is 128KB.</dd>
 					
 					<dt>--param=(parameter)</dt>
