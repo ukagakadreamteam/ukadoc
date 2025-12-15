@@ -4247,7 +4247,8 @@
 						Opens the InputBox.
 						<br>The SHIORI event <a href="list_shiori_event.html#OnUserInput">OnUserInput</a> is run on confirmation (when the OK button is pressed).
 						<br><a href="list_shiori_event.html#OnUserInputCancel">OnUserInputCancel</a> is run when the display time has passed (timed out) or when the close button was pressed.
-						<br>Moreover, measures were taken to prevent any other interaction with the ghost during input, however, SSP does not have these.
+						<br>If an input box times out and there is no response to OnUserInputCancel, OnUserInput will be triggered with "timeout" as the input text for compatibility reasons.
+						<br>Previously, the system was designed to prevent any other interaction with the ghost during input. However, this is not the case with SSP.
 					</p>
 					<p>
 						<br>The ID is stored in OnUserInput, which runs on confirmation, but if the ID starts with On, the event beginning with On will run instead. ※Refer to <a href="#notes_inputbox-id">ID</a>.

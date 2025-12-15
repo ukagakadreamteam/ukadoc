@@ -146,6 +146,7 @@
 				<li><a href="#id,ID_name">id,(ID name)</a></li>
 				<li><a href="#craftmanurl,URL">craftmanurl,(URL)</a></li>
 				<li><a href="#homeurl,URL">homeurl,(URL)</a></li>
+				<li><a href="#dpi,recommended_DPI">dpi,(recommended DPI)</a></li>
 				<li><a href="#readme,filename">readme,(filename)</a></li>
 				<li><a href="#readme.charset,character_code">readme.charset,(character code)</a></li>
 				<li><a href="#cursor,filename">cursor,(filename)/mousecursor,(filename)</a></li>
@@ -500,6 +501,24 @@ communicatebox.height,20
 					<p class="default">No value</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl id="dpi,recommended_DPI">
+				<dt class="entry">dpi,(recommended DPI)</dt>
+				<dd class="entry">
+					<p>Recommended DPI value for this balloon. If nothing is specified, it defaults to the standard Windows value of 96.<br />
+					Check the System - Display - Scaling settings in the Windows environment where the balloon was created, and choose a value based on the following reference table.</p>
+					<ul>
+						<li>100% - 96</li>
+						<li>125% - 120</li>
+						<li>150% - 144</li>
+						<li>175% - 168</li>
+						<li>200% - 192</li>
+					</ul>
+					<p class="default">96</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />2.7.21</li>
 					</ul>
 				</dd>
 			</dl>
