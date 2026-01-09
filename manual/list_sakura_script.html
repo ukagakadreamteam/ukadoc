@@ -188,7 +188,7 @@
 				<li><a href="#_!_set,scaling,scaling_factor_">\![set,scaling,(scaling factor)]</a></li>
 				<li><a href="#_!_set,scaling,horizontal_scaling_factor,vertical_scaling_factor_">\![set,scaling,(horizontal scaling factor),(vertical scaling factor)]</a></li>
 				<li><a href="#_!_set,scaling,horizontal_scaling_factor,vertical_scaling_factor,change_time_">\![set,scaling,(horizontal scaling factor),(vertical scaling factor),(change time)]</a></li>
-				<li><a href="#_!_set,alpha,value_">\![set,alpha,(value)]</a></li>
+				<li><a href="#_!_set,alpha,value_">\![set,alpha,(value),(change time)]</a></li>
 				<li><a href="#_!_effect,plugin_name,speed_scaling,parameter_">\![effect,(plugin name),(speed scaling),(parameter)]</a></li>
 				<li><a href="#_!_effect2,additional_surface_ID,plugin_name,speed_scaling,parameter_">\![effect2,(additional surface ID),(plugin name),(speed scaling),(parameter)]</a></li>
 				<li><a href="#_!_filter,plugin_name,startup_time,parameter_">\![filter,(plugin name),(startup time),(parameter)]</a></li>
@@ -491,8 +491,8 @@
 				<li><a href="#_!_execute,rss-get,URL,option,option,option..._">\![execute,rss-get,(URL),(option),(option),(option),...]</a></li>
 				<li><a href="#_!_execute,rss-post,URL,option,option,option..._">\![execute,rss-post,(URL),(option),(option),(option),...]</a></li>
 				
-				<li><a href="#_!_execute,extractarchive,file_name,directory_name_">\![execute,extractarchive,(file name),(directory name)]</a></li>
-				<li><a href="#_!_execute,compressarchive,file_name,directory_name_">\![execute,compressarchive,(file name),(directory name)]</a></li>
+				<li><a href="#_!_execute,extractarchive,file_name,directory_name,option..._">\![execute,extractarchive,(file name),(directory name),(option),...]</a></li>
+				<li><a href="#_!_execute,compressarchive,file_name,directory_name,option..._">\![execute,compressarchive,(file name),(directory name),(option)...]</a></li>
 				<li><a href="#_!_execute,dumpsurface,directory,scope_ID,surface_list_">\![execute,dumpsurface,(directory),(scope ID),(surface list),(prefix),(event ID),(zero position cutoff)]</a></li>
 				<li><a href="#_!_execute,install,path,file_name_">\![execute,install,path,(file name)]</a></li>
 				<li><a href="#_!_execute,install,url,URL,feed_nar_">\![execute,install,url,(URL),(feed|nar)]</a></li>
@@ -1013,17 +1013,23 @@
 			<dl id="_!_set,scaling,horizontal_scaling_factor,vertical_scaling_factor,change_time_">
 				<dt class="entry">\![set,scaling,(horizontal scaling factor),(vertical scaling factor),(change time)]</dt>
 				<dd class="entry">
-					<p>Changes the size of the surface minutely.<br>The unit of the scaling factor is in percent, and the change time is in milliseconds.</p>
+					<p>Changes the size of the surface minutely.<br>The unit of the scaling factor is in percent, and the change time is in milliseconds.
+					<br />This tag is stored in the execution queue at runtime and executed asynchronously.
+					<br />For example, if you execute a tag with a 2-second transition time followed by another tag with a 5-second transition time, the system will execute the scripts after this tag simultaneously without waiting for the transition to complete. The magnification will change in the specified order over a total of 7 seconds.
+					</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />2.7.31</li>
 					</ul>
 				</dd>
 			</dl>
 			<dl id="_!_set,alpha,value_">
-				<dt class="entry">\![set,alpha,(value)]</dt>
+				<dt class="entry">\![set,alpha,(value),(change time)]</dt>
 				<dd class="entry">
-					<p>Changes the opacity of the surface that currently has the focus from 0–100. The smaller the value, the more translucent it becomes.</p>
-					<p>Effective until the ghost is closed.</p>
+					<p>Changes the opacity of the surface that currently has the focus from 0–100. The smaller the value, the more translucent it becomes. The change duration is measured in milliseconds; if omitted, it defaults to 0 (immediate application).
+					<br />This tag is stored in the execution queue at runtime and executed asynchronously.
+					<br />For example, if you execute a tag with a 2-second transition time followed by another tag with a 5-second transition time, the system will execute the scripts after this tag simultaneously without waiting for the transition to complete. The opacity will change in the specified order over a total of 7 seconds.
+					<br />Effective until the ghost is closed.</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
@@ -5013,38 +5019,50 @@
 					</ul>
 				</dd>
 			</dl>
-			<dl id="_!_execute,extractarchive,file_name,directory_name_">
-				<dt class="entry">\![execute,extractarchive,(file name),(directory name)]</dt>
+			<dl id="_!_execute,extractarchive,file_name,directory_name,option..._">
+				<dt class="entry">\![execute,extractarchive,(file name),(directory name),(option),...]</dt>
 				<dd class="entry">
-					<p>Extracts a zip file. Full paths must be specified (relative paths cannot be specified).
-					<br />Execution of other scripts is paused until the process has finished.
-					<br />For security reasons, extractions are limited to destinations within folders under the control of SSP (ghost folder, balloon folder, etc. other locations specified in the Folder Preferences).
+					<p>Extracts a ZIP file. It is recommended to specify the full path. If a relative path is specified, it will be interpreted as a relative path from ghost/master/.
+					<br />The options are as follows.</p>
+					<ul class="description">
+						<li>--event=event indentifier……Specifying an event identifier allows the script to continue executing while the extraction process runs in the background, triggering an event upon completion. If the identifier begins with "On", that specific event will be triggered. Otherwise, OnExtractArchiveComplete or OnExtractArchiveFailure will be triggered. If omitted, script execution will be paused until the process is complete.</li>
+						<li>--password=password……The archive will be extracted using the specified password without requiring a password prompt.</li>
+					</ul>
+					<p>For specifications regarding events after execution, refer to <a href="list_shiori_event.html#OnExtractArchiveComplete">OnExtractArchiveComplete</a> and <a href="list_shiori_event.html#OnExtractArchiveFailure">OnExtractArchiveFailure</a>.
+					<br />For security reasons, extractions are limited to destinations within folders under the control of SSP (ghost folder, balloon folder, or other locations specified in the Folder Preferences).
 					<br />Furthermore, as this restriction may be tightened occasionally, it is also recommended to keep the file within the folder in which the ghost's own data is located.</p>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> Option specification is available starting from version 2.7.23</li>
 					</ul>
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code type="SakuraScript">\![execute,extractarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/testfolder]If SSP is installed in the C drive, an extracted copy of test.zip called testfolder will be created.</code></p>
+							<p><code type="SakuraScript">\![execute,extractarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/emily4]If SSP is installed directly in the C drive, extract test.zip into the emily4 folder. The script execution will pause until the process is complete.</code></p>
+							<p><code type="SakuraScript">\![execute,extractarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/emily4,--event=OnExtractComplete]The extraction is performed asynchronously, and the OnExtractComplete event is triggered upon completion.</code></p>
 						</section>
 					</div>
 				</dd>
 			</dl>
-			<dl id="_!_execute,compressarchive,file_name,directory_name_">
-				<dt class="entry">\![execute,compressarchive,(file name),(directory name)]</dt>
+			<dl id="_!_execute,compressarchive,file_name,directory_name,option..._">
+				<dt class="entry">\![execute,compressarchive,(file name),(directory name),(option),...]</dt>
 				<dd class="entry">
-					<p>Compresses a file into a zip file. Full paths must be specified (relative paths cannot be specified).
-					<br />Execution of other scripts is paused until the process has finished.
+					<p>Compresses a file into a ZIP file. It is recommended to specify the full path. If a relative path is specified, it will be interpreted as a relative path from ghost/master/.
+					<br />The options are as follows.</p>
+					<ul class="description">
+						<li>--event=event indentifier……Specifying an event identifier allows the script to continue executing while the extraction process runs in the background, triggering an event upon completion. If the identifier begins with "On", that specific event will be triggered. Otherwise, OnCompressArchiveComplete or OnCompressArchiveFailure will be triggered. If omitted, script execution will be paused until the process is complete.</li>
+						<li>--password=password……Enable AES-encrypted ZIP using the specified password.</li>
+					</ul>
+					<p>For specifications regarding events after execution, refer to <a href="list_shiori_event.html#OnCompressArchiveComplete">OnCompressArchiveComplete</a> and <a href="list_shiori_event.html#OnCompressArchiveFailure">OnCompressArchiveFailure</a>.
 					<br />For security reasons, compressions are limited to destinations within folders under the control of SSP (ghost folder, balloon folder, etc. other locations specified in the Folder Preferences).
 					<br />Furthermore, as this restriction may be tightened from time to time, it is also recommended to keep the file within the folder in which the ghost's own data is located.</p>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> Option specification is available starting from version 2.7.23</li>
 					</ul>
 					<div class="legend">
 						<section class="code">
 							<h1>Usage example</h1>
-							<p><code type="SakuraScript">\![execute,compressarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/emily4]If SSP is installed in the C drive, a compressed copy of the Emily/Phase4.5 folder named test.zip will be created in the ghost folder.</code></p>
+							<p><code type="SakuraScript">\![execute,compressarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/emily4]If SSP is installed directly in the C drive, compress the Emily/Phase4.5 folder into test.zip and place it in the ghost folder. The script execution will pause until the process is complete.</code></p>
+							<p><code type="SakuraScript">\![execute,compressarchive,C:/SSP/ghost/test.zip,C:/SSP/ghost/emily4,--event=OnCompressComplete]The compression is performed asynchronously, and the OnCompressComplete event is triggered upon completion.</code></p>
 						</section>
 					</div>
 				</dd>

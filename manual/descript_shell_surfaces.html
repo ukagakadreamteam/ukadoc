@@ -206,6 +206,8 @@
 					<li><a href="#never">never</a></li>
 					<li><a href="#yen-e">yen-e</a></li>
 					<li><a href="#talk,number">talk,(number)</a></li>
+					<li><a href="#starttalk">starttalk</a></li>
+					<li><a href="#endtalk">endtalk</a></li>
 					<li><a href="#_1_bind">bind</a></li>
 				</ul>
 			</section>
@@ -223,6 +225,7 @@
 					<li><a href="#interpolate">interpolate</a></li>
 					<li><a href="#asis">asis</a></li>
 					<li><a href="#move">move</a></li>
+					<li><a href="#scaling">scaling</a></li>
 					<li><a href="#_2_bind">bind</a></li>
 					<li><a href="#add">add</a></li>
 					<li><a href="#reduce">reduce</a></li>
@@ -1267,7 +1270,7 @@ animation0.pattern3,overlay,-1,100,168,67
 				<dl id="yen-e">
 					<dt class="entry">yen-e</dt>
 					<dd class="entry">
-						<p>Play when the \e tag is executed while on that surface.</p>
+						<p>Play when the \e tag is encountered in SakuraScript.</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
@@ -1283,6 +1286,27 @@ animation0.pattern3,overlay,-1,100,168,67
 							<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl id="starttalk">
+					<dt class="entry">starttalk</dt>
+					<dd class="entry">
+						<p>Played when talking begins on the specified scope.
+						<br />Specifically, this is executed when the balloon starts displaying text. (This includes synchronized display via the \_s tag.)
+						<br />Note that in scripts where the scope switches frequently within a short period, the animation may not be triggered because the system cannot keep up.</p>
+						<ul class="supported-baseware">
+							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />2.7.26</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl id="endtalk">
+					<dt class="entry">endtalk</dt>
+					<dd class="entry">
+						<p>Played when talking for the specified scope ends.
+						<br />Specifically, this is executed when the scope switches using the \0, \1, or \p[2] tags, provided a starttalk trigger was previously activated.</p>
+						<ul class="supported-baseware">
+							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" />2.7.26</li>
 						</ul>
 					</dd>
 				</dl>
@@ -1452,11 +1476,29 @@ animation0.pattern3,overlay,-1,100,168,67
 							<br>Positive X values move to the right side, and positive Y values move downwards.
 							<br>Surface IDs are ignored in pattern definitions that specify this drawing method.
 							<br>Cannot be used in dressup or elements.
+							<br>Note: You can disable the move action in the user settings.
 						</p>
 						<ul class="supported-baseware">
 							<li><img src="image/icon_m.png" alt="Materia" width="34" height="16" /></li>
 							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 							<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl id="scaling">
+					<dt class="entry">scaling</dt>
+					<dd class="entry">
+						<p>
+							Display the character window at a specified magnification level.
+							<br>This is the only drawing method that allows decimal values to be specified for X and Y coordinates (e.g., 92.5),
+							<br>The magnification ratio is calculated as follows.
+							<br>User scaling rate specification x \![scaling] tag setting x scaling animation in progress 1 x scaling animation in progress 2 ...
+							<br>Note 1: Resizing the window is a very resource-intensive operation, so please do not overuse this function.
+							<br>Note 2: Unless there are very special circumstances, failing to reset to 100% at the end of an animation will cause bugs.
+							<br>Note 3: If the function to disable the move method is enabled, scaling is also disabled.
+						</p>
+						<ul class="supported-baseware">
+							<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.7.28</li>
 						</ul>
 					</dd>
 				</dl>

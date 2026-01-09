@@ -752,18 +752,30 @@ Command: GetName
 					<dt>Restore</dt>
 					<dd>Quiet is cancelled. No additional data (status code 200 successful)</dd>
 					
-					<dt>CompressArchive [SSP] [Not supported in Remote]</dt>
-					<dd>Compresses a group of files in a specified folder into a compressed file.
-					<br />Note that no response will be returned until the process is completed.
-					<br />Parameter 0: Compressed file name
-					<br />Parameter 1: Full path of the folder to be compressed
+					<dt>CompressArchive [SSP 2.7.23] [Not supported in Remote]</dt>
+					<dd>Compresses the files in the specified folder into a ZIP file.
+					<br />Parameter 0: Compressed file name (specify the full path; relative paths are not allowed)
+					<br />Parameter 1: The full path of the folder to be compressed
+					<br />Parameter 2 and beyond: Optional (may be omitted)
+					<br />The options are as follows.
+					<br />--event=event identifier……Specifying an event identifier causes compression to continue after the response is sent, triggering an event upon completion. If the identifier begins with "On", that specific event will be triggered. Otherwise, OnCompressArchiveComplete or OnCompressArchiveFailure will be triggered. If omitted, the response is not returned until the process is complete.
+					<br />--password=password……Enable AES-encrypted ZIP using the specified password.
+					<br />For specifications regarding events after execution, refer to <a href="list_shiori_event.html#OnCompressArchiveComplete">OnCompressArchiveComplete</a> and <a href="list_shiori_event.html#OnCompressArchiveFailure">OnCompressArchiveFailure</a>.
+					<br />For security reasons, compressions are limited to destinations within folders under the control of SSP (ghost folder, balloon folder, etc. other locations specified in the Folder Preferences).
+					<br />Furthermore, as this restriction may be tightened from time to time, it is also recommended to keep the file within the folder in which the ghost's own data is located.
 					<br />No additional data (status code 200 successful)</dd>
 					
-					<dt>ExtractArchive [SSP] [Not supported in Remote]</dt>
-					<dd>Decompresses the specified compressed file.
-					<br />Note that no response will be returned until the process is completed.
-					<br />Parameter 0: Compressed file name
-					<br />Parameter 1： Full path of the folder to unzip to
+					<dt>ExtractArchive [SSP 2.7.23] [Not supported in Remote]</dt>
+					<dd>Extracts the specified ZIP file.
+					<br />Parameter 0: Compressed file name (specify the full path; relative paths are not allowed)
+					<br />Parameter 1: Full path to the destination folder
+					<br />Parameter 2 and beyond: Optional (may be omitted)
+					<br />The options are as follows.
+					<br />--event=event identifier……Specifying an event identifier causes extraction to continue after the response is sent, triggering an event upon completion. If the identifier begins with "On", that specific event will be triggered. Otherwise, OnExtractArchiveComplete or OnExtractArchiveFailure will be triggered. If omitted, the response is not returned until the process is complete.
+					<br />--password=password……The archive will be extracted using the specified password without requiring a password prompt.
+					<br />For specifications regarding events after execution, refer to <a href="list_shiori_event.html#OnExtractArchiveComplete">OnExtractArchiveComplete</a> and <a href="list_shiori_event.html#OnExtractArchiveFailure">OnExtractArchiveFailure</a>.
+					<br />For security reasons, extractions are limited to destinations within folders under the control of SSP (ghost folder, balloon folder, etc. other locations specified in the Folder Preferences).
+					<br />Furthermore, as this restriction may be tightened from time to time, it is also recommended to keep the file within the folder in which the ghost's own data is located.
 					<br />No additional data (status code 200 successful)</dd>
 
 					<dt>DumpSurface [SSP 2.5.98] [Not supported in Remote]</dt>
