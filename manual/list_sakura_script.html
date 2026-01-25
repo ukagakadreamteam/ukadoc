@@ -176,7 +176,7 @@
 				<li><a href="#_!_anim,resume,ID_">\![anim,resume,(ID)]</a></li>
 				<li><a href="#_!_anim,offset,ID,x_coordinate,y_coordinate_">\![anim,offset,(ID),(x coordinate),(y coordinate)]</a></li>
 				<li><a href="#_!_anim,add,overlay,ID_">\![anim,add,overlay,(ID)]</a></li>
-				<li><a href="#_!_anim,stop_">\![anim,stop]</a></li>
+				<li><a href="#_!_anim,stop_">\![anim,stop,(ID)]</a></li>
 				<li><a href="#_!_anim,add,text,x,y,width,height,string,display_time,r,g,b,font_size,character_identifier_">\![anim,add,text,(x),(y),(width),(height),(string),(display time),(r),(g),(b),(font size),(character identifier)]</a></li>
 				<li><a href="#___w_animation,ID_">\__w[animation,(ID)]</a></li>
 				<li><a href="#_!_bind,category_name,part_name,value_">\![bind,(category name),(part name),(value)]</a></li>
@@ -253,6 +253,7 @@
 				<li><a href="#__!">\_!</a></li>
 				<li><a href="#__?">\_?</a></li>
 				<li><a href="#___v">\__v</a></li>
+				<li><a href="#_!_execute,resetballoonpos_">\![execute,resetballoonpos]</a></li>
 			</ul>
 			<ul>
 				<li class="caption"><a href="#notes_imageresource">Regarding \_b[(filepath),...]</a></li>
@@ -481,18 +482,15 @@
 				<li><a href="#_!_execute,http-get,URL_">\![execute,http-get,(URL)]</a></li>
 				<li><a href="#_!_execute,http-get,URL,parameter_">\![execute,http-get,(URL),(parameter)]</a></li>
 				<li><a href="#_!_execute,http-post,URL,parameter_">\![execute,http-post,(URL),(parameter)]</a></li>
-				
-				<li><a href="#_!_execute,http-get,URL,option,option,option..._">\![execute,http-get,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-post,URL,option,option,option..._">\![execute,http-post,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-head,URL,option,option,option..._">\![execute,http-head,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-put,URL,option,option,option..._">\![execute,http-put,(URL),(option),(option),(option),...]</a></li>
-				<li><a href="#_!_execute,http-delete,URL,option,option,option..._">\![execute,http-delete,(URL),(option),(option),(option),...]</a></li>
+
+				<li><a href="#_!_execute,http-patch,URL,option,option,option..._">\![execute,http-patch,URL,(option),(option),(option),...]</a></li>
+				<li><a href="#_!_execute,http-options,URL,option,option,option..._">\![execute,http-options,URL,(option),(option),(option),...]</a></li>
 				
 				<li><a href="#_!_execute,rss-get,URL,option,option,option..._">\![execute,rss-get,(URL),(option),(option),(option),...]</a></li>
 				<li><a href="#_!_execute,rss-post,URL,option,option,option..._">\![execute,rss-post,(URL),(option),(option),(option),...]</a></li>
 				
 				<li><a href="#_!_execute,extractarchive,file_name,directory_name,option..._">\![execute,extractarchive,(file name),(directory name),(option),...]</a></li>
-				<li><a href="#_!_execute,compressarchive,file_name,directory_name,option..._">\![execute,compressarchive,(file name),(directory name),(option)...]</a></li>
+				<li><a href="#_!_execute,compressarchive,file_name,directory_name,option..._">\![execute,compressarchive,(file name),(directory name),(option),...]</a></li>
 				<li><a href="#_!_execute,dumpsurface,directory,scope_ID,surface_list_">\![execute,dumpsurface,(directory),(scope ID),(surface list),(prefix),(event ID),(zero position cutoff)]</a></li>
 				<li><a href="#_!_execute,install,path,file_name_">\![execute,install,path,(file name)]</a></li>
 				<li><a href="#_!_execute,install,url,URL,feed_nar_">\![execute,install,url,(URL),(feed|nar)]</a></li>
@@ -820,11 +818,12 @@
 				</dd>
 			</dl>
 			<dl id="_!_anim,stop_">
-				<dt class="entry">\![anim,stop]</dt>
+				<dt class="entry">\![anim,stop,ID]</dt>
 				<dd class="entry">
-					<p>Stops the surface animation.</p>
+					<p>Ends the playback of the surface animation with the specified ID number (same as clear).</p>
 					<ul class="supported-baseware">
 						<li><img src="image/icon_c.png" alt="CROW" width="34" height="16" /></li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /></li>
 					</ul>
 				</dd>
 			</dl>
@@ -1169,16 +1168,22 @@
 				<dd class="entry">
 					<p>Layers the windows of the specified characters such that the leftmost character is on top.<br>
 					Example: With \![set,zorder,1,0], \1's window will be displayed on top of \0's.</p>
-					
+
+					<p>If you want to include balloons in the z-order control, please follow the example below.<br>
+					Example: \![set,zorder,balloon1,surface1,balloon0,surface0]<br>
+					Example (abbreviated notation): \![set,zorder,b1,s1,b0,s0]<br>
+					When the above option is specified, the display order is strictly controlled as follows: balloon for character 1 - character 1's shell - balloon for character 0 - character 0's shell.</p>
+
 					<p>By running multiple tags each with different scope IDs, separate groups can be made.<br>
-					Example: With \![set,zorder,1,0] \![set,zorder,3,2], \1's window will be displayed on top of \0's, and \p[3]'s window will be displayed on top of \p[2]'s.</p>
+					Example: With \![set,zorder,1,0] \![set,zorder,3,2], \1's window will be displayed on top of \0's, and \p[3]'s window will be displayed on top of \p[2]'s.<br>
+					The same applies to the notation that includes balloons.</p>
 					
 					<p>There is no technical limit on the number of scope IDs that can be specified in the command, but large amounts may cause the ghost to slow down somewhat, so using two to three IDs is recommended.<br>
 					Running the command again with a character that has already been paired with another will cause an error. When changing the pairing of the characters, \![reset] must be run first before ordering the windows again.</p>
 					
 					<p>Effective until the ghost is closed.</p>
 					<ul class="supported-baseware">
-						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.3.77</li>
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.3.77/2.7.34(s,b notation)</li>
 					</ul>
 					<div class="legend">
 						<section class="code">
@@ -2000,6 +2005,15 @@
 							<p><code type="SakuraScript">\1\__v[disable]This sentence won't be spoken using the speech synthesis function.\__v</code></p>
 						</section>
 					</div>
+				</dd>
+			</dl>
+			<dl id="_!_execute,resetballoonpos_">
+				<dt class="entry">\![execute,resetballoonpos]</dt>
+				<dd class="entry">
+					<p>Resets the position of each balloon to its initial position. This has the same effect as the "Reset balloon position" menu command.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.7.41</li>
+					</ul>
 				</dd>
 			</dl>
 			<div class="caption" id="notes_imageresource">
@@ -5001,6 +5015,24 @@
 					</ul>
 				</dd>
 			</dl>
+			<dl id="_!_execute,http-patch,URL,option,option,option..._">
+				<dt class="entry">\![execute,http-patch,URL,(option),(option),(option),...]</dt>
+				<dd class="entry">
+					<p>Executes an http delete request with <a href="#notes_executehttp">※options</a>.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.7.34</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl id="_!_execute,http-options,URL,option,option,option..._">
+				<dt class="entry">\![execute,http-options,URL,(option),(option),(option),...]</dt>
+				<dd class="entry">
+					<p>Executes an http delete request with <a href="#notes_executehttp">※options</a>.</p>
+					<ul class="supported-baseware">
+						<li><img src="image/icon_s.png" alt="SSP" width="34" height="16" /> 2.7.34</li>
+					</ul>
+				</dd>
+			</dl>
 			<dl id="_!_execute,rss-get,URL,option,option,option..._">
 				<dt class="entry">\![execute,rss-get,URL,(option),(option),(option),...]</dt>
 				<dd class="entry">
@@ -5613,6 +5645,12 @@
 			<section class="caption" id="notes_executehttp">
 				<h1>http get/post options</h1>
 				<dl>
+					<dt>--accept=The content of the Accept request header [2.7.34]</dt>
+					<dd>Specify the Accept header to indicate the acceptable Content-Type formats that can be received.</dd>
+
+					<dt>--accept-language=The content of the Accept-Language request header [2.7.34]</dt>
+					<dd>Specifies the Accept-Language header to control internationalization-related behavior.</dd>
+					
 					<dt>--async=identification ID</dt>
 					<dd>Execute the rest of the SakuraScript without waiting for the process to complete, and notify the SHIORI events <a href="list_shiori_event.html#OnExecuteHTTPComplete">OnExecuteHTTPComplete</a> or <a href="list_shiori_event.html#OnExecuteHTTPFailure">OnExecuteHTTPFailure</a> when the process has finished.<br>
 					<a href="list_shiori_event.html#OnExecuteRSSComplete">OnExecuteRSSComplete</a> or <a href="list_shiori_event.html#OnExecuteRSSFailure">OnExecuteRSSFailure</a> are notified if the RSS commands are used.
@@ -5638,6 +5676,9 @@
 					<dd>Sets a request header of the name of choice. There must be a colon between the name and contents.
 					<br />Caution should be taken not to cause contradictions with the specifications, as this will overwrite the header information from SSP.</dd>
 					
+					<dt>--insecure [2.7.34]</dt>
+					<dd>Skip TLS certificate validation.</dd>
+					
 					<dt>--log=file name</dt>
 					<dd>Log all communications with the server. Mainly for debugging during development.</dd>
 					
@@ -5649,6 +5690,9 @@
 					<br />Specifies the character encoding to use when interpreting the acquired data. Defaults to UTF-8 when not specified.
 					<br />Since a Reference cannot contain line breaks, the line break code is converted to the byte value 1.
 					<br />The upper size limit for acquisition is 128KB.</dd>
+					
+					<dt>--no-cache [2.7.34]</dt>
+					<dd>Cache-Control: Specify "no-cache" to prevent caching.</dd>
 					
 					<dt>--param=(parameter)</dt>
 					<dd>Specifies the parameter for get/post. Can be specified multiple times.<br>

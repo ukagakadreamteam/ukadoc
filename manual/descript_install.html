@@ -170,9 +170,12 @@
 			</ul>
 		</section>
 		<section class="navigation-category">
-			<h1>.narignore / .updateignore</h1>
+			<h1>.narignore / .updateignore / .narinclude / .updateinclude</h1>
 			<ul>
 				<li class="caption introduction"><a href="#introduction_narignore_updateignore">.narignore / .updateignore</a></li>
+			</ul>
+			<ul>
+				<li class="caption introduction"><a href="#introduction_narinclude_updateinclude">.narinclude / .updateinclude</a></li>
 			</ul>
 		</section>
 		<section class="navigation-category">
@@ -513,14 +516,22 @@ ghost/master/profile/,nonar,noupdate
 				</ul>
 			</section>
 		</section>
-		<section class="category" id="#narignore_updateignore">
-			<h1>.narignore / .updateignore</h1>
-			<section class="caption introduction" id="introduction_narignore_updateignore">
-				<h1>.narignore / .updateignore</h1>
+		<section class="category">
+			<h1 id="#narignore_updateignore">.narignore / .updateignore / .narinclude / .updateinclude</h1>
+			<section class="caption introduction">
+				<h1 id="#narignore_updateignore">.narignore / .updateignore</h1>
 				<section>
-					<h1>Summary</h1>
 					<p>To provide more flexibility than the developer_options.txt syntax, .gitignore syntax can be used directly in .narignore / .updateignore.</p>
 					<p>For the syntax, check the <a href="https://git-scm.com/docs/gitignore">.gitignore manual</a>, or tell an LLM (text generation AI) what you want to do and have it generate the syntax for you.</p>
+					<p>A special feature unique to ukagaka is the "include:" specification. For example:<br>
+					include:.narignore<br>
+					When written like this, the system processes it as if the entire contents of the .narignore file were inserted at this line's position.
+					</p>
+				</section>
+				<h1 id="#narinclude_updateinclude">.narinclude / .updateinclude</h1>
+				<section>
+					<p>This is a whitelist version of .narignore/.updateignore. Only the files listed here will be included in the update files/NAR archive.<br>
+					Unlike gitignore, which handles subdirectories differently, if you write something like "shell/master" without specifying "shell/", it will still correctly include and process the parent directory.</p>
 				</section>
 			</section>
 		</section>
